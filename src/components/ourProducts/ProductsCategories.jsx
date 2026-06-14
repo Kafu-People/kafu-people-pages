@@ -20,6 +20,14 @@ const allProducts = [
   //   "url": "https://agent-zero.ai"
   // },
   {
+    "product_id": "p010",
+    "image": "/products/giscrap-dashboard.png",
+    "name": "Giscrap",
+    "description": "Discover GitHub profiles by keywords, location, and stars — enrich emails and LinkedIn, then send purpose-tagged campaigns with AI-personalized copy.",
+    "category": "AI & Agentic Workflows",
+    "url": "https://giscrap.duckdns.org/"
+  },
+  {
     "product_id": "p007",
     "image": "/products/Echo3s.webp",
     "name": "Echo3s",

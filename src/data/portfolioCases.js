@@ -168,6 +168,89 @@ const portfolioCases = [
       },
     ],
   },
+  {
+    slug: "giscrap",
+    productId: "p010",
+    title: "Giscrap",
+    tagline:
+      "GitHub talent discovery, contact enrichment, and AI-personalized outreach in one workflow",
+    outcome:
+      "Unified scraping, enrichment, and campaign delivery — with async AI batching that cut model spend while keeping every message on-brand",
+    description:
+      "Giscrap helps teams find GitHub profiles by keywords, location, followers, and stars — enrich emails and LinkedIn, then send purpose-tagged campaigns with AI-drafted copy over SMTP.",
+    category: "AI & Agentic Workflows",
+    role: "Full-stack Development Partner",
+    timeline: "6 weeks (MVP to launch)",
+    image: "/products/giscrap-dashboard.png",
+    liveUrl: "https://giscrap.duckdns.org/",
+    techStack: [
+      "Python",
+      "FastAPI",
+      "Anthropic API",
+      "Prompt Engineering",
+      "SMTP",
+    ],
+    features: [
+      {
+        title: "GitHub Discovery Filters",
+        description:
+          "Search and rank profiles by keywords, location, follower count, repository stars, and language — with saved searches and exportable lead lists.",
+      },
+      {
+        title: "Contact Enrichment",
+        description:
+          "Surface public emails and LinkedIn profiles from GitHub bios, commit metadata, and linked domains — deduplicated and validated before outreach.",
+      },
+      {
+        title: "Purpose Tags & Campaigns",
+        description:
+          "Organize leads with tags such as hiring, partnership, open-source, and investor outreach so each batch uses the right tone, CTA, and follow-up rules.",
+      },
+      {
+        title: "AI-Personalized Email Drafts",
+        description:
+          "Anthropic-powered prompts turn profile signals into tailored subject lines and body copy — reviewed in-app before anything is sent.",
+      },
+      {
+        title: "Sync & Async AI Pipeline",
+        description:
+          "Interactive edits use low-latency sync calls; bulk generation runs async with batching, caching, and rate-aware queues to optimize API cost.",
+      },
+      {
+        title: "SMTP Delivery & Tracking",
+        description:
+          "Send through configured SMTP with per-campaign throttling, send logs, and a dashboard that keeps operators in control of volume and compliance.",
+      },
+    ],
+    gallery: ["/products/giscrap-dashboard.png"],
+    relatedSlugs: ["echo3s", "nerohalla"],
+    sections: [
+      {
+        type: "overview",
+        heading: "Overview",
+        content:
+          "Giscrap is an outreach platform built for teams that source talent and partners on GitHub. Instead of juggling spreadsheets, browser tabs, and one-off email templates, operators run discovery, enrichment, AI drafting, and SMTP delivery from a single FastAPI-backed workspace with a polished, task-focused UI.",
+      },
+      {
+        type: "challenge",
+        heading: "The Challenge",
+        content:
+          "Manual GitHub prospecting does not scale. Teams were copying profile data by hand, guessing at contact details, and sending generic emails that hurt reply rates. Running every lead through an AI model synchronously was slow and expensive, and there was no consistent way to separate hiring outreach from partnership or community campaigns.",
+      },
+      {
+        type: "solution",
+        heading: "Our Solution",
+        content:
+          "Kafu People designed Giscrap around three layers: a scraper and filter engine for GitHub signals, an enrichment pass for email and LinkedIn, and a campaign hub with purpose tags and Anthropic-generated copy. Prompt templates are tuned per tag so hiring messages read differently from partnership or OSS invites. FastAPI exposes sync endpoints for on-demand edits and async workers for bulk generation — batching similar profiles, reusing cached summaries, and only calling the model when new context appears. SMTP integration handles verified sending with operator review gates and send throttling.",
+      },
+      {
+        type: "results",
+        heading: "Results",
+        content:
+          "The platform replaced a fragmented manual workflow with one dashboard: faster list building, higher-quality personalized drafts, and predictable AI spend through async batching. Purpose tags keep campaigns organized, and the review-first UI ensures humans stay in the loop before any email leaves the system.",
+      },
+    ],
+  },
 ];
 
 export function getCaseBySlug(slug) {

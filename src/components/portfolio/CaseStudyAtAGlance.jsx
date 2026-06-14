@@ -6,7 +6,7 @@ export default function CaseStudyAtAGlance({ role, timeline, techStack, liveUrl 
       label: "Tech Stack",
       value: techStack?.slice(0, 3).join(", ") + (techStack?.length > 3 ? " +more" : ""),
     },
-    { label: "Live Site", value: liveUrl, isLink: true },
+    ...(liveUrl ? [{ label: "Live Site", value: liveUrl, isLink: true }] : []),
   ];
 
   return (

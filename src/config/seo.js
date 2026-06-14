@@ -45,6 +45,18 @@ export const PAGE_SEO = {
       "Latest news, events, and insights from Kafu People on AI, cloud, and modern software delivery.",
     canonicalPath: "/newsAndEvents",
   },
+  newsList: {
+    title: `News & Updates | ${SITE_NAME}`,
+    description:
+      "Announcements, events, partnerships, and product updates from the Kafu People team.",
+    canonicalPath: "/news",
+  },
+  newsArticle: {
+    title: (title) => `${title} — News | ${SITE_NAME}`,
+    description:
+      "Read the latest news and updates from Kafu People on AI, cloud, and modern software delivery.",
+    canonicalPath: (slug) => `/news/${slug}`,
+  },
   blogPost: {
     title: (title) => `${title} — Blog | ${SITE_NAME}`,
     description:
@@ -56,6 +68,24 @@ export const PAGE_SEO = {
     description:
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: "/blogs",
+  },
+  articles: {
+    title: `Learn | ${SITE_NAME}`,
+    description:
+      "Plain-English guides to AI, cloud, product, and modern software from Kafu People — written to help founders and teams make better decisions.",
+    canonicalPath: "/articles",
+  },
+  article: {
+    title: (title) => `${title} — Learn | ${SITE_NAME}`,
+    description:
+      "An educational guide from Kafu People on AI, cloud, product, and modern software delivery.",
+    canonicalPath: (slug) => `/articles/${slug}`,
+  },
+  team: {
+    title: `Our Team | ${SITE_NAME}`,
+    description:
+      "Meet the distributed, remote-first team of engineers, designers, and strategists building AI, cloud, and full-stack products at Kafu People.",
+    canonicalPath: "/team",
   },
   terms: {
     title: `Terms of Service | ${SITE_NAME}`,

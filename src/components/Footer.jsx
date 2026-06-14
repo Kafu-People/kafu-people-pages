@@ -105,10 +105,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/newsAndEvents"
+                  to="/news"
                   className="hover:text-primary-light transition-colors"
                 >
-                  News & Events
+                  News & Updates
                 </Link>
               </li>
               </ul>

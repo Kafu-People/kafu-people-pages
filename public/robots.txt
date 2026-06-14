@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /signup
+Disallow: /products
+Disallow: /events
+Disallow: /addBlog
+Disallow: /fileUpload
+Disallow: /verifyUser
+Disallow: /registrationList
+
+Sitemap: https://kafupeople.com/sitemap.xml

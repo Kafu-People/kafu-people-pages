@@ -4,6 +4,8 @@ import Hero from "../components/homeComponents/Hero";
 import ServicesSection from "../components/homeComponents/ServicesSection";
 import TrainingPrograms from "../components/homeComponents/TrainingPrograms";
 import Testimonials from "../components/homeComponents/Testimonials";
+import HomeTeamCTA from "../components/homeComponents/HomeTeamCTA";
+import LatestContent from "../components/homeComponents/LatestContent";
 
 const Home = () => {
   const seo = PAGE_SEO.home;
@@ -17,7 +19,9 @@ const Home = () => {
       />
       <Hero />
       <ServicesSection />
+      <HomeTeamCTA />
       <Testimonials />
+      <LatestContent />
       <TrainingPrograms />
     </>
   );

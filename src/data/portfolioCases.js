@@ -86,6 +86,68 @@ const portfolioCases = [
       },
     ],
   },
+  {
+    slug: "nerohalla",
+    productId: "p009",
+    title: "Nerohalla",
+    tagline: "A modern product platform built with Kafu People as development partner",
+    outcome:
+      "Took a product vision from concept toward a launch-ready platform with a clean, scalable foundation",
+    description:
+      "Nerohalla partnered with Kafu People to design and build their product platform, pairing a clear vision with pragmatic engineering to move quickly from concept to a launch-ready build.",
+    category: "SaaS & Startup MVPs",
+    role: "Development Partner",
+    timeline: "Ongoing engagement",
+    // Placeholder image — replace public/products/Nerohalla.webp with real brand art.
+    image: "/products/Nerohalla.webp",
+    liveUrl: "https://nerohalla.com/",
+    techStack: ["React", "Node.js", "PostgreSQL", "AWS", "Tailwind CSS"],
+    features: [
+      {
+        title: "Scalable Foundation",
+        description:
+          "A clean architecture with authentication, a well-structured data model, and a deployment pipeline ready to grow with the product.",
+      },
+      {
+        title: "Responsive Interface",
+        description:
+          "A modern, mobile-first UI built with React and Tailwind for a fast, polished experience across devices.",
+      },
+      {
+        title: "Iterative Delivery",
+        description:
+          "Small, frequent releases that put working software in front of stakeholders early and often.",
+      },
+    ],
+    gallery: ["/products/Nerohalla.webp"],
+    relatedSlugs: ["echo3s"],
+    sections: [
+      {
+        type: "overview",
+        heading: "Overview",
+        content:
+          "Nerohalla engaged Kafu People as their development partner to bring a clear product vision to life. We joined as an extension of their team, owning the technical delivery from foundation through to a launch-ready platform.",
+      },
+      {
+        type: "challenge",
+        heading: "The Challenge",
+        content:
+          "Like many early-stage products, Nerohalla needed to move quickly without accumulating technical debt that would slow future growth. The goal was a platform that could be shipped fast yet remain a solid foundation as the product and team scaled.",
+      },
+      {
+        type: "solution",
+        heading: "Our Solution",
+        content:
+          "We applied our pragmatic build process: scope the core workflow, stand up a clean and scalable foundation, and deliver in small, frequent releases. This kept stakeholders close to the work and ensured every decision served the product's long-term direction.",
+      },
+      {
+        type: "results",
+        heading: "Results",
+        content:
+          "The engagement produced a launch-ready platform on a maintainable foundation, with a workflow that lets the Nerohalla team keep shipping confidently. A more detailed case study will follow as the product reaches its public milestones.",
+      },
+    ],
+  },
 ];
 
 export function getCaseBySlug(slug) {

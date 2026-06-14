@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/check-pages-asset-size.mjs",
+    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/check-pages-asset-size.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
     "check:assets": "node scripts/check-pages-asset-size.mjs",
     "lint": "eslint .",
     "preview": "vite preview"

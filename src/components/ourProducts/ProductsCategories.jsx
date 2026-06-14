@@ -32,6 +32,14 @@ const allProducts = [
     "url": "https://echo3s.io/"
   },
   {
+    "product_id": "p009",
+    "image": "/products/Nerohalla.webp",
+    "name": "Nerohalla",
+    "description": "A modern product platform built with Kafu People as development partner — a scalable foundation taken from concept toward launch.",
+    "category": "SaaS & Startup MVPs",
+    "url": "https://nerohalla.com/"
+  },
+  {
     "product_id": "p002",
     "image": "/products/Dustai.webp",
     "name": "Dustai",

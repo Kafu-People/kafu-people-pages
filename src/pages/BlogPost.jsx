@@ -70,9 +70,14 @@ const BlogPost = () => {
         </Link>
 
         <header className="mb-8">
-          <span className="mb-3 inline-block rounded-full bg-CPurple/10 px-3 py-1 text-sm font-medium text-CPurple">
-            {blog.category}
-          </span>
+          <div className="mb-3 flex flex-wrap items-center gap-3">
+            <span className="inline-block rounded-full bg-CPurple/10 px-3 py-1 text-sm font-semibold text-CPurple">
+              Blog
+            </span>
+            {blog.category && (
+              <span className="text-sm text-gray-500">{blog.category}</span>
+            )}
+          </div>
           <h1 className="text-3xl font-bold text-cDarkBlue sm:text-4xl">
             {blog.title}
           </h1>

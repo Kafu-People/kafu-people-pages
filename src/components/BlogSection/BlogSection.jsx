@@ -74,14 +74,13 @@ const BlogSection = () => {
             containerClassName="pt-8"
           >
             <h1 className="ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24">
-              KAFUPEOPLE BLOGS
+              Kafu People Blogs
             </h1>
             <div className="lg:w-[700px] w-auto">
               <p className="text-lg sm:text-xl lg:text-left lg:ml-24 mx-4 sm:text-justify text-cWhite mt-2">
-                Our company shares updates, achievements, and new projects. We
-                also post ideas, insights, and random thoughts on industry
-                trends, innovation, and daily work experiences. Stay connected
-                for news, announcements, and behind-the-scenes stories.
+                Team insights, startup lessons, and engineering perspectives —
+                including the posts we share on LinkedIn. Short reads from our
+                experience building products with clients.
               </p>
             </div>
           </PageHero>
@@ -130,11 +129,11 @@ const BlogSection = () => {
             ) : !Array.isArray(blogs) || blogs.length === 0 ? (
               <div className="text-center py-16">
                 <h3 className="text-2xl font-bold text-cDarkBlue mb-4">
-                  No articles yet
+                  No blog posts yet
                 </h3>
                 <p className="text-gray-600 max-w-md mx-auto">
-                  We're working on publishing our first articles. Check back
-                  soon for insights and updates from Kafu People.
+                  We&apos;re working on publishing our first posts. Check back
+                  soon for insights from Kafu People.
                 </p>
               </div>
             ) : (
@@ -152,21 +151,31 @@ const BlogSection = () => {
                       className="block"
                     >
                       <motion.div
-                        className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-CPurple"
+                        className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg cursor-pointer hover:border-CPurple/40 hover:shadow-CPurple"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
                         <img
                           src={blog.image}
                           alt={blog.title}
-                          className="w-full h-48 object-cover opacity-100 sm:opacity-80 md:opacity-100"
+                          className="h-48 w-full object-cover opacity-100 sm:opacity-80 md:opacity-100"
                         />
                         <div className="p-6">
+                          <div className="mb-2 flex items-center justify-between gap-2">
+                            <span className="inline-block rounded-full bg-CPurple/10 px-3 py-1 text-xs font-semibold text-CPurple">
+                              Blog
+                            </span>
+                            {blog.category && (
+                              <span className="text-xs text-gray-500">
+                                {blog.category}
+                              </span>
+                            )}
+                          </div>
                           <h2 className="text-xl font-bold text-cDarkBlue">
                             {blog.title}
                           </h2>
-                          <p className="text-CPurple mt-2 line-clamp-3">
-                            {blog.description}
+                          <p className="mt-2 line-clamp-3 text-gray-600">
+                            {blog.description.split("\n\n")[0]}
                           </p>
                         </div>
                       </motion.div>
@@ -175,7 +184,7 @@ const BlogSection = () => {
                 ) : (
                   <div className="col-span-full text-center py-12">
                     <p className="text-gray-500">
-                      No articles found for this category.
+                      No blog posts found for this category.
                     </p>
                   </div>
                 )}

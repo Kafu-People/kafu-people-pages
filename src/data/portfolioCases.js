@@ -90,61 +90,81 @@ const portfolioCases = [
     slug: "nerohalla",
     productId: "p009",
     title: "Nerohalla",
-    tagline: "A modern product platform built with Kafu People as development partner",
+    tagline: "AI-powered job search and application tracking for modern candidates",
     outcome:
-      "Took a product vision from concept toward a launch-ready platform with a clean, scalable foundation",
+      "Delivered a launch-ready platform spanning public job discovery, an application dashboard, profile onboarding, and flexible resume settings",
     description:
-      "Nerohalla partnered with Kafu People to design and build their product platform, pairing a clear vision with pragmatic engineering to move quickly from concept to a launch-ready build.",
+      "Nerohalla is a premium job-search platform where candidates discover roles, track applications, and generate tailored resumes — with a polished dark UI, ATS integrations, and configurable AI-assisted workflows.",
     category: "SaaS & Startup MVPs",
     role: "Development Partner",
     timeline: "Ongoing engagement",
-    // Placeholder image — replace public/products/Nerohalla.webp with real brand art.
-    image: "/products/Nerohalla.webp",
-    liveUrl: "https://nerohalla.com/",
-    techStack: ["React", "Node.js", "PostgreSQL", "AWS", "Tailwind CSS"],
+    image: "/products/Landing_1.webp",
+    liveUrl: "https://nerohalla.up.railway.app/",
+    techStack: ["React", "Node.js", "PostgreSQL", "Tailwind CSS", "AWS", "RenderCV"],
     features: [
       {
-        title: "Scalable Foundation",
+        title: "Job Discovery Landing",
         description:
-          "A clean architecture with authentication, a well-structured data model, and a deployment pipeline ready to grow with the product.",
+          "A cinematic marketing site with job search, category browsing, and a clear path from discovery to the candidate dashboard.",
       },
       {
-        title: "Responsive Interface",
+        title: "Application Dashboard",
         description:
-          "A modern, mobile-first UI built with React and Tailwind for a fast, polished experience across devices.",
+          "Track roles by company, filter by stack and status, match skills to listings, and manage apply/resume state in one workspace.",
       },
       {
-        title: "Iterative Delivery",
+        title: "Profile Onboarding",
         description:
-          "Small, frequent releases that put working software in front of stakeholders early and often.",
+          "A guided multi-step profile builder covering contact details, skills, employment, and education — with progress tracking to 100%.",
+      },
+      {
+        title: "Settings & Resume Customization",
+        description:
+          "Flexible settings for EEO autofill, resume design, downloads, and AI prompt configuration — all in a clean, premium UI.",
+      },
+      {
+        title: "ATS Integrations",
+        description:
+          "Pull jobs from Greenhouse, Ashby, Lever, Workable, and domain-based sources so candidates can search and apply from one hub.",
+      },
+      {
+        title: "Generated Resumes",
+        description:
+          "Create and attach tailored resumes per application, with a RenderCV editor integrated into the workflow.",
       },
     ],
-    gallery: ["/products/Nerohalla.webp"],
+    gallery: [
+      "/products/Landing_1.webp",
+      "/products/Landing_2.webp",
+      "/products/Nerohalla-Dashboard.webp",
+      "/products/Profile.webp",
+      "/products/Setttings.webp",
+    ],
     relatedSlugs: ["echo3s"],
     sections: [
       {
         type: "overview",
         heading: "Overview",
         content:
-          "Nerohalla engaged Kafu People as their development partner to bring a clear product vision to life. We joined as an extension of their team, owning the technical delivery from foundation through to a launch-ready platform.",
+          "Nerohalla helps job seekers find opportunities, manage applications, and produce tailored resumes from a single platform. Kafu People joined as development partner to turn that vision into a cohesive product — from the public landing experience through to the authenticated dashboard, profile builder, and settings layer.",
       },
       {
         type: "challenge",
         heading: "The Challenge",
         content:
-          "Like many early-stage products, Nerohalla needed to move quickly without accumulating technical debt that would slow future growth. The goal was a platform that could be shipped fast yet remain a solid foundation as the product and team scaled.",
+          "Job seekers juggle dozens of listings across multiple ATS platforms, each with different forms, resume formats, and tracking needs. Nerohalla needed a product that could unify discovery and application management without feeling generic — a premium brand experience backed by practical tools for search, tracking, profile setup, and resume generation.",
       },
       {
         type: "solution",
         heading: "Our Solution",
         content:
-          "We applied our pragmatic build process: scope the core workflow, stand up a clean and scalable foundation, and deliver in small, frequent releases. This kept stakeholders close to the work and ensured every decision served the product's long-term direction.",
+          "We built Nerohalla as a full-stack SaaS platform: a high-impact landing and category experience for discovery, a dashboard for filtering and tracking applications with stack matching, a step-by-step profile builder, and a settings area for EEO autofill, resume styling, and AI prompt customization. ATS integrations and a RenderCV editor connect the workflow end to end.",
       },
       {
         type: "results",
         heading: "Results",
         content:
-          "The engagement produced a launch-ready platform on a maintainable foundation, with a workflow that lets the Nerohalla team keep shipping confidently. A more detailed case study will follow as the product reaches its public milestones.",
+          "The platform is live with a polished candidate experience across marketing pages, the job dashboard, profile onboarding, and settings. Nerohalla now has a scalable foundation to grow job inventory, refine AI-assisted resume workflows, and expand integrations as the product reaches more users.",
       },
     ],
   },

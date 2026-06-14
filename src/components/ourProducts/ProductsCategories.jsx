@@ -4,15 +4,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Loader from "../Loader";
 import { getCaseByProductId } from "../../data/portfolioCases";
+import { SERVICE_CATEGORY_TITLES } from "../../constants/serviceCategories";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
-const categories = [
-  "AI & Agentic Workflows",
-  "SaaS & Startup MVPs",
-  "Cloud-Native Dashboards",
-  "Business & Corporate Websites",
-];
+const categories = SERVICE_CATEGORY_TITLES;
 
 const allProducts = [
   // {
@@ -33,11 +29,11 @@ const allProducts = [
   },
   {
     "product_id": "p009",
-    "image": "/products/Nerohalla.webp",
+    "image": "/products/Landing_1.webp",
     "name": "Nerohalla",
-    "description": "A modern product platform built with Kafu People as development partner — a scalable foundation taken from concept toward launch.",
+    "description": "AI-powered job search and application tracking — discover roles, manage applications, build your profile, and generate tailored resumes from one premium platform.",
     "category": "SaaS & Startup MVPs",
-    "url": "https://nerohalla.com/"
+    "url": "https://nerohalla.up.railway.app/"
   },
   {
     "product_id": "p002",

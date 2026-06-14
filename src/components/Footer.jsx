@@ -16,10 +16,18 @@ import {
   WHATSAPP_URL,
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
+  OFFICE_ADDRESS,
 } from "../constants/site";
+import { SERVICE_CATEGORIES } from "../constants/serviceCategories";
 import { NewsletterSubscribeForm } from "./NewsletterSignup";
 
 const columnClass = "min-w-0 w-full";
+const SERVICE_FOOTER_ICONS = {
+  "ai-agentic": FaShieldAlt,
+  "saas-mvp": FaBrain,
+  "cloud-dashboards": FaCloud,
+  "business-websites": FaLink,
+};
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnInnerClass =
@@ -56,22 +64,18 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Services</h3>
               <ul className={listClass}>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaShieldAlt className="mr-2 shrink-0" />
-                AI & Agentic Workflows
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaBrain className="mr-2 shrink-0" />
-                SaaS & Startup MVPs
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaCloud className="mr-2 shrink-0" />
-                Cloud-Native Dashboards
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaLink className="mr-2 shrink-0" />
-                Business & Corporate Websites
-              </li>
+                {SERVICE_CATEGORIES.map(({ id, title }) => {
+                  const Icon = SERVICE_FOOTER_ICONS[id];
+                  return (
+                    <li
+                      key={id}
+                      className="flex items-center transition-colors hover:text-primary-light"
+                    >
+                      <Icon className="mr-2 shrink-0" />
+                      {title}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -124,7 +128,7 @@ const Footer = () => {
                   <FaLocationDot />
                   Address:
                 </span>{" "}
-                Amsterdam, NL
+                {OFFICE_ADDRESS}
               </li>
               <li>
                 <span className="font-semibold text-accent-light flex items-center gap-1">

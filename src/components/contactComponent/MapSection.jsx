@@ -1,8 +1,9 @@
 import { useCookieConsent } from "../../context/useCookieConsent";
 import CookieFeatureFallback from "../cookies/CookieFeatureFallback";
-
-const MAPS_OPEN_URL =
-  "https://www.google.com/maps/search/?api=1&query=Amsterdam%2C+Netherlands";
+import {
+  OFFICE_MAPS_EMBED_URL,
+  OFFICE_MAPS_URL,
+} from "../../constants/site";
 
 const MapSection = () => {
   const { hydrated, allowFunctional } = useCookieConsent();
@@ -29,7 +30,7 @@ const MapSection = () => {
             className="shadow-sm"
           />
           <a
-            href={MAPS_OPEN_URL}
+            href={OFFICE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 block text-center text-sm font-semibold text-cBrightBlue underline hover:text-CPurple"
@@ -50,8 +51,8 @@ const MapSection = () => {
       }}
     >
       <iframe
-        title="KAFUPEOPLE office location — Amsterdam area"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77979.66565641426!2d4.821560303178677!3d52.35474184409316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1776537948033!5m2!1sen!2sus"
+        title="Kafu People office location — Brantjesoever 4, Purmerend"
+        src={OFFICE_MAPS_EMBED_URL}
         className="absolute inset-0 h-full w-full"
         style={{
           border: 0,

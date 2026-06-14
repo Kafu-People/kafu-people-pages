@@ -1,8 +1,13 @@
 export const SITE_NAME = "Kafu People";
 export const SITE_URL = "https://kafupeople.com";
 export const CONTACT_EMAIL = "hello@kafupeople.com";
-export const WHATSAPP_URL = "https://wa.me/31613913024";
-export const WHATSAPP_DISPLAY = "+31 6 13913024";
+export const OFFICE_ADDRESS = "Brantjesoever 4, 1441DW Purmerend, Netherlands";
+export const OFFICE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Brantjesoever+4,+1441DW+Purmerend,+Netherlands";
+export const OFFICE_MAPS_EMBED_URL =
+  "https://maps.google.com/maps?q=Brantjesoever+4,+1441DW+Purmerend,+Netherlands&hl=en&z=16&output=embed";
+export const WHATSAPP_URL = "https://wa.me/14436473437";
+export const WHATSAPP_DISPLAY = "+1 (443) 647-3437";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/kafu-people/";
 export const CALENDLY_URL = "https://calendly.com/kafupeople/30min";
 export const CALENDLY_PRIMARY_COLOR = "#1E4FD4";

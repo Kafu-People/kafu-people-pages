@@ -8,6 +8,7 @@ import {
   WHATSAPP_URL,
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
+  OFFICE_ADDRESS,
 } from "../constants/site";
 
 const ContactSection = () => {
@@ -77,7 +78,7 @@ const ContactSection = () => {
             <p className="flex justify-center text-cWhite/90 lg:justify-start">
               <FaLocationDot className="mr-2" /> Address:
             </p>
-            <p className="text-cWhite/80">Amsterdam, NL</p>
+            <p className="text-cWhite/80">{OFFICE_ADDRESS}</p>
           </div>
           <div className="mb-4">
             <CalendlyPopup buttonText="Book a Meeting" />

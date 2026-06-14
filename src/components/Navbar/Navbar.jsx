@@ -12,7 +12,6 @@ const menuItems = [
   { title: "PORTFOLIO", url: "/portfolio" },
   { title: "TEAM", url: "/team" },
   { title: "BLOGS", url: "/blogs" },
-  { title: "LEARN", url: "/articles" },
   { title: "CONTACT", url: "/contact" },
 ];
 

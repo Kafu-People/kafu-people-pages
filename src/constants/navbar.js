@@ -8,7 +8,6 @@ const DARK_HERO_PATHS = new Set([
   "/newsAndEvents",
   "/news",
   "/blogs",
-  "/articles",
   "/team",
   "/ProductsCategories",
 ]);

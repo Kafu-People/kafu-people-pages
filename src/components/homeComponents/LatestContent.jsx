@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import staticBlogs from "../../data/blogs";
 import { getLatestNews } from "../../data/news";
-import { getLatestArticles } from "../../data/articles";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("en-GB", {
@@ -11,7 +10,6 @@ const formatDate = (iso) =>
     year: "numeric",
   });
 
-// Pull the most recent item from each content type for a mixed preview.
 const buildItems = () => {
   const items = [];
 
@@ -32,25 +30,12 @@ const buildItems = () => {
   if (latestBlog) {
     items.push({
       key: latestBlog._id,
-      kind: "Blog",
+      kind: "Blog post",
       to: `/blogs/${latestBlog.slug}`,
       image: latestBlog.image,
       title: latestBlog.title,
-      excerpt: latestBlog.description,
+      excerpt: latestBlog.description.split("\n\n")[0],
       meta: latestBlog.category,
-    });
-  }
-
-  const latestArticle = getLatestArticles(1)[0];
-  if (latestArticle) {
-    items.push({
-      key: latestArticle._id,
-      kind: "Learn",
-      to: `/articles/${latestArticle.slug}`,
-      image: latestArticle.image,
-      title: latestArticle.title,
-      excerpt: latestArticle.excerpt,
-      meta: latestArticle.readingTime,
     });
   }
 
@@ -67,12 +52,12 @@ const LatestContent = () => {
         <h4 className="mb-2 text-xl text-textGray">FRESH FROM KAFU PEOPLE</h4>
         <h2 className="text-3xl font-bold text-CPurple">Latest Content</h2>
         <p className="mt-3 text-textGray">
-          News, articles, and ideas from across our team.
+          Company news and team insights from across Kafu People.
         </p>
       </div>
 
       <motion.div
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -114,10 +99,10 @@ const LatestContent = () => {
           View All News
         </Link>
         <Link
-          to="/articles"
+          to="/blogs"
           className="rounded-xl border border-CPurple px-6 py-3 font-semibold text-CPurple transition hover:bg-CPurple hover:text-white"
         >
-          Explore Articles
+          Read Blogs
         </Link>
       </div>
     </section>

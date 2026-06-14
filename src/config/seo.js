@@ -18,7 +18,7 @@ export const PAGE_SEO = {
   contact: {
     title: `Contact | ${SITE_NAME}`,
     description:
-      "Book a meeting or reach Kafu People in Amsterdam. We respond quickly and work with clients worldwide.",
+      "Book a meeting or reach Kafu People in Purmerend, Netherlands. We respond quickly and work with clients worldwide.",
     canonicalPath: "/contact",
   },
   portfolio: {
@@ -68,18 +68,6 @@ export const PAGE_SEO = {
     description:
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: "/blogs",
-  },
-  articles: {
-    title: `Learn | ${SITE_NAME}`,
-    description:
-      "Plain-English guides to AI, cloud, product, and modern software from Kafu People — written to help founders and teams make better decisions.",
-    canonicalPath: "/articles",
-  },
-  article: {
-    title: (title) => `${title} — Learn | ${SITE_NAME}`,
-    description:
-      "An educational guide from Kafu People on AI, cloud, product, and modern software delivery.",
-    canonicalPath: (slug) => `/articles/${slug}`,
   },
   team: {
     title: `Our Team | ${SITE_NAME}`,

@@ -21,7 +21,6 @@ const staticPaths = [
   "/portfolio",
   "/team",
   "/blogs",
-  "/articles",
   "/news",
   "/contact",
   "/terms-of-service",
@@ -37,7 +36,6 @@ const slugsFrom = (relPath) => {
 const dynamicPaths = [
   ...slugsFrom("src/data/blogs.js").map((s) => `/blogs/${s}`),
   ...slugsFrom("src/data/news.js").map((s) => `/news/${s}`),
-  ...slugsFrom("src/data/articles.js").map((s) => `/articles/${s}`),
   ...slugsFrom("src/data/portfolioCases.js").map((s) => `/portfolio/${s}`),
 ];
 

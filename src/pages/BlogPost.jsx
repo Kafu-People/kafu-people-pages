@@ -3,18 +3,22 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import PageSEO from "../components/PageSEO";
 import Loader from "../components/Loader";
-import { PAGE_SEO } from "../config/seo";
+import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { getStaticBlogBySlug, getStaticBlogById } from "../data/blogs";
+import { BlogPostingLD, BreadcrumbListLD } from "../components/Schema";
+import { useSSRData } from "../lib/SSRDataContext";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const ssrBlog = useSSRData("blog");
+  const [blog, setBlog] = useState(ssrBlog || null);
+  const [loading, setLoading] = useState(!ssrBlog);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (ssrBlog && ssrBlog.slug === slug) return;
     let found = getStaticBlogBySlug(slug) || getStaticBlogById(slug);
     if (found) {
       setBlog(found);
@@ -31,7 +35,7 @@ const BlogPost = () => {
         setError("Blog post not found.");
         setLoading(false);
       });
-  }, [slug]);
+  }, [slug, ssrBlog]);
 
   if (loading) return <Loader />;
 
@@ -52,15 +56,39 @@ const BlogPost = () => {
     );
   }
 
-  const { title, description, canonicalPath } = PAGE_SEO.blogPost;
+  const { title, canonicalPath } = PAGE_SEO.blogPost;
+  const rawExcerpt = blog.description
+    ? blog.description.split("\n\n")[0]
+    : PAGE_SEO.blogPost.description;
+  const blogDescription = rawExcerpt.length > 155
+    ? rawExcerpt.slice(0, 152).replace(/\s+\S*$/, "") + "..."
+    : rawExcerpt;
+
+  const blogOgImage = blog.image
+    ? blog.image.startsWith("http")
+      ? blog.image
+      : `${SITE_URL}${blog.image}`
+    : undefined;
 
   return (
     <>
       <PageSEO
         title={title(blog.title)}
-        description={description}
+        description={blogDescription}
         canonicalPath={canonicalPath(blog.slug || slug)}
-      />
+        ogImage={blogOgImage}
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(BlogPostingLD(blog))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(BreadcrumbListLD([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blogs" },
+            { name: blog.title, path: `/blogs/${blog.slug}` },
+          ]))}
+        </script>
+      </PageSEO>
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
           to="/blogs"

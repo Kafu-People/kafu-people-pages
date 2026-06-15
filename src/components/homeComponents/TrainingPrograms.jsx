@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const topics = [
   "Artificial Intelligence",
   "Cyber Security",

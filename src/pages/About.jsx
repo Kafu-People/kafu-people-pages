@@ -1,5 +1,7 @@
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
+import { OrganizationLD, PersonLD } from "../components/Schema";
+import { executives } from "../data/team";
 import AboutHero from "../components/aboutComponenets/AboutHero";
 import Vision from "../components/aboutComponenets/Vision";
 import AnimatedStats from "../components/AnimatedStats";
@@ -17,7 +19,16 @@ const About = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={seo.canonicalPath}
-      />
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(OrganizationLD())}
+        </script>
+        {executives.map((member) => (
+          <script key={member.name} type="application/ld+json">
+            {JSON.stringify(PersonLD(member))}
+          </script>
+        ))}
+      </PageSEO>
       <AboutHero />
       <AnimatedStats />
       <Vision />

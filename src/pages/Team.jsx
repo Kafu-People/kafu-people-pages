@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
+import { PersonLD } from "../components/Schema";
 import PageHero from "../components/ui/PageHero";
 import TeamCard from "../components/team/TeamCard";
 import teamHero from "../assets/images/aboutUs/Development.webp";
@@ -17,7 +18,13 @@ const Team = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={seo.canonicalPath}
-      />
+      >
+        {executives.map((member) => (
+          <script key={member.name} type="application/ld+json">
+            {JSON.stringify(PersonLD(member))}
+          </script>
+        ))}
+      </PageSEO>
 
       <PageHero
         image={teamHero}

@@ -1,7 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import PageSEO from "../components/PageSEO";
 import { getCaseBySlug } from "../data/portfolioCases";
-import { PAGE_SEO } from "../config/seo";
+import { PAGE_SEO, SITE_URL } from "../config/seo";
+import { SoftwareAppLD } from "../components/Schema";
+import { useSSRData } from "../lib/SSRDataContext";
 import CaseStudyHero from "../components/portfolio/CaseStudyHero";
 import CaseStudyAtAGlance from "../components/portfolio/CaseStudyAtAGlance";
 import CaseStudySection from "../components/portfolio/CaseStudySection";
@@ -13,7 +15,8 @@ import RelatedCaseStudies from "../components/portfolio/RelatedCaseStudies";
 
 const PortfolioCaseStudy = () => {
   const { slug } = useParams();
-  const caseStudy = getCaseBySlug(slug);
+  const ssrCaseStudy = useSSRData("portfolio");
+  const caseStudy = ssrCaseStudy || getCaseBySlug(slug);
 
   if (!caseStudy) {
     return (
@@ -40,14 +43,24 @@ const PortfolioCaseStudy = () => {
   const solution = caseStudy.sections.find((s) => s.type === "solution");
   const results = caseStudy.sections.find((s) => s.type === "results");
 
+  const csOgImage = caseStudy.image
+    ? caseStudy.image.startsWith("http")
+      ? caseStudy.image
+      : `${SITE_URL}${caseStudy.image}`
+    : undefined;
+
   return (
     <>
       <PageSEO
         title={title(caseStudy.title)}
         description={description}
         canonicalPath={canonicalPath(caseStudy.slug)}
-        ogImage={caseStudy.image}
-      />
+        ogImage={csOgImage}
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(SoftwareAppLD(caseStudy))}
+        </script>
+      </PageSEO>
 
       <CaseStudyHero
         title={caseStudy.title}

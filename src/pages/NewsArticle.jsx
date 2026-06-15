@@ -1,7 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import PageSEO from "../components/PageSEO";
-import { PAGE_SEO } from "../config/seo";
+import { PAGE_SEO, SITE_URL } from "../config/seo";
+import { ArticleLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
+import { useSSRData } from "../lib/SSRDataContext";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("en-GB", {
@@ -12,7 +14,8 @@ const formatDate = (iso) =>
 
 const NewsArticle = () => {
   const { slug } = useParams();
-  const article = getNewsBySlug(slug);
+  const ssrArticle = useSSRData("news");
+  const article = ssrArticle || getNewsBySlug(slug);
 
   if (!article) {
     return (
@@ -35,13 +38,24 @@ const NewsArticle = () => {
 
   const { title, description, canonicalPath } = PAGE_SEO.newsArticle;
 
+  const articleOgImage = article.image
+    ? article.image.startsWith("http")
+      ? article.image
+      : `${SITE_URL}${article.image}`
+    : undefined;
+
   return (
     <>
       <PageSEO
         title={title(article.title)}
         description={article.excerpt || description}
         canonicalPath={canonicalPath(article.slug)}
-      />
+        ogImage={articleOgImage}
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(ArticleLD(article))}
+        </script>
+      </PageSEO>
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
           to="/news"

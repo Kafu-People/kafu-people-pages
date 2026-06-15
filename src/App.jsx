@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ServiceMainFile from "./components/servicesComponents/ServiceMainFile";
@@ -44,7 +44,7 @@ import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
 const App = () => {
 
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <CookieConsentProvider>
         <Header />
@@ -151,7 +151,7 @@ const App = () => {
         <Footer />
         <FloatingWhatsApp />
       </CookieConsentProvider>
-    </Router>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import blogsection from "../../assets/images/blogs/blogSection.jpg";
 import Loader from "../Loader";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
+import { BreadcrumbListLD } from "../Schema";
 import PageHero from "../ui/PageHero";
 import staticBlogs from "../../data/blogs";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -60,7 +61,14 @@ const BlogSection = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={seo.canonicalPath}
-      />
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(BreadcrumbListLD([
+            { name: "Home", path: "/" },
+            { name: "Blogs", path: "/blogs" },
+          ]))}
+        </script>
+      </PageSEO>
       {loading ? (
         <Loader />
       ) : (

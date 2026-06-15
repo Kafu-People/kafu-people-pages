@@ -1,5 +1,6 @@
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
+import { OrganizationLD } from "../components/Schema";
 import Hero from "../components/homeComponents/Hero";
 import ServicesSection from "../components/homeComponents/ServicesSection";
 import TrainingPrograms from "../components/homeComponents/TrainingPrograms";
@@ -16,7 +17,11 @@ const Home = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={seo.canonicalPath}
-      />
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(OrganizationLD())}
+        </script>
+      </PageSEO>
       <Hero />
       <ServicesSection />
       <HomeTeamCTA />

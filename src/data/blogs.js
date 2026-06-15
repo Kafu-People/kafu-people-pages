@@ -26,6 +26,9 @@ const staticBlogs = [
       "Smaller teams. Bigger output. Faster execution.\n\n" +
       "The future belongs to teams that combine human ownership, engineering judgment, and AI leverage.",
     category: "AI",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-05-15",
+    dateModified: "2026-05-15",
     image: "/images/blogs/ai-will-not-replace-developers.webp",
   },
   {
@@ -57,6 +60,9 @@ const staticBlogs = [
       "It's flexibility, scalability, and the ability to invest more of your resources directly into product growth.\n\n" +
       "How is your team optimizing engineering efficiency and technical runway in 2026?",
     category: "Web Development",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-05-01",
+    dateModified: "2026-05-01",
     image: "/images/blogs/local-hiring-vs-remote-engineering-teams.webp",
   },
   {
@@ -73,6 +79,9 @@ const staticBlogs = [
       "By keeping these layers loosely coupled, we can swap out the underlying model as the ecosystem evolves without rewriting the entire system. This modularity has been critical for clients who started with GPT-4 and later migrated to open-source models like Llama or Mistral for cost reasons.\n\n" +
       "If you are considering adding AI agents to your product roadmap, start small. Pick one repetitive task that consumes at least five hours of human time per week, automate it, measure the savings, and then expand. That iterative approach consistently delivers the highest return on investment.",
     category: "AI",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-04-20",
+    dateModified: "2026-04-20",
     image: blogImg,
   },
   {
@@ -85,6 +94,9 @@ const staticBlogs = [
       "Fine-tuning changes the model's behaviour. It is the right tool when you need a specific tone, a structured output format, or a skill the base model performs poorly. Fine-tuning does not reliably teach a model new facts — that is what RAG is for.\n\n" +
       "Our default recommendation for most teams is to start with RAG plus careful prompt engineering. It is faster to ship, easier to debug, and keeps your data fresh. Reach for fine-tuning only once you have hit a clear ceiling that prompting and retrieval cannot break through.",
     category: "AI",
+    author: "Muhammad Waqas",
+    datePublished: "2026-04-10",
+    dateModified: "2026-04-10",
     image: cloudImg,
   },
   {
@@ -97,6 +109,9 @@ const staticBlogs = [
       "Weeks four and five are where the product comes alive. We build the primary feature end to end, wire up payments if needed, and start daily internal testing. Week six is hardening: fixing the bugs that matter, adding analytics so you can learn from launch, and shipping to production.\n\n" +
       "The discipline that makes this work is saying no. Every feature request during the build is logged for the post-launch roadmap rather than allowed to expand the MVP. You learn far more from a small product real users touch than from a large product nobody has seen.",
     category: "Web Development",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-03-25",
+    dateModified: "2026-03-25",
     image: blogSectionImg,
   },
   {
@@ -109,6 +124,9 @@ const staticBlogs = [
       "Code-split at the route level. Lazy-loading pages with React.lazy and Suspense means users only download the code for the screen they are viewing. Combined with compressing and lazy-loading images, this usually delivers the biggest single improvement to load time.\n\n" +
       "Only then worry about re-renders. Memoise expensive computations, keep state as local as possible, and avoid creating new object or function references in render paths that feed memoised children. Used surgically, these techniques keep complex interfaces feeling instant.",
     category: "Web Development",
+    author: "Muhammad Waqas",
+    datePublished: "2026-03-15",
+    dateModified: "2026-03-15",
     image: cloudImg3,
   },
   {
@@ -121,6 +139,9 @@ const staticBlogs = [
       "Embrace serverless for spiky workloads. Lambda, Fargate, and managed queues mean you pay for what you use rather than for idle servers waiting for traffic. For early products with unpredictable usage, this alone can reshape the cost curve.\n\n" +
       "Finally, set up billing alerts and tag everything. You cannot optimise what you cannot see. A simple tagging convention plus a weekly cost review turns the bill from a year-end surprise into a metric your team actively manages.",
     category: "AI",
+    author: "Muhammad Waqas",
+    datePublished: "2026-03-05",
+    dateModified: "2026-03-05",
     image: cloudImg,
   },
   {
@@ -133,6 +154,9 @@ const staticBlogs = [
       "Get authentication right. Hash passwords with a modern algorithm, enforce strong sessions, and offer multi-factor authentication. Never roll your own crypto — lean on well-audited libraries and identity providers.\n\n" +
       "Finally, keep dependencies current and automate the boring parts. Vulnerability scanning in CI, secrets kept out of source control, and least-privilege access for every service quietly prevent the incidents that make headlines.",
     category: "Cyber Security",
+    author: "Masooma Ali",
+    datePublished: "2026-02-20",
+    dateModified: "2026-02-20",
     image: iotImg,
   },
   {
@@ -145,6 +169,9 @@ const staticBlogs = [
       "Give crawlers a map. A generated sitemap.xml that lists every public route, combined with clean semantic HTML and proper heading structure, helps search engines understand and index your content quickly.\n\n" +
       "Finally, do not forget social previews. Open Graph and Twitter card tags determine how your links look when shared, and a compelling preview meaningfully improves click-through from social platforms.",
     category: "Digital Marketing",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-02-10",
+    dateModified: "2026-02-10",
     image: blogSectionImg,
   },
   {
@@ -157,6 +184,9 @@ const staticBlogs = [
       "Fail clearly. Good error responses include a machine-readable code, a human-readable message, and enough context to act on. Vague 500 errors are the fastest way to frustrate the people building on your platform.\n\n" +
       "Document with real examples. A copy-pasteable request and response for every endpoint, plus a quickstart that gets a developer to their first successful call in minutes, is worth more than any amount of prose.",
     category: "Web Development",
+    author: "Muhammad Waqas",
+    datePublished: "2026-01-25",
+    dateModified: "2026-01-25",
     image: cloudImg3,
   },
   {
@@ -169,6 +199,9 @@ const staticBlogs = [
       "Always keep a human in the loop where mistakes are costly. The goal is to make your team faster, not to remove their judgement. An LLM that drafts and a person who approves is a far safer pattern than full automation of consequential decisions.\n\n" +
       "Measure the time saved and the error rate from day one. Concrete numbers are what turn a promising experiment into a tool the whole organisation depends on.",
     category: "AI",
+    author: "Muhammad Waqas",
+    datePublished: "2026-01-15",
+    dateModified: "2026-01-15",
     image: iotImg,
   },
   {
@@ -223,6 +256,9 @@ const staticBlogs = [
       "Launch sooner. Learn faster. Grow smarter.\n\n" +
       "What's the biggest mistake you've seen early-stage startups make when building products?",
     category: "Digital Marketing",
+    author: "Dr. Hafeez Ur Rehman",
+    datePublished: "2026-01-05",
+    dateModified: "2026-01-05",
     image: "/images/blogs/KAFU-People_Validated-Roots_Startup-Growth.webp",
   },
 ];

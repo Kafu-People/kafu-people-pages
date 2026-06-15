@@ -15,6 +15,7 @@ const staticNews = [
       "If your team has a repetitive, high-volume process that eats hours every week, we'd love to talk about whether an agent is the right fit.",
     category: "Company",
     date: "2026-05-28",
+    author: "Kafu People",
     image: "/images/newsAndEvents/news.svg",
   },
   {
@@ -29,6 +30,7 @@ const staticNews = [
       "You can read the full story in our portfolio case study, or visit echo3s.io to see it in action.",
     category: "Product",
     date: "2026-05-12",
+    author: "Kafu People",
     image: "/images/newsAndEvents/image1.svg",
   },
   {
@@ -43,6 +45,7 @@ const staticNews = [
       "If you'll be in Amsterdam and want to grab a coffee, reach out — we'd love to say hello in person.",
     category: "Events",
     date: "2026-04-30",
+    author: "Kafu People",
     image: "/images/newsAndEvents/image2.svg",
   },
   {
@@ -57,6 +60,7 @@ const staticNews = [
       "It's a small change in process with an outsized effect on time-to-first-demo.",
     category: "Product",
     date: "2026-04-15",
+    author: "Kafu People",
     image: "/images/newsAndEvents/image3.svg",
   },
   {
@@ -71,6 +75,7 @@ const staticNews = [
       "Watch this space for updates as the project progresses.",
     category: "Partnership",
     date: "2026-03-22",
+    author: "Kafu People",
     image: "/images/newsAndEvents/image4.svg",
   },
   {
@@ -85,6 +90,7 @@ const staticNews = [
       "Being remote-first isn't a constraint we tolerate — it's a deliberate choice that lets us work with great people wherever they are.",
     category: "Company",
     date: "2026-03-05",
+    author: "Kafu People",
     image: "/images/newsAndEvents/blog1.svg",
   },
   {
@@ -99,6 +105,7 @@ const staticNews = [
       "The second: real usage beats internal debate. A small product that users actually touch teaches you more in a week than months of planning. Ship, watch, and adjust.",
     category: "Company",
     date: "2026-02-18",
+    author: "Kafu People",
     image: "/images/newsAndEvents/blog2.svg",
   },
   {
@@ -113,6 +120,7 @@ const staticNews = [
       "The feedback was clear: founders don't want more AI hype, they want a straight answer about what's worth doing. We're planning to run more of these sessions.",
     category: "Events",
     date: "2026-01-29",
+    author: "Kafu People",
     image: "/images/newsAndEvents/blog3.svg",
   },
   {
@@ -127,6 +135,7 @@ const staticNews = [
       "Thanks for following along as we keep building.",
     category: "Company",
     date: "2026-01-14",
+    author: "Kafu People",
     image: "/images/newsAndEvents/blog4.svg",
   },
   {
@@ -141,6 +150,7 @@ const staticNews = [
       "It's the kind of careful, detail-driven work that doesn't make headlines but quietly keeps a business running.",
     category: "Company",
     date: "2025-12-20",
+    author: "Kafu People",
     image: "/images/newsAndEvents/image1.svg",
   },
 ];

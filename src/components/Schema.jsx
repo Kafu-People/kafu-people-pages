@@ -108,6 +108,12 @@ export const BreadcrumbListLD = (items) => ({
   })),
 })
 
+export const SpeakableLD = (cssSelectors) => ({
+  "@context": "https://schema.org",
+  "@type": "SpeakableSpecification",
+  cssSelector: cssSelectors,
+})
+
 export const PersonLD = (member) => ({
   "@context": "https://schema.org",
   "@type": "Person",

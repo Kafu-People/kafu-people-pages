@@ -31,7 +31,7 @@ const staticNews = [
     category: "Product",
     date: "2026-05-12",
     author: "Kafu People",
-    image: "/images/newsAndEvents/6601d5db-3474-4dc3-98b8-a9a82400fdcb.png",
+    image: "/images/newsAndEvents/echo3s-launch-discussion.png",
   },
   {
     _id: "news-003",

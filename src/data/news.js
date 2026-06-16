@@ -27,11 +27,11 @@ const staticNews = [
     content:
       "Echo3s, the AI-powered audiobook creation platform we built as a full-stack development partner, has officially launched to the public.\n\n" +
       "Built to take audiobook production from weeks down to under 24 hours, the platform combines natural-sounding voice synthesis with an intuitive in-browser production workflow. The public launch follows a beta period that validated the workflow with real independent authors.\n\n" +
-      "You can read the full story in our portfolio case study, or visit echo3s.io to see it in action.",
+      'You can read the full story in <a href="/portfolio">our portfolio case study</a>, or visit <a href="https://echo3s.io/">echo3s.io</a> to see it in action.',
     category: "Product",
     date: "2026-05-12",
     author: "Kafu People",
-    image: "/images/newsAndEvents/image1.svg",
+    image: "/images/newsAndEvents/6601d5db-3474-4dc3-98b8-a9a82400fdcb.png",
   },
   {
     _id: "news-003",
@@ -71,7 +71,7 @@ const staticNews = [
       "We've teamed up with Nerohalla to bring their product vision to life as a development partner.",
     content:
       "We're proud to announce a new partnership with Nerohalla, joining as their development partner to help take their product from concept toward launch.\n\n" +
-      "It's the kind of engagement we love: a clear vision, a motivated team, and a real problem worth solving. We'll be sharing more about the work in a dedicated case study soon.\n\n" +
+      "It's the kind of engagement we love: a clear vision, a motivated team, and a real problem worth solving. Read the full story in <a href=\"/portfolio/nerohalla\">our Nerohalla portfolio case study</a>.\n\n" +
       "Watch this space for updates as the project progresses.",
     category: "Partnership",
     date: "2026-03-22",

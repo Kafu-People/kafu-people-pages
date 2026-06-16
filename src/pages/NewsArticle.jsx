@@ -4,6 +4,7 @@ import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { ArticleLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
 import { useSSRData } from "../lib/SSRDataContext";
+import RichTextParagraph from "../components/RichTextParagraph";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("en-GB", {
@@ -90,9 +91,12 @@ const NewsArticle = () => {
 
         <div className="max-w-none text-gray-700">
           {article.content.split("\n\n").map((paragraph, i) => (
-            <p key={i} className="mb-4 text-base leading-relaxed sm:text-lg">
+            <RichTextParagraph
+              key={i}
+              className="mb-4 text-base leading-relaxed sm:text-lg"
+            >
               {paragraph}
-            </p>
+            </RichTextParagraph>
           ))}
         </div>
       </article>

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaLinkedin } from "react-icons/fa";
+import TeamAvatar from "./TeamAvatar";
 
 /**
  * Responsive team member card. `variant="lead"` renders a larger leadership
@@ -15,11 +16,11 @@ const TeamCard = ({ member, variant = "default" }) => {
           isLead ? "h-32 w-32" : "h-24 w-24"
         }`}
       >
-        <img
-          src={member.image}
-          alt={member.name}
-          loading="lazy"
-          className="h-full w-full object-cover"
+        <TeamAvatar
+          name={member.name}
+          image={member.image}
+          size={isLead ? "lg" : "md"}
+          className="h-full w-full"
         />
       </div>
       <h3 className="text-lg font-bold text-cDarkBlue">{member.name}</h3>

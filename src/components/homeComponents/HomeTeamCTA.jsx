@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { executives, teamMembers } from "../../data/team";
-
+import TeamAvatar from "../team/TeamAvatar";
 // Show a small set of faces as a teaser that links to the full team page.
 const preview = [...executives, ...teamMembers].slice(0, 6);
 
@@ -28,11 +28,11 @@ const HomeTeamCTA = () => {
         <div className="flex flex-wrap justify-center gap-4">
           {preview.map((member) => (
             <div key={member.name} className="w-28 text-center">
-              <img
-                src={member.image}
-                alt={member.name}
-                loading="lazy"
-                className="mx-auto h-20 w-20 rounded-full object-cover shadow-md"
+              <TeamAvatar
+                name={member.name}
+                image={member.image}
+                size="sm"
+                className="mx-auto shadow-md"
               />
               <p className="mt-2 text-sm font-semibold text-cDarkBlue">
                 {member.name}

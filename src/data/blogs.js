@@ -26,7 +26,7 @@ const staticBlogs = [
       "Smaller teams. Bigger output. Faster execution.\n\n" +
       "The future belongs to teams that combine human ownership, engineering judgment, and AI leverage.",
     category: "AI",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-05-15",
     dateModified: "2026-05-15",
     image: "/images/blogs/ai-will-not-replace-developers.webp",
@@ -60,7 +60,7 @@ const staticBlogs = [
       "It's flexibility, scalability, and the ability to invest more of your resources directly into product growth.\n\n" +
       "How is your team optimizing engineering efficiency and technical runway in 2026?",
     category: "Web Development",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-05-01",
     dateModified: "2026-05-01",
     image: "/images/blogs/local-hiring-vs-remote-engineering-teams.webp",
@@ -79,7 +79,7 @@ const staticBlogs = [
       "By keeping these layers loosely coupled, we can swap out the underlying model as the ecosystem evolves without rewriting the entire system. This modularity has been critical for clients who started with GPT-4 and later migrated to open-source models like Llama or Mistral for cost reasons.\n\n" +
       "If you are considering adding AI agents to your product roadmap, start small. Pick one repetitive task that consumes at least five hours of human time per week, automate it, measure the savings, and then expand. That iterative approach consistently delivers the highest return on investment.",
     category: "AI",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-04-20",
     dateModified: "2026-04-20",
     image: blogImg,
@@ -109,7 +109,7 @@ const staticBlogs = [
       "Weeks four and five are where the product comes alive. We build the primary feature end to end, wire up payments if needed, and start daily internal testing. Week six is hardening: fixing the bugs that matter, adding analytics so you can learn from launch, and shipping to production.\n\n" +
       "The discipline that makes this work is saying no. Every feature request during the build is logged for the post-launch roadmap rather than allowed to expand the MVP. You learn far more from a small product real users touch than from a large product nobody has seen.",
     category: "Web Development",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-03-25",
     dateModified: "2026-03-25",
     image: blogSectionImg,
@@ -169,7 +169,7 @@ const staticBlogs = [
       "Give crawlers a map. A generated sitemap.xml that lists every public route, combined with clean semantic HTML and proper heading structure, helps search engines understand and index your content quickly.\n\n" +
       "Finally, do not forget social previews. Open Graph and Twitter card tags determine how your links look when shared, and a compelling preview meaningfully improves click-through from social platforms.",
     category: "Digital Marketing",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-02-10",
     dateModified: "2026-02-10",
     image: blogSectionImg,
@@ -256,7 +256,7 @@ const staticBlogs = [
       "Launch sooner. Learn faster. Grow smarter.\n\n" +
       "What's the biggest mistake you've seen early-stage startups make when building products?",
     category: "Digital Marketing",
-    author: "Dr. Hafeez Ur Rehman",
+    author: "Belal Haikal",
     datePublished: "2026-01-05",
     dateModified: "2026-01-05",
     image: "/images/blogs/KAFU-People_Validated-Roots_Startup-Growth.webp",

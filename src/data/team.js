@@ -4,7 +4,7 @@ import belal from "../assets/images/members/Belal_Haikal.png";
 import waqasi from "../assets/images/members/Mwaqas.jpg";
 import william from "../assets/images/members/williambakke.jpg";
 import fawad from "../assets/images/members/fawad.jpg";
-import adnan from "../assets/images/members/adnan.jpg";
+import iendrel from "../assets/images/members/Iendrel.png";
 import ahsan from "../assets/images/members/ahsan.jpg";
 import saif from "../assets/images/members/saif.jpg";
 import noor from "../assets/images/members/noor.jpg";
@@ -81,12 +81,12 @@ export const teamMembers = [
       "https://www.linkedin.com/in/fawad-azam-126705253",
   },
   {
-    name: "Muhammad Adnan",
-    role: "Full Stack Developer",
+    name: "Iendrel Gabriel",
+    role: "Senior Full Stack Engineer",
     description:
-      "Builds dynamic web applications across the front-end and back-end, delivering robust, scalable solutions.",
-    image: adnan,
-    linkedin: "https://www.linkedin.com/in/muhammad-adnan-khan-081ab9258",
+      "Builds scalable web applications, cloud-native platforms, and distributed systems across React, Next.js, Node.js, Python, and AWS. Experienced in microservices, event-driven architecture, CI/CD, and AI-integrated products — focused on reliable software that scales with the business.",
+    image: iendrel,
+    linkedin: "https://www.linkedin.com/in/iendrel-gabriel/",
   },
   {
     name: "Muhammad Ahsan Ayaz",

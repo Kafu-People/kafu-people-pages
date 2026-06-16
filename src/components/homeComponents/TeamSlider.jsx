@@ -8,7 +8,7 @@ import matheus from "../../assets/images/members/Matheus.jpg";
 import waqas from "../../assets/images/members/waqas.jpg";
 import waqasi from "../../assets/images/members/Mwaqas.jpg";
 import fawad from "../../assets/images/members/fawad.jpg";
-import adnan from "../../assets/images/members/adnan.jpg";
+import iendrel from "../../assets/images/members/Iendrel.png";
 import saif from "../../assets/images/members/saif.jpg";
 import abubakkar from "../../assets/images/members/abubakkar.jpg";
 import noor from "../../assets/images/members/noor.jpg";
@@ -87,14 +87,14 @@ const TeamSlider = () => {
       instagram: "https://www.instagram.com/f_fawad_zm?igsh=a3R3aW5jNDRzcXEx",
     },
     {
-      name: "Muhammad Adnan ",
-      role: "Full Stack Developer",
+      name: "Iendrel Gabriel",
+      role: "Senior Full Stack Engineer",
       description:
-        "As a Full Stack Developer at KAFUPEOPLE, He work on developing dynamic web applications using both front-end and back-end technologies. With a strong foundation in both client-side and server-side development, he contribute to building robust, scalable solutions that enhance our technological capabilities.",
-      image: adnan,
-      linkedin: "https://www.linkedin.com/in/muhammad-adnan-khan-081ab9258",
-      facebook: "https://www.facebook.com/share/1BXmpSspbD/",
-      instagram: "https://www.instagram.com/itx_malak10?igsh=b2FvdnQwdW9zd2kw",
+        "Builds scalable web applications, cloud-native platforms, and distributed systems across React, Next.js, Node.js, Python, and AWS. Experienced in microservices, event-driven architecture, CI/CD, and AI-integrated products — focused on reliable software that scales with the business.",
+      image: iendrel,
+      linkedin: "https://www.linkedin.com/in/iendrel-gabriel/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Muhammad Ahsan Ayaz",

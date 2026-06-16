@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO, SITE_URL } from "../config/seo";
-import { ArticleLD } from "../components/Schema";
+import { ArticleLD, SpeakableLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
 import { useSSRData } from "../lib/SSRDataContext";
 import RichTextParagraph from "../components/RichTextParagraph";
@@ -56,6 +56,9 @@ const NewsArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify(ArticleLD(article))}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(SpeakableLD(["[data-speakable=headline]", "[data-speakable=summary]"]))}
+        </script>
       </PageSEO>
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
@@ -74,7 +77,7 @@ const NewsArticle = () => {
               {formatDate(article.date)}
             </time>
           </div>
-          <h1 className="text-3xl font-bold text-cDarkBlue sm:text-4xl">
+          <h1 data-speakable="headline" className="text-3xl font-bold text-cDarkBlue sm:text-4xl">
             {article.title}
           </h1>
         </header>
@@ -93,6 +96,7 @@ const NewsArticle = () => {
           {article.content.split("\n\n").map((paragraph, i) => (
             <RichTextParagraph
               key={i}
+              {...(i === 0 ? { "data-speakable": "summary" } : {})}
               className="mb-4 text-base leading-relaxed sm:text-lg"
             >
               {paragraph}

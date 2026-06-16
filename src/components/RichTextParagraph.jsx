@@ -44,6 +44,6 @@ function parseAnchors(text) {
   return parts.length ? parts : text;
 }
 
-export default function RichTextParagraph({ children, className }) {
-  return <p className={className}>{parseAnchors(children)}</p>;
+export default function RichTextParagraph({ children, className, ...rest }) {
+  return <p className={className} {...rest}>{parseAnchors(children)}</p>;
 }

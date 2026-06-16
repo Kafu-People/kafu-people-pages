@@ -5,7 +5,7 @@ import PageSEO from "../components/PageSEO";
 import Loader from "../components/Loader";
 import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { getStaticBlogBySlug, getStaticBlogById } from "../data/blogs";
-import { BlogPostingLD, BreadcrumbListLD } from "../components/Schema";
+import { BlogPostingLD, BreadcrumbListLD, SpeakableLD } from "../components/Schema";
 import { useSSRData } from "../lib/SSRDataContext";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -88,6 +88,9 @@ const BlogPost = () => {
             { name: blog.title, path: `/blogs/${blog.slug}` },
           ]))}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(SpeakableLD(["[data-speakable=headline]", "[data-speakable=summary]"]))}
+        </script>
       </PageSEO>
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
@@ -106,7 +109,7 @@ const BlogPost = () => {
               <span className="text-sm text-gray-500">{blog.category}</span>
             )}
           </div>
-          <h1 className="text-3xl font-bold text-cDarkBlue sm:text-4xl">
+          <h1 data-speakable="headline" className="text-3xl font-bold text-cDarkBlue sm:text-4xl">
             {blog.title}
           </h1>
         </header>
@@ -123,7 +126,7 @@ const BlogPost = () => {
 
         <div className="max-w-none text-gray-700">
           {blog.description.split("\n\n").map((paragraph, i) => (
-            <p key={i} className="mb-4 text-base leading-relaxed sm:text-lg">
+            <p key={i} {...(i === 0 ? { "data-speakable": "summary" } : {})} className="mb-4 text-base leading-relaxed sm:text-lg">
               {paragraph}
             </p>
           ))}

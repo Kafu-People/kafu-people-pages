@@ -3,9 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import william from "../../assets/images/members/williambakke.jpg";
-import ali from "../../assets/images/members/ali.jpg";
 import matheus from "../../assets/images/members/Matheus.jpg";
-import waqas from "../../assets/images/members/waqas.jpg";
+import saad from "../../assets/images/members/saad_majeed.png";
 import waqasi from "../../assets/images/members/Mwaqas.jpg";
 import fawad from "../../assets/images/members/fawad.jpg";
 import iendrel from "../../assets/images/members/Iendrel.png";
@@ -14,12 +13,17 @@ import abubakkar from "../../assets/images/members/abubakkar.jpg";
 import noor from "../../assets/images/members/noor.jpg";
 import kainat from "../../assets/images/members/kainat.jpg";
 import ahsan from "../../assets/images/members/ahsan.jpg";
-
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-// import test from "../../assets/images/members/test1.jpg";
-
 import pauline from "../../assets/images/members/pauline_vroonen.webp";
 import belal from "../../assets/images/members/Belal_Haikal.png";
+import brian from "../../assets/images/members/brian.png";
+import soban from "../../assets/images/members/soban_a.png";
+import nauman from "../../assets/images/members/nauman_raees.png";
+import rakib from "../../assets/images/members/rakib_khan.png";
+import himanshi from "../../assets/images/members/himanshi_aggarwal.png";
+import nodari from "../../assets/images/members/nodari_gurjidze.png";
+import mahenoor from "../../assets/images/members/mahenoor_salat.png";
+import TeamAvatar from "../team/TeamAvatar";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const TeamSlider = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -138,15 +142,13 @@ const TeamSlider = () => {
       instagram: "/",
     },
     {
-      name: "Ali Khan",
-      role: "MERN Stack Developer",
+      name: "Gerardo Miguel Gutierrez Garcia",
+      role: "Senior Full Stack Engineer",
       description:
-        "As a MERN Stack Developer at KAFUPEOPLE, He specialize in building dynamic, scalable web applications using MongoDB, Express.js, React.js, and Node.js. he focus on delivering seamless, user-friendly interfaces and robust back-end systems to drive business success.",
-      image: ali,
-      linkedin: "https://www.linkedin.com/in/engr-ali-khan-626667251/",
-      facebook: "https://www.facebook.com/profile.php?id=100034895843168",
-      instagram:
-        "https://www.instagram.com/engineer_alikhan?utm_source=qr&igsh=MWV3amZ4cm80a3U4bQ==",
+        "Builds scalable web platforms, high-performance APIs, and cloud-native systems with 8+ years in fintech and gaming. Expert in TypeScript, React, Node.js, and AWS — with a track record optimizing payment APIs, microservices migrations, and real-time multiplayer services at scale.",
+      linkedin: "https://www.linkedin.com/in/gerardo-mmg/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Kainat Afzal",
@@ -159,14 +161,84 @@ const TeamSlider = () => {
       instagram: "/",
     },
     {
-      name: "Waqas Gul",
-      role: "MERN Stack developer",
+      name: "Saad Majeed",
+      role: "Full Stack Web Developer",
       description:
-        "As a Senior MERN Stack Developer at KAFUPEOPLE, he builds dynamic web applications with MongoDB, Express.js, React.js, and Node.js. He specializes in seamless UIs, robust backends, and mentoring teams to deliver high-performance solutions that drive business growth.",
-      image: waqas,
-      linkedin: "https://www.linkedin.com/in/waqas-gul-b7580826b/",
-      facebook: "https://www.facebook.com/WAQASI.369",
-      instagram: "https://www.instagram.com/w_a_q_a_s_i/",
+        "Builds scalable SaaS platforms, admin panels, and AI-powered web applications with Laravel, Vue.js, Inertia, and Tailwind CSS. Founder of Dorex App and experienced across healthcare, e-commerce, and business management systems — from architecture and APIs through deployment and long-term maintainability.",
+      image: saad,
+      linkedin: "https://www.linkedin.com/in/saadmajeeddev/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Brian Ervin",
+      role: "Senior UX/UI Designer",
+      description:
+        "Senior UX/UI designer and frontend-oriented product specialist at BE UI Design, LLC in Austin. Led TxDOTCONNECT enterprise UI for five+ years — design systems, responsive applications, standards libraries, and developer collaboration. Background spans studio art, architecture, industrial design, and full-stack web development in Agile/SCRUM environments.",
+      image: brian,
+      linkedin: "https://www.linkedin.com/in/brianervinmedia/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Soban A.",
+      role: "CRM & AI Automation Engineer / Full Stack Developer",
+      description:
+        "Official Make.com partner and automation architect building CRM, AI voice, and workflow systems at scale — GHL, HubSpot, Pipedrive, n8n, Retell, and Vapi. Designs high-volume automations that cut operational drag, migrate costly Zapier stacks, and deliver sub-minute lead follow-up with measurable ROI.",
+      image: soban,
+      linkedin: "https://www.linkedin.com/in/no-code-automator/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Nauman Raees",
+      role: "AI-Enabled Full Stack Engineer (MERN)",
+      description:
+        "Builds scalable MERN-stack applications with React, Next.js, Node.js, and NestJS — integrating AI-enabled features into production web apps. 5+ years delivering HRMS, SaaS, and enterprise platforms with AWS, Docker, and performance-focused API design.",
+      image: nauman,
+      linkedin: "https://www.linkedin.com/in/nauman-raees-355558183/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Md Rakib Khan",
+      role: "Senior Software Engineer in ASP.NET Core and Angular",
+      description:
+        "Senior software engineer with 5+ years building full-stack solutions on ASP.NET Core, Web API, MVC, and Angular. Experienced across MS SQL and MongoDB, database architecture, performance tuning, and agile delivery — from greenfield applications to optimizing production systems at Fulfillment Team and DISA Global Solutions.",
+      image: rakib,
+      linkedin: "https://www.linkedin.com/in/md-rakib-khan-51361315b/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Himanshi Aggarwal",
+      role: "Content & Community",
+      description:
+        "Leads content and community growth for Kafu People. Founder of TechLeads (1000+ members), campus ambassador, and content creator — experienced in curated tech content, event promotion, audience engagement, and building active online communities across social platforms.",
+      image: himanshi,
+      linkedin: "https://www.linkedin.com/in/himanshi-aggarwal-5a5553321/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Nodari Gurjidze",
+      role: "Software Developer",
+      description:
+        "Software developer focused on building modern, maintainable applications and contributing to full-stack product delivery — from implementation and debugging through clean, collaborative engineering practices.",
+      image: nodari,
+      linkedin: "https://www.linkedin.com/in/nodari-gurjidze-2911203a1/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Mahenoor Salat",
+      role: "QA & Full Stack",
+      description:
+        "Combines QA discipline with full-stack delivery on React and Next.js — from usability testing and UI/UX polish through scalable frontend architecture and rapid deployment. Led frontend development at Hexoforge LLC; experienced across component systems, cross-functional delivery, and performance-focused web applications.",
+      image: mahenoor,
+      linkedin: "https://www.linkedin.com/in/salat-mahenoor/",
+      facebook: "/",
+      instagram: "/",
     },
   ];
 
@@ -295,10 +367,11 @@ const TeamSlider = () => {
                 alignItems: "center",
               }}
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-24 h-24 rounded-full mb-4 object-cover"
+              <TeamAvatar
+                name={member.name}
+                image={member.image}
+                size="md"
+                className="mb-4"
               />
               <h3 className="text-xl font-semibold text-cDarkBlue">
                 {member.name}

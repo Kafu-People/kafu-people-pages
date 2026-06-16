@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import aibad from "../../assets/images/members/aibad.jpg";
+import william from "../../assets/images/members/williambakke.jpg";
 import ali from "../../assets/images/members/ali.jpg";
-import zuhiab from "../../assets/images/members/zuhiab.jpg";
+import matheus from "../../assets/images/members/Matheus.jpg";
 import waqas from "../../assets/images/members/waqas.jpg";
 import waqasi from "../../assets/images/members/Mwaqas.jpg";
 import fawad from "../../assets/images/members/fawad.jpg";
@@ -18,8 +18,8 @@ import ahsan from "../../assets/images/members/ahsan.jpg";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 // import test from "../../assets/images/members/test1.jpg";
 
-import masooma from "../../assets/images/members/masooma.jpg";
-import hafeezurehman from "../../assets/images/members/hafeez.jpg";
+import pauline from "../../assets/images/members/pauline_vroonen.webp";
+import belal from "../../assets/images/members/Belal_Haikal.png";
 
 const TeamSlider = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -55,15 +55,24 @@ const TeamSlider = () => {
 
   const teamMembers = [
     {
-      name: "Zohaib khan",
-      role: "Data Scientist",
+      name: "Muhammad Waqas",
+      role: "Senior AI Engineer",
       description:
-        "As a Data Scientist at KAFUPEOPLE, He specialize in analyzing complex datasets and developing data-driven solutions. With expertise in machine learning, statistical modeling, and data visualization, he uncover insights and build predictive models to drive business growth and support strategic decision-making.",
-      image: zuhiab,
-      linkedin: "https://www.linkedin.com/in/zuhaib-khan-183840275",
+        "Focuses on leveraging AI and deep learning to create real-world solutions. With a background in software engineering and generative AI, he drives the innovative projects that expand our technological capabilities.",
+      image: waqasi,
+      linkedin: "https://www.linkedin.com/in/muhammad-waqas-3b7122257/",
       facebook: "/",
-      instagram:
-        "https://www.instagram.com/zuhaibkhan662?igsh=ODdzdjlwOXEyY2o2",
+      instagram: "/",
+    },
+    {
+      name: "Matheus Serra",
+      role: "Senior Full-Stack Developer",
+      description:
+        "Builds cloud-native products with intelligent, full-stack workflows. Brings senior engineering experience alongside a background in process management, quality systems, and IT project delivery across industrial and technology environments.",
+      image: matheus,
+      linkedin: "https://www.linkedin.com/in/matheusserra/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Fawad Azam",
@@ -163,44 +172,34 @@ const TeamSlider = () => {
 
   const woners = [
     {
-      name: "Dr. Hafeez UR Rehman ",
+      name: "Belal Haikal",
       role: "Founder & CEO",
       description:
-        "Dr. Hafeez ur Rehman, CEO of KAFUPEOPLE PVT LTD, holds a PhD in Electrical Engineering and specializes in AI, IoT, and cybersecurity. With 13+ years of experience, he has developed advanced solutions for threat detection, automated security, and digital protection. His work strengthens Pakistan’s tech and security landscape, and as a published researcher, he bridges academic knowledge with real-world applications.",
-      image: hafeezurehman,
-      linkedin: "https://www.linkedin.com/in/dr-hafeez-ur-rehman-633a43135/",
+        "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale — from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
+      image: belal,
+      linkedin: "https://www.linkedin.com/in/belalhaikal/",
       facebook: "/",
       instagram: "/",
     },
     {
-      name: "Masooma Ali ",
-      role: "Director Cyber Security",
+      name: "Pauline Vroonen",
+      role: "Business Partner, HR Specialist, Account Manager",
       description:
-        "Masooma Ali is the Director of KAFUPEOPLE and leads the Cybersecurity Department. With a Bachelor's in Computer Science and certifications like CEH, CEH Practical Master, and CompTIA Security+, she brings over 5 years of experience. She has led key projects and trained NAVTTC and TEVTA Punjab cybersecurity batches, shaping future cybersecurity professionals.",
-      image: masooma,
-      linkedin: "https://www.linkedin.com/in/masooma-ali-94243b240/",
+        "Leads business development, client partnerships, and HR operations at Kafu People. Brings experience as an HR business partner and account manager across Belgium, Europe, and international markets — connecting strategic growth with people and client success. Odoo-certified; fluent in Dutch, French, and English.",
+      image: pauline,
+      linkedin: "https://www.linkedin.com/in/paulinevroonen647",
       facebook: "/",
       instagram: "/",
     },
     {
-      name: "Muhammad Waqas",
-      role: "Senior AI Engineer",
-      description:
-        "As an AI Engineer at KAFUPEOPLE, He focus on leveraging AI and deep learning to create real-world solutions. With a background in software engineering and generative AI, he drive innovative projects that enhance our technological capabilities.",
-      image: waqasi,
-      linkedin: "https://www.linkedin.com/in/muhammad-waqas-3b7122257/",
-      facebook: "/",
-      instagram: "/",
-    },
-    {
-      name: "Aibad Ullah",
+      name: "William Bakke",
       role: "Media & Marketing Manager",
       description:
-        "As the Media and Marketing Manager at KAFUPEOPLE, He bring over 7 years of expertise in digital strategy and photography to elevate our brand’s visual storytelling. he focus on creating compelling content and campaigns that effectively communicate our vision, engage our audience, and drive impactful results.",
-      image: aibad,
-      linkedin: "https://www.linkedin.com/in/aibadullah/",
-      facebook: "https://www.facebook.com/Aibadvlogs/",
-      instagram: "https://www.instagram.com/aibadvlogs/",
+        "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Morgan Stanley and Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+      image: william,
+      linkedin: "https://www.linkedin.com/in/williambakke",
+      facebook: "/",
+      instagram: "/",
     },
   ];
 

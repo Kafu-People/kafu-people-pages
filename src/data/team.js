@@ -1,10 +1,8 @@
 // Central team data module. Pages and homepage sections read from here so the
 // team roster lives in one place.
-import hafeez from "../assets/images/members/hafeez.jpg";
-import masooma from "../assets/images/members/masooma.jpg";
+import belal from "../assets/images/members/Belal_Haikal.png";
 import waqasi from "../assets/images/members/Mwaqas.jpg";
-import aibad from "../assets/images/members/aibad.jpg";
-import zuhiab from "../assets/images/members/zuhiab.jpg";
+import william from "../assets/images/members/williambakke.jpg";
 import fawad from "../assets/images/members/fawad.jpg";
 import adnan from "../assets/images/members/adnan.jpg";
 import ahsan from "../assets/images/members/ahsan.jpg";
@@ -13,25 +11,50 @@ import noor from "../assets/images/members/noor.jpg";
 import ali from "../assets/images/members/ali.jpg";
 import kainat from "../assets/images/members/kainat.jpg";
 import waqas from "../assets/images/members/waqas.jpg";
+import pauline from "../assets/images/members/pauline_vroonen.webp";
+import matheus from "../assets/images/members/Matheus.jpg";
+import jared from "../assets/images/members/Jared.jpg";
 
 // Leadership / executive team (G1.4).
 export const executives = [
   {
-    name: "Dr. Hafeez Ur Rehman",
+    name: "Belal Haikal",
     role: "Founder & CEO",
     description:
-      "Holds a PhD in Electrical Engineering and specializes in AI, IoT, and cybersecurity. With 13+ years of experience, he has built advanced solutions for threat detection and automated security, bridging academic research with real-world applications.",
-    image: hafeez,
-    linkedin: "https://www.linkedin.com/in/dr-hafeez-ur-rehman-633a43135/",
+      "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale — from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
+    image: belal,
+    linkedin: "https://www.linkedin.com/in/belalhaikal/",
+    email: "hello@kafupeople.com",
   },
   {
-    name: "Masooma Ali",
-    role: "Director, Cyber Security",
+    name: "Pauline Vroonen",
+    role: "Business Partner, HR Specialist, Account Manager",
     description:
-      "Leads the cybersecurity department with a BS in Computer Science and certifications including CEH, CEH Practical Master, and CompTIA Security+. She brings 5+ years of experience and has trained NAVTTC and TEVTA cybersecurity cohorts.",
-    image: masooma,
-    linkedin: "https://www.linkedin.com/in/masooma-ali-94243b240/",
+      "Leads business development, client partnerships, and HR operations at Kafu People. Brings experience as an HR business partner and account manager across Belgium, Europe, and international markets — connecting strategic growth with people and client success. Odoo-certified; fluent in Dutch, French, and English.",
+    image: pauline,
+    linkedin: "https://www.linkedin.com/in/paulinevroonen647",
   },
+  {
+    name: "William Bakke",
+    role: "Media & Marketing Manager",
+    description:
+      "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Morgan Stanley and Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+    image: william,
+    linkedin: "https://www.linkedin.com/in/williambakke",
+    email: "wbakke@ravenhawktech.com",
+  },
+  {
+    name: "Jared Allison",
+    role: "Technical Advisor",
+    description:
+      "Technical advisor to Kafu People. Staff Software Engineer at Stripe with 15+ years leading polyglot engineering teams across embedded, mobile, backend, frontend, and infrastructure — previously at Angaza Design, Backstop Solutions, and Motorola. Guides technical direction, architecture, and coaching teams to ship reliably at scale.",
+    image: jared,
+    linkedin: "https://www.linkedin.com/in/jared-allison-7aa03a11/",
+  },
+];
+
+// Wider team (G1.3).
+export const teamMembers = [
   {
     name: "Muhammad Waqas",
     role: "Senior AI Engineer",
@@ -41,24 +64,12 @@ export const executives = [
     linkedin: "https://www.linkedin.com/in/muhammad-waqas-3b7122257/",
   },
   {
-    name: "Aibad Ullah",
-    role: "Media & Marketing Manager",
+    name: "Matheus Serra",
+    role: "Senior Full-Stack Developer",
     description:
-      "Brings 7+ years of expertise in digital strategy and photography to elevate the brand's visual storytelling, creating content and campaigns that communicate our vision and engage our audience.",
-    image: aibad,
-    linkedin: "https://www.linkedin.com/in/aibadullah/",
-  },
-];
-
-// Wider team (G1.3).
-export const teamMembers = [
-  {
-    name: "Zohaib Khan",
-    role: "Data Scientist",
-    description:
-      "Specializes in analyzing complex datasets and building predictive models with machine learning, statistical modeling, and data visualization to support strategic decisions.",
-    image: zuhiab,
-    linkedin: "https://www.linkedin.com/in/zuhaib-khan-183840275",
+      "Builds cloud-native products with intelligent, full-stack workflows. Brings senior engineering experience alongside a background in process management, quality systems, and IT project delivery across industrial and technology environments.",
+    image: matheus,
+    linkedin: "https://www.linkedin.com/in/matheusserra/",
   },
   {
     name: "Fawad Azam",

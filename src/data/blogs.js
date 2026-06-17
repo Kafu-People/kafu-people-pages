@@ -1,5 +1,3 @@
-import blogSectionImg from "../assets/images/blogs/blogSection.jpg";
-
 const staticBlogs = [
   {
     _id: "static-012",
@@ -25,7 +23,7 @@ const staticBlogs = [
     author: "Belal Haikal",
     datePublished: "2026-05-15",
     dateModified: "2026-05-15",
-    image: "/images/blogs/ai-will-not-replace-developers.webp",
+    image: "/images/blogs/ai-will-not-replace-developers.jpg",
   },
   {
     _id: "static-011",
@@ -108,7 +106,7 @@ const staticBlogs = [
     author: "Belal Haikal",
     datePublished: "2026-03-25",
     dateModified: "2026-03-25",
-    image: blogSectionImg,
+    image: "/images/blogs/shipping-saas-mvp-in-six-weeks.jpg",
   },
   {
     _id: "static-004",
@@ -153,7 +151,7 @@ const staticBlogs = [
     author: "Masooma Ali",
     datePublished: "2026-02-20",
     dateModified: "2026-02-20",
-    image: "/images/blogs/securing-web-apps-baseline-checklist.png",
+    image: "/images/blogs/securing-web-apps-baseline-checklist.jpg",
   },
   {
     _id: "static-007",
@@ -183,7 +181,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-01-25",
     dateModified: "2026-01-25",
-    image: "/images/blogs/designing-apis-developers-love.png",
+    image: "/images/blogs/designing-apis-developers-love.jpg",
   },
   {
     _id: "static-009",

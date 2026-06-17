@@ -31,7 +31,7 @@ const staticNews = [
     category: "Product",
     date: "2026-05-12",
     author: "Kafu People",
-    image: "/images/newsAndEvents/echo3s-launch-discussion.png",
+    image: "/images/newsAndEvents/echo3s-reaches-launch-milestone.jpg",
   },
   {
     _id: "news-003",
@@ -46,7 +46,7 @@ const staticNews = [
     category: "Events",
     date: "2026-04-30",
     author: "Kafu People",
-    image: "/images/newsAndEvents/image2.svg",
+    image: "/images/newsAndEvents/kafu-people-joins-amsterdam-tech-week.jpg",
   },
   {
     _id: "news-004",
@@ -61,7 +61,7 @@ const staticNews = [
     category: "Product",
     date: "2026-04-15",
     author: "Kafu People",
-    image: "/images/newsAndEvents/image3.svg",
+    image: "/images/newsAndEvents/new-cloud-native-dashboard-template.jpg",
   },
   {
     _id: "news-005",
@@ -76,7 +76,7 @@ const staticNews = [
     category: "Partnership",
     date: "2026-03-22",
     author: "Kafu People",
-    image: "/images/newsAndEvents/image4.svg",
+    image: "/images/newsAndEvents/kafu-people-partners-with-nerohalla.jpg",
   },
   {
     _id: "news-006",
@@ -91,7 +91,7 @@ const staticNews = [
     category: "Company",
     date: "2026-03-05",
     author: "Kafu People",
-    image: "/images/newsAndEvents/blog1.svg",
+    image: "/images/newsAndEvents/team-spotlight-engineering-culture.jpg",
   },
   {
     _id: "news-007",
@@ -106,7 +106,7 @@ const staticNews = [
     category: "Company",
     date: "2026-02-18",
     author: "Kafu People",
-    image: "/images/newsAndEvents/blog2.svg",
+    image: "/images/newsAndEvents/lessons-from-a-year-of-shipping-mvps.jpg",
   },
   {
     _id: "news-008",
@@ -121,7 +121,7 @@ const staticNews = [
     category: "Events",
     date: "2026-01-29",
     author: "Kafu People",
-    image: "/images/newsAndEvents/blog3.svg",
+    image: "/images/newsAndEvents/hosting-applied-ai-workshop.jpg",
   },
   {
     _id: "news-009",
@@ -136,7 +136,7 @@ const staticNews = [
     category: "Company",
     date: "2026-01-14",
     author: "Kafu People",
-    image: "/images/newsAndEvents/blog4.svg",
+    image: "/images/newsAndEvents/kafu-people-website-refresh.jpg",
   },
   {
     _id: "news-010",
@@ -151,7 +151,7 @@ const staticNews = [
     category: "Company",
     date: "2025-12-20",
     author: "Kafu People",
-    image: "/images/newsAndEvents/image1.svg",
+    image: "/images/newsAndEvents/client-results-database-migration.jpg",
   },
 ];
 

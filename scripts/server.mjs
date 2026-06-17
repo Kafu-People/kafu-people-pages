@@ -1,14 +1,14 @@
 import { createServer } from 'node:http'
 import { readFileSync, statSync } from 'node:fs'
 import { resolve, extname, join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { brotliCompressSync, gzipSync } from 'node:zlib'
 import { renderPage } from 'vike/server'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
-await import(join(root, 'dist/server/entry.mjs'))
+await import(pathToFileURL(join(root, 'dist/server/entry.mjs')).href)
 
 const MIME = {
   '.js': 'application/javascript',

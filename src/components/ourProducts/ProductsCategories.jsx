@@ -187,8 +187,7 @@ const ProductsCategories = () => {
                       className="flex w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-cWhite shadow-lg transition-all duration-300 hover:shadow-lg hover:shadow-CPurple md:flex-row md:items-stretch"
                     >
                       <div className="group relative h-48 w-full shrink-0 sm:h-56 md:h-auto md:w-56 lg:w-64 xl:w-72">
-                        <img
-                          src={`${product.image}`}
+                        <img loading="lazy"                           src={`${product.image}`}
                           alt={product.name}
                           className="w-full h-full object-cover"
                         />

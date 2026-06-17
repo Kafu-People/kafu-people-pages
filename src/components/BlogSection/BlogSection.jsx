@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
-import blogsection from "../../assets/images/blogs/blogSection.jpg";
+import blogsection from "../../assets/images/blogs/blogSection.webp";
 import Loader from "../Loader";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
@@ -163,8 +163,7 @@ const BlogSection = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <img
-                          src={blog.image}
+                        <img loading="lazy"                           src={blog.image}
                           alt={blog.title}
                           className="h-48 w-full object-cover opacity-100 sm:opacity-80 md:opacity-100"
                         />

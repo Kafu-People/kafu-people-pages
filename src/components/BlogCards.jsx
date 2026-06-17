@@ -51,8 +51,7 @@ const BlogCards = () => {
           >
             {/* Left: Image */}
             <div className="w-full sm:w-1/3 flex justify-center items-center">
-              <img
-                src={blog.image}
+              <img loading="lazy"                 src={blog.image}
                 alt={blog.title}
                 className="w-full h-full object-cover sm:object-center sm:mx-0 mx-auto"
               />

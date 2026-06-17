@@ -5,8 +5,7 @@ const Vision = () => {
   return (
     <section className="font-inter px-4 py-16 lg:py-24 sm:px-8 lg:px-16 xl:px-20">
       <div className="relative mx-auto min-h-[360px] max-w-6xl overflow-hidden rounded-2xl md:min-h-[420px]">
-        <img
-          src={vision}
+        <img loading="lazy"           src={vision}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden

@@ -116,8 +116,7 @@ const BlogPost = () => {
 
         {blog.image && (
           <div className="mb-8 overflow-hidden rounded-2xl shadow-lg">
-            <img
-              src={blog.image}
+            <img loading="lazy"               src={blog.image}
               alt={blog.title}
               className="h-full w-full object-cover"
             />

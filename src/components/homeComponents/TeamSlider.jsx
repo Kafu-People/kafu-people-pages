@@ -299,8 +299,7 @@ const TeamSlider = () => {
             style={{ animationDelay: `${index * 200}ms` }}
           >
             <div className="flex items-center justify-center md:justify-start h-56 md:h-auto m-4 rounded-md">
-              <img
-                src={member.image}
+              <img loading="lazy"                 src={member.image}
                 alt={member.name}
                 className="w-3/4 md:w-full h-full object-cover rounded transition-all duration-500"
               />

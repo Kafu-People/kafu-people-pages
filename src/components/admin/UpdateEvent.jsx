@@ -127,8 +127,7 @@ const UpdateEvent = () => {
             </label>
             {form.image && typeof form.image === "string" ? (
               <div className="mb-4">
-                <img
-                  src={form.image} // If it's a URL, use it directly
+                <img loading="lazy"                   src={form.image} // If it's a URL, use it directly
                   alt="Previous Event Image"
                   className="w-full h-48 object-cover rounded-lg shadow-md"
                 />
@@ -136,8 +135,7 @@ const UpdateEvent = () => {
             ) : (
               form.image && (
                 <div className="mb-4">
-                  <img
-                    src={URL.createObjectURL(form.image)} // If it's a file, use createObjectURL
+                  <img loading="lazy"                     src={URL.createObjectURL(form.image)} // If it's a file, use createObjectURL
                     alt="Selected Event Image"
                     className="w-full h-48 object-cover rounded-lg shadow-md"
                   />

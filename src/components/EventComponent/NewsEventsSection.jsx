@@ -4,7 +4,7 @@ import PageHero from "../ui/PageHero";
 const NewsEventsSection = () => {
   return (
     <PageHero
-      image="/images/newsAndEvents/news.svg"
+      image="/images/newsAndEvents/news.webp"
       imageAlt="News & Events"
       height="min-h-[60vh] lg:min-h-[90vh]"
       priority

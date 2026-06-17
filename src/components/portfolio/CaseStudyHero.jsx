@@ -16,8 +16,7 @@ export default function CaseStudyHero({
         aria-hidden
       />
       {image && (
-        <img
-          src={image}
+        <img           src={image}
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-40"
           aria-hidden

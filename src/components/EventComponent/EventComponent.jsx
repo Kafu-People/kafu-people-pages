@@ -134,8 +134,7 @@ const EventComponent = () => {
                     {/* Image */}
 
                     <div className="lg:w-[25rem] md:w-1/3  flex items-center justify-center">
-                      <img
-                        src={`${BACKEND_URL}/${event.images[7]}`}
+                      <img loading="lazy"                         src={`${BACKEND_URL}/${event.images[7]}`}
                         alt={event.title}
                         className="w-[100vw] lg:h-[40vh] object-cover"
                       />

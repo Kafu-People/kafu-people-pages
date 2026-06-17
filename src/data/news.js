@@ -16,7 +16,7 @@ const staticNews = [
     category: "Company",
     date: "2026-05-28",
     author: "Kafu People",
-    image: "/images/newsAndEvents/news.svg",
+    image: "/images/newsAndEvents/news.webp",
   },
   {
     _id: "news-002",

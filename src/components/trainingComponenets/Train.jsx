@@ -1,5 +1,5 @@
 import React from "react";
-import train from "../../assets/images/traning/train.svg";
+import train from "../../assets/images/traning/train.webp";
 import PageHero from "../ui/PageHero";
 
 function Train() {

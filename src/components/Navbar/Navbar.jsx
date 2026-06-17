@@ -54,8 +54,7 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between sm:h-[72px]">
         <Link to="/" className="flex shrink-0 items-center" onClick={closeMenu}>
-          <img
-            src={kafupeople}
+          <img             src={kafupeople}
             alt="Kafu People"
             width={1280}
             height={853}

@@ -1,12 +1,18 @@
 import { FaEye } from "react-icons/fa";
-import vision from "../../assets/images/aboutUs/vision.webp";
+
+const VISION_IMAGE = "/images/vision.webp";
 
 const Vision = () => {
   return (
     <section className="font-inter px-4 py-16 lg:py-24 sm:px-8 lg:px-16 xl:px-20">
       <div className="relative mx-auto min-h-[360px] max-w-6xl overflow-hidden rounded-2xl md:min-h-[420px]">
-        <img loading="lazy"           src={vision}
+        <img
+          src={VISION_IMAGE}
           alt=""
+          width={1200}
+          height={500}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden
         />

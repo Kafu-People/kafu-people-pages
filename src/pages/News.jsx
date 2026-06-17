@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
-import newsHero from "../assets/images/blogs/blogSection.webp";
 import staticNews, { NEWS_CATEGORIES, getLatestNews } from "../data/news";
+
+const NEWS_HERO_IMAGE = "/images/blog-section.webp";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("en-GB", {
@@ -33,7 +34,7 @@ const News = () => {
       />
 
       <PageHero
-        image={newsHero}
+        image={NEWS_HERO_IMAGE}
         imageAlt=""
         height="h-[60vh] lg:h-[80vh]"
         priority

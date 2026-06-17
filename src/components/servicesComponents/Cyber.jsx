@@ -1,11 +1,12 @@
 import React from "react";
-import service from "../../assets/images/service/service.webp";
 import PageHero from "../ui/PageHero";
+
+const SERVICE_HERO_IMAGE = "/images/service.webp";
 
 function Cyber() {
   return (
     <PageHero
-      image={service}
+      image={SERVICE_HERO_IMAGE}
       imageAlt="Our Services"
       imageClassName="brightness-125"
       overlay={15}

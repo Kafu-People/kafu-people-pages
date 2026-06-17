@@ -1,10 +1,11 @@
-import product from "../../assets/images/ourProducts/product.webp";
 import PageHero from "../ui/PageHero";
+
+const PORTFOLIO_HERO_IMAGE = "/images/product.webp";
 
 const ProductsSection = () => {
   return (
     <PageHero
-      image={product}
+      image={PORTFOLIO_HERO_IMAGE}
       imageAlt="Our Products"
       imageClassName="brightness-125"
       overlay={20}

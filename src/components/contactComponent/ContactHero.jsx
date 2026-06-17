@@ -1,10 +1,11 @@
-import form from "../../assets/images/contactUs/form.webp";
 import PageHero from "../ui/PageHero";
+
+const CONTACT_HERO_IMAGE = "/images/contact-form.webp";
 
 const ContactHero = () => {
   return (
     <PageHero
-      image={form}
+      image={CONTACT_HERO_IMAGE}
       imageAlt="Contact Kafu People"
       imageClassName="brightness-125"
       overlay={40}

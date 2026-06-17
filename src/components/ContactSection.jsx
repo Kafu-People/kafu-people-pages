@@ -1,6 +1,5 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { MdMarkEmailUnread } from "react-icons/md";
-import contactBg from "../assets/images/contactUs/contact.webp";
 import { FaWhatsappSquare, FaLinkedin } from "react-icons/fa";
 import CalendlyPopup from "./ui/CalendlyPopup";
 import {
@@ -11,13 +10,19 @@ import {
   OFFICE_ADDRESS,
 } from "../constants/site";
 
+const CONTACT_SECTION_IMAGE = "/images/contact-section.webp";
+
 const ContactSection = () => {
   return (
     <section className="bg-cWhite px-4 py-12 font-inter sm:px-8 lg:px-24 lg:py-16">
       <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl shadow-lg">
-        <img loading="lazy"           src={contactBg}
+        <img
+          src={CONTACT_SECTION_IMAGE}
           alt=""
-          fetchpriority="high"
+          width={1200}
+          height={800}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden
         />

@@ -184,16 +184,19 @@ export const collaborators = [
   {
     name: "Nerohalla",
     role: "Product Partner",
+    url: "https://nerohalla.up.railway.app/",
     note: "We partner with the Nerohalla team as their development partner.",
   },
   {
     name: "Echo3s",
     role: "Product Partner",
+    url: "https://echo3s.io/",
     note: "Full-stack development partner for the Echo3s audiobook platform.",
   },
   {
     name: "Independent Specialists",
     role: "Extended Network",
+    url: "/contact",
     note: "Trusted freelance designers and engineers we bring in to scale delivery when projects call for it.",
   },
 ];

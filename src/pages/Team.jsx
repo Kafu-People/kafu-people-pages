@@ -102,20 +102,51 @@ const Team = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {collaborators.map((c) => (
-            <div
-              key={c.name}
-              className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
-            >
-              <h3 className="text-lg font-bold text-cDarkBlue">{c.name}</h3>
-              <p className="mt-1 text-sm font-semibold text-CPurple">
-                {c.role}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                {c.note}
-              </p>
-            </div>
-          ))}
+          {collaborators.map((c) => {
+            const isExternal = c.url?.startsWith("http");
+            const cardContent = (
+              <>
+                <h3 className="text-lg font-bold text-cDarkBlue">{c.name}</h3>
+                <p className="mt-1 text-sm font-semibold text-CPurple">{c.role}</p>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">{c.note}</p>
+                {c.url ? (
+                  <p className="mt-4 text-sm font-semibold text-CPurple">
+                    {isExternal ? "Visit live site →" : "Get in touch →"}
+                  </p>
+                ) : null}
+              </>
+            );
+            const cardClass =
+              "rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:border-CPurple/30 hover:shadow-md";
+
+            if (!c.url) {
+              return (
+                <div key={c.name} className={cardClass}>
+                  {cardContent}
+                </div>
+              );
+            }
+
+            if (isExternal) {
+              return (
+                <a
+                  key={c.name}
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${cardClass} block`}
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <Link key={c.name} to={c.url} className={`${cardClass} block`}>
+                {cardContent}
+              </Link>
+            );
+          })}
         </div>
       </section>
 

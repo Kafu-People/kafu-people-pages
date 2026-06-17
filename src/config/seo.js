@@ -18,7 +18,7 @@ export const PAGE_SEO = {
   contact: {
     title: `Contact | ${SITE_NAME}`,
     description:
-      "Book a meeting or reach Kafu People in Amsterdam. We respond quickly and work with clients worldwide.",
+      "Book a meeting or reach Kafu People in Purmerend, Netherlands. We respond quickly and work with clients worldwide.",
     canonicalPath: "/contact",
   },
   portfolio: {
@@ -26,6 +26,12 @@ export const PAGE_SEO = {
     description:
       "Explore products and projects built by Kafu People — SaaS MVPs, dashboards, integrations, and more.",
     canonicalPath: "/portfolio",
+  },
+  portfolioCaseStudy: {
+    title: (name) => `${name} — Case Study | ${SITE_NAME}`,
+    description:
+      "In-depth case study of a product built by Kafu People — from concept to delivery.",
+    canonicalPath: (slug) => `/portfolio/${slug}`,
   },
   services: {
     title: `Services | ${SITE_NAME}`,
@@ -39,11 +45,35 @@ export const PAGE_SEO = {
       "Latest news, events, and insights from Kafu People on AI, cloud, and modern software delivery.",
     canonicalPath: "/newsAndEvents",
   },
+  newsList: {
+    title: `News & Updates | ${SITE_NAME}`,
+    description:
+      "Announcements, events, partnerships, and product updates from the Kafu People team.",
+    canonicalPath: "/news",
+  },
+  newsArticle: {
+    title: (title) => `${title} — News | ${SITE_NAME}`,
+    description:
+      "Read the latest news and updates from Kafu People on AI, cloud, and modern software delivery.",
+    canonicalPath: (slug) => `/news/${slug}`,
+  },
+  blogPost: {
+    title: (title) => `${title} — Blog | ${SITE_NAME}`,
+    description:
+      "Read the latest article from Kafu People on technology, product development, and digital transformation.",
+    canonicalPath: (slug) => `/blogs/${slug}`,
+  },
   blog: {
     title: `Blog | ${SITE_NAME}`,
     description:
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
-    canonicalPath: "/blogSection",
+    canonicalPath: "/blogs",
+  },
+  team: {
+    title: `Our Team | ${SITE_NAME}`,
+    description:
+      "Meet the distributed, remote-first team of engineers, designers, and strategists building AI, cloud, and full-stack products at Kafu People.",
+    canonicalPath: "/team",
   },
   terms: {
     title: `Terms of Service | ${SITE_NAME}`,

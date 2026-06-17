@@ -2,6 +2,7 @@ import React from "react";
 import PageSEO from "../components/PageSEO";
 import LegalDocumentHeader from "../components/legal/LegalDocumentHeader";
 import LegalSection from "../components/legal/LegalSection";
+import { SITE_NAME } from "../constants/site";
 
 const CONTACT_EMAIL = "contact@kafupeople.com";
 
@@ -9,22 +10,22 @@ const TermsOfService = () => {
   return (
     <>
       <PageSEO
-        title="Terms of Service | KAFUPEOPLE"
-        description="Terms of Service for KAFUPEOPLE IT solutions, including cloud, cybersecurity, integration, and consulting. Effective April 25, 2026."
+        title={`Terms of Service | ${SITE_NAME}`}
+        description={`Terms of Service for ${SITE_NAME} IT solutions, including cloud, cybersecurity, integration, and consulting. Effective April 25, 2026.`}
         canonicalPath="/terms-of-service"
       />
       <main className="min-h-screen bg-white font-inter">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 max-w-4xl">
           <LegalDocumentHeader
             title="Terms of Service"
-            subtitle="These terms govern your use of the KAFUPEOPLE website and how we engage with you regarding our technology services."
+            subtitle={`These terms govern your use of the ${SITE_NAME} website and how we engage with you regarding our technology services.`}
           />
 
           <LegalSection id="acceptance" title="1. Acceptance of Terms">
             <p>
               By accessing or using the website located at kafupeople.com (the
               &quot;Site&quot;) or by requesting information, proposals, or
-              services from KAFUPEOPLE (&quot;we,&quot; &quot;us,&quot; or
+              services from Kafu People (&quot;we,&quot; &quot;us,&quot; or
               &quot;our&quot;), you agree to be bound by these Terms of Service
               (&quot;Terms&quot;). If you do not agree, do not use the Site or
               submit inquiries through it.
@@ -38,7 +39,7 @@ const TermsOfService = () => {
 
           <LegalSection id="services" title="2. Description of Services">
             <p>
-              KAFUPEOPLE provides professional information technology services,
+              Kafu People provides professional information technology services,
               which may include, without limitation: cloud computing and
               infrastructure advisory; cybersecurity assessments and program
               support; system integration; digital transformation consulting;
@@ -80,7 +81,7 @@ const TermsOfService = () => {
           <LegalSection id="intellectual-property" title="4. Intellectual Property">
             <p>
               The Site, including its design, text, graphics, logos, trademarks,
-              software, and compilations of content, is owned by KAFUPEOPLE or
+              software, and compilations of content, is owned by Kafu People or
               its licensors and is protected by applicable intellectual property
               laws. Except for temporary viewing in a browser, you may not copy,
               modify, distribute, publicly display, or create derivative works
@@ -157,7 +158,7 @@ const TermsOfService = () => {
           <LegalSection id="limitation-of-liability" title="9. Limitation of Liability">
             <p>
               TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL
-              KAFUPEOPLE OR ITS DIRECTORS, EMPLOYEES, OR AFFILIATES BE LIABLE FOR
+              KAFU PEOPLE OR ITS DIRECTORS, EMPLOYEES, OR AFFILIATES BE LIABLE FOR
               ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
               DAMAGES, OR ANY LOSS OF PROFITS, DATA, GOODWILL, OR BUSINESS
               OPPORTUNITIES, ARISING OUT OF OR RELATED TO THESE TERMS OR YOUR
@@ -192,7 +193,7 @@ const TermsOfService = () => {
 
           <LegalSection id="company-information" title="11. Company Information">
             <p>
-              <strong>KAFUPEOPLE</strong>
+              <strong>Kafu People</strong>
             </p>
             <dl className="mt-4 space-y-3">
               <div>
@@ -230,7 +231,7 @@ const TermsOfService = () => {
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </p>
             <p>
-              KAFUPEOPLE is an IT solutions company. Official correspondence
+              Kafu People is an IT solutions company. Official correspondence
               should identify your organization and the subject of your inquiry.
             </p>
           </LegalSection>

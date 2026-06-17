@@ -1,9 +1,10 @@
 import React from "react";
+import { SITE_NAME } from "../../constants/site";
 
 const LegalDocumentHeader = ({ title, subtitle }) => (
   <header className="mb-10 md:mb-12 border-b border-textGray/30 pb-8">
     <p className="text-sm font-semibold uppercase tracking-wide text-CPurple mb-2">
-      KAFUPEOPLE
+      {SITE_NAME}
     </p>
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-cDarkBlue mb-3">
       {title}

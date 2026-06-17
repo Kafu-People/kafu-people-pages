@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const BlogSection = () => {
   const blogs = [
     {
@@ -8,46 +7,45 @@ const BlogSection = () => {
       title: "Cloud Computing",
       description:
         "Cloud Computing emerged as a game-changer in the early 2000s, with major players like Amazon...",
-      image: "images/newsAndEvents/blog1.svg", // Replace with your image URL
+      image: "images/newsAndEvents/blog1.webp",
     },
     {
       id: 2,
       title: "Cybersecurity",
       description:
         "Cybersecurity became a critical focus in the 21st century, with increased reliance on digital systems driving innovations in encryption...",
-      image: "images/newsAndEvents/blog2.svg",
+      image: "images/newsAndEvents/blog2.webp",
     },
     {
       id: 3,
       title: "Artificial Intelligence (AI)",
       description:
         "Artificial Intelligence gained momentum in the late 2010s, transforming industries with advancements in machine learning...",
-      image: "images/newsAndEvents/blog3.svg",
+      image: "images/newsAndEvents/blog3.webp",
     },
     {
       id: 4,
       title: "Web Development",
       description:
         "Web development revolutionized the way we interact with technology, with the rise of dynamic websites and frameworks like...",
-      image: "images/newsAndEvents/blog4.svg",
+      image: "images/newsAndEvents/blog4.webp",
     },
   ];
 
   return (
-    <Link to={"/blogSection"}>
+    <Link to={"/blogs"}>
       <div className="px-4 sm:px-8 lg:px-24 py-8 font-inter">
         <h2 className="text-3xl font-bold text-cBlack p-4 mb-6 text-center">
-          Our <span className="text-indigo-600">Latest Blog & Articles</span>
+          Our <span className="text-CPurple">Latest Blog & Articles</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-cWhite rounded-lg shadow-md hover:shadow-CPurple overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg block"
+              className="bg-cWhite rounded-lg shadow-md hover:shadow-CPurple overflow-hidden transform transition-all duration-300 hover:md:scale-105 hover:shadow-lg block"
             >
               <div className="h-40 flex items-center justify-center  overflow-hidden">
-                <img
-                  src={blog.image}
+                <img loading="lazy"                   src={blog.image}
                   alt={blog.title}
                   className="object-cover w-full h-full"
                 />

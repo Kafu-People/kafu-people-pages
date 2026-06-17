@@ -1,27 +1,28 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { MdMarkEmailUnread } from "react-icons/md";
-import contactBg from "../assets/images/contactUs/contact.webp";
-import { PopupButton } from "react-calendly";
 import { FaWhatsappSquare, FaLinkedin } from "react-icons/fa";
-import { useCookieConsent } from "../context/useCookieConsent";
-import CookieFeatureFallback from "./cookies/CookieFeatureFallback";
+import CalendlyPopup from "./ui/CalendlyPopup";
 import {
-  CALENDLY_URL,
   CONTACT_EMAIL,
   WHATSAPP_URL,
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
+  OFFICE_ADDRESS,
 } from "../constants/site";
 
-const ContactSection = () => {
-  const { hydrated, allowFunctional } = useCookieConsent();
+const CONTACT_SECTION_IMAGE = "/images/contact-section.webp";
 
+const ContactSection = () => {
   return (
     <section className="bg-cWhite px-4 py-12 font-inter sm:px-8 lg:px-24 lg:py-16">
       <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl shadow-lg">
         <img
-          src={contactBg}
+          src={CONTACT_SECTION_IMAGE}
           alt=""
+          width={1200}
+          height={800}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden
         />
@@ -81,42 +82,10 @@ const ContactSection = () => {
             <p className="flex justify-center text-cWhite/90 lg:justify-start">
               <FaLocationDot className="mr-2" /> Address:
             </p>
-            <p className="text-cWhite/80">Amsterdam, NL</p>
+            <p className="text-cWhite/80">{OFFICE_ADDRESS}</p>
           </div>
           <div className="mb-4">
-            {!hydrated ? (
-              <div
-                className="mx-auto h-12 max-w-xs animate-pulse rounded-lg bg-cWhite/20 lg:mx-0"
-                aria-hidden
-              />
-            ) : allowFunctional ? (
-              <PopupButton
-                url={CALENDLY_URL}
-                rootElement={document.getElementById("root")}
-                branding
-                color="1E4FD4"
-                pageSettings={{
-                  backgroundColor: "ffffff",
-                  hideEventTypeDetails: false,
-                  hideGdprBanner: true,
-                  hideLandingPageDetails: false,
-                  primaryColor: "1E4FD4",
-                  textColor: "4d5055",
-                }}
-                utm={{
-                  utmSource: "Web",
-                }}
-                className="flex items-center gap-2 px-6 py-3 bg-primary text-cWhite font-semibold rounded-lg shadow-md hover:bg-primary-dark hover:shadow-lg transition duration-300"
-                text="Book a Meeting"
-              />
-            ) : (
-              <CookieFeatureFallback
-                variant="dark"
-                title="Scheduling is disabled"
-                description="Meeting booking uses functional cookies. Enable them in Cookie Preferences, or reach us by email or phone above."
-                className="max-w-sm md:mx-0"
-              />
-            )}
+            <CalendlyPopup buttonText="Book a Meeting" />
           </div>
         </div>
           </div>
@@ -194,7 +163,7 @@ const ContactSection = () => {
           </div>
           <button
             type="submit"
-            className="w-full p-3 bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-semibold rounded hover:opacity-90"
+            className="w-full min-h-[44px] p-3 bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-semibold rounded hover:opacity-90"
           >
             Submit
           </button>

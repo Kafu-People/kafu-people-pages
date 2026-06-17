@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import aibad from "../../assets/images/members/aibad.jpg";
-import ali from "../../assets/images/members/ali.jpg";
-import zuhiab from "../../assets/images/members/zuhiab.jpg";
-import waqas from "../../assets/images/members/waqas.jpg";
+import william from "../../assets/images/members/williambakke.jpg";
+import matheus from "../../assets/images/members/Matheus.jpg";
+import saad from "../../assets/images/members/saad_majeed.png";
 import waqasi from "../../assets/images/members/Mwaqas.jpg";
 import fawad from "../../assets/images/members/fawad.jpg";
-import adnan from "../../assets/images/members/adnan.jpg";
+import iendrel from "../../assets/images/members/Iendrel.png";
 import saif from "../../assets/images/members/saif.jpg";
 import abubakkar from "../../assets/images/members/abubakkar.jpg";
 import noor from "../../assets/images/members/noor.jpg";
 import kainat from "../../assets/images/members/kainat.jpg";
 import ahsan from "../../assets/images/members/ahsan.jpg";
-
+import pauline from "../../assets/images/members/pauline_vroonen.webp";
+import belal from "../../assets/images/members/Belal_Haikal.png";
+import brian from "../../assets/images/members/brian.png";
+import soban from "../../assets/images/members/soban_a.png";
+import nauman from "../../assets/images/members/nauman_raees.png";
+import rakib from "../../assets/images/members/rakib_khan.png";
+import himanshi from "../../assets/images/members/himanshi_aggarwal.png";
+import nodari from "../../assets/images/members/nodari_gurjidze.png";
+import mahenoor from "../../assets/images/members/mahenoor_salat.png";
+import TeamAvatar from "../team/TeamAvatar";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-// import test from "../../assets/images/members/test1.jpg";
-
-import masooma from "../../assets/images/members/masooma.jpg";
-import hafeezurehman from "../../assets/images/members/hafeez.jpg";
 
 const TeamSlider = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -55,15 +59,24 @@ const TeamSlider = () => {
 
   const teamMembers = [
     {
-      name: "Zohaib khan",
-      role: "Data Scientist",
+      name: "Muhammad Waqas",
+      role: "Senior AI Engineer",
       description:
-        "As a Data Scientist at KAFUPEOPLE, He specialize in analyzing complex datasets and developing data-driven solutions. With expertise in machine learning, statistical modeling, and data visualization, he uncover insights and build predictive models to drive business growth and support strategic decision-making.",
-      image: zuhiab,
-      linkedin: "https://www.linkedin.com/in/zuhaib-khan-183840275",
+        "Focuses on leveraging AI and deep learning to create real-world solutions. With a background in software engineering and generative AI, he drives the innovative projects that expand our technological capabilities.",
+      image: waqasi,
+      linkedin: "https://www.linkedin.com/in/muhammad-waqas-3b7122257/",
       facebook: "/",
-      instagram:
-        "https://www.instagram.com/zuhaibkhan662?igsh=ODdzdjlwOXEyY2o2",
+      instagram: "/",
+    },
+    {
+      name: "Matheus Serra",
+      role: "Senior Full-Stack Developer",
+      description:
+        "Builds cloud-native products with intelligent, full-stack workflows. Brings senior engineering experience alongside a background in process management, quality systems, and IT project delivery across industrial and technology environments.",
+      image: matheus,
+      linkedin: "https://www.linkedin.com/in/matheusserra/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Fawad Azam",
@@ -78,14 +91,14 @@ const TeamSlider = () => {
       instagram: "https://www.instagram.com/f_fawad_zm?igsh=a3R3aW5jNDRzcXEx",
     },
     {
-      name: "Muhammad Adnan ",
-      role: "Full Stack Developer",
+      name: "Iendrel Gabriel",
+      role: "Senior Full Stack Engineer",
       description:
-        "As a Full Stack Developer at KAFUPEOPLE, He work on developing dynamic web applications using both front-end and back-end technologies. With a strong foundation in both client-side and server-side development, he contribute to building robust, scalable solutions that enhance our technological capabilities.",
-      image: adnan,
-      linkedin: "https://www.linkedin.com/in/muhammad-adnan-khan-081ab9258",
-      facebook: "https://www.facebook.com/share/1BXmpSspbD/",
-      instagram: "https://www.instagram.com/itx_malak10?igsh=b2FvdnQwdW9zd2kw",
+        "Builds scalable web applications, cloud-native platforms, and distributed systems across React, Next.js, Node.js, Python, and AWS. Experienced in microservices, event-driven architecture, CI/CD, and AI-integrated products — focused on reliable software that scales with the business.",
+      image: iendrel,
+      linkedin: "https://www.linkedin.com/in/iendrel-gabriel/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Muhammad Ahsan Ayaz",
@@ -129,15 +142,13 @@ const TeamSlider = () => {
       instagram: "/",
     },
     {
-      name: "Ali Khan",
-      role: "MERN Stack Developer",
+      name: "Gerardo Miguel Gutierrez Garcia",
+      role: "Senior Full Stack Engineer",
       description:
-        "As a MERN Stack Developer at KAFUPEOPLE, He specialize in building dynamic, scalable web applications using MongoDB, Express.js, React.js, and Node.js. he focus on delivering seamless, user-friendly interfaces and robust back-end systems to drive business success.",
-      image: ali,
-      linkedin: "https://www.linkedin.com/in/engr-ali-khan-626667251/",
-      facebook: "https://www.facebook.com/profile.php?id=100034895843168",
-      instagram:
-        "https://www.instagram.com/engineer_alikhan?utm_source=qr&igsh=MWV3amZ4cm80a3U4bQ==",
+        "Builds scalable web platforms, high-performance APIs, and cloud-native systems with 8+ years in fintech and gaming. Expert in TypeScript, React, Node.js, and AWS — with a track record optimizing payment APIs, microservices migrations, and real-time multiplayer services at scale.",
+      linkedin: "https://www.linkedin.com/in/gerardo-mmg/",
+      facebook: "/",
+      instagram: "/",
     },
     {
       name: "Kainat Afzal",
@@ -150,57 +161,117 @@ const TeamSlider = () => {
       instagram: "/",
     },
     {
-      name: "Waqas Gul",
-      role: "MERN Stack developer",
+      name: "Saad Majeed",
+      role: "Full Stack Web Developer",
       description:
-        "As a Senior MERN Stack Developer at KAFUPEOPLE, he builds dynamic web applications with MongoDB, Express.js, React.js, and Node.js. He specializes in seamless UIs, robust backends, and mentoring teams to deliver high-performance solutions that drive business growth.",
-      image: waqas,
-      linkedin: "https://www.linkedin.com/in/waqas-gul-b7580826b/",
-      facebook: "https://www.facebook.com/WAQASI.369",
-      instagram: "https://www.instagram.com/w_a_q_a_s_i/",
+        "Builds scalable SaaS platforms, admin panels, and AI-powered web applications with Laravel, Vue.js, Inertia, and Tailwind CSS. Founder of Dorex App and experienced across healthcare, e-commerce, and business management systems — from architecture and APIs through deployment and long-term maintainability.",
+      image: saad,
+      linkedin: "https://www.linkedin.com/in/saadmajeeddev/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Brian Ervin",
+      role: "Senior UX/UI Designer",
+      description:
+        "Senior UX/UI designer and frontend-oriented product specialist at BE UI Design, LLC in Austin. Led TxDOTCONNECT enterprise UI for five+ years — design systems, responsive applications, standards libraries, and developer collaboration. Background spans studio art, architecture, industrial design, and full-stack web development in Agile/SCRUM environments.",
+      image: brian,
+      linkedin: "https://www.linkedin.com/in/brianervinmedia/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Soban A.",
+      role: "CRM & AI Automation Engineer / Full Stack Developer",
+      description:
+        "Official Make.com partner and automation architect building CRM, AI voice, and workflow systems at scale — GHL, HubSpot, Pipedrive, n8n, Retell, and Vapi. Designs high-volume automations that cut operational drag, migrate costly Zapier stacks, and deliver sub-minute lead follow-up with measurable ROI.",
+      image: soban,
+      linkedin: "https://www.linkedin.com/in/no-code-automator/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Nauman Raees",
+      role: "AI-Enabled Full Stack Engineer (MERN)",
+      description:
+        "Builds scalable MERN-stack applications with React, Next.js, Node.js, and NestJS — integrating AI-enabled features into production web apps. 5+ years delivering HRMS, SaaS, and enterprise platforms with AWS, Docker, and performance-focused API design.",
+      image: nauman,
+      linkedin: "https://www.linkedin.com/in/nauman-raees-355558183/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Md Rakib Khan",
+      role: "Senior Software Engineer in ASP.NET Core and Angular",
+      description:
+        "Senior software engineer with 5+ years building full-stack solutions on ASP.NET Core, Web API, MVC, and Angular. Experienced across MS SQL and MongoDB, database architecture, performance tuning, and agile delivery — from greenfield applications to optimizing production systems at Fulfillment Team and DISA Global Solutions.",
+      image: rakib,
+      linkedin: "https://www.linkedin.com/in/md-rakib-khan-51361315b/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Himanshi Aggarwal",
+      role: "Content & Community",
+      description:
+        "Leads content and community growth for Kafu People. Founder of TechLeads (1000+ members), campus ambassador, and content creator — experienced in curated tech content, event promotion, audience engagement, and building active online communities across social platforms.",
+      image: himanshi,
+      linkedin: "https://www.linkedin.com/in/himanshi-aggarwal-5a5553321/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Nodari Gurjidze",
+      role: "Software Developer",
+      description:
+        "Software developer focused on building modern, maintainable applications and contributing to full-stack product delivery — from implementation and debugging through clean, collaborative engineering practices.",
+      image: nodari,
+      linkedin: "https://www.linkedin.com/in/nodari-gurjidze-2911203a1/",
+      facebook: "/",
+      instagram: "/",
+    },
+    {
+      name: "Mahenoor Salat",
+      role: "QA & Full Stack",
+      description:
+        "Combines QA discipline with full-stack delivery on React and Next.js — from usability testing and UI/UX polish through scalable frontend architecture and rapid deployment. Led frontend development at Hexoforge LLC; experienced across component systems, cross-functional delivery, and performance-focused web applications.",
+      image: mahenoor,
+      linkedin: "https://www.linkedin.com/in/salat-mahenoor/",
+      facebook: "/",
+      instagram: "/",
     },
   ];
 
   const woners = [
     {
-      name: "Dr. Hafeez UR Rehman ",
+      name: "Belal Haikal",
       role: "Founder & CEO",
       description:
-        "Dr. Hafeez ur Rehman, CEO of KAFUPEOPLE PVT LTD, holds a PhD in Electrical Engineering and specializes in AI, IoT, and cybersecurity. With 13+ years of experience, he has developed advanced solutions for threat detection, automated security, and digital protection. His work strengthens Pakistan’s tech and security landscape, and as a published researcher, he bridges academic knowledge with real-world applications.",
-      image: hafeezurehman,
-      linkedin: "https://www.linkedin.com/in/dr-hafeez-ur-rehman-633a43135/",
+        "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale — from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
+      image: belal,
+      linkedin: "https://www.linkedin.com/in/belalhaikal/",
       facebook: "/",
       instagram: "/",
     },
     {
-      name: "Masooma Ali ",
-      role: "Director Cyber Security",
+      name: "Pauline Vroonen",
+      role: "Business Partner, HR Specialist, Account Manager",
       description:
-        "Masooma Ali is the Director of KAFUPEOPLE and leads the Cybersecurity Department. With a Bachelor's in Computer Science and certifications like CEH, CEH Practical Master, and CompTIA Security+, she brings over 5 years of experience. She has led key projects and trained NAVTTC and TEVTA Punjab cybersecurity batches, shaping future cybersecurity professionals.",
-      image: masooma,
-      linkedin: "https://www.linkedin.com/in/masooma-ali-94243b240/",
+        "Leads business development, client partnerships, and HR operations at Kafu People. Brings experience as an HR business partner and account manager across Belgium, Europe, and international markets — connecting strategic growth with people and client success. Odoo-certified; fluent in Dutch, French, and English.",
+      image: pauline,
+      linkedin: "https://www.linkedin.com/in/paulinevroonen647",
       facebook: "/",
       instagram: "/",
     },
     {
-      name: "Muhammad Waqas",
-      role: "Senior AI Engineer",
-      description:
-        "As an AI Engineer at KAFUPEOPLE, He focus on leveraging AI and deep learning to create real-world solutions. With a background in software engineering and generative AI, he drive innovative projects that enhance our technological capabilities.",
-      image: waqasi,
-      linkedin: "https://www.linkedin.com/in/muhammad-waqas-3b7122257/",
-      facebook: "/",
-      instagram: "/",
-    },
-    {
-      name: "Aibad Ullah",
+      name: "William Bakke",
       role: "Media & Marketing Manager",
       description:
-        "As the Media and Marketing Manager at KAFUPEOPLE, He bring over 7 years of expertise in digital strategy and photography to elevate our brand’s visual storytelling. he focus on creating compelling content and campaigns that effectively communicate our vision, engage our audience, and drive impactful results.",
-      image: aibad,
-      linkedin: "https://www.linkedin.com/in/aibadullah/",
-      facebook: "https://www.facebook.com/Aibadvlogs/",
-      instagram: "https://www.instagram.com/aibadvlogs/",
+        "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Morgan Stanley and Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+      image: william,
+      linkedin: "https://www.linkedin.com/in/williambakke",
+      facebook: "/",
+      instagram: "/",
     },
   ];
 
@@ -212,7 +283,7 @@ const TeamSlider = () => {
     >
       <h4 className="text-center text-xl mb-3">MEET OUR TEAM</h4>
       <h2 className="text-center text-3xl font-bold mb-6">
-        <span className="text-indigo-500">Spotlight On Our Experts</span>
+        <span className="text-CPurple">Spotlight On Our Experts</span>
       </h2>
       <p className="text-center text-textGray">
         Explore the expertise, passion, and innovative thinking of the
@@ -228,8 +299,7 @@ const TeamSlider = () => {
             style={{ animationDelay: `${index * 200}ms` }}
           >
             <div className="flex items-center justify-center md:justify-start h-56 md:h-auto m-4 rounded-md">
-              <img
-                src={member.image}
+              <img loading="lazy"                 src={member.image}
                 alt={member.name}
                 className="w-3/4 md:w-full h-full object-cover rounded transition-all duration-500"
               />
@@ -296,15 +366,16 @@ const TeamSlider = () => {
                 alignItems: "center",
               }}
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-24 h-24 rounded-full mb-4 object-cover"
+              <TeamAvatar
+                name={member.name}
+                image={member.image}
+                size="md"
+                className="mb-4"
               />
               <h3 className="text-xl font-semibold text-cDarkBlue">
                 {member.name}
               </h3>
-              <p className="text-indigo-600 text-sm font-medium">
+              <p className="text-CPurple text-sm font-medium">
                 {member.role}
               </p>
               <p className="text-gray-500 text-sm mt-2 text-textGray">

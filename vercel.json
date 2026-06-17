@@ -1,3 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/ssr" }
+  ],
+  "functions": {
+    "api/ssr.js": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  }
 }

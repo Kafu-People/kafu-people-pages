@@ -16,16 +16,24 @@ import {
   WHATSAPP_URL,
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
+  OFFICE_ADDRESS,
 } from "../constants/site";
+import { SERVICE_CATEGORIES } from "../constants/serviceCategories";
 import { NewsletterSubscribeForm } from "./NewsletterSignup";
 
 const columnClass = "min-w-0 w-full";
+const SERVICE_FOOTER_ICONS = {
+  "ai-agentic": FaShieldAlt,
+  "saas-mvp": FaBrain,
+  "cloud-dashboards": FaCloud,
+  "business-websites": FaLink,
+};
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnInnerClass =
   "text-left w-full min-w-0 sm:w-max sm:max-w-full";
 const footerGridClass =
-  "grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4 xl:gap-8";
+  "grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 xl:grid-cols-5 xl:gap-8";
 const headingClass = "text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white";
 const listClass = "space-y-2 text-xs sm:text-sm text-slate-200";
 
@@ -42,8 +50,7 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={footerGridClass}>
           <div className={brandColumnClass}>
-            <img
-              src="/images/kafupeople.webp"
+            <img loading="lazy"               src="/images/kafupeople.webp"
               alt="Kafu People Logo"
               className="mb-4 block mx-auto max-w-[45%] sm:max-w-[200px] h-auto brightness-110"
             />
@@ -56,22 +63,18 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Services</h3>
               <ul className={listClass}>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaShieldAlt className="mr-2 shrink-0" />
-                AI & Agentic Workflows
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaBrain className="mr-2 shrink-0" />
-                SaaS & Startup MVPs
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaCloud className="mr-2 shrink-0" />
-                Cloud-Native Dashboards
-              </li>
-              <li className="flex items-center hover:text-primary-light transition-colors">
-                <FaLink className="mr-2 shrink-0" />
-                Business & Corporate Websites
-              </li>
+                {SERVICE_CATEGORIES.map(({ id, title }) => {
+                  const Icon = SERVICE_FOOTER_ICONS[id];
+                  return (
+                    <li
+                      key={id}
+                      className="flex items-center transition-colors hover:text-primary-light"
+                    >
+                      <Icon className="mr-2 shrink-0" />
+                      {title}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -93,6 +96,30 @@ const Footer = () => {
 
           <div className={linkColumnClass}>
             <div className={linkColumnInnerClass}>
+              <h3 className={headingClass}>Quick Links</h3>
+              <ul className={listClass}>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="hover:text-primary-light transition-colors"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/news"
+                  className="hover:text-primary-light transition-colors"
+                >
+                  News & Updates
+                </Link>
+              </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={linkColumnClass}>
+            <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Get in Touch</h3>
               <ul className={`${listClass} sm:space-y-3`}>
               <li>
@@ -100,7 +127,7 @@ const Footer = () => {
                   <FaLocationDot />
                   Address:
                 </span>{" "}
-                Amsterdam, NL
+                {OFFICE_ADDRESS}
               </li>
               <li>
                 <span className="font-semibold text-accent-light flex items-center gap-1">

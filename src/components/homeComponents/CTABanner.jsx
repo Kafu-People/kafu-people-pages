@@ -3,7 +3,7 @@ import { HiArrowRight } from "react-icons/hi2";
 
 const CTABanner = () => {
   return (
-    <section className="bg-white px-4 py-12 font-inter sm:px-8 sm:py-16 lg:px-12">
+    <section className="bg-white px-4 py-12 font-inter sm:px-8 sm:py-16 lg:py-24 lg:px-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:gap-10 lg:gap-12">
         <article className="px-4 py-2 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl">

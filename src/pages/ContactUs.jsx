@@ -1,8 +1,12 @@
+import { lazy, Suspense } from "react";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import ContactHero from "../components/contactComponent/ContactHero";
-import ContactSection from "../components/ContactSection";
-import MapSection from "../components/contactComponent/MapSection";
+import { ContactSectionPlaceholder } from "../components/contactComponent/ContactSectionPlaceholder";
+import { MapSectionPlaceholder } from "../components/contactComponent/MapSectionPlaceholder";
+
+const ContactSection = lazy(() => import("../components/ContactSection"));
+const MapSection = lazy(() => import("../components/contactComponent/MapSection"));
 
 const ContactUs = () => {
   const seo = PAGE_SEO.contact;
@@ -15,8 +19,12 @@ const ContactUs = () => {
         canonicalPath={seo.canonicalPath}
       />
       <ContactHero />
-      <ContactSection />
-      <MapSection />
+      <Suspense fallback={<ContactSectionPlaceholder />}>
+        <ContactSection />
+      </Suspense>
+      <Suspense fallback={<MapSectionPlaceholder />}>
+        <MapSection />
+      </Suspense>
     </>
   );
 };

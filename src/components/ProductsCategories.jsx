@@ -36,7 +36,7 @@ const ProductsCategories = () => {
     );
 
   return (
-    <div className="w-full p-4 sm:p-6 md:p-8 lg:mx-24 font-inter">
+    <div className="box-border w-full max-w-[100vw] overflow-x-hidden p-4 sm:p-6 md:p-8 lg:mx-24 font-inter">
       <div className="block lg:hidden mb-4">
         <h3 className="text-lg font-bold text-cDarkBlue mb-2 m-6">
           Categories:
@@ -54,11 +54,11 @@ const ProductsCategories = () => {
                 setSelectedCategory(category);
                 setCurrentPage(1);
               }}
-              className={`flex-shrink-0 px-4 py-2 my-4 rounded-lg shadow-md text-sm font-medium ${
-                selectedCategory === category
-                  ? "bg-indigo-600 text-cWhite"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
+               className={`flex-shrink-0 px-4 py-2 min-h-[44px] my-4 rounded-lg shadow-md text-sm font-medium ${
+                 selectedCategory === category
+                   ? "bg-CPurple text-cWhite"
+                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+               }`}
             >
               {category}
             </button>
@@ -107,8 +107,7 @@ const ProductsCategories = () => {
                 className="bg-cWhite rounded-lg p-4 shadow hover:shadow-lg transition"
               >
                 <div className="h-40 bg-gray-100 rounded mb-4 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={`${BACKEND_URL}/${product.image}`}
+                  <img loading="lazy"                     src={`${BACKEND_URL}/${product.image}`}
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />
@@ -125,11 +124,11 @@ const ProductsCategories = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentPage(index + 1)}
-                  className={`px-4 py-2 rounded ${
-                    currentPage === index + 1
-                      ? "bg-indigo-600 text-cWhite"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
+               className={`px-4 py-2 min-h-[44px] rounded ${
+                 currentPage === index + 1
+                   ? "bg-CPurple text-cWhite"
+                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+               }`}
                 >
                   {index + 1}
                 </button>

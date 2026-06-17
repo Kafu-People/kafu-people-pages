@@ -22,7 +22,7 @@ const Login = () => {
 
       if (data.token) {
         localStorage.setItem("token", data.token);
-        localStorage.setItem("role", data.token);
+        localStorage.setItem("role", data.role);
 
         Swal.fire({
           icon: "success",

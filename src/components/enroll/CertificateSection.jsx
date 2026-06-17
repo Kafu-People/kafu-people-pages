@@ -20,8 +20,7 @@ const CertificateSection = () => {
 
         {/* Certificate Image */}
         <div className=" flex justify-center items-center ">
-          <img
-            src="/images/enroll/certificat.svg" // Replace with the actual certificate image link
+          <img loading="lazy"             src="/images/enroll/certificat.svg" // Replace with the actual certificate image link
             alt="Certificate"
             className="rounded-lg shadow-lg"
           />

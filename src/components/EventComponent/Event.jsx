@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { SlCalender } from "react-icons/sl";
 import { CiLocationOn } from "react-icons/ci";
-import AboutEventsImage from "../../assets/images/AboutNewsImage/AboutEvents.svg";
-import { HERO_CONTENT_PT, HERO_FLUSH_CLASS } from "../../constants/layout";
+import AboutEventsImage from "../../assets/images/AboutNewsImage/AboutEvents.webp";
+import PageHero from "../ui/PageHero";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -33,31 +33,19 @@ const Event = () => {
 
   return (
     <>
-      <div
-        className={`relative box-border flex h-[400px] w-full items-center justify-center bg-gray-800 font-inter sm:h-[500px] lg:h-[600px] ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
+      <PageHero
+        image={AboutEventsImage}
+        imageAlt="About Our Events"
+        height="h-[400px] sm:h-[500px] lg:h-[600px]"
+        priority
       >
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${AboutEventsImage})`,
-          }}
-          aria-label="Event background image" // Accessibility enhancement
-        ></div>
-
-        {/* Overlay Content */}
-        <div className="relative z-10 text-cWhite text-center px-4 top-32 sm:px-8 lg:px-16 w-full">
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
-            About Our Events
-          </h1>
-          <p className="mt-4 text-base sm:text-lg lg:text-xl text-cWhite">
-            Stay tuned for the latest updates and happenings.
-          </p>
-        </div>
-
-        {/* Optional Overlay Effect */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-      </div>
+        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
+          About Our Events
+        </h1>
+        <p className="mt-4 text-base sm:text-lg lg:text-xl">
+          Stay tuned for the latest updates and happenings.
+        </p>
+      </PageHero>
 
       <div className="p-4 sm:p-6 bg-cWhite lg:mx-24 sm:mx-5">
         {/* Heading Section */}
@@ -100,19 +88,16 @@ const Event = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {/* Image with Nested Grid 1 */}
             <div className="flex  flex-col items-center space-y-7 ">
-              <img
-                src={`${BACKEND_URL}/${event.images[0]}`}
+              <img loading="lazy"                 src={`${BACKEND_URL}/${event.images[0]}`}
                 alt="Main Workshop"
                 className="w-[20rem]  h-auto max-w-md object-cover rounded-lg shadow-md "
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
-                <img
-                  src={`${BACKEND_URL}/${event.images[1]}`}
+                <img loading="lazy"                   src={`${BACKEND_URL}/${event.images[1]}`}
                   alt="Workshop Image 1"
                   className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
-                <img
-                  src={`${BACKEND_URL}/${event.images[2]}`}
+                <img loading="lazy"                   src={`${BACKEND_URL}/${event.images[2]}`}
                   alt="Workshop Image 2"
                   className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
@@ -121,8 +106,7 @@ const Event = () => {
 
             {/* Image with Nested Grid 2 */}
             <div className="flex flex-col items-center space-y-4">
-              <img
-                src={`${BACKEND_URL}/${event.images[3]}`}
+              <img loading="lazy"                 src={`${BACKEND_URL}/${event.images[3]}`}
                 alt="Workshop Image 3"
                 className="w-full h-[24rem] max-w-md object-cover rounded-lg shadow-md"
               />
@@ -130,19 +114,16 @@ const Event = () => {
 
             {/* Image with Nested Grid 3 */}
             <div className="flex flex-col items-center space-y-4">
-              <img
-                src={`${BACKEND_URL}/${event.images[4]}`}
+              <img loading="lazy"                 src={`${BACKEND_URL}/${event.images[4]}`}
                 alt="Main Workshop"
                 className="w-[20rem] h-auto max-w-md object-cover rounded-lg shadow-md"
               />
               <div className="grid grid-cols-2 gap-2 w-full max-w-md">
-                <img
-                  src={`${BACKEND_URL}/${event.images[5]}`}
+                <img loading="lazy"                   src={`${BACKEND_URL}/${event.images[5]}`}
                   alt="Workshop Image 1"
                   className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />
-                <img
-                  src={`${BACKEND_URL}/${event.images[6]}`}
+                <img loading="lazy"                   src={`${BACKEND_URL}/${event.images[6]}`}
                   alt="Workshop Image 2"
                   className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                 />

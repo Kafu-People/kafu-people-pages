@@ -2,6 +2,7 @@ import React from "react";
 import PageSEO from "../components/PageSEO";
 import LegalDocumentHeader from "../components/legal/LegalDocumentHeader";
 import LegalSection from "../components/legal/LegalSection";
+import { SITE_NAME } from "../constants/site";
 
 const CONTACT_EMAIL = "contact@kafupeople.com";
 
@@ -9,15 +10,15 @@ const PrivacyPolicy = () => {
   return (
     <>
       <PageSEO
-        title="Privacy Policy | KAFUPEOPLE"
-        description="Privacy Policy for KAFUPEOPLE: how we collect, use, and protect personal data when you use our website and services. Effective April 25, 2026."
+        title={`Privacy Policy | ${SITE_NAME}`}
+        description={`Privacy Policy for ${SITE_NAME}: how we collect, use, and protect personal data when you use our website and services. Effective April 25, 2026.`}
         canonicalPath="/privacy-policy"
       />
       <main className="min-h-screen bg-white font-inter">
         <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 max-w-4xl">
           <LegalDocumentHeader
             title="Privacy Policy"
-            subtitle="This policy describes how KAFUPEOPLE collects, uses, and protects personal information in connection with our website and related business activities."
+            subtitle={`This policy describes how ${SITE_NAME} collects, uses, and protects personal information in connection with our website and related business activities.`}
           />
 
           <LegalSection id="information-we-collect" title="1. Information We Collect">
@@ -69,7 +70,7 @@ const PrivacyPolicy = () => {
               <li>Comply with law, regulation, and professional obligations;</li>
               <li>
                 Establish, exercise, or defend legal claims, and protect the
-                rights, property, and safety of KAFUPEOPLE, our clients, and the
+                rights, property, and safety of Kafu People, our clients, and the
                 public.
               </li>
             </ul>
@@ -187,7 +188,7 @@ const PrivacyPolicy = () => {
 
           <LegalSection id="company-information" title="11. Company Information">
             <p>
-              <strong>KAFUPEOPLE</strong>
+              <strong>Kafu People</strong>
             </p>
             <dl className="mt-4 space-y-3">
               <div>
@@ -225,7 +226,7 @@ const PrivacyPolicy = () => {
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </p>
             <p>
-              KAFUPEOPLE — IT solutions including cloud computing, cybersecurity,
+              Kafu People — IT solutions including cloud computing, cybersecurity,
               system integration, digital transformation, software support, and
               business technology consulting.
             </p>

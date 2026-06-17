@@ -1,50 +1,81 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { motion } from "framer-motion";
-import blogsection from "../../assets/images/blogs/blogSection.jpg";
-import Loader from "../Loader";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
-import { HERO_CONTENT_PT, HERO_FLUSH_CLASS } from "../../constants/layout";
+import { BreadcrumbListLD } from "../Schema";
+import PageHero from "../ui/PageHero";
+import staticBlogs from "../../data/blogs";
+import { BlogGridPlaceholder } from "./BlogGridPlaceholder";
+
+const BlogGrid = lazy(() => import("./BlogGrid"));
+
+const BLOG_HERO_IMAGE = "/images/blog-section.webp";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+const FILTER_OPTIONS = [
+  "All Blogs",
+  "Artificial Intelligence",
+  "Web Development",
+  "Cyber Security",
+  "Digital Marketing",
+];
+
+const categoryMap = {
+  "All Blogs": "All",
+  "Artificial Intelligence": "AI",
+  "Web Development": "Web Development",
+  "Cyber Security": "Cyber Security",
+  "Digital Marketing": "Digital Marketing",
+};
+
 const BlogSection = () => {
-  const [blogs, setBlogs] = useState([]); // Store fetched blogs
-  const [loading, setLoading] = useState(true); // Loading state
-  const [error, setError] = useState(null); // Error state
+  const [blogs, setBlogs] = useState(staticBlogs);
+  const [error, setError] = useState(null);
   const [filter, setFilter] = useState("All Blogs");
 
-  // Map button labels to blog categories
-  const categoryMap = {
-    "All Blogs": "All",
-    "Artificial Intelligence": "AI",
-    "Web Development": "Web Development",
-    "Cyber Security": "Cyber Security",
-    "Digital Marketing": "Digital Marketing",
-  };
-
-  // Fetch blogs from API using Axios
   useEffect(() => {
+    if (!BACKEND_URL) return undefined;
+
+    const controller = new AbortController();
+
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`${BACKEND_URL}/api/blogs`); // Replace with your actual API
-        setBlogs(response.data); // Set blog data
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-        setError("Failed to load blogs. Please try again later.");
-      } finally {
-        setLoading(false);
+        const { default: axios } = await import("axios");
+        const response = await axios.get(`${BACKEND_URL}/api/blogs`, {
+          timeout: 3000,
+          signal: controller.signal,
+        });
+        if (Array.isArray(response.data) && response.data.length > 0) {
+          setBlogs(response.data);
+        }
+      } catch (fetchError) {
+        if (!Array.isArray(staticBlogs) || staticBlogs.length === 0) {
+          console.error("Error fetching blogs:", fetchError);
+          setError(fetchError);
+        }
       }
     };
 
-    fetchBlogs();
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(fetchBlogs, { timeout: 3000 });
+      return () => {
+        controller.abort();
+        window.cancelIdleCallback(idleId);
+      };
+    }
+
+    const timeoutId = setTimeout(fetchBlogs, 1200);
+    return () => {
+      controller.abort();
+      clearTimeout(timeoutId);
+    };
   }, []);
 
-  // Filter blogs based on selected category
-  const filteredBlogs =
-    filter === "All Blogs"
-      ? blogs
-      : Array.isArray(blogs) &&
-        blogs.filter((blog) => blog.category === categoryMap[filter]);
+  const filteredBlogs = useMemo(() => {
+    if (filter === "All Blogs") return blogs;
+    return Array.isArray(blogs)
+      ? blogs.filter((blog) => blog.category === categoryMap[filter])
+      : [];
+  }, [blogs, filter]);
 
   const seo = PAGE_SEO.blog;
 
@@ -54,89 +85,62 @@ const BlogSection = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={seo.canonicalPath}
-      />
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <div
-            className={`relative box-border h-[60vh] bg-cover bg-center font-inter text-center text-cWhite lg:h-[80vh] lg:opacity-100 sm:opacity-15 ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
-            style={{ backgroundImage: `url(${blogsection})` }}
-          >
-            <div className="flex flex-col">
-              <h1 className="relative z-10 ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24 lg:text-cWhite sm:text-cBlack">
-                KAFUPEOPLE BLOGS
-              </h1>
-              <div className=" lg:w-[700px] w-auto ">
-                <p className="relative text-lg  sm:text-xl lg:text-left  lg:ml-24 mx-4 sm:text-justify lg:text-cWhite text-cWhite mt-2 z-10 sm:text-cBlack">
-                  Our company shares updates, achievements, and new projects. We
-                  also post ideas, insights, and random thoughts on industry
-                  trends, innovation, and daily work experiences. Stay connected
-                  for news, announcements, and behind-the-scenes stories.
-                </p>
-              </div>
-            </div>
-          </div>
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(
+            BreadcrumbListLD([
+              { name: "Home", path: "/" },
+              { name: "Blogs", path: "/blogs" },
+            ]),
+          )}
+        </script>
+      </PageSEO>
+      <PageHero
+        image={BLOG_HERO_IMAGE}
+        imageAlt="Kafu People blog"
+        height="h-[60vh] lg:h-[80vh]"
+        priority
+        align="left"
+        containerClassName="pt-8"
+      >
+        <h1 className="ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24">
+          Kafu People Blogs
+        </h1>
+        <div className="w-auto lg:w-[700px]">
+          <p className="mx-4 mt-2 text-lg text-cWhite sm:text-justify sm:text-xl lg:ml-24 lg:text-left">
+            Team insights, startup lessons, and engineering perspectives — including the
+            posts we share on LinkedIn. Short reads from our experience building products
+            with clients.
+          </p>
+        </div>
+      </PageHero>
 
-          <div className="container mx-auto px-6 py-6 text-center">
-            <div className="flex justify-center">
-              <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide sm:flex-wrap sm:justify-center w-full px-2">
-                {[
-                  "All Blogs",
-                  "Artificial Intelligence",
-                  "Web Development",
-                  "Cyber Security",
-                  "Digital Marketing",
-                ].map((category) => (
-                  <button
-                    key={category}
-                    className={`px-4 py-2 rounded-md text-sm sm:text-base border flex-shrink-0 ${
-                      filter === category
-                        ? "border-CPurple text-CPurple bg-transparent"
-                        : "bg-cBrightBlue text-cgray hover:bg-cWhite hover:text-cBlack"
-                    }`}
-                    onClick={() => setFilter(category)}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
+      <div className="container mx-auto px-6 py-6 text-center">
+        <div className="flex justify-center">
+          <div className="scrollbar-hide flex w-full gap-4 overflow-x-auto whitespace-nowrap px-2 sm:flex-wrap sm:justify-center">
+            {FILTER_OPTIONS.map((category) => (
+              <button
+                key={category}
+                type="button"
+                className={`min-h-[44px] flex-shrink-0 rounded-md border px-4 py-2 text-sm sm:text-base ${
+                  filter === category
+                    ? "border-CPurple bg-transparent text-CPurple"
+                    : "bg-cBrightBlue text-cgray hover:bg-cWhite hover:text-cBlack"
+                }`}
+                onClick={() => setFilter(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-          {/* Blog Grid */}
-          <div className="container mx-auto px-6 py-8">
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 "
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              {Array.isArray(filteredBlogs) &&
-                filteredBlogs.map((blog) => (
-                  <motion.div
-                    key={blog._id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-CPurple"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {/* Image with opacity change on small devices */}
-                    <img
-                      src={`${BACKEND_URL}/${blog.image}`}
-                      alt={blog.title}
-                      className="w-full h-48 object-cover opacity-100 sm:opacity-80 md:opacity-100"
-                    />
-                    <div className="p-6">
-                      <h2 className="text-xl font-bold text-cDarkBlue">
-                        {blog.title}
-                      </h2>
-                      <p className="text-CPurple mt-2">{blog.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-            </motion.div>
-          </div>
-        </>
-      )}
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 py-8">
+        <Suspense fallback={<BlogGridPlaceholder />}>
+          <BlogGrid blogs={filteredBlogs} error={error} />
+        </Suspense>
+      </div>
     </>
   );
 };

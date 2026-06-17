@@ -46,13 +46,12 @@ const BlogCards = () => {
         {blogs.map((blog) => (
           <Link
             key={blog.id}
-            to="/blogSection"
+            to="/blogs"
             className="bg-CcradColor text-black border border-primary/30 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl w-full max-w-4xl flex flex-col sm:flex-row no-underline"
           >
             {/* Left: Image */}
             <div className="w-full sm:w-1/3 flex justify-center items-center">
-              <img
-                src={blog.image}
+              <img loading="lazy"                 src={blog.image}
                 alt={blog.title}
                 className="w-full h-full object-cover sm:object-center sm:mx-0 mx-auto"
               />

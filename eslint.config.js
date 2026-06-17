@@ -34,6 +34,7 @@ export default [
       'no-unused-vars': 'off',
       'react/jsx-no-target-blank': 'off',
       'react/no-unescaped-entities': 'off',
+      'react/no-unknown-property': ['error', { ignore: ['fetchpriority'] }],
       'react/prop-types': 'off',
       'react-hooks/exhaustive-deps': 'off',
       'react-refresh/only-export-components': [

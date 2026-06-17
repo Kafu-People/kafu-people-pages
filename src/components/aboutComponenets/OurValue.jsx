@@ -41,7 +41,7 @@ const values = [
 
 const OurValue = () => {
   return (
-    <section className="bg-white px-4 py-14 font-inter sm:px-8 lg:px-16 xl:px-20">
+    <section className="bg-white px-4 py-16 lg:py-24 font-inter sm:px-8 lg:px-16 xl:px-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 text-center sm:mb-12">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">

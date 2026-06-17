@@ -10,6 +10,8 @@ const menuItems = [
   { title: "ABOUT", url: "/about" },
   { title: "SERVICES", url: "/services" },
   { title: "PORTFOLIO", url: "/portfolio" },
+  { title: "TEAM", url: "/team" },
+  { title: "BLOGS", url: "/blogs" },
   { title: "CONTACT", url: "/contact" },
 ];
 
@@ -52,9 +54,10 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between sm:h-[72px]">
         <Link to="/" className="flex shrink-0 items-center" onClick={closeMenu}>
-          <img
-            src={kafupeople}
+          <img             src={kafupeople}
             alt="Kafu People"
+            width={1280}
+            height={853}
             className="h-14 w-auto max-w-[220px] object-contain object-left sm:h-16 sm:max-w-[280px]"
           />
         </Link>
@@ -91,7 +94,7 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
             onClick={closeMenu}
           />
           <div
-            className="lg:hidden absolute left-0 right-0 top-full z-50 max-h-[min(32rem,calc(100dvh-5rem))] overflow-y-auto bg-slate-900 shadow-xl border-t border-slate-700"
+            className="lg:hidden absolute left-0 right-0 top-full z-50 max-h-[min(32rem,calc(100dvh-5rem))] overflow-y-auto bg-slate-900 shadow-xl border-t border-slate-700 pb-[env(safe-area-inset-bottom)]"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
@@ -102,7 +105,11 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
                   <Link
                     to={menu.url}
                     onClick={closeMenu}
-                    className="block px-4 py-3.5 text-center text-sm font-medium uppercase tracking-wide text-white hover:bg-slate-800 hover:text-primary-light transition-colors"
+                    className={`block px-4 py-3.5 text-center text-sm font-medium uppercase tracking-wide transition-colors min-h-[44px] flex items-center justify-center ${
+                      pathname === menu.url
+                        ? "text-primary-light bg-slate-800/60"
+                        : "text-white hover:bg-slate-800 hover:text-primary-light"
+                    }`}
                   >
                     {menu.title}
                   </Link>

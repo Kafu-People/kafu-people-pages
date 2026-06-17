@@ -10,8 +10,7 @@ const Loader = () => {
 
         {/* Logo centered inside spinner */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <img
-            src={logo}
+          <img             src={logo}
             alt="Kafu People"
             className="w-24 sm:w-28 h-auto max-w-[55%] object-contain animate-bounce"
           />

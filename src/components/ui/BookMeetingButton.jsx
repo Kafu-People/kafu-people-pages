@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import CalendlyPopup from "../contactComponent/CalendlyPopup";
-import { CALENDLY_URL } from "../../constants/site";
+import CalendlyPopup from "../ui/CalendlyPopup";
 
 const variantClasses = {
   primary:
@@ -18,9 +17,8 @@ export default function BookMeetingButton({
 }) {
   return (
     <CalendlyPopup
-      url={CALENDLY_URL}
       buttonText={buttonText}
-      className={`inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition ${variantClasses[variant] || variantClasses.primary} ${className}`}
+      className={`inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition ${variantClasses[variant] || variantClasses.primary} ${className}`}
     />
   );
 }

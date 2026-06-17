@@ -1,34 +1,25 @@
 import React from "react";
-import train from "../../assets/images/traning/train.svg";
-import { HERO_CONTENT_PT, HERO_FLUSH_CLASS } from "../../constants/layout";
+import train from "../../assets/images/traning/train.webp";
+import PageHero from "../ui/PageHero";
 
 function Train() {
   return (
-    <div
-      className={`relative box-border flex h-[400px] w-full items-center bg-gray-800 font-inter ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
+    <PageHero
+      image={train}
+      imageAlt="Training"
+      height="h-[400px]"
+      priority
+      align="left"
+      containerClassName="max-w-lg ml-10"
     >
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${train})`,
-        }}
-      ></div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      {/* Text Section */}
-      <div className="relative z-10 text-cWhite text-left ml-10 px-6 max-w-lg w-full">
-        <p className="text-lg leading-relaxed">Innovate Smarter with AI</p>
-        <h1 className="text-4xl font-bold mb-4">
-          Empowering Innovation with Smart Solutions
-        </h1>
-        <p className="text-lg leading-relaxed">
-          Leading the way in Artificial <br /> Intelligence
-        </p>
-      </div>
-    </div>
+      <p className="text-lg leading-relaxed">Innovate Smarter with AI</p>
+      <h1 className="text-4xl font-bold mb-4">
+        Empowering Innovation with Smart Solutions
+      </h1>
+      <p className="text-lg leading-relaxed">
+        Leading the way in Artificial <br /> Intelligence
+      </p>
+    </PageHero>
   );
 }
 

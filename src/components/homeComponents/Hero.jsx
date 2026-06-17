@@ -33,11 +33,16 @@ export default function Hero() {
 
   return (
     <section
-      className={`relative box-border flex min-h-[90dvh] w-full flex-col justify-center overflow-hidden font-inter sm:min-h-[95dvh] lg:min-h-[100dvh] ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
+      className={`relative box-border flex min-h-[100dvh] w-full flex-col justify-center overflow-hidden font-inter ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
     >
       <img
         src={HERO_POSTER_SRC}
         alt=""
+        width={1920}
+        height={1080}
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
         className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
           showVideo ? "opacity-0" : "opacity-100"
         }`}
@@ -82,7 +87,7 @@ export default function Hero() {
               <BookMeetingButton buttonText="Book a Meeting" variant="secondary" />
               <Link
                 to="/portfolio"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white/90 px-6 py-3 text-sm font-semibold text-cWhite transition hover:bg-white/10"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-lg border-2 border-white/90 px-6 py-3 text-sm font-semibold text-cWhite transition hover:bg-white/10"
               >
                 View Portfolio
               </Link>

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const topics = [
   "Artificial Intelligence",
   "Cyber Security",
@@ -8,7 +7,7 @@ const topics = [
 
 const TrainingPrograms = () => {
   return (
-    <section className="bg-white py-16 px-4 font-inter border-t border-slate-100">
+    <section className="bg-white py-16 lg:py-24 px-4 font-inter border-t border-slate-100">
       <div className="max-w-3xl mx-auto text-center px-4">
         <span className="inline-block rounded-full bg-accent/10 text-accent px-4 py-1 text-sm font-semibold mb-4">
           Coming soon

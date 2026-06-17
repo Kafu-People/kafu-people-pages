@@ -1,35 +1,12 @@
 import React from "react";
-import { IoWarningOutline } from "react-icons/io5";
-import { GrThreats } from "react-icons/gr";
-import { BsHddNetworkFill } from "react-icons/bs";
-import { MdOutlineSecurity } from "react-icons/md";
-import { FcDataProtection } from "react-icons/fc";
-import { FaUniversalAccess } from "react-icons/fa";
-import { MdOnDeviceTraining } from "react-icons/md";
-import { FcDataRecovery } from "react-icons/fc";
-import { MdSupportAgent } from "react-icons/md";
-import { SiTestinglibrary } from "react-icons/si";
-import { MdSecurity } from "react-icons/md";
-import { MdDesignServices } from "react-icons/md";
-import { MdSettingsApplications } from "react-icons/md";
-import { SiSmartthings } from "react-icons/si";
-import { MdManageHistory } from "react-icons/md";
-import { SiGnuprivacyguard } from "react-icons/si";
-import { BsMicrosoftTeams } from "react-icons/bs";
-import { MdDeveloperMode } from "react-icons/md";
-import { GrTechnology } from "react-icons/gr";
-import { SiQuantconnect } from "react-icons/si";
-import { SiCyberdefenders } from "react-icons/si";
 
 import {
-  FaBrain,
   FaRobot,
   FaProjectDiagram,
   FaChartLine,
   FaCloudUploadAlt,
   FaShieldAlt,
   FaRocket,
-  FaMobileAlt,
   FaDatabase,
   FaCloudSun,
   FaWindowMaximize,
@@ -49,8 +26,7 @@ import {
   MdOutlineAnalytics,
   MdOutlineDashboardCustomize,
 } from "react-icons/md";
-import { SiTensorflow, SiLangchain } from "react-icons/si";
-import { GiArtificialIntelligence } from "react-icons/gi";
+import { SiTensorflow } from "react-icons/si";
 
 // const services = [
 //   {

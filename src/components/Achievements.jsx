@@ -50,6 +50,8 @@ const Achievements = () => {
           <img
             src="/images/choose.webp"
             alt="Team collaborating in a modern workspace"
+            width={800}
+            height={600}
             className="w-full rounded-2xl object-cover shadow-lg"
             loading="lazy"
             decoding="async"

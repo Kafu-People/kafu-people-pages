@@ -75,30 +75,30 @@ const EventComponent = () => {
           {filters.map((filter) => (
             <button
               key={filter}
-              className={`flex-shrink-0 px-4 py-2 rounded-md text-sm font-medium transition-all transform ${
-                activeFilter === filter
-                  ? "bg-CPurple text-cWhite shadow-lg scale-105 border-blue-400 outline-offset-2"
-                  : "bg-cWhite hover:bg-cBrightBlue hover:text-cWhite hover:scale-105 border-transparent"
-              }`}
-              onClick={() => {
-                setActiveFilter(filter);
-                setCurrentPage(1);
-              }}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-        {/* For larger devices */}
-        <div className="hidden md:flex justify-center space-x-4">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all transform ${
-                activeFilter === filter
-                  ? "bg-CPurple text-cWhite shadow-lg scale-105 border-blue-400 outline-offset-2"
-                  : "bg-cWhite hover:bg-cBrightBlue hover:text-cWhite hover:scale-105 border-transparent"
-              }`}
+               className={`flex-shrink-0 px-4 py-2 min-h-[44px] rounded-md text-sm font-medium transition-all transform ${
+                 activeFilter === filter
+                   ? "bg-CPurple text-cWhite shadow-lg scale-105 border-blue-400 outline-offset-2"
+                   : "bg-cWhite hover:bg-cBrightBlue hover:text-cWhite hover:md:scale-105 border-transparent"
+               }`}
+               onClick={() => {
+                 setActiveFilter(filter);
+                 setCurrentPage(1);
+               }}
+             >
+               {filter}
+             </button>
+           ))}
+         </div>
+         {/* For larger devices */}
+         <div className="hidden md:flex justify-center space-x-4">
+           {filters.map((filter) => (
+             <button
+               key={filter}
+               className={`px-4 py-2 min-h-[44px] rounded-md text-sm font-medium transition-all transform ${
+                 activeFilter === filter
+                   ? "bg-CPurple text-cWhite shadow-lg scale-105 border-blue-400 outline-offset-2"
+                   : "bg-cWhite hover:bg-cBrightBlue hover:text-cWhite hover:md:scale-105 border-transparent"
+               }`}
               onClick={() => {
                 setActiveFilter(filter);
                 setCurrentPage(1);
@@ -125,7 +125,7 @@ const EventComponent = () => {
               {paginatedData.map((event) => (
                 <NavLink to={`/event/${event._id}`} key={event._id}>
                   <motion.div
-                    className="relative bg-cWhite rounded-lg shadow-md flex flex-col md:flex-row overflow-hidden transition-transform transform hover:scale-[1.07] hover:shadow-2xl hover:shadow-[#0000ff] w-full md:w-72 cursor-pointer"
+                    className="relative bg-cWhite rounded-lg shadow-md flex flex-col md:flex-row overflow-hidden transition-transform transform hover:md:scale-[1.07] hover:shadow-2xl hover:shadow-[#0000ff] w-full md:w-72 cursor-pointer"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
@@ -134,8 +134,7 @@ const EventComponent = () => {
                     {/* Image */}
 
                     <div className="lg:w-[25rem] md:w-1/3  flex items-center justify-center">
-                      <img
-                        src={`${BACKEND_URL}/${event.images[7]}`}
+                      <img loading="lazy"                         src={`${BACKEND_URL}/${event.images[7]}`}
                         alt={event.title}
                         className="w-[100vw] lg:h-[40vh] object-cover"
                       />
@@ -185,7 +184,7 @@ const EventComponent = () => {
           <button
             key={index}
             onClick={() => handlePageChange(index + 1)}
-            className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+            className={`px-3 py-1 min-h-[44px] rounded-full text-sm font-medium transition-all ${
               currentPage === index + 1
                 ? "bg-CPurple text-cWhite"
                 : "bg-cBrightBlue text-cWhite hover:bg-cWhite hover:text-cBlack"

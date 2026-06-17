@@ -1,9 +1,5 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { useEffect, useMemo, useState } from "react";
 import { TESTIMONIALS } from "../../constants/site";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const TestimonialCard = ({ quote, name, location, project }) => (
   <blockquote className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
@@ -23,6 +19,45 @@ const TestimonialCard = ({ quote, name, location, project }) => (
 );
 
 const Testimonials = () => {
+  const [swiperUi, setSwiperUi] = useState(null);
+
+  const preview = useMemo(() => TESTIMONIALS.slice(0, 3), []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadSwiper = async () => {
+      try {
+        // Load heavy carousel code & CSS after initial render to reduce TBT.
+        const [{ Swiper, SwiperSlide }, modules] = await Promise.all([
+          import("swiper/react"),
+          import("swiper/modules"),
+          import("swiper/css"),
+          import("swiper/css/navigation"),
+          import("swiper/css/pagination"),
+        ]);
+
+        if (cancelled) return;
+
+        const { Autoplay, Navigation, Pagination } = modules;
+        setSwiperUi({ Swiper, SwiperSlide, Autoplay, Navigation, Pagination });
+      } catch {
+        // If Swiper can't load for any reason, keep the static layout.
+      }
+    };
+
+    // Prefer idle time to avoid blocking first interaction.
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      window.requestIdleCallback(loadSwiper, { timeout: 2500 });
+    } else {
+      setTimeout(loadSwiper, 800);
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section className="bg-surface py-16 font-inter lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-24">
@@ -40,49 +75,68 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonials-carousel relative px-1 sm:px-10 [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-pagination-bullet]:bg-slate-400 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-slide]:flex [&_.swiper-slide]:h-auto">
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            className="!pb-12"
-            spaceBetween={24}
-            slidesPerView={1}
-            loop
-            speed={800}
-            grabCursor
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            navigation={{
-              prevEl: ".testimonials-prev",
-              nextEl: ".testimonials-next",
-            }}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {TESTIMONIALS.map(({ id, quote, name, location, project }) => (
-              <SwiperSlide key={id} className="!h-auto">
+          {swiperUi ? (
+            <swiperUi.Swiper
+              modules={[
+                swiperUi.Autoplay,
+                swiperUi.Navigation,
+                swiperUi.Pagination,
+              ]}
+              className="!pb-12"
+              spaceBetween={24}
+              slidesPerView={1}
+              loop
+              speed={800}
+              grabCursor
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+              }}
+              navigation={{
+                prevEl: ".testimonials-prev",
+                nextEl: ".testimonials-next",
+              }}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+            >
+              {TESTIMONIALS.map(({ id, quote, name, location, project }) => (
+                <swiperUi.SwiperSlide key={id} className="!h-auto">
+                  <TestimonialCard
+                    quote={quote}
+                    name={name}
+                    location={location}
+                    project={project}
+                  />
+                </swiperUi.SwiperSlide>
+              ))}
+            </swiperUi.Swiper>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {preview.map(({ id, quote, name, location, project }) => (
                 <TestimonialCard
+                  key={id}
                   quote={quote}
                   name={name}
                   location={location}
                   project={project}
                 />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              ))}
+            </div>
+          )}
 
           <button
             type="button"
             className="testimonials-prev absolute left-0 top-[38%] z-10 hidden -translate-y-1/2 rounded-full border border-slate-200 bg-white p-2.5 text-slate-700 shadow-md transition hover:border-primary hover:text-primary sm:inline-flex"
             aria-label="Previous testimonial"
+            disabled={!swiperUi}
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -92,6 +146,7 @@ const Testimonials = () => {
             type="button"
             className="testimonials-next absolute right-0 top-[38%] z-10 hidden -translate-y-1/2 rounded-full border border-slate-200 bg-white p-2.5 text-slate-700 shadow-md transition hover:border-primary hover:text-primary sm:inline-flex"
             aria-label="Next testimonial"
+            disabled={!swiperUi}
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

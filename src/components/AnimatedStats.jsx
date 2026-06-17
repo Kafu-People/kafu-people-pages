@@ -16,54 +16,66 @@ const AnimatedStats = () => {
     team: 5,
   };
 
-  const animateNumbers = () => {
-    const duration = 2000;
-    const frameRate = 30;
-    const totalFrames = Math.round((duration / 1000) * frameRate);
+  useEffect(() => {
+    const statsSection = document.getElementById("stats-section");
+    if (!statsSection) return;
 
-    const incrementValues = Object.keys(targetStats).reduce(
-      (increments, key) => {
-        increments[key] = targetStats[key] / totalFrames;
-        return increments;
-      },
-      {},
-    );
+    const durationMs = 1200;
+    let rafId = 0;
+    let startedAt = 0;
 
-    let currentFrame = 0;
+    const animate = (timestamp) => {
+      if (!startedAt) startedAt = timestamp;
+      const t = Math.min(1, (timestamp - startedAt) / durationMs);
+      // easeOutCubic
+      const eased = 1 - Math.pow(1 - t, 3);
 
-    const interval = setInterval(() => {
-      currentFrame++;
-      setStats((prevStats) => {
-        const updatedStats = { ...prevStats };
-        Object.keys(targetStats).forEach((key) => {
-          updatedStats[key] = Math.min(
-            prevStats[key] + incrementValues[key],
-            targetStats[key],
-          );
-        });
-        return updatedStats;
+      setStats({
+        clients: targetStats.clients * eased,
+        projects: targetStats.projects * eased,
+        experience: targetStats.experience * eased,
+        team: targetStats.team * eased,
       });
 
-      if (currentFrame >= totalFrames) {
-        clearInterval(interval);
-      }
-    }, duration / totalFrames);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const statsSection = document.getElementById("stats-section");
-      if (!statsSection) return;
-      const rect = statsSection.getBoundingClientRect();
-
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        animateNumbers();
-        window.removeEventListener("scroll", handleScroll);
-      }
+      if (t < 1) rafId = requestAnimationFrame(animate);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const start = () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(animate);
+    };
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            start();
+            io.disconnect();
+          }
+        },
+        { threshold: 0.2 },
+      );
+      io.observe(statsSection);
+      return () => {
+        io.disconnect();
+        if (rafId) cancelAnimationFrame(rafId);
+      };
+    }
+
+    // Fallback for older browsers
+    const onScroll = () => {
+      const rect = statsSection.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        start();
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const items = [

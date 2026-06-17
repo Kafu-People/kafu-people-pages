@@ -56,9 +56,12 @@ export default function PageHero({
         aria-hidden
       />
       {image ? (
-        <img           src={image}
+        <img
+          src={image}
           alt={imageAlt}
           fetchpriority={priority ? "high" : undefined}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
           className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}
         />
       ) : null}

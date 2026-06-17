@@ -1,7 +1,3 @@
-import blogImg from "../assets/images/blogs/cloudComputing1.png";
-import cloudImg from "../assets/images/blogs/cloudComputing2.png";
-import cloudImg3 from "../assets/images/blogs/cloudComputing3.jpg";
-import iotImg from "../assets/images/blogs/Iot.png";
 import blogSectionImg from "../assets/images/blogs/blogSection.jpg";
 
 const staticBlogs = [
@@ -82,7 +78,7 @@ const staticBlogs = [
     author: "Belal Haikal",
     datePublished: "2026-04-20",
     dateModified: "2026-04-20",
-    image: blogImg,
+    image: "/images/blogs/building-scalable-ai-agents.jpg",
   },
   {
     _id: "static-002",
@@ -97,7 +93,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-04-10",
     dateModified: "2026-04-10",
-    image: cloudImg,
+    image: "/images/blogs/rag-vs-fine-tuning-when-to-use-each.png",
   },
   {
     _id: "static-003",
@@ -127,7 +123,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-03-15",
     dateModified: "2026-03-15",
-    image: cloudImg3,
+    image: "/images/blogs/react-performance-patterns-that-matter.png",
   },
   {
     _id: "static-005",
@@ -142,7 +138,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-03-05",
     dateModified: "2026-03-05",
-    image: cloudImg,
+    image: "/images/blogs/aws-cost-optimization-for-startups.jpg",
   },
   {
     _id: "static-006",
@@ -157,7 +153,7 @@ const staticBlogs = [
     author: "Masooma Ali",
     datePublished: "2026-02-20",
     dateModified: "2026-02-20",
-    image: iotImg,
+    image: "/images/blogs/securing-web-apps-baseline-checklist.png",
   },
   {
     _id: "static-007",
@@ -172,7 +168,7 @@ const staticBlogs = [
     author: "Belal Haikal",
     datePublished: "2026-02-10",
     dateModified: "2026-02-10",
-    image: blogSectionImg,
+    image: "/images/blogs/technical-seo-for-react-spas.jpg",
   },
   {
     _id: "static-008",
@@ -187,7 +183,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-01-25",
     dateModified: "2026-01-25",
-    image: cloudImg3,
+    image: "/images/blogs/designing-apis-developers-love.png",
   },
   {
     _id: "static-009",
@@ -202,7 +198,7 @@ const staticBlogs = [
     author: "Muhammad Waqas",
     datePublished: "2026-01-15",
     dateModified: "2026-01-15",
-    image: iotImg,
+    image: "/images/blogs/automating-workflows-with-llms.jpg",
   },
   {
     _id: "static-010",

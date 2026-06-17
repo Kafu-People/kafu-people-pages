@@ -139,8 +139,7 @@ const CoursePage = () => {
               {/* Right Section - Course Info */}
               <div className="bg-white shadow-lg rounded-lg p-6">
                 <div className="flex flex-col items-center mb-6">
-                  <img
-                    src={course.image}
+                  <img loading="lazy"                     src={course.image}
                     alt={course.trainer}
                     className="rounded w-full h-auto object-cover mb-2"
                   />

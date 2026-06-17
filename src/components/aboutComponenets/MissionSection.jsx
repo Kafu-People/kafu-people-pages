@@ -1,4 +1,4 @@
-import mission from "../../assets/images/aboutUs/mission.svg";
+import mission from "../../assets/images/aboutUs/mission.webp";
 
 const MissionSection = () => {
   return (
@@ -17,8 +17,7 @@ const MissionSection = () => {
       </div>
 
       <div className="flex-1 flex justify-center items-center">
-        <img
-          src={mission}
+        <img loading="lazy"           src={mission}
           alt="Mission illustration"
           className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain"
         />

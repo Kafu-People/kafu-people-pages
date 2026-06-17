@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
-import newsHero from "../assets/images/blogs/blogSection.jpg";
+import newsHero from "../assets/images/blogs/blogSection.webp";
 import staticNews, { NEWS_CATEGORIES, getLatestNews } from "../data/news";
 
 const formatDate = (iso) =>
@@ -104,8 +104,7 @@ const News = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <img
-                      src={item.image}
+                    <img loading="lazy"                       src={item.image}
                       alt={item.title}
                       className="w-full h-48 object-cover bg-cDarkBlue"
                     />

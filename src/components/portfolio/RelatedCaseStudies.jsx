@@ -19,8 +19,7 @@ export default function RelatedCaseStudies({ currentSlug }) {
             className="group rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md"
           >
             {cs.image && (
-              <img
-                src={cs.image}
+              <img loading="lazy"                 src={cs.image}
                 alt={cs.title}
                 className="mb-4 h-40 w-full rounded-lg object-cover"
               />

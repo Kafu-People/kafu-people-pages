@@ -107,8 +107,7 @@ const ProductsCategories = () => {
                 className="bg-cWhite rounded-lg p-4 shadow hover:shadow-lg transition"
               >
                 <div className="h-40 bg-gray-100 rounded mb-4 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={`${BACKEND_URL}/${product.image}`}
+                  <img loading="lazy"                     src={`${BACKEND_URL}/${product.image}`}
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />

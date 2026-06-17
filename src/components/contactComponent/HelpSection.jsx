@@ -22,8 +22,7 @@ const HelpSection = () => {
 
       {/* Image Section */}
       <div className="mb-8 lg:mb-0 w-full lg:w-1/2 flex justify-center">
-        <img
-          src={help} // Replace with your image URL
+        <img loading="lazy"           src={help} // Replace with your image URL
           alt="Support team illustration"
           className="max-w-full h-auto"
         />

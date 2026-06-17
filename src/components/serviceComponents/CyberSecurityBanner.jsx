@@ -1,5 +1,5 @@
 import React from "react";
-import service from "../../assets/images/service/service.svg";
+import service from "../../assets/images/service/service.webp";
 import PageHero from "../ui/PageHero";
 
 function CyberSecurityBanner() {

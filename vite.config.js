@@ -9,7 +9,7 @@ const CJS_IMPORTS = [
 
 let _ssrBuild = false
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     react(),
     vike(),
@@ -52,4 +52,8 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 5173,
   },
-})
+
+  ssr: {
+    noExternal: command === 'build' ? ['react-helmet-async'] : [],
+  },
+}))

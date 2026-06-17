@@ -84,8 +84,7 @@ const NewsArticle = () => {
 
         {article.image && (
           <div className="mb-8 overflow-hidden rounded-2xl bg-cDarkBlue shadow-lg">
-            <img
-              src={article.image}
+            <img loading="lazy"               src={article.image}
               alt={article.title}
               className="h-full w-full object-cover"
             />

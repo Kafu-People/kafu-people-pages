@@ -50,8 +50,7 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={footerGridClass}>
           <div className={brandColumnClass}>
-            <img
-              src="/images/kafupeople.webp"
+            <img loading="lazy"               src="/images/kafupeople.webp"
               alt="Kafu People Logo"
               className="mb-4 block mx-auto max-w-[45%] sm:max-w-[200px] h-auto brightness-110"
             />

@@ -9,7 +9,8 @@
     "sitemap": "node scripts/generate-sitemap.mjs",
     "check:assets": "node scripts/check-pages-asset-size.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node scripts/server.mjs"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.5",
@@ -25,7 +26,7 @@
     "react-toastify": "^11.0.3",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.15.10",
-    "swiper": "^12.1.4",
+    "swiper": "^12.2.0",
     "vike": "^0.4.212"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "postcss": "^8.5.0",
+    "svgo": "^4.0.1",
     "tailwindcss": "^3.4.17",
     "vite": "^6.4.3"
   }

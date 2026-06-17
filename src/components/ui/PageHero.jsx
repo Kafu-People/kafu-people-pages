@@ -56,7 +56,7 @@ export default function PageHero({
     >
       {priority && image ? (
         <Helmet>
-          <link rel="preload" as="image" href={image} fetchPriority="high" />
+          <link rel="preload" as="image" href={image} fetchpriority="high" />
         </Helmet>
       ) : null}
       <div
@@ -69,7 +69,7 @@ export default function PageHero({
           alt={imageAlt}
           width={imageWidth}
           height={imageHeight}
-          fetchPriority={priority ? "high" : undefined}
+          fetchpriority={priority ? "high" : undefined}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}

@@ -26,7 +26,7 @@ const Home = () => {
           rel="preload"
           as="image"
           href={HERO_POSTER_SRC}
-          fetchPriority="high"
+          fetchpriority="high"
         />
         <script type="application/ld+json">
           {JSON.stringify(OrganizationLD())}

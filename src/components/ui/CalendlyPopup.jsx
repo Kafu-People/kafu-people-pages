@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import { PopupModal, useCalendlyEventListener } from "react-calendly";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { useCookieConsent } from "../../context/useCookieConsent";
 import CookieFeatureFallback from "../cookies/CookieFeatureFallback";
@@ -8,6 +7,8 @@ import {
   CALENDLY_URL,
   CALENDLY_PAGE_SETTINGS,
 } from "../../constants/site";
+
+const CalendlyModal = lazy(() => import("./CalendlyModal"));
 
 const DEFAULT_CLASS =
   "inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition bg-primary hover:bg-primary-dark text-white shadow-md hover:shadow-lg";
@@ -23,10 +24,6 @@ export default function CalendlyPopup({
   const { hydrated, allowFunctional } = useCookieConsent();
   const [open, setOpen] = useState(false);
 
-  useCalendlyEventListener({
-    onEventScheduled: () => setOpen(false),
-  });
-
   useEffect(() => {
     if (open) {
       document.body.classList.add("calendly-popup-open");
@@ -38,7 +35,7 @@ export default function CalendlyPopup({
   if (!hydrated) {
     return (
       <div
-        className={`inline-flex items-center justify-center gap-2 rounded-lg bg-gray-200 px-6 py-3 text-sm font-semibold text-transparent animate-pulse ${className}`}
+        className={`inline-flex animate-pulse items-center justify-center gap-2 rounded-lg bg-gray-200 px-6 py-3 text-sm font-semibold text-transparent ${className}`}
         aria-hidden
       >
         {buttonText}
@@ -62,22 +59,18 @@ export default function CalendlyPopup({
         <FaCalendarAlt className="h-5 w-5 shrink-0" />
         {buttonText}
       </button>
-      <PopupModal
-        url={url}
-        open={open}
-        onModalClose={() => setOpen(false)}
-        pageSettings={pageSettings}
-        prefill={
-          user
-            ? {
-                name: user.name,
-                email: user.email,
-              }
-            : undefined
-        }
-        rootElement={document.getElementById("root")}
-        utm={utm}
-      />
+      {open ? (
+        <Suspense fallback={null}>
+          <CalendlyModal
+            url={url}
+            open={open}
+            onClose={() => setOpen(false)}
+            pageSettings={pageSettings}
+            user={user}
+            utm={utm}
+          />
+        </Suspense>
+      ) : null}
     </>
   );
 }

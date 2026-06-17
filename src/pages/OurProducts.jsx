@@ -1,7 +1,10 @@
+import { lazy, Suspense } from "react";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import ProductsSection from "../components/ourProducts/ProductsSection";
-import ProductsCategories from "../components/ourProducts/ProductsCategories";
+import { ProductsCategoriesPlaceholder } from "../components/ourProducts/ProductsCategoriesPlaceholder";
+
+const ProductsCategories = lazy(() => import("../components/ourProducts/ProductsCategories"));
 
 const OurProducts = () => {
   const seo = PAGE_SEO.portfolio;
@@ -14,7 +17,9 @@ const OurProducts = () => {
         canonicalPath={seo.canonicalPath}
       />
       <ProductsSection />
-      <ProductsCategories />
+      <Suspense fallback={<ProductsCategoriesPlaceholder />}>
+        <ProductsCategories />
+      </Suspense>
     </>
   );
 };

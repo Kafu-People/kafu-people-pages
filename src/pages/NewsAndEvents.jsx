@@ -1,9 +1,12 @@
+import { lazy, Suspense } from "react";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import NewsEventsSection from "../components/EventComponent/NewsEventsSection";
 import EventComponent from "../components/EventComponent/EventComponent";
 import BlogSection from "../components/EventComponent/BlogSection";
-import ContactSection from "../components/ContactSection";
+import { ContactSectionPlaceholder } from "../components/contactComponent/ContactSectionPlaceholder";
+
+const ContactSection = lazy(() => import("../components/ContactSection"));
 
 const NewsAndEvents = () => {
   const seo = PAGE_SEO.news;
@@ -18,7 +21,9 @@ const NewsAndEvents = () => {
       <NewsEventsSection />
       <EventComponent />
       <BlogSection />
-      <ContactSection />
+      <Suspense fallback={<ContactSectionPlaceholder />}>
+        <ContactSection />
+      </Suspense>
     </>
   );
 };

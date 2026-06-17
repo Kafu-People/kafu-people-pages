@@ -1,8 +1,11 @@
+import { lazy, Suspense } from "react";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
 import { FAQPageLD } from "../Schema";
 import Cyber from "./Cyber";
-import CyberService from "./CyberService";
+import { CyberServicePlaceholder } from "./CyberServicePlaceholder";
+
+const CyberService = lazy(() => import("./CyberService"));
 
 const faqs = [
   {
@@ -38,7 +41,9 @@ export default function ServiceMainFile() {
         </script>
       </PageSEO>
       <Cyber />
-      <CyberService />
+      <Suspense fallback={<CyberServicePlaceholder />}>
+        <CyberService />
+      </Suspense>
     </div>
   );
 }

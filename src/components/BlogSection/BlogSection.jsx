@@ -1,37 +1,45 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { motion } from "framer-motion";
-import blogsection from "../../assets/images/blogs/blogSection.webp";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
 import { BreadcrumbListLD } from "../Schema";
 import PageHero from "../ui/PageHero";
 import staticBlogs from "../../data/blogs";
+import { BlogGridPlaceholder } from "./BlogGridPlaceholder";
+
+const BlogGrid = lazy(() => import("./BlogGrid"));
+
+const BLOG_HERO_IMAGE = "/images/blog-section.webp";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+const FILTER_OPTIONS = [
+  "All Blogs",
+  "Artificial Intelligence",
+  "Web Development",
+  "Cyber Security",
+  "Digital Marketing",
+];
+
+const categoryMap = {
+  "All Blogs": "All",
+  "Artificial Intelligence": "AI",
+  "Web Development": "Web Development",
+  "Cyber Security": "Cyber Security",
+  "Digital Marketing": "Digital Marketing",
+};
+
 const BlogSection = () => {
-  // Render static content immediately for fast LCP; hydrate with API data if available.
   const [blogs, setBlogs] = useState(staticBlogs);
-  const [error, setError] = useState(null); // Error state
+  const [error, setError] = useState(null);
   const [filter, setFilter] = useState("All Blogs");
 
-  // Map button labels to blog categories
-  const categoryMap = {
-    "All Blogs": "All",
-    "Artificial Intelligence": "AI",
-    "Web Development": "Web Development",
-    "Cyber Security": "Cyber Security",
-    "Digital Marketing": "Digital Marketing",
-  };
-
-  // Fetch blogs from API using Axios
   useEffect(() => {
-    if (!BACKEND_URL) return;
+    if (!BACKEND_URL) return undefined;
 
     const controller = new AbortController();
 
     const fetchBlogs = async () => {
       try {
+        const { default: axios } = await import("axios");
         const response = await axios.get(`${BACKEND_URL}/api/blogs`, {
           timeout: 3000,
           signal: controller.signal,
@@ -39,26 +47,35 @@ const BlogSection = () => {
         if (Array.isArray(response.data) && response.data.length > 0) {
           setBlogs(response.data);
         }
-      } catch (error) {
-        // Keep static fallback; only show error UI if we have no content at all.
+      } catch (fetchError) {
         if (!Array.isArray(staticBlogs) || staticBlogs.length === 0) {
-          console.error("Error fetching blogs:", error);
-          setError(error);
+          console.error("Error fetching blogs:", fetchError);
+          setError(fetchError);
         }
       }
     };
 
-    fetchBlogs();
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(fetchBlogs, { timeout: 3000 });
+      return () => {
+        controller.abort();
+        window.cancelIdleCallback(idleId);
+      };
+    }
 
-    return () => controller.abort();
+    const timeoutId = setTimeout(fetchBlogs, 1200);
+    return () => {
+      controller.abort();
+      clearTimeout(timeoutId);
+    };
   }, []);
 
-  // Filter blogs based on selected category
-  const filteredBlogs =
-    filter === "All Blogs"
-      ? blogs
-      : Array.isArray(blogs) &&
-        blogs.filter((blog) => blog.category === categoryMap[filter]);
+  const filteredBlogs = useMemo(() => {
+    if (filter === "All Blogs") return blogs;
+    return Array.isArray(blogs)
+      ? blogs.filter((blog) => blog.category === categoryMap[filter])
+      : [];
+  }, [blogs, filter]);
 
   const seo = PAGE_SEO.blog;
 
@@ -70,15 +87,17 @@ const BlogSection = () => {
         canonicalPath={seo.canonicalPath}
       >
         <script type="application/ld+json">
-          {JSON.stringify(BreadcrumbListLD([
-            { name: "Home", path: "/" },
-            { name: "Blogs", path: "/blogs" },
-          ]))}
+          {JSON.stringify(
+            BreadcrumbListLD([
+              { name: "Home", path: "/" },
+              { name: "Blogs", path: "/blogs" },
+            ]),
+          )}
         </script>
       </PageSEO>
       <PageHero
-        image={blogsection}
-        imageAlt=""
+        image={BLOG_HERO_IMAGE}
+        imageAlt="Kafu People blog"
         height="h-[60vh] lg:h-[80vh]"
         priority
         align="left"
@@ -87,30 +106,25 @@ const BlogSection = () => {
         <h1 className="ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24">
           Kafu People Blogs
         </h1>
-        <div className="lg:w-[700px] w-auto">
-          <p className="text-lg sm:text-xl lg:text-left lg:ml-24 mx-4 sm:text-justify text-cWhite mt-2">
-            Team insights, startup lessons, and engineering perspectives —
-            including the posts we share on LinkedIn. Short reads from our
-            experience building products with clients.
+        <div className="w-auto lg:w-[700px]">
+          <p className="mx-4 mt-2 text-lg text-cWhite sm:text-justify sm:text-xl lg:ml-24 lg:text-left">
+            Team insights, startup lessons, and engineering perspectives — including the
+            posts we share on LinkedIn. Short reads from our experience building products
+            with clients.
           </p>
         </div>
       </PageHero>
 
       <div className="container mx-auto px-6 py-6 text-center">
         <div className="flex justify-center">
-          <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide sm:flex-wrap sm:justify-center w-full px-2">
-            {[
-              "All Blogs",
-              "Artificial Intelligence",
-              "Web Development",
-              "Cyber Security",
-              "Digital Marketing",
-            ].map((category) => (
+          <div className="scrollbar-hide flex w-full gap-4 overflow-x-auto whitespace-nowrap px-2 sm:flex-wrap sm:justify-center">
+            {FILTER_OPTIONS.map((category) => (
               <button
                 key={category}
-                className={`px-4 py-2 min-h-[44px] rounded-md text-sm sm:text-base border flex-shrink-0 ${
+                type="button"
+                className={`min-h-[44px] flex-shrink-0 rounded-md border px-4 py-2 text-sm sm:text-base ${
                   filter === category
-                    ? "border-CPurple text-CPurple bg-transparent"
+                    ? "border-CPurple bg-transparent text-CPurple"
                     : "bg-cBrightBlue text-cgray hover:bg-cWhite hover:text-cBlack"
                 }`}
                 onClick={() => setFilter(category)}
@@ -122,93 +136,10 @@ const BlogSection = () => {
         </div>
       </div>
 
-      {/* Blog Grid */}
       <div className="container mx-auto px-6 py-8">
-        {error ? (
-          <div className="text-center py-16">
-            <h3 className="text-2xl font-bold text-cDarkBlue mb-4">
-              Something went wrong
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-md mx-auto">
-              We couldn't load the blog articles right now. Please try again
-              later or{" "}
-              <Link
-                to="/contact"
-                className="text-CPurple underline hover:no-underline"
-              >
-                contact us
-              </Link>{" "}
-              if the issue persists.
-            </p>
-          </div>
-        ) : !Array.isArray(blogs) || blogs.length === 0 ? (
-          <div className="text-center py-16">
-            <h3 className="text-2xl font-bold text-cDarkBlue mb-4">
-              No blog posts yet
-            </h3>
-            <p className="text-gray-600 max-w-md mx-auto">
-              We&apos;re working on publishing our first posts. Check back soon
-              for insights from Kafu People.
-            </p>
-          </div>
-        ) : (
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 "
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {Array.isArray(filteredBlogs) && filteredBlogs.length > 0 ? (
-              filteredBlogs.map((blog) => (
-                <Link
-                  key={blog._id}
-                  to={`/blogs/${blog.slug || blog._id}`}
-                  className="block"
-                >
-                  <motion.div
-                    className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg cursor-pointer hover:border-CPurple/40 hover:shadow-CPurple"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img
-                      src={blog.image}
-                      alt={blog.title}
-                      loading="lazy"
-                      decoding="async"
-                      width="1200"
-                      height="630"
-                      className="h-48 w-full object-cover opacity-100 sm:opacity-80 md:opacity-100"
-                    />
-                    <div className="p-6">
-                      <div className="mb-2 flex items-center justify-between gap-2">
-                        <span className="inline-block rounded-full bg-CPurple/10 px-3 py-1 text-xs font-semibold text-CPurple">
-                          Blog
-                        </span>
-                        {blog.category && (
-                          <span className="text-xs text-gray-500">
-                            {blog.category}
-                          </span>
-                        )}
-                      </div>
-                      <h2 className="text-xl font-bold text-cDarkBlue">
-                        {blog.title}
-                      </h2>
-                      <p className="mt-2 line-clamp-3 text-gray-600">
-                        {blog.description.split("\n\n")[0]}
-                      </p>
-                    </div>
-                  </motion.div>
-                </Link>
-              ))
-            ) : (
-              <div className="col-span-full text-center py-12">
-                <p className="text-gray-500">
-                  No blog posts found for this category.
-                </p>
-              </div>
-            )}
-          </motion.div>
-        )}
+        <Suspense fallback={<BlogGridPlaceholder />}>
+          <BlogGrid blogs={filteredBlogs} error={error} />
+        </Suspense>
       </div>
     </>
   );

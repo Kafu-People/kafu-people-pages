@@ -18,6 +18,21 @@ const TestimonialCard = ({ quote, name, location, project }) => (
   </blockquote>
 );
 
+const testimonialsHeader = (
+  <div className="mb-12 text-center">
+    <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">
+      Client testimonials
+    </p>
+    <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+      Trusted by teams worldwide
+    </h2>
+    <p className="mx-auto mt-4 max-w-2xl text-muted">
+      Real feedback from founders and engineering leaders we have partnered
+      with on products, migrations, and production systems.
+    </p>
+  </div>
+);
+
 const Testimonials = () => {
   const [swiperUi, setSwiperUi] = useState(null);
 
@@ -61,18 +76,7 @@ const Testimonials = () => {
   return (
     <section className="bg-surface py-16 font-inter lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-24">
-        <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">
-            Client testimonials
-          </p>
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            Trusted by teams worldwide
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted">
-            Real feedback from founders and engineering leaders we have partnered
-            with on products, migrations, and production systems.
-          </p>
-        </div>
+        {testimonialsHeader}
 
         <div className="testimonials-carousel relative px-1 sm:px-10 [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-pagination-bullet]:bg-slate-400 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-slide]:flex [&_.swiper-slide]:h-auto">
           {swiperUi ? (

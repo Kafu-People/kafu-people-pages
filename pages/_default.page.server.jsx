@@ -32,11 +32,30 @@ export function render(pageContext) {
 
   const serialized = JSON.stringify(ssrData).replace(/</g, "\\u003c")
 
+  const fontHead = `
+    <link rel="icon" type="image/png" href="/mini-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      />
+    </noscript>
+  `
+
   const documentHtml = escapeInject`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ${dangerouslySkipEscape(fontHead)}
     ${dangerouslySkipEscape(title)}
     ${dangerouslySkipEscape(meta)}
     ${dangerouslySkipEscape(link)}

@@ -24,10 +24,11 @@ export function useStreamableMp4(streamablePageUrl) {
     }
 
     let cancelled = false;
-    setFailed(false);
-    setSrc(null);
 
-    fetch(`https://api.streamable.com/videos/${id}`)
+    const runFetch = () => {
+      if (cancelled) return;
+
+      fetch(`https://api.streamable.com/videos/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Streamable API ${res.status}`);
         return res.json();
@@ -44,9 +45,23 @@ export function useStreamableMp4(streamablePageUrl) {
       .catch(() => {
         if (!cancelled) setFailed(true);
       });
+    };
 
+    setFailed(false);
+    setSrc(null);
+
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(runFetch, { timeout: 3000 });
+      return () => {
+        cancelled = true;
+        window.cancelIdleCallback(idleId);
+      };
+    }
+
+    const timeoutId = setTimeout(runFetch, 1200);
     return () => {
       cancelled = true;
+      clearTimeout(timeoutId);
     };
   }, [streamablePageUrl]);
 

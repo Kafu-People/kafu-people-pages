@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Helmet } from "react-helmet-async";
 import { HERO_CONTENT_PT, HERO_FLUSH_CLASS } from "../../constants/layout";
 
 const ALIGN_CLASSES = {
@@ -38,6 +39,8 @@ export default function PageHero({
   height = "full",
   align = "center",
   priority = false,
+  imageWidth = 1920,
+  imageHeight = 1080,
   className = "",
   containerClassName = "",
   children,
@@ -51,6 +54,11 @@ export default function PageHero({
     <section
       className={`relative box-border flex w-full flex-col justify-center overflow-hidden font-inter ${heightClass} ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT} ${className}`}
     >
+      {priority && image ? (
+        <Helmet>
+          <link rel="preload" as="image" href={image} fetchPriority="high" />
+        </Helmet>
+      ) : null}
       <div
         className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"
         aria-hidden
@@ -59,7 +67,9 @@ export default function PageHero({
         <img
           src={image}
           alt={imageAlt}
-          fetchpriority={priority ? "high" : undefined}
+          width={imageWidth}
+          height={imageHeight}
+          fetchPriority={priority ? "high" : undefined}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`}

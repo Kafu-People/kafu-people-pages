@@ -35,9 +35,14 @@ export default function Hero() {
     <section
       className={`relative box-border flex min-h-[100dvh] w-full flex-col justify-center overflow-hidden font-inter ${HERO_FLUSH_CLASS} ${HERO_CONTENT_PT}`}
     >
-      <img         src={HERO_POSTER_SRC}
+      <img
+        src={HERO_POSTER_SRC}
         alt=""
-        fetchpriority="high"
+        width={1920}
+        height={1080}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
         className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
           showVideo ? "opacity-0" : "opacity-100"
         }`}

@@ -69,6 +69,18 @@ export const PAGE_SEO = {
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: "/blogs",
   },
+  articlesList: {
+    title: `Articles | ${SITE_NAME}`,
+    description:
+      "In-depth, educational guides and deep dives from Kafu People on AI, cloud, web development, automation, and security.",
+    canonicalPath: "/articles",
+  },
+  articlePost: {
+    title: (title) => `${title} — Article | ${SITE_NAME}`,
+    description:
+      "Read an in-depth, educational guide from Kafu People on AI, cloud, web development, automation, and security.",
+    canonicalPath: (slug) => `/articles/${slug}`,
+  },
   team: {
     title: `Our Team | ${SITE_NAME}`,
     description:

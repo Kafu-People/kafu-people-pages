@@ -63,6 +63,38 @@ export const ArticleLD = (article) => ({
   },
 })
 
+export const ArticlePostingLD = (article) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${SITE_URL}/articles/${article.slug}#article`,
+  headline: article.title,
+  description: article.excerpt || (article.content || "").split("\n\n")[0],
+  image: article.image
+    ? article.image.startsWith("http")
+      ? article.image
+      : `${SITE_URL}${article.image}`
+    : `${SITE_URL}/images/kafupeople.webp`,
+  datePublished: article.datePublished,
+  dateModified: article.dateModified || article.datePublished,
+  ...(Array.isArray(article.tags) && article.tags.length
+    ? { keywords: article.tags.join(", ") }
+    : {}),
+  author: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/articles/${article.slug}`,
+  },
+})
+
 export const SoftwareAppLD = (caseStudy) => ({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",

@@ -18,6 +18,8 @@ import NewsArticle from "./pages/NewsArticle";
 import Team from "./pages/Team";
 import BlogSection from "./components/BlogSection/BlogSection";
 import BlogPost from "./pages/BlogPost";
+import Articles from "./pages/Articles";
+import ArticlePost from "./pages/ArticlePost";
 
 import Event from "./components/EventComponent/Event";
 
@@ -75,9 +77,9 @@ const App = () => {
         <Route path="/blog" element={<Navigate to="/blogs" replace />} />
         <Route path="/blogs" element={<BlogSection />} />
         <Route path="/blogs/:slug" element={<BlogPost />} />
-        <Route path="/articles" element={<Navigate to="/blogs" replace />} />
-        <Route path="/articles/:slug" element={<Navigate to="/blogs" replace />} />
-        <Route path="/learn" element={<Navigate to="/blogs" replace />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:slug" element={<ArticlePost />} />
+        <Route path="/learn" element={<Navigate to="/articles" replace />} />
 
         <Route path="/team" element={<Team />} />
 

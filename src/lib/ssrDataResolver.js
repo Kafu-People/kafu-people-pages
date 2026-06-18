@@ -1,5 +1,6 @@
 import { getStaticBlogBySlug } from "../data/blogs"
 import { getNewsBySlug } from "../data/news"
+import { getArticleBySlug } from "../data/articles"
 import { getCaseBySlug } from "../data/portfolioCases"
 
 export function resolveSSRData(url) {
@@ -16,6 +17,12 @@ export function resolveSSRData(url) {
     const slug = path.replace("/news/", "")
     const article = getNewsBySlug(slug)
     if (article) return { pageType: "news", data: article }
+  }
+
+  if (path.startsWith("/articles/")) {
+    const slug = path.replace("/articles/", "")
+    const article = getArticleBySlug(slug)
+    if (article) return { pageType: "article", data: article }
   }
 
   if (path.startsWith("/portfolio/")) {

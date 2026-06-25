@@ -171,7 +171,7 @@ const App = () => {
                   The page you are looking for does not exist.
                 </p>
                 <Link
-                  to="https://kafupeople.com/"
+                  to="/"
                   className="text-xl text-white px-6 py-4 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors">
                   Back to home
                 </Link>

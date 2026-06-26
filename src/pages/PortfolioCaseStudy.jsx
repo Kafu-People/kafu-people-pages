@@ -53,7 +53,7 @@ const PortfolioCaseStudy = () => {
     <>
       <PageSEO
         title={title(caseStudy.title)}
-        description={description}
+        description={description(caseStudy.slug)}
         canonicalPath={canonicalPath(caseStudy.slug)}
         ogImage={csOgImage}
       >

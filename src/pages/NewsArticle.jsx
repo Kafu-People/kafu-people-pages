@@ -53,6 +53,15 @@ const NewsArticle = () => {
         canonicalPath={canonicalPath(article.slug)}
         ogImage={articleOgImage}
       >
+        {article.date && (
+          <meta property="article:published_time" content={article.date} />
+        )}
+        {(article.dateModified || article.date) && (
+          <meta
+            property="article:modified_time"
+            content={article.dateModified || article.date}
+          />
+        )}
         <script type="application/ld+json">
           {JSON.stringify(ArticleLD(article))}
         </script>

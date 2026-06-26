@@ -22,7 +22,6 @@ const RegistrationList = () => {
       const response = await axios.get(`${BACKEND_URL}/api/registrations`);
       setRegistrations(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
-      console.error("Error fetching registrations:", error);
       setRegistrations([]);
     }
   };

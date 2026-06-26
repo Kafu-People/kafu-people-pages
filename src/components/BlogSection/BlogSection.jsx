@@ -49,7 +49,6 @@ const BlogSection = () => {
         }
       } catch (fetchError) {
         if (!Array.isArray(staticBlogs) || staticBlogs.length === 0) {
-          console.error("Error fetching blogs:", fetchError);
           setError(fetchError);
         }
       }

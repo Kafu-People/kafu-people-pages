@@ -61,7 +61,6 @@ const Signup = () => {
         title: "Signup Error",
         text: "Failed to connect to the server. Please try again later.",
       });
-      console.error("Signup error:", error);
     }
   };
 

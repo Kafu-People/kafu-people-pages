@@ -46,7 +46,6 @@ const Logout = () => {
           title: "Logout Failed",
           text: "Something went wrong. Please try again!",
         });
-        console.error("Logout failed:", err);
       }
     }
   };

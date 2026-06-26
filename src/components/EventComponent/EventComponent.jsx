@@ -33,7 +33,6 @@ const EventComponent = () => {
           Array.isArray(response.data.events) ? response.data.events : [],
         );
       } catch (error) {
-        console.error("Error fetching events:", error);
         setEvents([]);
       } finally {
         setIsLoading(false);

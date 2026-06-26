@@ -30,7 +30,7 @@ const UpdateEvent = () => {
         image: data.image,
       });
     } catch (error) {
-      console.error("Error fetching event details:", error);
+      // Failed to load event details; form stays with its current values.
     }
   };
 
@@ -48,7 +48,7 @@ const UpdateEvent = () => {
       await axios.put(`${API_URL}/${id}`, formData);
       navigate("/events"); // Redirect back to events list
     } catch (error) {
-      console.error("Error updating event:", error);
+      // Update failed; user remains on the form to retry.
     }
   };
 

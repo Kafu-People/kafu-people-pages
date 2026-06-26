@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import { FaPython } from "react-icons/fa6";
 import { GiLevelFourAdvanced } from "react-icons/gi";
 import { MdDataThresholding } from "react-icons/md";
@@ -86,9 +87,11 @@ const PythonService = () => {
 
       {/* Centered Button */}
       <div className="flex justify-center mt-8">
+        <Link to="/contact">
         <button className="bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-medium py-2 px-6 rounded shadow-lg hover:opacity-90">
           ENROLL NOW →
         </button>
+        </Link>
       </div>
     </div>
   );

@@ -192,7 +192,7 @@ const Events = () => {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Please login first</h1>
+          <h2 className="text-2xl font-bold mb-4">Please login first</h2>
           <button
             onClick={() => navigate("/login")}
             className="bg-blue-500 text-cWhite px-4 py-2 rounded hover:bg-blue-600"
@@ -206,12 +206,12 @@ const Events = () => {
 
   return (
     <>
-      <h1
+      <h2
         className="text-2xl font-bold mb-6 text-cDarkBlue text-center m-5 font-inter"
         id="manag-events"
       >
         Manage Events
-      </h1>
+      </h2>
       {/* Form Section */}
 
       <div ref={formRef} className="flex justify-center font-inter">
@@ -220,9 +220,9 @@ const Events = () => {
           className="bg-cWhite p-6 rounded-lg shadow-md w-full mx-auto max-w-[700px]"
         >
           <div className="flex flex-col items-center space-y-4">
-            <h2 className="text-cDarkBlue text-2xl font-bold">
+            <h3 className="text-cDarkBlue text-2xl font-bold">
               {editEventId ? "Edit Event" : "Add Event"}
-            </h2>
+            </h3>
 
             {/* Type & Date Row */}
             <div className="w-full flex flex-col md:flex-row gap-4">

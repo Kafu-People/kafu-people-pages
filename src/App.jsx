@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./pages/ContactUs";
 import OurProducts from "./pages/OurProducts";
 import PortfolioCaseStudy from "./pages/PortfolioCaseStudy";
+import SkipToContent from "./components/ui/SkipToContent";
 
 import NewsAndEvents from "./pages/NewsAndEvents";
 import News from "./pages/News";
@@ -42,9 +43,12 @@ const VerifyUser = lazy(() => import("./components/admin/VerifyUser"));
 const App = () => {
   return (
     <>
+      <SkipToContent targetId="main-content" />
+
       <ScrollToTop />
       <CookieConsentProvider>
         <Header />
+        <main id="main-content" tabIndex="-1" className="focus:outline-none">
         <Routes>
           <Route
             path="/login"
@@ -179,6 +183,7 @@ const App = () => {
             }
           />
         </Routes>
+        </main>
         <Footer />
         <FloatingWhatsApp />
       </CookieConsentProvider>

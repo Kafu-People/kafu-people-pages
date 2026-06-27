@@ -12,13 +12,18 @@ const MissionSection = () => {
           we help startups and growing businesses leverage technology with
           clarity and craftsmanship. We deliver AI, cloud, and full-stack
           solutions that are scoped honestly, built to last, and aligned with
-          your business goals — so you can ship faster and scale with confidence.
+          your business goals — so you can ship faster and scale with
+          confidence.
         </p>
       </div>
 
       <div className="flex-1 flex justify-center items-center">
-        <img loading="lazy"           src={mission}
+        <img
+          loading="lazy"
+          src={mission}
           alt="Mission illustration"
+          width={512}
+          height={384}
           className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain"
         />
       </div>

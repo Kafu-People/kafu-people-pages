@@ -68,7 +68,9 @@ const LatestContent = () => {
             <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-CPurple/30">
               <img
                 src={item.image}
-                alt={item.title}
+                alt={item.title}  
+                width={600}
+                height={400}
                 loading="lazy"
                 className="h-44 w-full object-cover"
               />

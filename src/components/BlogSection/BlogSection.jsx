@@ -5,6 +5,7 @@ import { BreadcrumbListLD } from "../Schema";
 import PageHero from "../ui/PageHero";
 import staticBlogs from "../../data/blogs";
 import { BlogGridPlaceholder } from "./BlogGridPlaceholder";
+import { logError } from "../../lib/logError";
 
 const BlogGrid = lazy(() => import("./BlogGrid"));
 
@@ -48,8 +49,8 @@ const BlogSection = () => {
           setBlogs(response.data);
         }
       } catch (fetchError) {
+        logError("Error fetching blogs:", fetchError);
         if (!Array.isArray(staticBlogs) || staticBlogs.length === 0) {
-          console.error("Error fetching blogs:", fetchError);
           setError(fetchError);
         }
       }

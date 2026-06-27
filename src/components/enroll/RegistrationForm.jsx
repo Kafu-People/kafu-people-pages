@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Itsolera from "../../assets/images/Itsolera.svg";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { logError } from "../../lib/logError";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 function RegistrationForm() {
   // Create refs for all form fields
@@ -51,7 +52,7 @@ function RegistrationForm() {
       // Reset form fields after successful submission
       e.target.reset();
     } catch (error) {
-      console.error("Registration failed:", error);
+      logError("Registration failed:", error);
 
       // Show error alert
       Swal.fire({
@@ -73,7 +74,7 @@ function RegistrationForm() {
     >
       <div className=" w-full max-w-3xl py-10 px-8 shadow-lg bg-cWhite rounded-lg">
         <div className="flex justify-center mb-8">
-          <img loading="lazy" src={Itsolera} alt="Logo" className="h-12" />
+          <img loading="lazy" src={Itsolera} alt="Kafu People Logo" className="h-12" />
         </div>
         <h1 className="text-2xl font-bold text-center text-cDarkBlue mb-6">
           Registration Form

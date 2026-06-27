@@ -13,6 +13,7 @@ const menuItems = [
   { title: "TEAM", url: "/team" },
   { title: "BLOGS", url: "/blogs" },
   { title: "CONTACT", url: "/contact" },
+  { title: "NEWS", url: "/news" },
 ];
 
 const Navbar = ({ isScrolled: isScrolledProp }) => {

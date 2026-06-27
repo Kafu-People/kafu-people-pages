@@ -353,16 +353,22 @@ const Events = () => {
                 <div className="flex flex-col items-center space-y-4">
                   <img loading="lazy"                     src={`${BACKEND_URL}/${event.images[0]}`}
                     alt="Main Workshop"
+                    width={320}
+                    height={240}
                     className="w-[20rem] h-auto max-w-md object-cover rounded-lg shadow-md"
                   />
 
                   <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                     <img loading="lazy"                       src={`${BACKEND_URL}/${event.images[1]}`}
                       alt="Workshop Image 1"
+                      width={160}
+                      height={128}
                       className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                     />
                     <img loading="lazy"                       src={`${BACKEND_URL}/${event.images[2]}`}
                       alt="Workshop Image 2"
+                      width={160}
+                      height={128}
                       className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                     />
                   </div>
@@ -372,6 +378,8 @@ const Events = () => {
                 <div className="flex flex-col items-center space-y-4">
                   <img loading="lazy"                     src={`${BACKEND_URL}/${event.images[3]}`}
                     alt="Workshop Image 3"
+                    width={448}
+                    height={368}
                     className="w-full h-[23rem] max-w-md object-cover rounded-lg shadow-md"
                   />
                 </div>
@@ -380,15 +388,21 @@ const Events = () => {
                 <div className="flex flex-col items-center space-y-4">
                   <img loading="lazy"                     src={`${BACKEND_URL}/${event.images[4]}`}
                     alt="Main Workshop"
+                    width={320}
+                    height={240}
                     className="w-[20rem] h-auto max-w-md object-cover rounded-lg shadow-md"
                   />
                   <div className="grid grid-cols-2 gap-2 w-full max-w-md">
                     <img loading="lazy"                       src={`${BACKEND_URL}/${event.images[5]}`}
                       alt="Workshop Image 1"
+                      width={160}
+                      height={128}
                       className="w-[10rem] h-[8rem] object-cover rounded-lg shadow-md"
                     />
                     <img loading="lazy"                       src={`${BACKEND_URL}/${event.images[6]}`}
                       alt="Workshop Image 2"
+                      width={160}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg shadow-md"
                     />
                   </div>

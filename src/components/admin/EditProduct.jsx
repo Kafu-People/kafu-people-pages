@@ -127,8 +127,12 @@ const EditProduct = () => {
           </div>
           {previewImage && (
             <div className="mt-4 flex items-center justify-center">
-              <img loading="lazy"                 src={previewImage}
+              <img
+                loading="lazy"
+                src={previewImage}
                 alt="Preview"
+                width={128}
+                height={128}
                 className="w-32 h-32 object-cover rounded-lg shadow-md"
               />
             </div>

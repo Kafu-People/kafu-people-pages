@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { logError } from "../../lib/logError";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -61,6 +62,7 @@ const Signup = () => {
         title: "Signup Error",
         text: "Failed to connect to the server. Please try again later.",
       });
+      logError("Signup error:", error);
     }
   };
 

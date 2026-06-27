@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { logError } from "../../lib/logError";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const Logout = () => {
   const handleLogout = async () => {
@@ -41,6 +42,7 @@ const Logout = () => {
           window.location.href = "/";
         }, 2000);
       } catch (err) {
+        logError("Logout failed:", err);
         Swal.fire({
           icon: "error",
           title: "Logout Failed",

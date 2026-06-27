@@ -3,6 +3,7 @@ import axios from "axios";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Navigate } from "react-router-dom";
+import { logError } from "../../lib/logError";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const RegistrationList = () => {
   const [registrations, setRegistrations] = useState([]);
@@ -22,6 +23,7 @@ const RegistrationList = () => {
       const response = await axios.get(`${BACKEND_URL}/api/registrations`);
       setRegistrations(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
+      logError("Error fetching registrations:", error);
       setRegistrations([]);
     }
   };

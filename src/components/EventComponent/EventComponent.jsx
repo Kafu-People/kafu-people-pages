@@ -5,6 +5,7 @@ import { MdDateRange } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "../Loader";
+import { logError } from "../../lib/logError";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -33,6 +34,7 @@ const EventComponent = () => {
           Array.isArray(response.data.events) ? response.data.events : [],
         );
       } catch (error) {
+        logError("Error fetching events:", error);
         setEvents([]);
       } finally {
         setIsLoading(false);

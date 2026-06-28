@@ -6,6 +6,23 @@ export const SERVICE_CATEGORIES = [
     summary:
       "We design and deploy autonomous AI agents that integrate into your operations — handling multi-step workflows, LLM integrations, and intelligent automation.",
     homeIcon: "ai",
+    servicesPage: {
+      image: "/images/blogs/building-scalable-ai-agents.jpg",
+      decorative: "/images/AI.svg",
+      heroGradient:
+        "bg-gradient-to-br from-slate-950 via-primary-dark to-slate-900",
+      headerBg: "bg-primary/5 border-primary/20",
+      headerLabel: "text-primary",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-primary/30 bg-primary/5 hover:border-primary/50 hover:bg-primary/10",
+      overviewIcon: "text-primary",
+      offeringsBg: "bg-slate-900",
+      card: "bg-white/10 border-white/20 backdrop-blur-md",
+      iconWrap: "bg-white/15 text-white",
+      icon: "robot",
+    },
   },
   {
     id: "saas-mvp",
@@ -13,6 +30,23 @@ export const SERVICE_CATEGORIES = [
     summary:
       "Launch your product in weeks with scalable MVPs — user auth, billing, APIs, and core features ready for real users and early validation.",
     homeIcon: "rocket",
+    servicesPage: {
+      image: "/images/blogs/shipping-saas-mvp-in-six-weeks.jpg",
+      decorative: "/images/product.webp",
+      heroGradient:
+        "bg-gradient-to-br from-slate-950 via-blue-700 to-primary-dark",
+      headerBg: "bg-blue-50 border-blue-200/60",
+      headerLabel: "text-blue-700",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-blue-600/30 bg-blue-600/5 hover:border-blue-600/50 hover:bg-blue-600/10",
+      overviewIcon: "text-blue-600",
+      offeringsBg: "bg-slate-900",
+      card: "bg-white/10 border-white/20 backdrop-blur-md",
+      iconWrap: "bg-white/15 text-white",
+      icon: "rocket",
+    },
   },
   {
     id: "cloud-dashboards",
@@ -20,6 +54,22 @@ export const SERVICE_CATEGORIES = [
     summary:
       "Build real-time dashboards and data visualization on cloud-native infrastructure — live streaming, embedded analytics, and performance at scale.",
     homeIcon: "cloud",
+    servicesPage: {
+      image: "/images/newsAndEvents/new-cloud-native-dashboard-template.jpg",
+      decorative: "/images/cloud.png",
+      heroGradient: "bg-gradient-to-br from-slate-950 via-accent to-slate-900",
+      headerBg: "bg-teal-50 border-teal-200/60",
+      headerLabel: "text-teal-700",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-accent/35 bg-accent/5 hover:border-accent/55 hover:bg-accent/10",
+      overviewIcon: "text-accent",
+      offeringsBg: "bg-slate-900",
+      card: "bg-white/10 border-white/20 backdrop-blur-md",
+      iconWrap: "bg-white/15 text-white",
+      icon: "tachometer",
+    },
   },
   {
     id: "business-websites",
@@ -27,6 +77,23 @@ export const SERVICE_CATEGORIES = [
     summary:
       "Responsive, SEO-friendly corporate sites and landing pages with strong UI/UX, CMS integration, and ongoing maintenance.",
     homeIcon: "web",
+    servicesPage: {
+      image: "/images/about1.webp",
+      decorative: "/images/web.png",
+      heroGradient:
+        "bg-gradient-to-br from-slate-800 via-slate-700 to-accent",
+      headerBg: "bg-emerald-50 border-emerald-200/60",
+      headerLabel: "text-emerald-700",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-green-500/35 bg-green-500/5 hover:border-green-500/55 hover:bg-green-500/10",
+      overviewIcon: "text-green-500",
+      offeringsBg: "bg-slate-50",
+      card: "bg-white border-slate-200 shadow-sm",
+      iconWrap: "bg-primary/10 text-primary",
+      icon: "store",
+    },
   },
 ];
 

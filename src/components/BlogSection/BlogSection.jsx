@@ -6,6 +6,7 @@ import PageHero from "../ui/PageHero";
 import staticBlogs from "../../data/blogs";
 import { BlogGridPlaceholder } from "./BlogGridPlaceholder";
 import { logError } from "../../lib/logError";
+import { scrollToReturnBlogCardWithRetry } from "../../lib/blogListScroll";
 
 const BlogGrid = lazy(() => import("./BlogGrid"));
 
@@ -78,6 +79,10 @@ const BlogSection = () => {
       : [];
   }, [blogs, filter]);
 
+  useEffect(() => {
+    return scrollToReturnBlogCardWithRetry();
+  }, [filteredBlogs]);
+
   const seo = PAGE_SEO.blog;
 
   return (
@@ -102,6 +107,7 @@ const BlogSection = () => {
         height="h-[60vh] lg:h-[80vh]"
         priority
         align="left"
+        overlay={40}
         containerClassName="pt-8"
       >
         <h1 className="ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24">

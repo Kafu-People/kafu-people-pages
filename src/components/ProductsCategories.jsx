@@ -54,11 +54,11 @@ const ProductsCategories = () => {
                 setSelectedCategory(category);
                 setCurrentPage(1);
               }}
-               className={`flex-shrink-0 px-4 py-2 min-h-[44px] my-4 rounded-lg shadow-md text-sm font-medium ${
-                 selectedCategory === category
-                   ? "bg-CPurple text-cWhite"
-                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-               }`}
+              className={`flex-shrink-0 px-4 py-2 min-h-[44px] my-4 rounded-lg shadow-md text-sm font-medium ${
+                selectedCategory === category
+                  ? "bg-CPurple text-cWhite"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
             >
               {category}
             </button>
@@ -107,8 +107,12 @@ const ProductsCategories = () => {
                 className="bg-cWhite rounded-lg p-4 shadow hover:shadow-lg transition"
               >
                 <div className="h-40 bg-gray-100 rounded mb-4 flex items-center justify-center overflow-hidden">
-                  <img loading="lazy"                     src={`${BACKEND_URL}/${product.image}`}
+                  <img
+                    loading="lazy"
+                    src={`${BACKEND_URL}/${product.image}`}
                     alt={product.name}
+                    width={300}
+                    height={160}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -124,11 +128,11 @@ const ProductsCategories = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentPage(index + 1)}
-               className={`px-4 py-2 min-h-[44px] rounded ${
-                 currentPage === index + 1
-                   ? "bg-CPurple text-cWhite"
-                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-               }`}
+                  className={`px-4 py-2 min-h-[44px] rounded ${
+                    currentPage === index + 1
+                      ? "bg-CPurple text-cWhite"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  }`}
                 >
                   {index + 1}
                 </button>

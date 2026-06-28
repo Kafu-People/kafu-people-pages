@@ -9,8 +9,12 @@ const TrainingAndDevelopment = () => {
         <div className="w-full lg:w-1/2 flex justify-center px-4 sm:px-6 lg:px-0 order-first lg:order-last">
           <div className="relative">
             {/* Image */}
-            <img loading="lazy"               src={Development}
+            <img
+              loading="lazy"
+              src={Development}
               alt="Training and Development"
+              width={576}
+              height={324}
               className="rounded-lg shadow-lg w-full sm:w-1/2 md:w-2/3 lg:max-w-xl"
             />
           </div>

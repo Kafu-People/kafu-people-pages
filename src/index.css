@@ -11,6 +11,9 @@
     @apply transition-colors;
   }
 }
+html {
+  scrollbar-gutter: stable;
+}
 
 body.calendly-popup-open {
   overflow: hidden !important;

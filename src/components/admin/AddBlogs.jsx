@@ -171,8 +171,12 @@ const AddBlog = () => {
                 accept="image/*"
               />
               {existingImage && (
-                <img loading="lazy"                   src={`${BACKEND_URL}${existingImage}`}
+                <img
+                  loading="lazy"
+                  src={`${BACKEND_URL}${existingImage}`}
                   alt="Current"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 rounded-lg object-cover border border-cDarkBlue shadow-md"
                 />
               )}
@@ -197,8 +201,12 @@ const AddBlog = () => {
           >
             {/* Blog Image */}
             {blog.image && (
-              <img loading="lazy"                 src={`${BACKEND_URL}${blog.image}`}
+              <img
+                loading="lazy"
+                src={`${BACKEND_URL}${blog.image}`}
                 alt={blog.title}
+                width={400}
+                height={224}
                 className="w-full h-56 object-cover p-4"
               />
             )}

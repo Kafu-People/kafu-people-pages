@@ -301,6 +301,8 @@ const TeamSlider = () => {
             <div className="flex items-center justify-center md:justify-start h-56 md:h-auto m-4 rounded-md">
               <img loading="lazy"                 src={member.image}
                 alt={member.name}
+                width={240}
+                height={224}
                 className="w-3/4 md:w-full h-full object-cover rounded transition-all duration-500"
               />
             </div>

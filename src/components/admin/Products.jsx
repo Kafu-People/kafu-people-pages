@@ -252,6 +252,8 @@ const Products = () => {
             <div className="h-40 w-full rounded mb-4 flex items-center justify-center overflow-hidden">
               <img loading="lazy"                 src={`${BACKEND_URL}/${product.image}`}
                 alt={product.name}
+                width={300}
+                height={160}
                 className="w-full h-full object-cover"
               />
             </div>

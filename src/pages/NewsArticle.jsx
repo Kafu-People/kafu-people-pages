@@ -4,7 +4,8 @@ import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { ArticleLD, SpeakableLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
 import { useSSRData } from "../lib/SSRDataContext";
-import RichTextParagraph from "../components/RichTextParagraph";
+import ArticleContent from "../components/ArticleContent";
+import { prepareNewsListReturn } from "../lib/newsListScroll";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("en-GB", {
@@ -29,6 +30,8 @@ const NewsArticle = () => {
         </p>
         <Link
           to="/news"
+          state={{ returnNewsId: slug }}
+          onClick={() => prepareNewsListReturn(slug)}
           className="rounded-xl bg-CPurple px-6 py-3 font-semibold text-white transition hover:opacity-90"
         >
           &larr; Back to News
@@ -63,6 +66,8 @@ const NewsArticle = () => {
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
           to="/news"
+          state={{ returnNewsId: article.slug || slug }}
+          onClick={() => prepareNewsListReturn(article.slug || slug)}
           className="mb-6 inline-flex items-center text-sm font-medium text-CPurple hover:underline"
         >
           &larr; Back to News
@@ -91,17 +96,7 @@ const NewsArticle = () => {
           </div>
         )}
 
-        <div className="max-w-none text-gray-700">
-          {article.content.split("\n\n").map((paragraph, i) => (
-            <RichTextParagraph
-              key={i}
-              {...(i === 0 ? { "data-speakable": "summary" } : {})}
-              className="mb-4 text-base leading-relaxed sm:text-lg"
-            >
-              {paragraph}
-            </RichTextParagraph>
-          ))}
-        </div>
+        <ArticleContent text={article.content} speakableIndex={0} />
       </article>
     </>
   );

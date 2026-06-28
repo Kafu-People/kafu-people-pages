@@ -56,6 +56,11 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://kafupeople.com/contact</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://kafupeople.com/terms-of-service</loc>
     <lastmod>2026-06-28</lastmod>
     <priority>0.30</priority>

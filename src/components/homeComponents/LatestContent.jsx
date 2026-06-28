@@ -49,8 +49,8 @@ const LatestContent = () => {
   return (
     <section className="w-full px-4 py-16 font-inter lg:px-16">
       <div className="mb-10 text-center">
-        <h4 className="mb-2 text-xl text-textGray">FRESH FROM KAFU PEOPLE</h4>
-        <h2 className="text-3xl font-bold text-CPurple">Latest Content</h2>
+        <h2 className="mb-2 text-xl text-textGray">FRESH FROM KAFU PEOPLE</h2>
+        <h3 className="text-3xl font-bold text-CPurple">Latest Content</h3>
         <p className="mt-3 text-textGray">
           Company news and team insights from across Kafu People.
         </p>
@@ -68,7 +68,9 @@ const LatestContent = () => {
             <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-CPurple/30">
               <img
                 src={item.image}
-                alt={item.title}
+                alt={item.title}  
+                width={600}
+                height={400}
                 loading="lazy"
                 className="h-44 w-full object-cover"
               />

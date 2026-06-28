@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
 import staticNews, { NEWS_CATEGORIES, getLatestNews } from "../data/news";
+import {
+  scrollToReturnNewsCardWithRetry,
+  setReturnNewsId,
+} from "../lib/newsListScroll";
 
 const NEWS_HERO_IMAGE = "/images/blog-section.webp";
 
@@ -25,6 +29,10 @@ const News = () => {
       ? newsItems
       : newsItems.filter((item) => item.category === filter);
 
+  useEffect(() => {
+    return scrollToReturnNewsCardWithRetry();
+  }, [filteredNews]);
+
   return (
     <>
       <PageSEO
@@ -39,6 +47,7 @@ const News = () => {
         height="h-[60vh] lg:h-[80vh]"
         priority
         align="left"
+        overlay={40}
         containerClassName="pt-8"
       >
         <h1 className="ml-8 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-24">
@@ -47,7 +56,7 @@ const News = () => {
         <div className="lg:w-[700px] w-auto">
           <p className="text-lg sm:text-xl lg:text-left lg:ml-24 mx-4 sm:text-justify text-cWhite mt-2">
             Announcements, events, partnerships, and product updates from the
-            Kafu People team. Stay connected for the latest on what we're
+            Kafu People. Stay connected for the latest on what we're
             building and where we'll be next.
           </p>
         </div>
@@ -78,9 +87,9 @@ const News = () => {
       <div className="container mx-auto px-6 py-8">
         {staticNews.length === 0 ? (
           <div className="text-center py-16">
-            <h3 className="text-2xl font-bold text-cDarkBlue mb-4">
+            <h2 className="text-2xl font-bold text-cDarkBlue mb-4">
               No updates yet
-            </h3>
+            </h2>
             <p className="text-gray-600 max-w-md mx-auto">
               We're working on our first updates. Check back soon for news from
               Kafu People.
@@ -98,10 +107,12 @@ const News = () => {
                 <Link
                   key={item._id}
                   to={`/news/${item.slug}`}
-                  className="block"
+                  className="block h-full"
+                  onClick={() => setReturnNewsId(item.slug || item._id)}
                 >
                   <motion.article
-                    className="h-full bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-CPurple"
+                    id={`news-card-${item.slug || item._id}`}
+                    className="h-full scroll-mt-28 overflow-hidden rounded-lg bg-white shadow-lg cursor-pointer hover:shadow-CPurple"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >

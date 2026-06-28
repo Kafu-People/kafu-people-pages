@@ -30,8 +30,7 @@ const SERVICE_FOOTER_ICONS = {
 };
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;
-const linkColumnInnerClass =
-  "text-left w-full min-w-0 sm:w-max sm:max-w-full";
+const linkColumnInnerClass = "text-left w-full min-w-0 sm:w-max sm:max-w-full";
 const footerGridClass =
   "grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 xl:grid-cols-5 xl:gap-8";
 const headingClass = "text-base sm:text-lg font-bold mb-3 sm:mb-4 text-white";
@@ -50,8 +49,12 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={footerGridClass}>
           <div className={brandColumnClass}>
-            <img loading="lazy"               src="/images/kafupeople.webp"
+            <img
+              loading="lazy"
+              src="/images/kafupeople.webp"
               alt="Kafu People Logo"
+              width={300}
+              height={200}
               className="mb-4 block mx-auto max-w-[45%] sm:max-w-[200px] h-auto brightness-110"
             />
             <div className="w-full min-w-0 max-w-sm px-1">
@@ -83,13 +86,13 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Business Hours</h3>
               <ul className={listClass}>
-              <li>
-                <span className="font-semibold text-accent-light flex items-center gap-1">
-                  <IoIosTime />
-                  Monday to Friday:
-                </span>{" "}
-                9:00 AM – 9:00 PM (CET)
-              </li>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <IoIosTime />
+                    Monday to Friday:
+                  </span>{" "}
+                  9:00 AM – 9:00 PM (CET)
+                </li>
               </ul>
             </div>
           </div>
@@ -130,54 +133,54 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Get in Touch</h3>
               <ul className={`${listClass} sm:space-y-3`}>
-              <li>
-                <span className="font-semibold text-accent-light flex items-center gap-1">
-                  <FaLocationDot />
-                  Address:
-                </span>{" "}
-                {OFFICE_ADDRESS}
-              </li>
-              <li>
-                <span className="font-semibold text-accent-light flex items-center gap-1">
-                  <FaWhatsapp className="shrink-0" />
-                  WhatsApp:
-                </span>{" "}
-                <a
-                  href={WHATSAPP_URL}
-                  className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {WHATSAPP_DISPLAY}
-                </a>
-              </li>
-              <li>
-                <span className="font-semibold text-accent-light flex items-center gap-1">
-                  <MdMarkEmailUnread />
-                  Email:
-                </span>{" "}
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
-                >
-                  {CONTACT_EMAIL}
-                </a>
-              </li>
-              <li>
-                <span className="font-semibold text-accent-light flex items-center gap-1">
-                  <FaLinkedin />
-                  LinkedIn:
-                </span>{" "}
-                <a
-                  href={LINKEDIN_URL}
-                  className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Kafu People
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <FaLocationDot />
+                    Address:
+                  </span>{" "}
+                  {OFFICE_ADDRESS}
+                </li>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <FaWhatsapp className="shrink-0" />
+                    WhatsApp:
+                  </span>{" "}
+                  <a
+                    href={WHATSAPP_URL}
+                    className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {WHATSAPP_DISPLAY}
+                  </a>
+                </li>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <MdMarkEmailUnread />
+                    Email:
+                  </span>{" "}
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                </li>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <FaLinkedin />
+                    LinkedIn:
+                  </span>{" "}
+                  <a
+                    href={LINKEDIN_URL}
+                    className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Kafu People
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

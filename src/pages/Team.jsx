@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import { PersonLD } from "../components/Schema";
 import PageHero from "../components/ui/PageHero";
-import TeamCard from "../components/team/TeamCard";
+import TeamHumanCard from "../components/team/TeamHumanCard";
+import TeamLeadershipCard from "../components/team/TeamLeadershipCard";
 import teamHero from "../assets/images/aboutUs/Development.webp";
 import { executives, teamMembers, collaborators } from "../data/team";
 import { WHATSAPP_URL } from "../constants/site";
@@ -32,6 +32,7 @@ const Team = () => {
         height="h-[55vh] lg:h-[70vh]"
         priority
         align="left"
+        overlay={40}
         containerClassName="pt-8"
       >
         <h1 className="ml-2 text-left text-4xl font-bold text-cWhite sm:text-5xl md:text-6xl lg:ml-12">
@@ -46,51 +47,40 @@ const Team = () => {
         </div>
       </PageHero>
 
-      {/* Leadership */}
       <section className="container mx-auto px-6 py-16">
-        <div className="mb-10 text-center">
+        <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-cDarkBlue">Leadership</h2>
-          <p className="mt-2 text-gray-600">
+          <p className="mx-auto mt-2 max-w-2xl text-gray-600">
             The people setting direction and standards at Kafu People.
           </p>
         </div>
-        <motion.div
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          {executives.map((member) => (
-            <TeamCard key={member.name} member={member} variant="lead" />
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {executives.map((member, index) => (
+            <TeamLeadershipCard
+              key={member.name}
+              member={member}
+              index={index}
+            />
           ))}
-        </motion.div>
-      </section>
-
-      {/* Wider team */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-6">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold text-cDarkBlue">Our Experts</h2>
-            <p className="mt-2 text-gray-600">
-              The engineers and specialists who build and ship the work.
-            </p>
-          </div>
-          <motion.div
-            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {teamMembers.map((member) => (
-              <TeamCard key={member.name} member={member} />
-            ))}
-          </motion.div>
         </div>
       </section>
 
-      {/* Collaborators */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold text-cDarkBlue">Our Experts</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-gray-600">
+              The engineers and specialists who build and ship the work.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {teamMembers.map((member, index) => (
+              <TeamHumanCard key={member.name} member={member} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="container mx-auto px-6 py-16">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold text-cDarkBlue">
@@ -150,7 +140,6 @@ const Team = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-slate-950 py-16 text-center text-cWhite">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl font-bold sm:text-3xl">

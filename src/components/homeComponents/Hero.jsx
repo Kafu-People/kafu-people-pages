@@ -69,10 +69,14 @@ export default function Hero() {
       ) : null}
 
       <div className="absolute inset-0 z-[2] bg-black/50" aria-hidden />
+      <div
+        className="absolute inset-0 z-[2] bg-gradient-to-r from-black/35 via-black/15 to-transparent lg:bg-gradient-to-r"
+        aria-hidden
+      />
 
       <div className="relative z-10 w-full px-6 pb-16 sm:px-10 sm:pb-20 lg:px-16 lg:pb-24 xl:px-32">
         <div className="container mx-auto flex flex-1 flex-col justify-center py-8 lg:py-12">
-          <div className="mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
+          <div className="mx-auto w-full max-w-2xl text-center [text-shadow:0_1px_2px_rgb(0_0_0/0.85),0_2px_18px_rgb(0_0_0/0.65)] lg:mx-0 lg:text-left">
             <h1 className="mb-6 text-3xl font-bold leading-snug text-cWhite sm:text-4xl lg:text-5xl">
               Build and scale with{" "}
               <span className="text-primary-light">AI, Cloud, and Full-stack</span>{" "}

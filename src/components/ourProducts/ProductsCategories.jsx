@@ -1,29 +1,24 @@
 import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { getCaseByProductId } from "../../data/portfolioCases";
 import {
   PORTFOLIO_CATEGORIES,
+  PORTFOLIO_CATEGORY_ALL,
   PORTFOLIO_PRODUCTS,
 } from "../../data/portfolioProducts";
 
 const ProductsCategories = () => {
-  const [selectedCategory, setSelectedCategory] = useState(PORTFOLIO_CATEGORIES[0]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const [selectedCategory, setSelectedCategory] = useState(PORTFOLIO_CATEGORY_ALL);
 
   const filteredProducts = useMemo(() => {
+    if (selectedCategory === PORTFOLIO_CATEGORY_ALL) {
+      return PORTFOLIO_PRODUCTS;
+    }
     return PORTFOLIO_PRODUCTS.filter(
       (product) => product.category === selectedCategory,
     );
   }, [selectedCategory]);
-
-  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-  const paginatedProducts = useMemo(() => {
-    return filteredProducts.slice(
-      (currentPage - 1) * itemsPerPage,
-      currentPage * itemsPerPage,
-    );
-  }, [filteredProducts, currentPage, itemsPerPage]);
 
   return (
     <div className="box-border w-full max-w-[100vw] overflow-x-hidden p-4 font-inter sm:p-6 md:p-8 lg:px-16 xl:px-24">
@@ -33,10 +28,7 @@ const ProductsCategories = () => {
           {PORTFOLIO_CATEGORIES.map((category) => (
             <button
               key={category}
-              onClick={() => {
-                setSelectedCategory(category);
-                setCurrentPage(1);
-              }}
+              onClick={() => setSelectedCategory(category)}
               className={`my-4 min-h-[44px] flex-shrink-0 rounded-lg px-4 py-2 text-sm font-medium shadow-md ${
                 selectedCategory === category
                   ? "bg-CPurple text-cWhite"
@@ -62,10 +54,7 @@ const ProductsCategories = () => {
                   name="category"
                   value={category}
                   checked={selectedCategory === category}
-                  onChange={() => {
-                    setSelectedCategory(category);
-                    setCurrentPage(1);
-                  }}
+                  onChange={() => setSelectedCategory(category)}
                   className="form-radio accent-cDarkBlue"
                 />
                 <span className="text-base font-semibold text-cBlack">{category}</span>
@@ -76,9 +65,13 @@ const ProductsCategories = () => {
 
         <div className="min-w-0 w-full flex-1">
           <div className="space-y-8">
-            {paginatedProducts.map((product) => (
-              <div
+            {filteredProducts.map((product, index) => (
+              <motion.div
                 key={product.product_id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.3) }}
                 className="flex w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-cWhite shadow-lg transition-all duration-300 hover:shadow-lg hover:shadow-CPurple md:flex-row md:items-stretch"
               >
                 <div className="group relative h-48 w-full shrink-0 sm:h-56 md:h-auto md:w-56 lg:w-64 xl:w-72">
@@ -147,27 +140,9 @@ const ProductsCategories = () => {
                     {product.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-
-          {totalPages > 1 && (
-            <div className="mt-8 flex items-center justify-center gap-2">
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentPage(index + 1)}
-                  className={`min-h-[44px] rounded-lg px-4 py-2 transition-all duration-200 ${
-                    currentPage === index + 1
-                      ? "bg-CPurple text-cWhite shadow-lg"
-                      : "bg-textGray text-cWhite hover:bg-primary-dark"
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </div>

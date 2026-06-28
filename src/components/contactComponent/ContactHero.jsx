@@ -7,8 +7,6 @@ const ContactHero = () => {
     <PageHero
       image={CONTACT_HERO_IMAGE}
       imageAlt="Contact Kafu People"
-      imageClassName="brightness-125"
-      overlay={40}
       priority
     >
       <h1 className="mb-4 text-4xl font-bold text-cWhite sm:text-5xl lg:text-6xl">

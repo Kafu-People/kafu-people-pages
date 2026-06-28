@@ -12,8 +12,8 @@ const menuItems = [
   { title: "PORTFOLIO", url: "/portfolio" },
   { title: "TEAM", url: "/team" },
   { title: "BLOGS", url: "/blogs" },
-  { title: "CONTACT", url: "/contact" },
   { title: "NEWS", url: "/news" },
+  { title: "CONTACT", url: "/contact" },
 ];
 
 const Navbar = ({ isScrolled: isScrolledProp }) => {

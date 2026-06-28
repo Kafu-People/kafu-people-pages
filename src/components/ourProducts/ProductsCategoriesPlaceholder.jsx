@@ -3,12 +3,9 @@ import {
   PORTFOLIO_PRODUCTS,
 } from "../../data/portfolioProducts";
 
-const ITEMS_PER_PAGE = 3;
-const defaultCategory = PORTFOLIO_CATEGORIES[0];
+const PREVIEW_COUNT = 3;
 
-const previewProducts = PORTFOLIO_PRODUCTS.filter(
-  (product) => product.category === defaultCategory,
-).slice(0, ITEMS_PER_PAGE);
+const previewProducts = PORTFOLIO_PRODUCTS.slice(0, PREVIEW_COUNT);
 
 export function ProductsCategoriesPlaceholder() {
   return (

@@ -7,6 +7,7 @@ import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { getStaticBlogBySlug, getStaticBlogById } from "../data/blogs";
 import { BlogPostingLD, BreadcrumbListLD, SpeakableLD } from "../components/Schema";
 import { useSSRData } from "../lib/SSRDataContext";
+import { prepareBlogListReturn } from "../lib/blogListScroll";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -95,6 +96,8 @@ const BlogPost = () => {
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <Link
           to="/blogs"
+          state={{ returnBlogId: blog.slug || slug || blog._id }}
+          onClick={() => prepareBlogListReturn(blog.slug || slug || blog._id)}
           className="mb-6 inline-flex items-center text-sm font-medium text-CPurple hover:underline"
         >
           &larr; Back to Blogs

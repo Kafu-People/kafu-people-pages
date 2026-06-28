@@ -56,7 +56,7 @@ const News = () => {
         <div className="lg:w-[700px] w-auto">
           <p className="text-lg sm:text-xl lg:text-left lg:ml-24 mx-4 sm:text-justify text-cWhite mt-2">
             Announcements, events, partnerships, and product updates from the
-            Kafu People team. Stay connected for the latest on what we're
+            Kafu People. Stay connected for the latest on what we're
             building and where we'll be next.
           </p>
         </div>

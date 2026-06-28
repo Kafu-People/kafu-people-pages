@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import MenuItems from "./MenuItems";
 import { Link, useLocation } from "react-router-dom";
 import kafupeople from "../../assets/images/kafupeople.webp";
-import { useScrolled } from "../../hooks/useScrolled";
-import { isDarkHeroRoute } from "../../constants/navbar";
+import { useNavScroll } from "../../context/NavScrollContext";
+import { NAV_SCROLL_TRANSITION_CLASS } from "../../constants/layout";
 
 const menuItems = [
   { title: "HOME", url: "/" },
@@ -16,13 +16,11 @@ const menuItems = [
   { title: "CONTACT", url: "/contact" },
 ];
 
-const Navbar = ({ isScrolled: isScrolledProp }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
-  const isScrolledFromHook = useScrolled(12, pathname);
-  const isScrolled = isScrolledProp ?? isScrolledFromHook;
-  const isSolid = isScrolled || isOpen;
-  const useLightNavText = !isSolid && isDarkHeroRoute(pathname);
+  const { isScrolledPastTop, useLightNavText } = useNavScroll();
+  const isSolid = isScrolledPastTop || isOpen;
 
   const closeMenu = () => setIsOpen(false);
 
@@ -45,7 +43,7 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
 
   return (
     <nav
-      className={`relative z-50 w-full px-4 text-sm font-medium font-inter transition-all duration-300 sm:px-8 md:px-16 lg:px-32 ${
+      className={`relative z-50 w-full px-4 text-sm font-medium font-inter sm:px-8 md:px-16 lg:px-32 ${NAV_SCROLL_TRANSITION_CLASS} ${
         isSolid
           ? "border-b border-slate-200 bg-cWhite text-slate-900 shadow-sm"
           : `border-0 bg-transparent shadow-none ${
@@ -55,7 +53,8 @@ const Navbar = ({ isScrolled: isScrolledProp }) => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between sm:h-[72px]">
         <Link to="/" className="flex shrink-0 items-center" onClick={closeMenu}>
-          <img             src={kafupeople}
+          <img
+            src={kafupeople}
             alt="Kafu People"
             width={1280}
             height={853}

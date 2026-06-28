@@ -48,7 +48,7 @@ export const PAGE_SEO = {
   newsList: {
     title: `News & Updates | ${SITE_NAME}`,
     description:
-      "Announcements, events, partnerships, and product updates from the Kafu People team.",
+      "Announcements, events, partnerships, and product updates from the Kafu People.",
     canonicalPath: "/news",
   },
   newsArticle: {

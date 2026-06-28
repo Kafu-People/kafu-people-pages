@@ -38,7 +38,7 @@ const BlogCards = () => {
 
   return (
     <section className="bg-primary text-cWhite py-12 px-4 sm:px-8 font-inter">
-      <h4 className="text-center text-sm text-cWhite mb-3">OUR BLOG</h4>
+      <h2 className="text-center text-sm text-cWhite mb-3">OUR BLOG</h2>
       <h2 className="text-center text-2xl text-cWhite font-bold mb-8">
         Latest Blog & Articles
       </h2>
@@ -58,7 +58,7 @@ const BlogCards = () => {
             </div>
             {/* Right: Content */}
             <div className="w-full sm:w-2/3 p-4">
-              <h4 className="text-sm text-textGray mb-4">Blog</h4>
+              <h3 className="text-sm text-textGray mb-4">Blog</h3>
               <h3 className="font-semibold text-cWhite text-lg">
                 {blog.title}
               </h3>

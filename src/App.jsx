@@ -28,6 +28,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { CookieConsentProvider } from "./context/CookieConsentProvider";
 import { NavScrollProvider } from "./context/NavScrollContext";
 import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
+import AdminNoIndex from "./components/AdminNoIndex";
 
 const Signup = lazy(() => import("./components/admin/Signup"));
 const Login = lazy(() => import("./components/admin/Login"));
@@ -49,6 +50,7 @@ const App = () => {
       <ScrollToTop />
       <NavScrollProvider>
         <CookieConsentProvider>
+          <AdminNoIndex />
           <Header />
           <main id="main-content" tabIndex="-1" className="focus:outline-none">
         <Routes>

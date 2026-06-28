@@ -6,7 +6,7 @@ const AboutLeadership = () => {
   return (
     <section className="w-full px-4 py-16 font-inter lg:px-16">
       <div className="mx-auto max-w-3xl text-center">
-        <h4 className="mb-2 text-xl text-textGray">OUR LEADERSHIP</h4>
+        <h2 className="mb-2 text-xl text-textGray">OUR LEADERSHIP</h2>
         <h2 className="text-3xl font-bold text-CPurple">
           Led by experienced engineers
         </h2>

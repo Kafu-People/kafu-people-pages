@@ -101,22 +101,30 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Quick Links</h3>
               <ul className={listClass}>
-                <li>
-                  <Link
-                    to="/blogs"
-                    className="hover:text-primary-light transition-colors"
-                  >
-                    Blogs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/news"
-                    className="hover:text-primary-light transition-colors"
-                  >
-                    News & Updates
-                  </Link>
-                </li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="hover:text-primary-light transition-colors"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/news"
+                  className="hover:text-primary-light transition-colors"
+                >
+                  News & Updates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/team"
+                  className="hover:text-primary-light transition-colors"
+                >
+                  Team
+                </Link>
+              </li>
               </ul>
             </div>
           </div>

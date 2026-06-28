@@ -1,6 +1,4 @@
 // Generates public/sitemap.xml from the app's routes.
-// Slugs are extracted from the data modules as text so this script never has to
-// import image assets (which Node can't load).
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
@@ -8,44 +6,61 @@ import { dirname, resolve } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-// Keep in sync with constants/site.js.
+const { default: blogs } = await import("../src/data/blogs.js");
+const { default: news } = await import("../src/data/news.js");
+const { default: portfolio } = await import("../src/data/portfolioCases.js");
+
 const siteFile = readFileSync(resolve(root, "src/constants/site.js"), "utf8");
 const SITE_URL = (siteFile.match(/SITE_URL\s*=\s*["']([^"']+)["']/) || [])[1] ||
   "https://kafupeople.com";
 
-// Static, indexable routes (admin/auth routes are intentionally excluded).
-const staticPaths = [
-  "/",
-  "/about",
-  "/services",
-  "/portfolio",
-  "/team",
-  "/blogs",
-  "/news",
-  "/contact",
-  "/terms-of-service",
-  "/privacy-policy",
-];
-
-const slugsFrom = (relPath) => {
-  const text = readFileSync(resolve(root, relPath), "utf8");
-  const matches = [...text.matchAll(/slug:\s*["']([^"']+)["']/g)];
-  return matches.map((m) => m[1]);
-};
-
-const dynamicPaths = [
-  ...slugsFrom("src/data/blogs.js").map((s) => `/blogs/${s}`),
-  ...slugsFrom("src/data/news.js").map((s) => `/news/${s}`),
-  ...slugsFrom("src/data/portfolioCases.js").map((s) => `/portfolio/${s}`),
-];
-
-const allPaths = [...staticPaths, ...dynamicPaths];
 const today = new Date().toISOString().slice(0, 10);
+
+const staticPaths = [
+  { path: "/",                   lastmod: today, priority: 1.0 },
+  { path: "/about",              lastmod: today, priority: 0.8 },
+  { path: "/services",           lastmod: today, priority: 0.8 },
+  { path: "/contact",            lastmod: today, priority: 0.8 },
+  { path: "/portfolio",          lastmod: today, priority: 0.8 },
+  { path: "/team",               lastmod: today, priority: 0.8 },
+  { path: "/blogs",              lastmod: today, priority: 0.8 },
+  { path: "/news",               lastmod: today, priority: 0.8 },
+  { path: "/newsAndEvents",      lastmod: today, priority: 0.7 },
+  { path: "/training/ai",        lastmod: today, priority: 0.7 },
+  { path: "/ProductsCategories", lastmod: today, priority: 0.7 },
+  { path: "/terms-of-service",   lastmod: today, priority: 0.3 },
+  { path: "/privacy-policy",     lastmod: today, priority: 0.3 },
+];
+
+const blogPaths = blogs.map((b) => ({
+  path: `/blogs/${b.slug}`,
+  lastmod: b.dateModified || b.datePublished || today,
+  priority: 0.7,
+}));
+
+const newsPaths = news.map((n) => ({
+  path: `/news/${n.slug}`,
+  lastmod: n.date || today,
+  priority: 0.7,
+}));
+
+const portfolioPaths = portfolio.map((p) => ({
+  path: `/portfolio/${p.slug}`,
+  lastmod: today,
+  priority: 0.9,
+}));
+
+const allPaths = [
+  ...staticPaths,
+  ...blogPaths,
+  ...newsPaths,
+  ...portfolioPaths,
+];
 
 const urls = allPaths
   .map(
-    (path) =>
-      `  <url>\n    <loc>${SITE_URL}${path}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`
+    (entry) =>
+      `  <url>\n    <loc>${SITE_URL}${entry.path}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n    <priority>${entry.priority.toFixed(2)}</priority>\n  </url>`
   )
   .join("\n");
 

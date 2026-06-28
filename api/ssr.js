@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   const { body, contentType } = httpResponse
   res.statusCode = 200
   res.setHeader("Content-Type", contentType)
+  res.setHeader("Cache-Control", "no-cache")
   res.end(body)
 }
 

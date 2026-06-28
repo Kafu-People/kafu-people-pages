@@ -26,6 +26,7 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { CookieConsentProvider } from "./context/CookieConsentProvider";
 import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
+import AdminNoIndex from "./components/AdminNoIndex";
 
 const Signup = lazy(() => import("./components/admin/Signup"));
 const Login = lazy(() => import("./components/admin/Login"));
@@ -44,6 +45,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <CookieConsentProvider>
+        <AdminNoIndex />
         <Header />
         <Routes>
           <Route

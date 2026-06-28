@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { EMAIL_REGEX } from "../constants/site";
 
 const COPY = {
   title: "Stay in the loop",
@@ -8,8 +9,6 @@ const COPY = {
 };
 
 const STORAGE_KEY = "kafu-newsletter-demo-subscribers";
-
-const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
 const saveDemoSubscription = (email) => {
   const normalized = email.trim().toLowerCase();
@@ -35,7 +34,7 @@ export function NewsletterSubscribeForm({ variant = "footer" }) {
     event.preventDefault();
     const trimmed = email.trim();
 
-    if (!isValidEmail(trimmed)) {
+    if (!EMAIL_REGEX.test(trimmed)) {
       Swal.fire({
         icon: "error",
         title: "Invalid email",

@@ -21,6 +21,8 @@ export const CALENDLY_PAGE_SETTINGS = {
 };
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/kafupeople.webp`;
 
+export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export const TESTIMONIALS = [
   {
     id: 1,

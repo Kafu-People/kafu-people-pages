@@ -7,8 +7,6 @@ const ProductsSection = () => {
     <PageHero
       image={PORTFOLIO_HERO_IMAGE}
       imageAlt="Our Products"
-      imageClassName="brightness-125"
-      overlay={20}
       priority
       containerClassName="max-w-4xl"
     >

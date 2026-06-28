@@ -8,10 +8,9 @@ function Cyber() {
     <PageHero
       image={SERVICE_HERO_IMAGE}
       imageAlt="Our Services"
-      imageClassName="brightness-125"
-      overlay={15}
       priority
       align="left"
+      overlay={false}
       containerClassName="max-w-xl sm:ml-6 lg:ml-24"
     >
       <h1 className="mb-4 text-white text-4xl font-bold sm:text-5xl lg:text-6xl">Our Services</h1>

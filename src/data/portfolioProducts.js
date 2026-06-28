@@ -1,6 +1,11 @@
 import { SERVICE_CATEGORY_TITLES } from "../constants/serviceCategories";
 
-export const PORTFOLIO_CATEGORIES = SERVICE_CATEGORY_TITLES;
+export const PORTFOLIO_CATEGORY_ALL = "ALL";
+
+export const PORTFOLIO_CATEGORIES = [
+  PORTFOLIO_CATEGORY_ALL,
+  ...SERVICE_CATEGORY_TITLES,
+];
 
 export const PORTFOLIO_PRODUCTS = [
   {

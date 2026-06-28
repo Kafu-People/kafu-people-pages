@@ -4,7 +4,7 @@ import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { ArticleLD, SpeakableLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
 import { useSSRData } from "../lib/SSRDataContext";
-import RichTextParagraph from "../components/RichTextParagraph";
+import ArticleContent from "../components/ArticleContent";
 import { prepareNewsListReturn } from "../lib/newsListScroll";
 
 const formatDate = (iso) =>
@@ -96,17 +96,7 @@ const NewsArticle = () => {
           </div>
         )}
 
-        <div className="max-w-none text-gray-700">
-          {article.content.split("\n\n").map((paragraph, i) => (
-            <RichTextParagraph
-              key={i}
-              {...(i === 0 ? { "data-speakable": "summary" } : {})}
-              className="mb-4 text-base leading-relaxed sm:text-lg"
-            >
-              {paragraph}
-            </RichTextParagraph>
-          ))}
-        </div>
+        <ArticleContent text={article.content} speakableIndex={0} />
       </article>
     </>
   );

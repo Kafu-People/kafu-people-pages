@@ -7,6 +7,7 @@ import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { getStaticBlogBySlug, getStaticBlogById } from "../data/blogs";
 import { BlogPostingLD, BreadcrumbListLD, SpeakableLD } from "../components/Schema";
 import { useSSRData } from "../lib/SSRDataContext";
+import ArticleContent from "../components/ArticleContent";
 import { prepareBlogListReturn } from "../lib/blogListScroll";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -126,13 +127,7 @@ const BlogPost = () => {
           </div>
         )}
 
-        <div className="max-w-none text-gray-700">
-          {blog.description.split("\n\n").map((paragraph, i) => (
-            <p key={i} {...(i === 0 ? { "data-speakable": "summary" } : {})} className="mb-4 text-base leading-relaxed sm:text-lg">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <ArticleContent text={blog.description} speakableIndex={0} />
       </article>
     </>
   );

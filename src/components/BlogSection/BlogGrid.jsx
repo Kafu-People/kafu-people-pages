@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { flattenBlogPreview } from "../../lib/blogText";
+import { blogCardExcerpt } from "../../lib/blogText";
 import { setReturnBlogId } from "../../lib/blogListScroll";
 
 const BlogGrid = ({ blogs, error }) => {
@@ -71,7 +71,7 @@ const BlogGrid = ({ blogs, error }) => {
                   </span>
                 </h2>
                 <p className="mt-2 h-[4.5rem] line-clamp-3 text-sm leading-6 text-gray-600">
-                  {flattenBlogPreview(blog.description)}
+                  {blogCardExcerpt(blog.description)}
                 </p>
               </div>
             </article>

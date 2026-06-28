@@ -1,17 +1,19 @@
-import { renderToString } from "react-dom/server"
-import { escapeInject, dangerouslySkipEscape } from "vike/server"
-import "../src/index.css"
+import { renderToString } from "react-dom/server";
+import { escapeInject, dangerouslySkipEscape } from "vike/server";
+import "../src/index.css";
 import { StaticRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import App from "../src/App"
-import { SSRDataProvider } from "../src/lib/SSRDataContext"
-import { resolveSSRData } from "../src/lib/ssrDataResolver"
+import App from "../src/App";
+import { SSRDataProvider } from "../src/lib/SSRDataContext";
+import { resolveSSRData } from "../src/lib/ssrDataResolver";
 
-export function render(pageContext) {
-  const helmetContext = {}
+export { onRenderHtml };
 
-  const resolved = resolveSSRData(pageContext.urlOriginal)
-  const ssrData = resolved.data ? { [resolved.pageType]: resolved.data } : {}
+function onRenderHtml(pageContext) {
+  const helmetContext = {};
+
+  const resolved = resolveSSRData(pageContext.urlOriginal);
+  const ssrData = resolved.data ? { [resolved.pageType]: resolved.data } : {};
 
   const pageHtml = renderToString(
     <SSRDataProvider data={ssrData}>
@@ -20,17 +22,17 @@ export function render(pageContext) {
           <App />
         </StaticRouter>
       </HelmetProvider>
-    </SSRDataProvider>
-  )
+    </SSRDataProvider>,
+  );
 
-  const { helmet } = helmetContext
+  const { helmet } = helmetContext;
 
-  const title = helmet.title ? helmet.title.toString() : ""
-  const meta = helmet.meta ? helmet.meta.toString() : ""
-  const link = helmet.link ? helmet.link.toString() : ""
-  const script = helmet.script ? helmet.script.toString() : ""
+  const title = helmet.title ? helmet.title.toString() : "";
+  const meta = helmet.meta ? helmet.meta.toString() : "";
+  const link = helmet.link ? helmet.link.toString() : "";
+  const script = helmet.script ? helmet.script.toString() : "";
 
-  const serialized = JSON.stringify(ssrData).replace(/</g, "\\u003c")
+  const serialized = JSON.stringify(ssrData).replace(/</g, "\\u003c");
 
   const fontHead = `
     <link rel="icon" type="image/png" href="/mini-logo.png" />
@@ -48,7 +50,7 @@ export function render(pageContext) {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       />
     </noscript>
-  `
+  `;
 
   const documentHtml = escapeInject`<!DOCTYPE html>
 <html lang="en">
@@ -65,7 +67,7 @@ export function render(pageContext) {
     <div id="root">${dangerouslySkipEscape(pageHtml)}</div>
     <script id="__INITIAL_STATE__" type="application/json">${serialized}</script>
   </body>
-</html>`
+</html>`;
 
-  return { documentHtml }
+  return { documentHtml };
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { logError } from "../../lib/logError";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const API_URL = `${BACKEND_URL}/api/events`; // Adjust based on your backend
 
@@ -30,7 +31,7 @@ const UpdateEvent = () => {
         image: data.image,
       });
     } catch (error) {
-      console.error("Error fetching event details:", error);
+      logError("Error fetching event details:", error);
     }
   };
 
@@ -48,7 +49,7 @@ const UpdateEvent = () => {
       await axios.put(`${API_URL}/${id}`, formData);
       navigate("/events"); // Redirect back to events list
     } catch (error) {
-      console.error("Error updating event:", error);
+      logError("Error updating event:", error);
     }
   };
 

@@ -45,6 +45,8 @@ const ServicesSection = () => {
                     className={`${iconWrapClass} object-contain object-left`}
                     loading="lazy"
                     decoding="async"
+                    width={48}
+                    height={48}
                   />
                 ) : (
                   <div className={iconWrapClass}>
@@ -58,7 +60,9 @@ const ServicesSection = () => {
                 <h3 className="mb-3 text-2xl font-bold text-cWhite sm:text-[1.75rem]">
                   {title}
                 </h3>
-                <p className="text-sm leading-relaxed text-cWhite/90">{summary}</p>
+                <p className="text-sm leading-relaxed text-cWhite/90">
+                  {summary}
+                </p>
               </div>
             );
           })}

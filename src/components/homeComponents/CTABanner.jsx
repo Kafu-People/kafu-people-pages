@@ -11,11 +11,11 @@ const CTABanner = () => {
           </h2>
           <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-slate-700 sm:text-lg lg:max-w-5xl">
             Kafu People is proudly headquartered in Amsterdam, a city known for
-            innovation, creativity, and global connection. While our roots are in
-            Europe, our reach extends far beyond it. Our distributed team spans
-            multiple time zones, cultures, and technical disciplines — enabling
-            us to collaborate around the clock and bring diverse perspectives to
-            every project we build.
+            innovation, creativity, and global connection. While our roots are
+            in Europe, our reach extends far beyond it. Our distributed team
+            spans multiple time zones, cultures, and technical disciplines —
+            enabling us to collaborate around the clock and bring diverse
+            perspectives to every project we build.
           </p>
           <p className="mx-auto mt-6 max-w-4xl text-base font-semibold text-slate-900 sm:text-lg lg:max-w-5xl">
             Global team, local touch.
@@ -31,6 +31,8 @@ const CTABanner = () => {
             <img
               src="/images/world.webp"
               alt="Kafu People global team across the world"
+              width={832}
+              height={468}
               className="block h-auto w-full max-w-3xl object-contain sm:max-w-4xl lg:max-w-[52rem]"
               loading="lazy"
               decoding="async"
@@ -44,8 +46,9 @@ const CTABanner = () => {
                   Ready to move from idea to production?
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">
-                  If you're serious about building, we're ready to move.
-                  No fluff. No waiting. Just smart, focused execution built around your goals.
+                  If you're serious about building, we're ready to move. No
+                  fluff. No waiting. Just smart, focused execution built around
+                  your goals.
                 </p>
               </div>
 

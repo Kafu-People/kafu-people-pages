@@ -1,5 +1,7 @@
-import { useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
+import { useIsomorphicLayoutEffect } from "../hooks/useIsomorphicLayoutEffect";
 import { useLocation } from "react-router-dom";
+import { isArticleDetailPath } from "../constants/navbar";
 import {
   blogIdFromPath,
   clearBlogListScroll,
@@ -34,12 +36,32 @@ const LIST_RETURN_ROUTES = [
   },
 ];
 
+function scrollWindowToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
 export default function ScrollToTop() {
   const { pathname, state } = useLocation();
-  const prevPathRef = useRef(pathname);
+  const prevPathRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== "undefined" && "scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
     const prev = prevPathRef.current;
+
+    if (prev === null) {
+      prevPathRef.current = pathname;
+      if (isArticleDetailPath(pathname)) {
+        clearBlogListScroll();
+        clearNewsListScroll();
+        scrollWindowToTop();
+      }
+      return;
+    }
 
     if (pathname === prev) return;
 
@@ -55,7 +77,7 @@ export default function ScrollToTop() {
       route.clear();
     }
 
-    window.scrollTo(0, 0);
+    scrollWindowToTop();
     prevPathRef.current = pathname;
   }, [pathname, state]);
 

@@ -26,6 +26,7 @@ import ProductsCategories from "./components/ProductsCategories";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { CookieConsentProvider } from "./context/CookieConsentProvider";
+import { NavScrollProvider } from "./context/NavScrollContext";
 import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
 
 const Signup = lazy(() => import("./components/admin/Signup"));
@@ -46,9 +47,10 @@ const App = () => {
       <SkipToContent targetId="main-content" />
 
       <ScrollToTop />
-      <CookieConsentProvider>
-        <Header />
-        <main id="main-content" tabIndex="-1" className="focus:outline-none">
+      <NavScrollProvider>
+        <CookieConsentProvider>
+          <Header />
+          <main id="main-content" tabIndex="-1" className="focus:outline-none">
         <Routes>
           <Route
             path="/login"
@@ -183,10 +185,11 @@ const App = () => {
             }
           />
         </Routes>
-        </main>
-        <Footer />
-        <FloatingWhatsApp />
-      </CookieConsentProvider>
+          </main>
+          <Footer />
+          <FloatingWhatsApp />
+        </CookieConsentProvider>
+      </NavScrollProvider>
     </>
   );
 };

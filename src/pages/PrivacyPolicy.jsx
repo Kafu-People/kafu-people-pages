@@ -2,9 +2,7 @@ import React from "react";
 import PageSEO from "../components/PageSEO";
 import LegalDocumentHeader from "../components/legal/LegalDocumentHeader";
 import LegalSection from "../components/legal/LegalSection";
-import { SITE_NAME } from "../constants/site";
-
-const CONTACT_EMAIL = "contact@kafupeople.com";
+import { SITE_NAME, CONTACT_EMAIL } from "../constants/site";
 
 const PrivacyPolicy = () => {
   return (

@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import axios from "axios";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
 import { BreadcrumbListLD } from "../Schema";
@@ -41,7 +42,6 @@ const BlogSection = () => {
 
     const fetchBlogs = async () => {
       try {
-        const { default: axios } = await import("axios");
         const response = await axios.get(`${BACKEND_URL}/api/blogs`, {
           timeout: 3000,
           signal: controller.signal,

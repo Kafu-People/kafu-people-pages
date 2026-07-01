@@ -90,10 +90,9 @@ const ContactSection = () => {
           <div className="mb-4 text-base">
             <a href={`mailto:${CONTACT_EMAIL}`} className="text-cWhite hover:text-cWhite/80">
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <MdMarkEmailUnread className="mr-2" />
-                Email:
+                <MdMarkEmailUnread className="mr-1" />
+                Email: {CONTACT_EMAIL}
               </p>
-              {CONTACT_EMAIL}
             </a>
           </div>
           <div className="mb-4">
@@ -104,10 +103,9 @@ const ContactSection = () => {
               rel="noopener noreferrer"
             >
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <FaWhatsappSquare className="mr-2" />
-                Phone:
+                <FaWhatsappSquare className="mr-1" />
+                Phone: {WHATSAPP_DISPLAY}
               </p>
-              {WHATSAPP_DISPLAY}
             </a>
           </div>
           <div className="mb-4">
@@ -118,10 +116,9 @@ const ContactSection = () => {
               rel="noopener noreferrer"
             >
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <FaLinkedin className="mr-2" />
-                LinkedIn:
+                <FaLinkedin className="mr-1" />
+                LinkedIn: Kafu People
               </p>
-              Kafu People
             </a>
           </div>
           <div className="mb-4">
@@ -135,7 +132,7 @@ const ContactSection = () => {
           </div>
         </div>
           </div>
-
+          
           {/* Contact Form */}
           <div className="flex flex-1 items-center justify-center p-8 lg:p-10">
         <form className="w-full max-w-md lg:max-w-none" onSubmit={handleSubmit}>

@@ -1,6 +1,8 @@
 // Central team data module. Pages and homepage sections read from here so the
 // team roster lives in one place.
 
+import { CONTACT_EMAIL } from "../constants/site";
+
 // Leadership / executive team (G1.4).
 export const executives = [
   {
@@ -10,7 +12,7 @@ export const executives = [
       "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale — from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
     image: "/images/members/Belal_Haikal.png",
     linkedin: "https://www.linkedin.com/in/belalhaikal/",
-    email: "hello@kafupeople.com",
+    email: CONTACT_EMAIL,
   },
   {
     name: "Pauline Vroonen",

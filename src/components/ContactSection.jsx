@@ -8,57 +8,11 @@ import {
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
   OFFICE_ADDRESS,
-  EMAIL_REGEX,
 } from "../constants/site";
-import { useState } from "react";
-import Swal from "sweetalert2";
 
 const CONTACT_SECTION_IMAGE = "/images/contact-section.webp";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "", email: "", phone: "", message: "",
-  });
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-    setErrors((prev) => ({ ...prev, [id]: "" }));
-  };
-
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!EMAIL_REGEX.test(formData.email)) {
-      newErrors.email = "Invalid email format";
-    }
-    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      Swal.fire({
-        icon: "success",
-        title: "Message Sent!",
-        text: "Your message has been sent successfully! We'll get back to you soon.",
-        timer: 3000,
-        showConfirmButton: false,
-      });
-    }, 1500);
-  };
-
   return (
     <section className="bg-cWhite px-4 py-12 font-inter sm:px-8 lg:px-24 lg:py-16">
       <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl shadow-lg">
@@ -90,10 +44,9 @@ const ContactSection = () => {
           <div className="mb-4 text-base">
             <a href={`mailto:${CONTACT_EMAIL}`} className="text-cWhite hover:text-cWhite/80">
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <MdMarkEmailUnread className="mr-2" />
-                Email:
+                <MdMarkEmailUnread className="mr-1" />
+                Email: {CONTACT_EMAIL}
               </p>
-              {CONTACT_EMAIL}
             </a>
           </div>
           <div className="mb-4">
@@ -104,10 +57,9 @@ const ContactSection = () => {
               rel="noopener noreferrer"
             >
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <FaWhatsappSquare className="mr-2" />
-                Phone:
+                <FaWhatsappSquare className="mr-1" />
+                Phone: {WHATSAPP_DISPLAY}
               </p>
-              {WHATSAPP_DISPLAY}
             </a>
           </div>
           <div className="mb-4">
@@ -118,10 +70,9 @@ const ContactSection = () => {
               rel="noopener noreferrer"
             >
               <p className="flex items-center justify-center text-cWhite/90 lg:justify-start">
-                <FaLinkedin className="mr-2" />
-                LinkedIn:
+                <FaLinkedin className="mr-1" />
+                LinkedIn: Kafu People
               </p>
-              Kafu People
             </a>
           </div>
           <div className="mb-4">
@@ -138,7 +89,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="flex flex-1 items-center justify-center p-8 lg:p-10">
-        <form className="w-full max-w-md lg:max-w-none" onSubmit={handleSubmit}>
+        <form className="w-full max-w-md lg:max-w-none">
           <h2 className="mb-3 text-center text-2xl font-bold text-cWhite sm:text-xl lg:text-left">
             Contact Form:
           </h2>
@@ -146,9 +97,6 @@ const ContactSection = () => {
             For any inquiries, please fill out the form below, and we will get
             back to you as soon as possible.
           </p>
-          <div className="mb-4 rounded bg-yellow-100 px-4 py-2 text-center text-sm text-yellow-800">
-            Demo mode — messaging coming in v2
-          </div>
           <div className="mb-4 w-full">
             <label
               className="mb-2 block text-base font-medium text-cWhite"
@@ -159,16 +107,10 @@ const ContactSection = () => {
             <input
               type="text"
               id="name"
-              value={formData.name}
-              onChange={handleChange}
-              autoComplete="name"
-              aria-invalid={errors.name ? "true" : undefined}
-              aria-describedby={errors.name ? "name-error" : undefined}
               className="w-full rounded border border-slate-200 bg-cWhite p-2 text-slate-900 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-CPurple focus:scale-105"
               placeholder="Name"
               required
             />
-            {errors.name && <span id="name-error" role="alert" className="mt-1 text-sm text-red-300">{errors.name}</span>}
           </div>
           <div className="mb-4 w-full">
             <label
@@ -180,16 +122,11 @@ const ContactSection = () => {
             <input
               type="email"
               id="email"
-              value={formData.email}
-              onChange={handleChange}
-              autoComplete="email"
-              aria-invalid={errors.email ? "true" : undefined}
-              aria-describedby={errors.email ? "email-error" : undefined}
+              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               className="w-full p-2 border rounded transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-CPurple focus:scale-105"
               placeholder="Email"
               required
             />
-            {errors.email && <span id="email-error" role="alert" className="mt-1 text-sm text-red-300">{errors.email}</span>}
           </div>
           <div className="mb-4 w-full">
             <label
@@ -201,16 +138,10 @@ const ContactSection = () => {
             <input
               type="tel"
               id="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              autoComplete="tel"
-              aria-invalid={errors.phone ? "true" : undefined}
-              aria-describedby={errors.phone ? "phone-error" : undefined}
               className="w-full rounded border border-slate-200 bg-cWhite p-2 text-slate-900 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-CPurple focus:scale-105"
               placeholder="Phone"
               required
             />
-            {errors.phone && <span id="phone-error" role="alert" className="mt-1 text-sm text-red-300">{errors.phone}</span>}
           </div>
           <div className="mb-4 w-full">
             <label
@@ -221,24 +152,17 @@ const ContactSection = () => {
             </label>
             <textarea
               id="message"
-              value={formData.message}
-              onChange={handleChange}
-              autoComplete="off"
-              aria-invalid={errors.message ? "true" : undefined}
-              aria-describedby={errors.message ? "message-error" : undefined}
               className="w-full rounded border border-slate-200 bg-cWhite p-2 text-slate-900 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-CPurple focus:scale-105"
               placeholder="Your message here..."
               rows="4"
               required
             ></textarea>
-            {errors.message && <span id="message-error" role="alert" className="mt-1 text-sm text-red-300">{errors.message}</span>}
           </div>
           <button
             type="submit"
-            disabled={isSubmitting}
-            className="w-full min-h-[44px] p-3 bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-semibold rounded hover:opacity-90 disabled:opacity-50"
+            className="w-full min-h-[44px] p-3 bg-gradient-to-r from-cDarkBlue to-CPurple text-cWhite font-semibold rounded hover:opacity-90"
           >
-            {isSubmitting ? "Sending..." : "Submit"}
+            Submit
           </button>
         </form>
           </div>

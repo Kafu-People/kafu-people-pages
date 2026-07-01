@@ -80,6 +80,15 @@ const BlogPost = () => {
         canonicalPath={canonicalPath(blog.slug || slug)}
         ogImage={blogOgImage}
       >
+        {blog.datePublished && (
+          <meta property="article:published_time" content={blog.datePublished} />
+        )}
+        {(blog.dateModified || blog.datePublished) && (
+          <meta
+            property="article:modified_time"
+            content={blog.dateModified || blog.datePublished}
+          />
+        )}
         <script type="application/ld+json">
           {JSON.stringify(BlogPostingLD(blog))}
         </script>

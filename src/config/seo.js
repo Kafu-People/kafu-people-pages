@@ -1,7 +1,17 @@
 import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "../constants/site";
+import { getCaseBySlug } from "../data/portfolioCases";
 
 const defaultDescription =
   "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs — from idea to production.";
+
+const fallbackCaseStudyDescription =
+  "In-depth case study of a product built by Kafu People — from concept to delivery.";
+
+// cut long descriptions to ~155 chars so google doesn't chop them mid-word
+const truncateForMeta = (text, max = 155) =>
+  text && text.length > max
+    ? text.slice(0, max - 3).replace(/\s+\S*$/, "") + "..."
+    : text;
 
 export const PAGE_SEO = {
   home: {
@@ -29,8 +39,11 @@ export const PAGE_SEO = {
   },
   portfolioCaseStudy: {
     title: (name) => `${name} — Case Study | ${SITE_NAME}`,
-    description:
-      "In-depth case study of a product built by Kafu People — from concept to delivery.",
+    // grab each case's own description instead of using one shared line
+    description: (slug) => {
+      const caseStudy = getCaseBySlug(slug);
+      return truncateForMeta(caseStudy?.description) || fallbackCaseStudyDescription;
+    },
     canonicalPath: (slug) => `/portfolio/${slug}`,
   },
   services: {

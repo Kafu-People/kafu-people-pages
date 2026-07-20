@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { FaLinkedin } from "react-icons/fa";
 import TeamAvatar from "./TeamAvatar";
+import { getProfileLink, hasProfileLink } from "./profileLink";
 
 /**
  * Responsive team member card. `variant="lead"` renders a larger leadership
@@ -8,6 +8,7 @@ import TeamAvatar from "./TeamAvatar";
  */
 const TeamCard = ({ member, variant = "default" }) => {
   const isLead = variant === "lead";
+  const { Icon, label } = getProfileLink(member.name, member.linkedin);
 
   return (
     <div className="group flex h-full flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-CPurple/20">
@@ -28,15 +29,15 @@ const TeamCard = ({ member, variant = "default" }) => {
       <p className="mt-3 text-sm leading-relaxed text-gray-600">
         {member.description}
       </p>
-      {member.linkedin && member.linkedin !== "/" && (
+      {hasProfileLink(member.linkedin) && (
         <a
           href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`${member.name} on LinkedIn`}
+          aria-label={label}
           className="mt-4 inline-flex items-center text-xl text-cDarkBlue transition-colors hover:text-CPurple"
         >
-          <FaLinkedin />
+          <Icon />
         </a>
       )}
     </div>

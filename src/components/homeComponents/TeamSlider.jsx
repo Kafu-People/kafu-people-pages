@@ -23,6 +23,7 @@ import himanshi from "../../assets/images/members/himanshi_aggarwal.png";
 import nodari from "../../assets/images/members/nodari_gurjidze.png";
 import mahenoor from "../../assets/images/members/mahenoor_salat.png";
 import TeamAvatar from "../team/TeamAvatar";
+import { getProfileLink, hasProfileLink } from "../team/profileLink";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const TeamSlider = () => {
@@ -267,9 +268,9 @@ const TeamSlider = () => {
       name: "William Bakke",
       role: "Media & Marketing Manager",
       description:
-        "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Morgan Stanley and Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+        "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
       image: william,
-      linkedin: "https://www.linkedin.com/in/williambakke",
+      linkedin: "https://ravenhawktech.com",
       facebook: "/",
       instagram: "/",
     },
@@ -292,7 +293,10 @@ const TeamSlider = () => {
       </p>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 px-8 py-12 bg-gray-50">
-        {woners.map((member, index) => (
+        {woners.map((member, index) => {
+          const { Icon, label } = getProfileLink(member.name, member.linkedin);
+
+          return (
           <div
             key={index}
             className="relative grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl  animate-fadeIn"
@@ -319,14 +323,15 @@ const TeamSlider = () => {
 
             <div className="absolute inset-0 flex items-end bottom-4 left-56 justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-500 hover:opacity-100    ">
               <div className="flex space-x-4">
-                {member.linkedin && (
+                {hasProfileLink(member.linkedin) && (
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={label}
                     className="text-cWhite text-2xl hover:text-CPurple"
                   >
-                    <FaLinkedin />
+                    <Icon />
                   </a>
                 )}
                 {member.facebook && (
@@ -352,7 +357,8 @@ const TeamSlider = () => {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       <Slider {...settings}>

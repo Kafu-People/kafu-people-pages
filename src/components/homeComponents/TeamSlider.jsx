@@ -266,9 +266,9 @@ const TeamSlider = () => {
     },
     {
       name: "William Bakke",
-      role: "Media & Marketing Manager",
+      role: "Partner",
       description:
-        "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+        "Partner to Kafu People, connecting clients with our engineering team and helping bring their projects to life. Brings 15+ years of enterprise technology experience, from infrastructure engineering to customer-facing consulting and business development.",
       image: william,
       linkedin: "https://ravenhawktech.com",
       facebook: "/",

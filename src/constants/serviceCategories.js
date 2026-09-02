@@ -95,6 +95,30 @@ export const SERVICE_CATEGORIES = [
       icon: "store",
     },
   },
+  {
+    id: "chatgpt-ads",
+    title: "Run Ads on ChatGPT",
+    summary:
+      "One of the first EU agencies running ChatGPT ad campaigns for brands — we handle strategy, creative, and full campaign management on OpenAI's ad platform.",
+    homeIcon: "ads",
+    servicesPage: {
+      image: "/images/blogs/building-scalable-ai-agents.jpg",
+      decorative: "/images/AI.svg",
+      heroGradient:
+        "bg-gradient-to-br from-slate-950 via-violet-700 to-slate-900",
+      headerBg: "bg-violet-50 border-violet-200/60",
+      headerLabel: "text-violet-700",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-violet-600/30 bg-violet-600/5 hover:border-violet-600/50 hover:bg-violet-600/10",
+      overviewIcon: "text-violet-600",
+      offeringsBg: "bg-slate-900",
+      card: "bg-white/10 border-white/20 backdrop-blur-md",
+      iconWrap: "bg-white/15 text-white",
+      icon: "bullhorn",
+    },
+  },
 ];
 
 export const SERVICE_CATEGORY_TITLES = SERVICE_CATEGORIES.map((c) => c.title);
@@ -229,6 +253,42 @@ export const SERVICE_OFFERINGS = [
     title: "White-Label Dashboard Portals",
     description:
       "Provide branded analytics portals for each client with custom themes, user roles, and secure data isolation on shared cloud infrastructure.",
+  },
+  // ChatGPT Ads
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "bullhorn",
+    title: "ChatGPT Ad Campaign Strategy",
+    description:
+      "Define campaign goals, target audiences, and budget allocation for your ChatGPT ad campaigns — built around your product's value proposition and EU market positioning.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "magic",
+    title: "Ad Creative & Copywriting",
+    description:
+      "Craft compelling ad copy and creative assets that meet OpenAI's ad policies — messaging that converts within the unique context of a conversational AI interface.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "chartLine",
+    title: "Campaign Setup & Launch",
+    description:
+      "Full technical setup on OpenAI's advertiser platform — account configuration, audience targeting, bid strategy, and compliant landing page alignment.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "analytics",
+    title: "Ongoing Management & Optimisation",
+    description:
+      "Continuous campaign monitoring, A/B testing, and bid adjustments to improve performance, reduce cost-per-click, and maximise return on ad spend.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "chartBar",
+    title: "Performance Reporting",
+    description:
+      "Clear, actionable reports on impressions, clicks, conversions, and ROAS — so you always know what your ChatGPT ad budget is delivering.",
   },
   // Business & Corporate Websites
   {

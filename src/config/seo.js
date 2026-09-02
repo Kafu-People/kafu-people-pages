@@ -39,6 +39,12 @@ export const PAGE_SEO = {
       "AI & agentic workflows, SaaS MVPs, AWS cloud architecture, and business websites tailored to your stage of growth.",
     canonicalPath: "/services",
   },
+  chatgptAds: {
+    title: `Run Ads on ChatGPT | ${SITE_NAME}`,
+    description:
+      "Kafu People is one of the first EU agencies running ChatGPT ad campaigns for brands — covering strategy, creative, setup, and ongoing management on OpenAI's ad platform.",
+    canonicalPath: "/services/chatgpt-ads",
+  },
   news: {
     title: `News & Events | ${SITE_NAME}`,
     description:

@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ServiceMainFile from "./components/servicesComponents/ServiceMainFile";
+import ChatGPTAdsPage from "./pages/ChatGPTAdsPage";
 import MainFile from "./components/trainingComponenets/MainFile";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
@@ -78,6 +79,7 @@ const App = () => {
           <Route path="/portfolio" element={<OurProducts />} />
           <Route path="/portfolio/:slug" element={<PortfolioCaseStudy />} />
           <Route path="/services" element={<ServiceMainFile />} />
+          <Route path="/services/chatgpt-ads" element={<ChatGPTAdsPage />} />
 
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsArticle />} />

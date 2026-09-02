@@ -75,12 +75,6 @@ export const PAGE_SEO = {
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: "/blogs",
   },
-  team: {
-    title: `Our Team | ${SITE_NAME}`,
-    description:
-      "Meet the distributed, remote-first team of engineers, designers, and strategists building AI, cloud, and full-stack products at Kafu People.",
-    canonicalPath: "/team",
-  },
   terms: {
     title: `Terms of Service | ${SITE_NAME}`,
     description: `Terms of Service for ${SITE_NAME}.`,

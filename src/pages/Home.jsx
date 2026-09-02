@@ -7,7 +7,6 @@ import Hero from "../components/homeComponents/Hero";
 import ServicesSection from "../components/homeComponents/ServicesSection";
 import TrainingPrograms from "../components/homeComponents/TrainingPrograms";
 import { TestimonialsPlaceholder } from "../components/homeComponents/TestimonialsPlaceholder";
-import HomeTeamCTA from "../components/homeComponents/HomeTeamCTA";
 import LatestContent from "../components/homeComponents/LatestContent";
 
 const Testimonials = lazy(() => import("../components/homeComponents/Testimonials"));
@@ -34,7 +33,6 @@ const Home = () => {
       </PageSEO>
       <Hero />
       <ServicesSection />
-      <HomeTeamCTA />
       <Suspense fallback={<TestimonialsPlaceholder />}>
         <Testimonials />
       </Suspense>

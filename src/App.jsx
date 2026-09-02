@@ -17,7 +17,6 @@ import SkipToContent from "./components/ui/SkipToContent";
 import NewsAndEvents from "./pages/NewsAndEvents";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
-import Team from "./pages/Team";
 import BlogSection from "./components/BlogSection/BlogSection";
 import BlogPost from "./pages/BlogPost";
 
@@ -99,9 +98,7 @@ const App = () => {
           />
           <Route path="/learn" element={<Navigate to="/blogs" replace />} />
 
-          <Route path="/team" element={<Team />} />
-
-          <Route path="/ProductsCategories" element={<ProductsCategories />} />
+<Route path="/ProductsCategories" element={<ProductsCategories />} />
 
           <Route
             path="/admin"

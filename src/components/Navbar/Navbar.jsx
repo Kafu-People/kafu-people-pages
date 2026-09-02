@@ -10,7 +10,6 @@ const menuItems = [
   { title: "ABOUT", url: "/about" },
   { title: "SERVICES", url: "/services" },
   { title: "PORTFOLIO", url: "/portfolio" },
-  { title: "TEAM", url: "/team" },
   { title: "BLOGS", url: "/blogs" },
   { title: "NEWS", url: "/news" },
   { title: "CONTACT", url: "/contact" },

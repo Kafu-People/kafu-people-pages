@@ -18,7 +18,7 @@ const TermsOfService = () => {
             title="Terms of Service"
             subtitle={`These terms govern your use of the ${SITE_NAME} website and how we engage with you regarding our technology services.`}
             lastUpdated="September 24, 2026"
-            version="1.1"
+            version="1.2"
           />
 
           <LegalSection id="acceptance" title="1. Acceptance of Terms">
@@ -52,6 +52,8 @@ const TermsOfService = () => {
               Content on the Site is for general information and marketing
               purposes. It does not constitute a binding offer or guarantee of
               results, availability, or pricing until confirmed in writing.
+              This does not apply to AI Training Coaching packages purchased
+              through the Site, which are governed by Section 13.
             </p>
           </LegalSection>
 
@@ -318,6 +320,11 @@ const TermsOfService = () => {
 
           <LegalSection id="change-history" title="14. Change History">
             <ul>
+              <li>
+                <strong>Version 1.2</strong>, September 24, 2026: Clarified in
+                Section 2 that AI Training Coaching packages purchased through
+                the Site are governed by Section 13.
+              </li>
               <li>
                 <strong>Version 1.1</strong>, September 24, 2026: Added Section
                 13 on AI Training Coaching Programs.

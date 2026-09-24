@@ -119,9 +119,28 @@ export const SERVICE_CATEGORIES = [
       icon: "bullhorn",
     },
   },
+  {
+    id: "ai-training-coaching",
+    title: "AI Training Coaching",
+    summary:
+      "Coaching for developers in Latin America and the US to get accepted onto AI training platforms and do great work there.",
+    homeIcon: "coaching",
+    // Has its own page instead of an offerings section on /services.
+    href: "/services/ai-training-coaching",
+    // A coaching program, not client work, so it is not a portfolio filter.
+    inPortfolio: false,
+    servicesPage: {
+      overviewCard:
+        "border-primary/30 bg-primary/5 hover:border-primary/50 hover:bg-primary/10",
+      overviewIcon: "text-primary",
+      icon: "graduationCap",
+    },
+  },
 ];
 
-export const SERVICE_CATEGORY_TITLES = SERVICE_CATEGORIES.map((c) => c.title);
+export const SERVICE_CATEGORY_TITLES = SERVICE_CATEGORIES.filter(
+  (c) => c.inPortfolio !== false
+).map((c) => c.title);
 
 /** Individual offerings grouped under SERVICE_CATEGORIES on /services. */
 export const SERVICE_OFFERINGS = [

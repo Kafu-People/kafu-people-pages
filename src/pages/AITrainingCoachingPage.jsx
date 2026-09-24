@@ -16,7 +16,7 @@ import PageSEO from "../components/PageSEO";
 import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { FAQPageLD } from "../components/Schema";
 import PageHero from "../components/ui/PageHero";
-import BookMeetingButton from "../components/ui/BookMeetingButton";
+import { CALENDLY_URL } from "../constants/site";
 import PricingSection from "../components/coaching/PricingSection";
 
 const AUDIENCES = [
@@ -208,7 +208,12 @@ export default function AITrainingCoachingPage() {
           >
             See packages and pricing
           </a>
-          <BookMeetingButton buttonText="Ask us a question" variant="secondary" />
+          <Link
+            to="/contact"
+            className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary transition hover:bg-surface"
+          >
+            Ask us a question
+          </Link>
         </div>
       </PageHero>
 
@@ -364,7 +369,15 @@ export default function AITrainingCoachingPage() {
             >
               View packages
             </a>
-            <BookMeetingButton buttonText="Book a call" variant="secondary" />
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border-2 border-primary bg-white px-6 py-3 text-sm font-semibold text-primary transition hover:bg-surface"
+            >
+              Book a call
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
             <Link
               to="/services"
               className="inline-flex min-h-[44px] items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold text-primary transition hover:underline"

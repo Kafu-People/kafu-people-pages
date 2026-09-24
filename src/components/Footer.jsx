@@ -119,14 +119,6 @@ const Footer = () => {
                   News & Updates
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/team"
-                  className="hover:text-primary-light transition-colors"
-                >
-                  Team
-                </Link>
-              </li>
               </ul>
             </div>
           </div>

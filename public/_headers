@@ -1,18 +1,17 @@
+# Cloudflare static asset headers. Each rule must start with a URL path;
+# extension globs such as *.png are not supported and fail the deploy.
+
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
-*.png
+
+/images/*
   Cache-Control: public, max-age=2592000
-*.jpg
+
+/products/*
   Cache-Control: public, max-age=2592000
-*.jpeg
+
+/itsolera.png
   Cache-Control: public, max-age=2592000
-*.gif
-  Cache-Control: public, max-age=2592000
-*.webp
-  Cache-Control: public, max-age=2592000
-*.svg
-  Cache-Control: public, max-age=2592000
-*.ico
-  Cache-Control: public, max-age=2592000
-*.avif
+
+/mini-logo.png
   Cache-Control: public, max-age=2592000

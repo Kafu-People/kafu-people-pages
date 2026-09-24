@@ -1,5 +1,9 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { TESTIMONIALS } from "../../constants/site";
 import TestimonialCard from "./TestimonialCard";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const testimonialsHeader = (
   <div className="mb-12 text-center">
@@ -22,17 +26,35 @@ const Testimonials = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-24">
         {testimonialsHeader}
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          loop
+          grabCursor
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{ clickable: true }}
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="testimonials-swiper pb-12"
+        >
           {TESTIMONIALS.map(({ id, quote, name, location, project }) => (
-            <TestimonialCard
-              key={id}
-              quote={quote}
-              name={name}
-              location={location}
-              project={project}
-            />
+            <SwiperSlide key={id} className="!h-auto">
+              <TestimonialCard
+                quote={quote}
+                name={name}
+                location={location}
+                project={project}
+              />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

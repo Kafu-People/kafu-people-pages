@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { LuRocket } from "react-icons/lu";
+import { FaBullhorn } from "react-icons/fa";
 import BookMeetingButton from "../ui/BookMeetingButton";
 import aiMachineIcon from "../../assets/images/homeServices/ai-machine.png";
 import webDevelopmentIcon from "../../assets/images/homeServices/web-development.png";
@@ -12,6 +13,12 @@ const HOME_ICONS = {
   rocket: null,
   cloud: awsCloudIcon,
   web: webDevelopmentIcon,
+  ads: null,
+};
+
+const FALLBACK_ICON_COMPONENTS = {
+  rocket: <LuRocket className="h-14 w-14 text-cWhite sm:h-16 sm:w-16" strokeWidth={1} aria-hidden />,
+  ads: <FaBullhorn className="h-12 w-12 text-cWhite sm:h-14 sm:w-14" aria-hidden />,
 };
 
 const iconWrapClass =
@@ -29,9 +36,10 @@ const ServicesSection = () => {
           End-to-end support for teams that need to ship — from architecture and
           development to cloud and AI.
         </p>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-5">
           {SERVICE_CATEGORIES.map(({ title, summary, homeIcon }) => {
             const icon = HOME_ICONS[homeIcon];
+            const fallbackComponent = FALLBACK_ICON_COMPONENTS[homeIcon];
 
             return (
               <div
@@ -50,11 +58,13 @@ const ServicesSection = () => {
                   />
                 ) : (
                   <div className={iconWrapClass}>
-                    <LuRocket
-                      className="h-14 w-14 text-cWhite sm:h-16 sm:w-16"
-                      strokeWidth={1}
-                      aria-hidden
-                    />
+                    {fallbackComponent ?? (
+                      <LuRocket
+                        className="h-14 w-14 text-cWhite sm:h-16 sm:w-16"
+                        strokeWidth={1}
+                        aria-hidden
+                      />
+                    )}
                   </div>
                 )}
                 <h3 className="mb-3 text-2xl font-bold text-cWhite sm:text-[1.75rem]">

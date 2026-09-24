@@ -2,72 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kafupeople.com/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/about</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/services</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/contact</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/team</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/blogs</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/news</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/newsAndEvents</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/training/ai</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/ProductsCategories</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://kafupeople.com/contact</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/terms-of-service</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.30</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/privacy-policy</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.30</priority>
   </url>
   <url>
@@ -182,17 +177,17 @@
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/echo3s</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/nerohalla</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/giscrap</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <priority>0.90</priority>
   </url>
 </urlset>

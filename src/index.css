@@ -18,3 +18,12 @@ html {
 body.calendly-popup-open {
   overflow: hidden !important;
 }
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background-color: #cbd5e1;
+  opacity: 1;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background-color: #0d9488;
+}

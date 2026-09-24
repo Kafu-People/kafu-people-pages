@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/check-pages-asset-size.mjs",
+    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/strip-ssr-bare-imports.mjs && node scripts/check-pages-asset-size.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "check:assets": "node scripts/check-pages-asset-size.mjs",
     "lint": "eslint .",
@@ -28,6 +28,9 @@
     "sweetalert2": "^11.15.10",
     "swiper": "^12.2.0",
     "vike": "^0.4.212"
+  },
+  "overrides": {
+    "glob": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

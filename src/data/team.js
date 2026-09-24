@@ -24,11 +24,11 @@ export const executives = [
   },
   {
     name: "William Bakke",
-    role: "Media & Marketing Manager",
+    role: "Partner",
     description:
-      "Leads media and marketing at Kafu People. Brings 15+ years of enterprise technology experience — from infrastructure engineering at Morgan Stanley and Lenovo to customer-facing consulting, sales, and web development — to deliver clear technical storytelling, brand visibility, and campaigns that connect with engineering and business audiences.",
+      "Partner to Kafu People, connecting clients with our engineering team and helping bring their projects to life. Brings 15+ years of enterprise technology experience, from infrastructure engineering to customer-facing consulting and business development.",
     image: "/images/members/williambakke.jpg",
-    linkedin: "https://www.linkedin.com/in/williambakke",
+    linkedin: "https://ravenhawktech.com",
     email: "wbakke@ravenhawktech.com",
   },
   {

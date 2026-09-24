@@ -20,6 +20,7 @@ import {
   FaServer,
   FaLock,
   FaMagic,
+  FaBullhorn,
 } from "react-icons/fa";
 import {
   MdOutlineAnalytics,
@@ -55,6 +56,7 @@ const SERVICE_ICONS = {
   users: <FaUsers />,
   palette: <FaPalette />,
   shield: <FaShieldAlt />,
+  bullhorn: <FaBullhorn />,
 };
 
 function CategoryHero({ theme, index, title, summary }) {
@@ -106,7 +108,7 @@ const CyberService = () => {
             What we offer
           </p>
           <h2 className="mb-4 text-3xl font-bold text-cDarkBlue sm:text-4xl">
-            Four ways we help you ship
+            Five ways we help you ship
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
             Kafu People is a product engineering partner for startups and growing
@@ -116,7 +118,7 @@ const CyberService = () => {
           </p>
         </div>
 
-        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {SERVICE_CATEGORIES.map((category) => {
             const theme = category.servicesPage;
             return (
@@ -145,7 +147,8 @@ const CyberService = () => {
             const theme = category.servicesPage;
             if (offerings.length === 0) return null;
 
-            const isLightSection = category.id === "business-websites";
+            const isLightSection =
+            category.id === "business-websites";
 
             return (
               <section

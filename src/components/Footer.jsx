@@ -10,6 +10,7 @@ import {
   FaLink,
   FaWhatsapp,
   FaLinkedin,
+  FaBullhorn,
 } from "react-icons/fa";
 import {
   CONTACT_EMAIL,
@@ -27,6 +28,7 @@ const SERVICE_FOOTER_ICONS = {
   "saas-mvp": FaBrain,
   "cloud-dashboards": FaCloud,
   "business-websites": FaLink,
+  "chatgpt-ads": FaBullhorn,
 };
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;

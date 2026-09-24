@@ -36,7 +36,7 @@ function renderBlock(block, index, speakableProps) {
         {lines.map((line) => {
           const { label, detail } = parseNumberedLine(line);
           const itemText = detail
-            ? `${label.replace(/^\d+\.\s*/, "")} — ${detail}`
+            ? `${label.replace(/^\d+\.\s*/, "")}: ${detail}`
             : label.replace(/^\d+\.\s*/, "");
 
           return (

@@ -10,7 +10,7 @@ const staticNews = [
     excerpt:
       "We're formalising years of agent-building experience into a dedicated practice helping clients ship production-grade AI agents.",
     content:
-      "Today we're excited to announce the launch of our dedicated AI Agent practice. Over the past few years we've quietly designed and deployed agents that handle real, revenue-affecting work for our clients — from customer support triage to document enrichment and automated reporting.\n\n" +
+      "Today we're excited to announce the launch of our dedicated AI Agent practice. Over the past few years we've quietly designed and deployed agents that handle real, revenue-affecting work for our clients, from customer support triage to document enrichment and automated reporting.\n\n" +
       "Bundling that experience into a focused practice means clients get a clear, repeatable path from idea to a production agent: discovery, a scoped pilot, and a hardened rollout with monitoring built in from day one.\n\n" +
       "If your team has a repetitive, high-volume process that eats hours every week, we'd love to talk about whether an agent is the right fit.",
     category: "Company",
@@ -42,7 +42,7 @@ const staticNews = [
     content:
       "We're heading to Amsterdam Tech Week this year to connect with founders, engineers, and operators building the next wave of products.\n\n" +
       "Members of our team will be attending sessions on applied AI, agentic workflows, and pragmatic cloud architecture. It's one of our favourite weeks of the year for meeting the people behind the products we admire.\n\n" +
-      "If you'll be in Amsterdam and want to grab a coffee, reach out — we'd love to say hello in person.",
+      "If you'll be in Amsterdam and want to grab a coffee, reach out. We'd love to say hello in person.",
     category: "Events",
     date: "2026-04-30",
     author: "Kafu People",
@@ -87,7 +87,7 @@ const staticNews = [
     content:
       "People often ask how a distributed team stays aligned and ships consistently. The short answer is clear written communication and a strong default toward asynchronous work.\n\n" +
       "We keep decisions in writing, document context generously, and protect deep-focus time so engineers can do their best work regardless of timezone. Meetings are reserved for the conversations that genuinely need them.\n\n" +
-      "Being remote-first isn't a constraint we tolerate — it's a deliberate choice that lets us work with great people wherever they are.",
+      "Being remote-first isn't a constraint we tolerate; it's a deliberate choice that lets us work with great people wherever they are.",
     category: "Company",
     date: "2026-03-05",
     author: "Kafu People",
@@ -116,7 +116,7 @@ const staticNews = [
       "A hands-on session helping non-technical founders separate genuine AI opportunities from the hype.",
     content:
       "Last month we ran a hands-on workshop for a group of founders who wanted a grounded, practical view of where AI can actually help their businesses.\n\n" +
-      "Rather than abstract theory, we worked through their real processes and identified concrete tasks where automation would pay off — and, just as importantly, where it wouldn't.\n\n" +
+      "Rather than abstract theory, we worked through their real processes and identified concrete tasks where automation would pay off and, just as importantly, where it wouldn't.\n\n" +
       "The feedback was clear: founders don't want more AI hype, they want a straight answer about what's worth doing. We're planning to run more of these sessions.",
     category: "Events",
     date: "2026-01-29",
@@ -130,7 +130,7 @@ const staticNews = [
     excerpt:
       "We've rebuilt our site with a cleaner design, faster performance, and room to share more of our work.",
     content:
-      "Our website just got a meaningful refresh. Beyond a cleaner look, the rebuild focuses on performance and on giving us room to share more of our work — case studies, articles, news, and the people behind the projects.\n\n" +
+      "Our website just got a meaningful refresh. Beyond a cleaner look, the rebuild focuses on performance and on giving us room to share more of our work: case studies, articles, news, and the people behind the projects.\n\n" +
       "Expect to see this News section grow as we share updates, and look out for an expanded portfolio and knowledge base in the coming weeks.\n\n" +
       "Thanks for following along as we keep building.",
     category: "Company",
@@ -145,7 +145,7 @@ const staticNews = [
     excerpt:
       "How we helped a client migrate a production database with zero downtime and a measurable performance gain.",
     content:
-      "Database migrations are among the most nerve-wracking projects a team can take on — the stakes are high and the work is unforgiving. We recently completed one for a client moving from a Laravel and relational setup toward MongoDB.\n\n" +
+      "Database migrations are among the most nerve-wracking projects a team can take on: the stakes are high and the work is unforgiving. We recently completed one for a client moving from a Laravel and relational setup toward MongoDB.\n\n" +
       "By staging the migration carefully, validating data at every step, and rehearsing the cutover, we delivered the move with zero downtime and a measurable improvement in query performance.\n\n" +
       "It's the kind of careful, detail-driven work that doesn't make headlines but quietly keeps a business running.",
     category: "Company",

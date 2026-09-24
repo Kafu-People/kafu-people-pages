@@ -13,7 +13,7 @@ const CTABanner = () => {
             Kafu People is proudly headquartered in Amsterdam, a city known for
             innovation, creativity, and global connection. While our roots are
             in Europe, our reach extends far beyond it. Our distributed team
-            spans multiple time zones, cultures, and technical disciplines —
+            spans multiple time zones, cultures, and technical disciplines,
             enabling us to collaborate around the clock and bring diverse
             perspectives to every project we build.
           </p>

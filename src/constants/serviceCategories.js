@@ -4,7 +4,7 @@ export const SERVICE_CATEGORIES = [
     id: "ai-agentic",
     title: "AI & Agentic Workflows",
     summary:
-      "We design and deploy autonomous AI agents that integrate into your operations — handling multi-step workflows, LLM integrations, and intelligent automation.",
+      "We design and deploy autonomous AI agents that integrate into your operations, handling multi-step workflows, LLM integrations, and intelligent automation.",
     homeIcon: "ai",
     servicesPage: {
       image: "/images/blogs/building-scalable-ai-agents.jpg",
@@ -28,7 +28,7 @@ export const SERVICE_CATEGORIES = [
     id: "saas-mvp",
     title: "SaaS & Startup MVPs",
     summary:
-      "Launch your product in weeks with scalable MVPs — user auth, billing, APIs, and core features ready for real users and early validation.",
+      "Launch your product in weeks with scalable MVPs: user auth, billing, APIs, and core features ready for real users and early validation.",
     homeIcon: "rocket",
     servicesPage: {
       image: "/images/blogs/shipping-saas-mvp-in-six-weeks.jpg",
@@ -52,7 +52,7 @@ export const SERVICE_CATEGORIES = [
     id: "cloud-dashboards",
     title: "Cloud-Native Dashboards",
     summary:
-      "Build real-time dashboards and data visualization on cloud-native infrastructure — live streaming, embedded analytics, and performance at scale.",
+      "Build real-time dashboards and data visualization on cloud-native infrastructure: live streaming, embedded analytics, and performance at scale.",
     homeIcon: "cloud",
     servicesPage: {
       image: "/images/newsAndEvents/new-cloud-native-dashboard-template.jpg",
@@ -99,7 +99,7 @@ export const SERVICE_CATEGORIES = [
     id: "chatgpt-ads",
     title: "Run Ads on ChatGPT",
     summary:
-      "One of the first EU agencies running ChatGPT ad campaigns for brands — we handle strategy, creative, and full campaign management on OpenAI's ad platform.",
+      "One of the first EU agencies running ChatGPT ad campaigns for brands. We handle strategy, creative, and full campaign management on OpenAI's ad platform.",
     homeIcon: "ads",
     servicesPage: {
       image: "/images/blogs/building-scalable-ai-agents.jpg",
@@ -260,21 +260,21 @@ export const SERVICE_OFFERINGS = [
     iconKey: "bullhorn",
     title: "ChatGPT Ad Campaign Strategy",
     description:
-      "Define campaign goals, target audiences, and budget allocation for your ChatGPT ad campaigns — built around your product's value proposition and EU market positioning.",
+      "Define campaign goals, target audiences, and budget allocation for your ChatGPT ad campaigns, built around your product's value proposition and EU market positioning.",
   },
   {
     categoryId: "chatgpt-ads",
     iconKey: "magic",
     title: "Ad Creative & Copywriting",
     description:
-      "Craft compelling ad copy and creative assets that meet OpenAI's ad policies — messaging that converts within the unique context of a conversational AI interface.",
+      "Craft compelling ad copy and creative assets that meet OpenAI's ad policies: messaging that converts within the unique context of a conversational AI interface.",
   },
   {
     categoryId: "chatgpt-ads",
     iconKey: "chartLine",
     title: "Campaign Setup & Launch",
     description:
-      "Full technical setup on OpenAI's advertiser platform — account configuration, audience targeting, bid strategy, and compliant landing page alignment.",
+      "Full technical setup on OpenAI's advertiser platform: account configuration, audience targeting, bid strategy, and compliant landing page alignment.",
   },
   {
     categoryId: "chatgpt-ads",
@@ -288,7 +288,7 @@ export const SERVICE_OFFERINGS = [
     iconKey: "chartBar",
     title: "Performance Reporting",
     description:
-      "Clear, actionable reports on impressions, clicks, conversions, and ROAS — so you always know what your ChatGPT ad budget is delivering.",
+      "Clear, actionable reports on impressions, clicks, conversions, and ROAS, so you always know what your ChatGPT ad budget is delivering.",
   },
   // Business & Corporate Websites
   {

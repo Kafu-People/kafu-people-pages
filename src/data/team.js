@@ -9,7 +9,7 @@ export const executives = [
     name: "Belal Haikal",
     role: "Founder & CEO",
     description:
-      "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale — from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
+      "Leads Kafu People as founder and CEO. AWS-certified solutions architect and software engineering leader with 12+ years delivering cloud-native platforms, streaming systems, and secure software at scale, from DAZN and Fortanix to Decathlon Digital. Combines tech strategy, team leadership, and generative AI–driven product delivery.",
     image: "/images/members/Belal_Haikal.png",
     linkedin: "https://www.linkedin.com/in/belalhaikal/",
     email: CONTACT_EMAIL,
@@ -18,7 +18,7 @@ export const executives = [
     name: "Pauline Vroonen",
     role: "Business Partner, HR Specialist, Account Manager",
     description:
-      "Leads business development, client partnerships, and HR operations at Kafu People. Brings experience as an HR business partner and account manager across Belgium, Europe, and international markets — connecting strategic growth with people and client success. Odoo-certified; fluent in Dutch, French, and English.",
+      "Leads business development, client partnerships, and HR operations at Kafu People. Brings experience as an HR business partner and account manager across Belgium, Europe, and international markets, connecting strategic growth with people and client success. Odoo-certified; fluent in Dutch, French, and English.",
     image: "/images/members/pauline_vroonen.webp",
     linkedin: "https://www.linkedin.com/in/paulinevroonen647",
   },
@@ -35,7 +35,7 @@ export const executives = [
     name: "Jared Allison",
     role: "Technical Advisor",
     description:
-      "Technical advisor to Kafu People. Staff Software Engineer at Stripe with 15+ years leading polyglot engineering teams across embedded, mobile, backend, frontend, and infrastructure — previously at Angaza Design, Backstop Solutions, and Motorola. Guides technical direction, architecture, and coaching teams to ship reliably at scale.",
+      "Technical advisor to Kafu People. Staff Software Engineer at Stripe with 15+ years leading polyglot engineering teams across embedded, mobile, backend, frontend, and infrastructure; previously at Angaza Design, Backstop Solutions, and Motorola. Guides technical direction, architecture, and coaching teams to ship reliably at scale.",
     image: "/images/members/Jared.jpg",
     linkedin: "https://www.linkedin.com/in/jared-allison-7aa03a11/",
   },
@@ -72,7 +72,7 @@ export const teamMembers = [
     name: "Iendrel Gabriel",
     role: "Senior Full Stack Engineer",
     description:
-      "Builds scalable web applications, cloud-native platforms, and distributed systems across React, Next.js, Node.js, Python, and AWS. Experienced in microservices, event-driven architecture, CI/CD, and AI-integrated products — focused on reliable software that scales with the business.",
+      "Builds scalable web applications, cloud-native platforms, and distributed systems across React, Next.js, Node.js, Python, and AWS. Experienced in microservices, event-driven architecture, CI/CD, and AI-integrated products, focused on reliable software that scales with the business.",
     image: "/images/members/Iendrel.png",
     linkedin: "https://www.linkedin.com/in/iendrel-gabriel/",
   },
@@ -104,7 +104,7 @@ export const teamMembers = [
     name: "Gerardo Miguel Gutierrez Garcia",
     role: "Senior Full Stack Engineer",
     description:
-      "Builds scalable web platforms, high-performance APIs, and cloud-native systems with 8+ years in fintech and gaming. Expert in TypeScript, React, Node.js, and AWS — with a track record optimizing payment APIs, microservices migrations, and real-time multiplayer services at scale.",
+      "Builds scalable web platforms, high-performance APIs, and cloud-native systems with 8+ years in fintech and gaming. Expert in TypeScript, React, Node.js, and AWS, with a track record optimizing payment APIs, microservices migrations, and real-time multiplayer services at scale.",
     linkedin: "https://www.linkedin.com/in/gerardo-mmg/",
   },
   {
@@ -119,7 +119,7 @@ export const teamMembers = [
     name: "Saad Majeed",
     role: "Full Stack Web Developer",
     description:
-      "Builds scalable SaaS platforms, admin panels, and AI-powered web applications with Laravel, Vue.js, Inertia, and Tailwind CSS. Founder of Dorex App and experienced across healthcare, e-commerce, and business management systems — from architecture and APIs through deployment and long-term maintainability.",
+      "Builds scalable SaaS platforms, admin panels, and AI-powered web applications with Laravel, Vue.js, Inertia, and Tailwind CSS. Founder of Dorex App and experienced across healthcare, e-commerce, and business management systems, from architecture and APIs through deployment and long-term maintainability.",
     image: "/images/members/saad_majeed.png",
     linkedin: "https://www.linkedin.com/in/saadmajeeddev/",
   },
@@ -127,7 +127,7 @@ export const teamMembers = [
     name: "Brian Ervin",
     role: "Senior UX/UI Designer",
     description:
-      "Senior UX/UI designer and frontend-oriented product specialist at BE UI Design, LLC in Austin. Led TxDOTCONNECT enterprise UI for five+ years — design systems, responsive applications, standards libraries, and developer collaboration. Background spans studio art, architecture, industrial design, and full-stack web development in Agile/SCRUM environments.",
+      "Senior UX/UI designer and frontend-oriented product specialist at BE UI Design, LLC in Austin. Led TxDOTCONNECT enterprise UI for five+ years: design systems, responsive applications, standards libraries, and developer collaboration. Background spans studio art, architecture, industrial design, and full-stack web development in Agile/SCRUM environments.",
     image: "/images/members/brian.png",
     linkedin: "https://www.linkedin.com/in/brianervinmedia/",
   },
@@ -135,7 +135,7 @@ export const teamMembers = [
     name: "Soban A.",
     role: "CRM & AI Automation Engineer / Full Stack Developer",
     description:
-      "Official Make.com partner and automation architect building CRM, AI voice, and workflow systems at scale — GHL, HubSpot, Pipedrive, n8n, Retell, and Vapi. Designs high-volume automations that cut operational drag, migrate costly Zapier stacks, and deliver sub-minute lead follow-up with measurable ROI.",
+      "Official Make.com partner and automation architect building CRM, AI voice, and workflow systems at scale: GHL, HubSpot, Pipedrive, n8n, Retell, and Vapi. Designs high-volume automations that cut operational drag, migrate costly Zapier stacks, and deliver sub-minute lead follow-up with measurable ROI.",
     image: "/images/members/soban_a.png",
     linkedin: "https://www.linkedin.com/in/no-code-automator/",
   },
@@ -143,7 +143,7 @@ export const teamMembers = [
     name: "Nauman Raees",
     role: "AI-Enabled Full Stack Engineer (MERN)",
     description:
-      "Builds scalable MERN-stack applications with React, Next.js, Node.js, and NestJS — integrating AI-enabled features into production web apps. 5+ years delivering HRMS, SaaS, and enterprise platforms with AWS, Docker, and performance-focused API design.",
+      "Builds scalable MERN-stack applications with React, Next.js, Node.js, and NestJS, integrating AI-enabled features into production web apps. 5+ years delivering HRMS, SaaS, and enterprise platforms with AWS, Docker, and performance-focused API design.",
     image: "/images/members/nauman_raees.png",
     linkedin: "https://www.linkedin.com/in/nauman-raees-355558183/",
   },
@@ -151,7 +151,7 @@ export const teamMembers = [
     name: "Md Rakib Khan",
     role: "Senior Software Engineer in ASP.NET Core and Angular",
     description:
-      "Senior software engineer with 5+ years building full-stack solutions on ASP.NET Core, Web API, MVC, and Angular. Experienced across MS SQL and MongoDB, database architecture, performance tuning, and agile delivery — from greenfield applications to optimizing production systems at Fulfillment Team and DISA Global Solutions.",
+      "Senior software engineer with 5+ years building full-stack solutions on ASP.NET Core, Web API, MVC, and Angular. Experienced across MS SQL and MongoDB, database architecture, performance tuning, and agile delivery, from greenfield applications to optimizing production systems at Fulfillment Team and DISA Global Solutions.",
     image: "/images/members/rakib_khan.png",
     linkedin: "https://www.linkedin.com/in/md-rakib-khan-51361315b/",
   },
@@ -159,7 +159,7 @@ export const teamMembers = [
     name: "Himanshi Aggarwal",
     role: "Content & Community",
     description:
-      "Leads content and community growth for Kafu People. Founder of TechLeads (1000+ members), campus ambassador, and content creator — experienced in curated tech content, event promotion, audience engagement, and building active online communities across social platforms.",
+      "Leads content and community growth for Kafu People. Founder of TechLeads (1000+ members), campus ambassador, and content creator, experienced in curated tech content, event promotion, audience engagement, and building active online communities across social platforms.",
     image: "/images/members/himanshi_aggarwal.png",
     linkedin: "https://www.linkedin.com/in/himanshi-aggarwal-5a5553321/",
   },
@@ -167,7 +167,7 @@ export const teamMembers = [
     name: "Nodari Gurjidze",
     role: "Software Developer",
     description:
-      "Software developer focused on building modern, maintainable applications and contributing to full-stack product delivery — from implementation and debugging through clean, collaborative engineering practices.",
+      "Software developer focused on building modern, maintainable applications and contributing to full-stack product delivery, from implementation and debugging through clean, collaborative engineering practices.",
     image: "/images/members/nodari_gurjidze.png",
     linkedin: "https://www.linkedin.com/in/nodari-gurjidze-2911203a1/",
   },
@@ -175,7 +175,7 @@ export const teamMembers = [
     name: "Mahenoor Salat",
     role: "QA & Full Stack",
     description:
-      "Combines QA discipline with full-stack delivery on React and Next.js — from usability testing and UI/UX polish through scalable frontend architecture and rapid deployment. Led frontend development at Hexoforge LLC; experienced across component systems, cross-functional delivery, and performance-focused web applications.",
+      "Combines QA discipline with full-stack delivery on React and Next.js, from usability testing and UI/UX polish through scalable frontend architecture and rapid deployment. Led frontend development at Hexoforge LLC; experienced across component systems, cross-functional delivery, and performance-focused web applications.",
     image: "/images/members/mahenoor_salat.png",
     linkedin: "https://www.linkedin.com/in/salat-mahenoor/",
   },

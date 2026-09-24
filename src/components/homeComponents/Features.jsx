@@ -8,7 +8,7 @@ const cards = [
     icon: <AiFillProduct />,
     title: "Our Products",
     description:
-      "Explore SaaS tools, dashboards, and integrations we have built for startups and teams — from MVPs to production systems.",
+      "Explore SaaS tools, dashboards, and integrations we have built for startups and teams, from MVPs to production systems.",
     cta: "View Portfolio",
     link: "/portfolio",
   },
@@ -17,7 +17,7 @@ const cards = [
     icon: <FaLaptopCode />,
     title: "Our Services",
     description:
-      "AI workflows, cloud architecture, and full-stack development tailored to your stage — with clear scope, communication, and delivery.",
+      "AI workflows, cloud architecture, and full-stack development tailored to your stage, with clear scope, communication, and delivery.",
     cta: "Explore Services",
     link: "/services",
   },

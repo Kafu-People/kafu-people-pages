@@ -49,7 +49,7 @@ export function NewsletterSubscribeForm({ variant = "footer" }) {
       icon: "success",
       title: isNew ? "You're subscribed!" : "Already subscribed",
       text: isNew
-        ? "Thanks for joining. Newsletter delivery is coming soon — this is a demo signup for now."
+        ? "Thanks for joining. Newsletter delivery is coming soon. This is a demo signup for now."
         : "This email is already on our list in this browser.",
       timer: 4500,
       showConfirmButton: false,

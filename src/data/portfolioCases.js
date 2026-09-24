@@ -76,7 +76,7 @@ const portfolioCases = [
         type: "solution",
         heading: "Our Solution",
         content:
-          "Kafu People designed and built Echo3s as a full-stack web application that combines natural-sounding AI voice synthesis with an intuitive production workflow. Authors can upload manuscripts, select from multiple AI voice profiles (or clone their own voice), preview chapters in real-time, and export studio-quality audiobooks with proper chapter markers and metadata — all from their browser.",
+          "Kafu People designed and built Echo3s as a full-stack web application that combines natural-sounding AI voice synthesis with an intuitive production workflow. Authors can upload manuscripts, select from multiple AI voice profiles (or clone their own voice), preview chapters in real-time, and export studio-quality audiobooks with proper chapter markers and metadata, all from their browser.",
       },
       {
         type: "results",
@@ -94,7 +94,7 @@ const portfolioCases = [
     outcome:
       "Delivered a launch-ready platform spanning public job discovery, an application dashboard, profile onboarding, and flexible resume settings",
     description:
-      "Nerohalla is a premium job-search platform where candidates discover roles, track applications, and generate tailored resumes — with a polished dark UI, ATS integrations, and configurable AI-assisted workflows.",
+      "Nerohalla is a premium job-search platform where candidates discover roles, track applications, and generate tailored resumes, with a polished dark UI, ATS integrations, and configurable AI-assisted workflows.",
     category: "SaaS & Startup MVPs",
     role: "Development Partner",
     timeline: "Ongoing engagement",
@@ -115,12 +115,12 @@ const portfolioCases = [
       {
         title: "Profile Onboarding",
         description:
-          "A guided multi-step profile builder covering contact details, skills, employment, and education — with progress tracking to 100%.",
+          "A guided multi-step profile builder covering contact details, skills, employment, and education, with progress tracking to 100%.",
       },
       {
         title: "Settings & Resume Customization",
         description:
-          "Flexible settings for EEO autofill, resume design, downloads, and AI prompt configuration — all in a clean, premium UI.",
+          "Flexible settings for EEO autofill, resume design, downloads, and AI prompt configuration, all in a clean, premium UI.",
       },
       {
         title: "ATS Integrations",
@@ -146,13 +146,13 @@ const portfolioCases = [
         type: "overview",
         heading: "Overview",
         content:
-          "Nerohalla helps job seekers find opportunities, manage applications, and produce tailored resumes from a single platform. Kafu People joined as development partner to turn that vision into a cohesive product — from the public landing experience through to the authenticated dashboard, profile builder, and settings layer.",
+          "Nerohalla helps job seekers find opportunities, manage applications, and produce tailored resumes from a single platform. Kafu People joined as development partner to turn that vision into a cohesive product, from the public landing experience through to the authenticated dashboard, profile builder, and settings layer.",
       },
       {
         type: "challenge",
         heading: "The Challenge",
         content:
-          "Job seekers juggle dozens of listings across multiple ATS platforms, each with different forms, resume formats, and tracking needs. Nerohalla needed a product that could unify discovery and application management without feeling generic — a premium brand experience backed by practical tools for search, tracking, profile setup, and resume generation.",
+          "Job seekers juggle dozens of listings across multiple ATS platforms, each with different forms, resume formats, and tracking needs. Nerohalla needed a product that could unify discovery and application management without feeling generic: a premium brand experience backed by practical tools for search, tracking, profile setup, and resume generation.",
       },
       {
         type: "solution",
@@ -175,9 +175,9 @@ const portfolioCases = [
     tagline:
       "GitHub talent discovery, contact enrichment, and AI-personalized outreach in one workflow",
     outcome:
-      "Unified scraping, enrichment, and campaign delivery — with async AI batching that cut model spend while keeping every message on-brand",
+      "Unified scraping, enrichment, and campaign delivery, with async AI batching that cut model spend while keeping every message on-brand",
     description:
-      "Giscrap helps teams find GitHub profiles by keywords, location, followers, and stars — enrich emails and LinkedIn, then send purpose-tagged campaigns with AI-drafted copy over SMTP.",
+      "Giscrap helps teams find GitHub profiles by keywords, location, followers, and stars; enrich emails and LinkedIn; then send purpose-tagged campaigns with AI-drafted copy over SMTP.",
     category: "AI & Agentic Workflows",
     role: "Full-stack Development Partner",
     timeline: "6 weeks (MVP to launch)",
@@ -194,12 +194,12 @@ const portfolioCases = [
       {
         title: "GitHub Discovery Filters",
         description:
-          "Search and rank profiles by keywords, location, follower count, repository stars, and language — with saved searches and exportable lead lists.",
+          "Search and rank profiles by keywords, location, follower count, repository stars, and language, with saved searches and exportable lead lists.",
       },
       {
         title: "Contact Enrichment",
         description:
-          "Surface public emails and LinkedIn profiles from GitHub bios, commit metadata, and linked domains — deduplicated and validated before outreach.",
+          "Surface public emails and LinkedIn profiles from GitHub bios, commit metadata, and linked domains, deduplicated and validated before outreach.",
       },
       {
         title: "Purpose Tags & Campaigns",
@@ -209,7 +209,7 @@ const portfolioCases = [
       {
         title: "AI-Personalized Email Drafts",
         description:
-          "Anthropic-powered prompts turn profile signals into tailored subject lines and body copy — reviewed in-app before anything is sent.",
+          "Anthropic-powered prompts turn profile signals into tailored subject lines and body copy, reviewed in-app before anything is sent.",
       },
       {
         title: "Sync & Async AI Pipeline",
@@ -241,7 +241,7 @@ const portfolioCases = [
         type: "solution",
         heading: "Our Solution",
         content:
-          "Kafu People designed Giscrap around three layers: a scraper and filter engine for GitHub signals, an enrichment pass for email and LinkedIn, and a campaign hub with purpose tags and Anthropic-generated copy. Prompt templates are tuned per tag so hiring messages read differently from partnership or OSS invites. FastAPI exposes sync endpoints for on-demand edits and async workers for bulk generation — batching similar profiles, reusing cached summaries, and only calling the model when new context appears. SMTP integration handles verified sending with operator review gates and send throttling.",
+          "Kafu People designed Giscrap around three layers: a scraper and filter engine for GitHub signals, an enrichment pass for email and LinkedIn, and a campaign hub with purpose tags and Anthropic-generated copy. Prompt templates are tuned per tag so hiring messages read differently from partnership or OSS invites. FastAPI exposes sync endpoints for on-demand edits and async workers for bulk generation, batching similar profiles, reusing cached summaries, and only calling the model when new context appears. SMTP integration handles verified sending with operator review gates and send throttling.",
       },
       {
         type: "results",

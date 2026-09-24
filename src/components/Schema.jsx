@@ -8,7 +8,7 @@ export const OrganizationLD = () => ({
   url: SITE_URL,
   logo: `${SITE_URL}/images/kafupeople.webp`,
   description:
-    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs — from idea to production.",
+    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs, from idea to production.",
   email: CONTACT_EMAIL,
   address: {
     "@type": "PostalAddress",

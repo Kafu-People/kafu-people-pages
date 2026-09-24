@@ -43,7 +43,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     quote:
-      "Kafu People is fantastic to work with — thorough communication, professional, highly skilled, and just a great partner. They have an excellent attitude regardless of the situation. I highly recommend them for your development needs.",
+      "Kafu People is fantastic to work with: thorough communication, professional, highly skilled, and just a great partner. They have an excellent attitude regardless of the situation. I highly recommend them for your development needs.",
     name: "Blake W.",
     location: "Charleston, United States",
     project: "ThetaScreener",

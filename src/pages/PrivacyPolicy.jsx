@@ -224,7 +224,7 @@ const PrivacyPolicy = () => {
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </p>
             <p>
-              Kafu People — IT solutions including cloud computing, cybersecurity,
+              Kafu People: IT solutions including cloud computing, cybersecurity,
               system integration, digital transformation, software support, and
               business technology consulting.
             </p>
@@ -233,7 +233,7 @@ const PrivacyPolicy = () => {
           <LegalSection id="change-history" title="13. Change History">
             <ul>
               <li>
-                <strong>Version 1.0</strong> — April 25, 2026: Initial publication
+                <strong>Version 1.0</strong>, April 25, 2026: Initial publication
                 of this Privacy Policy.
               </li>
             </ul>

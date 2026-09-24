@@ -13,7 +13,7 @@ export const PORTFOLIO_PRODUCTS = [
     image: "/products/giscrap-dashboard.png",
     name: "Giscrap",
     description:
-      "Discover GitHub profiles by keywords, location, and stars — enrich emails and LinkedIn, then send purpose-tagged campaigns with AI-personalized copy.",
+      "Discover GitHub profiles by keywords, location, and stars; enrich emails and LinkedIn; then send purpose-tagged campaigns with AI-personalized copy.",
     category: "AI & Agentic Workflows",
     url: "https://giscrap.duckdns.org/",
   },
@@ -31,7 +31,7 @@ export const PORTFOLIO_PRODUCTS = [
     image: "/products/Landing_1.webp",
     name: "Nerohalla",
     description:
-      "AI-powered job search and application tracking — discover roles, manage applications, build your profile, and generate tailored resumes from one premium platform.",
+      "AI-powered job search and application tracking: discover roles, manage applications, build your profile, and generate tailored resumes from one premium platform.",
     category: "SaaS & Startup MVPs",
     url: "https://nerohalla.up.railway.app/",
   },

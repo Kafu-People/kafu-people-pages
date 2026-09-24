@@ -85,7 +85,7 @@ const ContactSection = () => {
           <p className="mb-6 text-base text-cWhite/90 sm:text-sm">
             At <span className="font-semibold text-cWhite">Kafu People</span>, we help you
             ship AI, cloud, and full-stack solutions. Book a meeting or send a
-            message — we typically respond within one business day.
+            message. We typically respond within one business day.
           </p>
           <div className="mb-4 text-base">
             <a href={`mailto:${CONTACT_EMAIL}`} className="text-cWhite hover:text-cWhite/80">
@@ -144,7 +144,7 @@ const ContactSection = () => {
             back to you as soon as possible.
           </p>
           <div className="mb-4 rounded bg-yellow-100 px-4 py-2 text-center text-sm text-yellow-800">
-            Demo mode — messaging coming in v2
+            Demo mode: messaging coming in v2
           </div>
           <div className="mb-4 w-full">
             <label

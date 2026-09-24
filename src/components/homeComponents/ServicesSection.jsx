@@ -33,7 +33,7 @@ const ServicesSection = () => {
         </p>
         <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Our Services</h2>
         <p className="mx-auto mb-12 max-w-2xl text-base text-cWhite/90">
-          End-to-end support for teams that need to ship — from architecture and
+          End-to-end support for teams that need to ship, from architecture and
           development to cloud and AI.
         </p>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-5">

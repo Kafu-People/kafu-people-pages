@@ -12,7 +12,7 @@ const MissionSection = () => {
           we help startups and growing businesses leverage technology with
           clarity and craftsmanship. We deliver AI, cloud, and full-stack
           solutions that are scoped honestly, built to last, and aligned with
-          your business goals — so you can ship faster and scale with
+          your business goals, so you can ship faster and scale with
           confidence.
         </p>
       </div>

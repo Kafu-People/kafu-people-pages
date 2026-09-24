@@ -8,7 +8,7 @@ export default function CaseStudyCTA({ liveUrl }) {
         Want to build something like this?
       </h2>
       <p className="mb-8 text-base italic leading-relaxed text-slate-200 sm:text-lg">
-        Let&apos;s talk about your project — from concept to production, we
+        Let&apos;s talk about your project, from concept to production, we
         partner with you every step of the way.
       </p>
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

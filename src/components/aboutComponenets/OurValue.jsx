@@ -34,7 +34,7 @@ const values = [
   {
     title: "Ownership",
     description:
-      "We take responsibility from architecture to deployment and delivery—treating every project as our own.",
+      "We take responsibility from architecture to deployment and delivery, treating every project as our own.",
     Icon: TbTargetArrow,
   },
 ];

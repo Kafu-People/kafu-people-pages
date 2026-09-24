@@ -38,7 +38,7 @@ const Vision = () => {
             />
             <p className="text-base leading-relaxed text-cWhite/90 md:text-lg">
               We aim to be a trusted technology partner for startups and growing
-              businesses in Europe and beyond — known for shipping reliable
+              businesses in Europe and beyond, known for shipping reliable
               software, communicating clearly, and helping teams turn complex ideas
               into products that work in the real world. We measure success by your
               outcomes: faster delivery, maintainable code, and systems you can

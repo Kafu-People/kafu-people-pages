@@ -16,7 +16,7 @@ const WHAT_WE_DO = [
     icon: <FaBullhorn />,
     title: "Campaign Strategy",
     description:
-      "We define your campaign goals, target audience, and budget allocation — built around your product and your EU market opportunity.",
+      "We define your campaign goals, target audience, and budget allocation, built around your product and your EU market opportunity.",
   },
   {
     icon: <FaMagic />,
@@ -28,7 +28,7 @@ const WHAT_WE_DO = [
     icon: <FaChartLine />,
     title: "Account Setup & Launch",
     description:
-      "Full technical setup on OpenAI's advertiser platform — targeting configuration, bid strategy, and landing page alignment for policy compliance.",
+      "Full technical setup on OpenAI's advertiser platform: targeting configuration, bid strategy, and landing page alignment for policy compliance.",
   },
   {
     icon: <MdOutlineAnalytics />,
@@ -40,7 +40,7 @@ const WHAT_WE_DO = [
     icon: <FaChartBar />,
     title: "Performance Reporting",
     description:
-      "Clear, actionable reports on impressions, clicks, conversions, and ROAS — so you always know exactly what your budget is delivering.",
+      "Clear, actionable reports on impressions, clicks, conversions, and ROAS, so you always know exactly what your budget is delivering.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function ChatGPTAdsPage() {
         className="bg-gradient-to-br from-slate-950 via-violet-800 to-slate-900"
       >
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-violet-300">
-          New service — ChatGPT Ads
+          New service: ChatGPT Ads
         </p>
         <h1 className="mb-5 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
           Run Ads on ChatGPT
@@ -70,7 +70,7 @@ export default function ChatGPTAdsPage() {
         <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
           One of the first EU agencies running ChatGPT ad campaigns for brands.
           We handle strategy, creative, and full campaign management on
-          OpenAI&apos;s ad platform — so you can reach your audience where they
+          OpenAI&apos;s ad platform, so you can reach your audience where they
           search, ask, and decide.
         </p>
         <BookMeetingButton buttonText="Book a Meeting" variant="secondary" />
@@ -87,8 +87,8 @@ export default function ChatGPTAdsPage() {
               End-to-end ChatGPT ad management
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-              ChatGPT Ads is a brand-new channel. We take care of every step —
-              from first setup to ongoing optimisation — so you can move fast
+              ChatGPT Ads is a brand-new channel. We take care of every step,
+              from first setup to ongoing optimisation, so you can move fast
               without the learning curve.
             </p>
           </div>
@@ -129,13 +129,13 @@ export default function ChatGPTAdsPage() {
             world&apos;s fastest-growing AI platforms. As one of the first
             agencies in the EU to offer this service, Kafu People has the
             hands-on experience to get your campaigns live, compliant, and
-            performing — while the channel is still new and competition for
+            performing, while the channel is still new and competition for
             attention is low.
           </p>
           <p className="text-base leading-relaxed text-white/80 sm:text-lg">
             We are a remote-first product engineering team based in Purmerend,
             Netherlands, working with clients across Europe and beyond. ChatGPT
-            Ads sit naturally alongside our existing AI and digital services —
+            Ads sit naturally alongside our existing AI and digital services,
             giving you a single partner for both building and promoting your
             product.
           </p>

@@ -86,7 +86,7 @@ function CategoryHero({ theme, index, title, summary }) {
       </div>
       <div className={`border-b px-6 py-8 sm:px-8 sm:py-10 lg:px-10 ${theme.headerBg}`}>
         <p className={`text-xs font-semibold uppercase tracking-[0.2em] ${theme.headerLabel}`}>
-          {String(index + 1).padStart(2, "0")} — Practice area
+          {String(index + 1).padStart(2, "0")} · Practice area
         </p>
         <h3 className={`mt-2 text-2xl font-bold sm:text-3xl ${theme.headerTitle}`}>
           {title}
@@ -113,7 +113,7 @@ const CyberService = () => {
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
             Kafu People is a product engineering partner for startups and growing
             teams. We build AI-powered software, launch SaaS MVPs, ship cloud
-            dashboards, and deliver business websites — from architecture through
+            dashboards, and deliver business websites, from architecture through
             production.
           </p>
         </div>

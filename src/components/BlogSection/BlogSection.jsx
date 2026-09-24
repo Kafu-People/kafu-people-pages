@@ -115,7 +115,7 @@ const BlogSection = () => {
         </h1>
         <div className="w-auto lg:w-[700px]">
           <p className="mx-4 mt-2 text-lg text-cWhite sm:text-justify sm:text-xl lg:ml-24 lg:text-left">
-            Team insights, startup lessons, and engineering perspectives — including the
+            Team insights, startup lessons, and engineering perspectives, including the
             posts we share on LinkedIn. Short reads from our experience building products
             with clients.
           </p>

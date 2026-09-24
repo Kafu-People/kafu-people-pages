@@ -8,7 +8,7 @@ export const OrganizationLD = () => ({
   url: SITE_URL,
   logo: `${SITE_URL}/images/kafupeople.webp`,
   description:
-    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs — from idea to production.",
+    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs, from idea to production.",
   email: CONTACT_EMAIL,
   address: {
     "@type": "PostalAddress",
@@ -82,10 +82,10 @@ export const SoftwareAppLD = (caseStudy) => ({
   },
 })
 
-export const FAQPageLD = (questions) => ({
+export const FAQPageLD = (questions, id = `${SITE_URL}/services#faq`) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `${SITE_URL}/services#faq`,
+  "@id": id,
   mainEntity: questions.map((q) => ({
     "@type": "Question",
     name: q.question,

@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "How long does it take to build an MVP?",
-    answer: "We ship SaaS MVPs in approximately six weeks — from discovery and architecture to a production-ready product with authentication, payments, and analytics.",
+    answer: "We ship SaaS MVPs in approximately six weeks, from discovery and architecture to a production-ready product with authentication, payments, and analytics.",
   },
   {
     question: "What technologies does Kafu People use?",

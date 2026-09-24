@@ -10,7 +10,7 @@ export function flattenBlogPreview(text) {
   return (text || "").replace(/\s+/g, " ").trim();
 }
 
-const BULLET_RE = /^[•\-]\s/;
+const BULLET_RE = /^[•-]\s/;
 const NUMBERED_RE = /^\d+\.\s/;
 const EM_DASH_SPLIT_RE = /^(\d+\.\s.+?)(?:\s*[—–-]\s*(.+))?$/;
 

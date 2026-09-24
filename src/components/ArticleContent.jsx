@@ -23,7 +23,7 @@ function renderBlock(block, index, speakableProps) {
       <ul key={index} className="mb-4 list-disc space-y-2 pl-5">
         {lines.map((line) => (
           <li key={line} className={listItemClass}>
-            {line.replace(/^[•\-]\s*/, "")}
+            {line.replace(/^[•-]\s*/, "")}
           </li>
         ))}
       </ul>

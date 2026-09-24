@@ -11,6 +11,7 @@ import {
   FaWhatsapp,
   FaLinkedin,
   FaBullhorn,
+  FaGraduationCap,
 } from "react-icons/fa";
 import {
   CONTACT_EMAIL,
@@ -80,6 +81,15 @@ const Footer = () => {
                     </li>
                   );
                 })}
+                <li>
+                  <Link
+                    to="/services/ai-training-coaching"
+                    className="flex items-center transition-colors hover:text-primary-light"
+                  >
+                    <FaGraduationCap className="mr-2 shrink-0" aria-hidden="true" />
+                    AI Training Coaching
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

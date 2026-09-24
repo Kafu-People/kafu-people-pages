@@ -21,6 +21,7 @@ const staticPaths = [
   { path: "/about",              lastmod: today, priority: 0.8 },
   { path: "/services",           lastmod: today, priority: 0.8 },
   { path: "/services/chatgpt-ads", lastmod: today, priority: 0.8 },
+  { path: "/services/ai-training-coaching", lastmod: today, priority: 0.8 },
   { path: "/contact",            lastmod: today, priority: 0.8 },
   { path: "/portfolio",          lastmod: today, priority: 0.8 },
   { path: "/blogs",              lastmod: today, priority: 0.8 },

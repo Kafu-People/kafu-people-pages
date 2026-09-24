@@ -103,6 +103,19 @@ button span {
     display: block;
 }
 
+.dropdown a {
+    color: #0f172a;
+    padding: 0.6rem 1rem;
+    white-space: nowrap;
+    text-transform: none;
+}
+
+.dropdown a:hover,
+.dropdown a:focus-visible {
+    background-color: #f8fafc;
+    color: #1E4FD4;
+}
+
 .dropdown .dropdown-submenu {
     position: absolute;
     left: 100%;

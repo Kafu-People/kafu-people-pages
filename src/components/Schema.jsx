@@ -82,10 +82,10 @@ export const SoftwareAppLD = (caseStudy) => ({
   },
 })
 
-export const FAQPageLD = (questions) => ({
+export const FAQPageLD = (questions, id = `${SITE_URL}/services#faq`) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `${SITE_URL}/services#faq`,
+  "@id": id,
   mainEntity: questions.map((q) => ({
     "@type": "Question",
     name: q.question,

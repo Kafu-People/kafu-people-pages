@@ -58,6 +58,18 @@ export const PAGE_SEO = {
       "Kafu People is one of the first EU agencies running ChatGPT ad campaigns for brands — covering strategy, creative, setup, and ongoing management on OpenAI's ad platform.",
     canonicalPath: "/services/chatgpt-ads",
   },
+  aiTrainingCoaching: {
+    title: `AI Training Coaching for Developers | ${SITE_NAME}`,
+    description:
+      "Coaching for developers in Latin America and the US to get accepted onto AI training platforms for RLHF, evaluation, and coding tasks, and to do great work once you are in.",
+    canonicalPath: "/services/ai-training-coaching",
+  },
+  enrollSuccess: {
+    title: `You're enrolled | ${SITE_NAME}`,
+    description:
+      "Thank you for enrolling in AI Training Coaching. Here is what happens next.",
+    canonicalPath: "/enroll/success",
+  },
   news: {
     title: `News & Events | ${SITE_NAME}`,
     description:

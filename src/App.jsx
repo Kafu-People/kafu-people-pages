@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ServiceMainFile from "./components/servicesComponents/ServiceMainFile";
 import ChatGPTAdsPage from "./pages/ChatGPTAdsPage";
+import AITrainingCoachingPage from "./pages/AITrainingCoachingPage";
+import EnrollSuccessPage from "./pages/EnrollSuccessPage";
 import MainFile from "./components/trainingComponenets/MainFile";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
@@ -81,6 +83,8 @@ const App = () => {
           <Route path="/portfolio/:slug" element={<PortfolioCaseStudy />} />
           <Route path="/services" element={<ServiceMainFile />} />
           <Route path="/services/chatgpt-ads" element={<ChatGPTAdsPage />} />
+          <Route path="/services/ai-training-coaching" element={<AITrainingCoachingPage />} />
+          <Route path="/enroll/success" element={<EnrollSuccessPage />} />
 
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsArticle />} />

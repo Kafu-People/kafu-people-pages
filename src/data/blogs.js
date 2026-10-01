@@ -1,5 +1,87 @@
 const staticBlogs = [
   {
+    _id: "static-013",
+    slug: "ai-training-pay-by-field-and-task-2026",
+    title: "From Generalist to Expert: AI Training Pay by Field and Task in 2026",
+    metaDescription: "Advertised AI training pay ranges by field and task in 2026, from generalist rating to expert coding, medicine, and law, with sources.",
+    description:
+      "AI training pay varies more than almost any other kind of remote work. The same platform can list one project at $16 per hour and another at $150. The difference comes down to two things: your field, and the type of task. This guide pulls together advertised ranges from platform pages and job listings so you can see where the money is in 2026.\n" +
+      "\n" +
+      "One important caveat first. Everything below is an advertised or reported range, not guaranteed pay. Projects pause, rates change, and what you earn depends on how much work is available and how well you score.\n" +
+      "\n" +
+      "## The big trend: experts over generalists\n" +
+      "\n" +
+      "AI labs no longer need large crowds to label simple data. They need people who can judge whether an answer is actually correct, and that takes real expertise. TechCrunch reported in September 2025 that xAI cut around 500 generalist annotators while planning to grow its specialist tutor team tenfold. Business Insider reported that Scale AI closed a generalist contractor team in Dallas, citing a shift toward higher-skill expert work.\n" +
+      "\n" +
+      "Generalist work has not disappeared, but it is under pressure. Business Insider reported in November 2025 that a large Meta project run through Mercor ended at $21 per hour and its replacement offered $16. Meanwhile, expert pools advertise rates several times higher.\n" +
+      "\n" +
+      "Two other trends are shaping the market. Multimodal work, such as rating images, audio, and video, keeps growing. And agent evaluation, where you review how an AI agent uses tools and completes multi-step tasks, is one of the newest and fastest-growing task types.\n" +
+      "\n" +
+      "## Advertised pay by field\n" +
+      "\n" +
+      "| Field | Advertised range (USD/hr) | Examples from listings |\n" +
+      "|---|---|---|\n" +
+      "| General (no specialty) | $15 to $50 | DataAnnotation lists generalist work at $25 to $50; some generalist projects pay $16 to $21 |\n" +
+      "| Coding | $40 to $150 | DataAnnotation lists $40 to $150+; Mercor software engineer experts $100 to $150 |\n" +
+      "| Math and STEM | $40 to $125 | DataAnnotation lists STEM at $40 to $125+ |\n" +
+      "| Medicine | $40 to $250 | Mercor medical experts $60 to $180; physician network $110 to $250 |\n" +
+      "| Law | $40 to $150 | Mercor legal experts $60 to $150 |\n" +
+      "| Finance | $40 to $150 | DataAnnotation $40 to $125+; Mercor finance experts $60 to $180 |\n" +
+      "| Creative writing | $15 to $60 | Lower on generalist writing projects; around $60 for credentialed writers on Mercor |\n" +
+      "| Languages | $15 to $50 | DataAnnotation multilingual $25 to $40; Mercor language and audio $35 to $50 |\n" +
+      "\n" +
+      "Handshake AI says its roles pay $40 to $125 per hour depending on the role, which fits the expert end of this table. At the other end, Prolific, which runs research studies rather than AI training projects, sets a minimum of $8 per hour and recommends $12.\n" +
+      "\n" +
+      "## Advertised pay by task\n" +
+      "\n" +
+      "| Task | Advertised range (USD/hr) | Notes |\n" +
+      "|---|---|---|\n" +
+      "| RLHF ranking | $15 to $50 | Generalist ranking sits at the low end; expert ranking pays more |\n" +
+      "| Red teaming | $40 to $110 | Mercor AI safety red teamer listings show $54 to $111 and $70 to $84 |\n" +
+      "| Golden answers | $20 to $70 | Writing reference answers that models are graded against |\n" +
+      "| Fact-checking | $20 to $60 | Often bundled into writing and citation review |\n" +
+      "| Code review | $40 to $125 | Mercor senior code review listings went up to $125 |\n" +
+      "| Multimodal annotation | $15 to $40 | Image, audio, and video rating |\n" +
+      "| Search relevance | $10 to $20 | Classic search rating varies a lot by country |\n" +
+      "| Agent evaluation | $25 to $90 | Reviewing multi-step agent traces and tool use |\n" +
+      "| Translation review | $15 to $50 | Higher for technical or rare language pairs |\n" +
+      "\n" +
+      "## What moves you up the range\n" +
+      "\n" +
+      "• Proven expertise. A degree, license, or years of professional experience in a field is the single biggest factor.\n" +
+      "• A second language. Bilingual experts in less common languages are in short supply.\n" +
+      "• Assessment scores. Platforms route better-paid projects to people who score well and stay consistent.\n" +
+      "• Following guidelines exactly. Quality reviewers penalize small deviations, and low quality scores remove you from projects.\n" +
+      "\n" +
+      "## What this means for developers\n" +
+      "\n" +
+      "Software engineers are in a strong position. Coding, code review, and agent evaluation are among the best-paid task types, and they reward the skills you already use at work. The challenge is getting through the screening: coding assessments, writing samples, and sometimes AI-led interviews.\n" +
+      "\n" +
+      "If you are early in your career, generalist projects can still be a way in, but treat them as a starting point. Build a track record, then apply for expert pools in your stack.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.dataannotation.tech/\">DataAnnotation: advertised rates by project type</a>\n" +
+      "• <a href=\"https://www.mercor.com/experts/\">Mercor: expert talent networks and rates</a>\n" +
+      "• <a href=\"https://www.aol.com/articles/ai-startup-powering-meta-openai-230627434.html\">Business Insider via AOL: Mercor ends Meta project, offers lower rate</a>\n" +
+      "• <a href=\"https://techcrunch.com/2025/09/13/xai-reportedly-lays-off-500-workers-from-data-annotation-team\">TechCrunch: xAI lays off 500 generalist annotators</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-09-18",
+    dateModified: "2026-09-18",
+    image: "/images/blogs/ai-training-pay-by-field-and-task-2026.webp",
+    imageAlt: "A calculator next to a laptop and printed charts on a desk",
+    imageCredit: {
+      name: "Jakub Żerdzicki",
+      url: "https://unsplash.com/@jakubzerdzicki",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/8wLZi9OhsWU",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "dataannotation", "mercor", "handshake-ai", "prolific"],
+  },
+  {
     _id: "static-012",
     slug: "ai-will-not-replace-developers-ai-leverage",
     title: "AI Will Not Replace Developers",

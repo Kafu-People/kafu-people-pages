@@ -1,5 +1,82 @@
 const staticBlogs = [
   {
+    _id: "static-015",
+    slug: "choosing-ai-training-platform-after-mturk-2026",
+    title: "Life After MTurk: Choosing an AI Training Platform in 2026",
+    metaDescription: "A guide for developers in Latin America and the US to 15 AI training platforms: reported pay, payment methods, onboarding, and availability.",
+    description:
+      "Amazon Mechanical Turk closed on September 30, 2026, after 21 years. If you relied on it, or you are a developer looking for AI training work for the first time, there are many alternatives. They differ a lot in pay, payment methods, how hard they are to join, and which countries they accept. This guide compares 15 of them for developers in Mexico, Argentina, Colombia, and the US.\n" +
+      "\n" +
+      "All pay figures below are ranges advertised by the platforms or shown in their listings. They are not guarantees, and actual earnings depend on project availability and your performance. Availability was checked against each platform's official pages in late September 2026 and can change.\n" +
+      "\n" +
+      "## Platform comparison\n" +
+      "\n" +
+      "| Platform | Best for | Reported pay (USD/hr) | Payment | Onboarding | US / MX / AR / CO |\n" +
+      "|---|---|---|---|---|---|\n" +
+      "| Outlier | Generalist and expert tasks | Varies; shown before each project | PayPal, Airtm, ACH | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| DataAnnotation | Writing, coding, STEM | $25 to $50 general; $40 to $150+ coding | PayPal | Medium (one-attempt assessment) | Yes / Check / Check / Check |\n" +
+      "| Alignerr | Domain experts, coding, languages | $20 to $120; some LATAM roles $10 to $35 | Weekly, via Deel | Medium (ID check, sometimes an AI interview) | Check / Yes / Yes / Check |\n" +
+      "| Mercor | Professionals: law, medicine, finance, coding | $10 to $250 across listings | Stripe (weekly) | Medium to high (AI interview, background check) | Yes / Yes / Yes / Yes |\n" +
+      "| micro1 | Experts and engineers | About $20 to $180 by listing | Deel, twice a month | Medium (AI interview) | Yes / Yes / Yes / Yes |\n" +
+      "| Handshake AI | US students, graduates, PhDs | Up to $40 to $125 by role | Stripe | Medium to high | Yes / No / No / No |\n" +
+      "| Snorkel AI | Credentialed experts, coding | Task-based; no hourly rate published | Not stated | High | Select US locations |\n" +
+      "| Surge AI | Senior engineers and elite experts | From $60; engineering $100 to $150+ | PayPal, via DataAnnotation | High (coding screen, paid trial) | Same as DataAnnotation |\n" +
+      "| Turing | Coding and LLM trainer contracts | Not published | Varies by project | Medium (60-minute evaluation) | Check / Yes / Check / Check |\n" +
+      "| Invisible | Language and domain specialists | $6 to $120 across listings | Not stated | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| TELUS Digital | Search and quality rating | Around $9 on some Mexico rater listings | Not verified | Medium | Check listings |\n" +
+      "| Prolific | Short studies, AI tasks, domain experts | $8 minimum; $30 to $100 recommended for experts | PayPal | Low | Yes / Yes / No / No |\n" +
+      "| Mindrift (Toloka) | Experts, coding | $5 to $30 evaluation; $32 to $90+ coding | Payoneer or PayPal via Tipalti | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| CrowdGen (Appen) | Language and rating tasks | Varies by location and skills | PayPal, bank, Airtm, Payoneer | Low to medium | Check listings |\n" +
+      "| Welocalize (Welo Data) | Language raters, localized LATAM work | $2.25 to $105 across listings | Verified payment platforms, per project | Medium | Yes / Yes / Yes / Yes |\n" +
+      "\n" +
+      "\"Check\" means we could not confirm availability from an official source. Even where a platform accepts your country, individual projects can add their own location rules, so always read the listing.\n" +
+      "\n" +
+      "## If you are a beginner\n" +
+      "\n" +
+      "Start with platforms that have a low entry barrier and broad country coverage, such as Prolific (if you are in the US or Mexico), Outlier, Mindrift, and Welo Data. Expect lower rates on generalist tasks. Your goal at this stage is to build a track record and learn how quality reviews work.\n" +
+      "\n" +
+      "## If you are a domain expert\n" +
+      "\n" +
+      "If you have professional experience in software engineering, medicine, law, finance, or a science field, aim for expert pools directly. Mercor, micro1, Alignerr, Mindrift, and DataAnnotation all advertise expert rates well above generalist work. Surge AI and Snorkel AI are harder to join but target senior specialists. Developers should look for coding, code review, and agent evaluation projects, which are among the best-paid task types. For more detail, see our guide to <a href=\"/blogs/ai-training-pay-by-field-and-task-2026\">AI training pay by field and task</a>.\n" +
+      "\n" +
+      "## Rules that keep you on a platform\n" +
+      "\n" +
+      "• Follow the guidelines exactly. Reviewers grade against detailed instructions, and small deviations lower your quality score.\n" +
+      "• Never use AI tools on assessments or tasks unless the instructions allow it. Platforms including Handshake AI and Outlier prohibit it, and Mercor restricts it.\n" +
+      "• Keep a stable internet connection and work from the location on your profile. Identity and location checks are common, and mismatches can get an account closed.\n" +
+      "• Apply and work only under your own account. Sharing or renting accounts breaks platform terms and can lead to a permanent ban.\n" +
+      "\n" +
+      "## Avoid anyone who asks you to pay\n" +
+      "\n" +
+      "Legitimate platforms do not charge registration, training, or equipment fees. DataAnnotation, Mindrift, CrowdGen, and Welo Data state this directly. The US Federal Trade Commission warns that honest employers never ask you to pay to get a job, and that task scams often ask you to deposit your own money, frequently in crypto. Mexico's national employment service gives the same advice. If an \"AI training job\" asks for money upfront, walk away.\n" +
+      "\n" +
+      "## How to choose\n" +
+      "\n" +
+      "Pick two or three platforms that accept your country and match your skills, and apply to all of them. Approval can take weeks, and project availability rises and falls, so having more than one option keeps your income steadier.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://outlier.ai/legal/working-location-policy\">Outlier: Working location policy</a>\n" +
+      "• <a href=\"https://talent.docs.mercor.com/policies/supported-countries.md\">Mercor: Supported countries</a>\n" +
+      "• <a href=\"https://mindrift.ai/legal/eligibility-and-geographic-restrictions\">Mindrift: Eligibility and geographic restrictions</a>\n" +
+      "• <a href=\"https://consumer.ftc.gov/articles/job-scams\">FTC: Job scams</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-10-01",
+    dateModified: "2026-10-01",
+    image: "/images/blogs/choosing-ai-training-platform-2026.webp",
+    imageAlt: "A person typing on a laptop at a wooden desk in a home office",
+    imageCredit: {
+      name: "Kelly Sikkema",
+      url: "https://unsplash.com/@kellysikkema",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/r3zfwg1ByUI",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "outlier", "dataannotation", "alignerr", "mercor", "micro1", "mindrift", "prolific"],
+  },
+  {
     _id: "static-014",
     slug: "linkedin-software-engineering-ai-trainer-program",
     title: "LinkedIn's Software Engineering AI Trainer Role: What We Know",

@@ -17,8 +17,8 @@ const TermsOfService = () => {
           <LegalDocumentHeader
             title="Terms of Service"
             subtitle={`These terms govern your use of the ${SITE_NAME} website and how we engage with you regarding our technology services.`}
-            lastUpdated="September 24, 2026"
-            version="1.2"
+            lastUpdated="October 1, 2026"
+            version="1.3"
           />
 
           <LegalSection id="acceptance" title="1. Acceptance of Terms">
@@ -302,9 +302,11 @@ const TermsOfService = () => {
               <strong>No guarantee of results.</strong> Acceptance, task
               availability, pay rates, and account decisions are made solely by
               each platform. We do not guarantee that you will be accepted onto
-              any platform or earn any amount. Kafu People is independent and
-              is not affiliated with, endorsed by, or acting on behalf of any AI
-              training platform.
+              any platform or earn any amount. Kafu People partners with Surge
+              AI, Scale AI, and Alignerr. These partnerships do not change how
+              each platform screens or accepts applicants, and Kafu People does
+              not make decisions about your platform account. Kafu People is not
+              affiliated with any other AI training platform.
             </p>
             <p>
               <strong>Program materials.</strong> Guides, recordings, and other
@@ -320,6 +322,10 @@ const TermsOfService = () => {
 
           <LegalSection id="change-history" title="14. Change History">
             <ul>
+              <li>
+                <strong>Version 1.3</strong>, October 1, 2026: Section 13 now
+                names Kafu People&apos;s AI training platform partners.
+              </li>
               <li>
                 <strong>Version 1.2</strong>, September 24, 2026: Clarified in
                 Section 2 that AI Training Coaching packages purchased through

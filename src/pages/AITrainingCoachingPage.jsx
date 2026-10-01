@@ -34,6 +34,15 @@ const AUDIENCES = [
   },
 ];
 
+// Platforms Kafu People has partnership agreements with. Logos come from each
+// company's official site or brand kit; keep their original colors.
+const PARTNERS = [
+  // Per-logo sizing evens out the different aspect ratios.
+  { name: "Surge AI", logo: "/images/partners/surge-ai.svg", url: "https://www.surgehq.ai/", logoClass: "h-9" },
+  { name: "Scale AI", logo: "/images/partners/scale-ai.svg", url: "https://scale.com/", logoClass: "h-7" },
+  { name: "Alignerr", logo: "/images/partners/alignerr.svg", url: "https://www.alignerr.com/", logoClass: "w-56 max-w-full" },
+];
+
 const CURRICULUM = [
   {
     icon: <FaClipboardCheck />,
@@ -114,9 +123,9 @@ const FAQS = [
       "No. Acceptance, task availability, and pay are decided by each platform. We teach you how the process works and help you prepare as well as possible, but we cannot promise a result or any level of earnings.",
   },
   {
-    question: "Are you affiliated with any AI training platform?",
+    question: "Do you partner with AI training platforms?",
     answer:
-      "No. Kafu People is an independent software agency. We are not partnered with, endorsed by, or paid by any AI training platform.",
+      "Yes. Kafu People partners with Surge AI, Scale AI, and Alignerr. Each platform still runs its own screening and makes its own acceptance decisions, and you always apply and work under your own account. We also prepare students for other platforms that we are not partnered with.",
   },
   {
     question: "Who is this program for?",
@@ -230,6 +239,48 @@ export default function AITrainingCoachingPage() {
               <IconCard key={item.title} {...item} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section
+        aria-labelledby="partners-heading"
+        className="border-t border-slate-100 bg-white py-12 font-inter lg:py-16"
+      >
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-8">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
+            Partners
+          </p>
+          <h2
+            id="partners-heading"
+            className="mb-8 text-2xl font-bold text-cDarkBlue sm:text-3xl"
+          >
+            Our AI training platform partners
+          </h2>
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {PARTNERS.map((partner) => (
+              <li key={partner.name}>
+                <a
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-24 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    loading="lazy"
+                    className={`${partner.logoClass} object-contain`}
+                  />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-muted">
+            Each platform runs its own screening and makes its own acceptance
+            decisions. You always apply and work under your own account.
+          </p>
         </div>
       </section>
 

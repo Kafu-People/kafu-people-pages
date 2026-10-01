@@ -34,13 +34,20 @@ interface WebhookContext {
 export const onRequestPost = async (context: WebhookContext): Promise<Response> => {
   const { request, env } = context;
 
-  const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
-    httpClient: Stripe.createFetchHttpClient(),
-  });
-
   // 1. Verify signature. Must use the raw body and the async variant on Workers.
   const signature = request.headers.get("stripe-signature");
   if (!signature) return new Response("Missing signature", { status: 400 });
+
+  // Without these secrets the Stripe client throws. Return 503 so Stripe
+  // retries the event later instead of the Worker crashing.
+  if (!env.STRIPE_SECRET_KEY || !env.STRIPE_WEBHOOK_SECRET) {
+    console.error("Stripe webhook is not configured: missing Stripe secrets");
+    return new Response("Webhook not configured", { status: 503 });
+  }
+
+  const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
+    httpClient: Stripe.createFetchHttpClient(),
+  });
 
   const body = await request.text();
   let event: Stripe.Event;

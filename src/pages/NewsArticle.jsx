@@ -5,6 +5,7 @@ import { ArticleLD, SpeakableLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
 import { useSSRData } from "../lib/SSRDataContext";
 import ArticleContent from "../components/ArticleContent";
+import ImageCredit from "../components/ImageCredit";
 import { prepareNewsListReturn } from "../lib/newsListScroll";
 
 const formatDate = (iso) =>
@@ -52,7 +53,7 @@ const NewsArticle = () => {
     <>
       <PageSEO
         title={title(article.title)}
-        description={article.excerpt || description}
+        description={article.metaDescription || article.excerpt || description}
         canonicalPath={canonicalPath(article.slug)}
         ogImage={articleOgImage}
       >
@@ -97,12 +98,15 @@ const NewsArticle = () => {
         </header>
 
         {article.image && (
-          <div className="mb-8 overflow-hidden rounded-2xl bg-cDarkBlue shadow-lg">
-            <img loading="lazy"               src={article.image}
-              alt={article.title}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <figure className="mb-8">
+            <div className="overflow-hidden rounded-2xl bg-cDarkBlue shadow-lg">
+              <img loading="lazy"               src={article.image}
+                alt={article.imageAlt || article.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <ImageCredit credit={article.imageCredit} />
+          </figure>
         )}
 
         <ArticleContent text={article.content} speakableIndex={0} />

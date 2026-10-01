@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
 import TeamAvatar from "./TeamAvatar";
-
-const hasLinkedIn = (url) => url && url !== "/";
+import { getProfileLink, hasProfileLink } from "./profileLink";
 
 /** Fixed overlay grid — every card shares the same text band height and slot positions. */
 const NAME_HEIGHT = "h-[2.75rem]";
@@ -14,6 +12,7 @@ const BIO_PREVIEW_HEIGHT = "h-[3.75rem]";
 
 const TeamLeadershipCard = ({ member, index = 0 }) => {
   const [expanded, setExpanded] = useState(false);
+  const { Icon, label } = getProfileLink(member.name, member.linkedin);
 
   return (
     <motion.article
@@ -31,15 +30,15 @@ const TeamLeadershipCard = ({ member, index = 0 }) => {
           className="absolute inset-0 h-full w-full object-cover object-top"
         />
 
-        {hasLinkedIn(member.linkedin) && (
+        {hasProfileLink(member.linkedin) && (
           <a
             href={member.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${member.name} on LinkedIn`}
+            aria-label={label}
             className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-lg text-cDarkBlue shadow-md transition hover:bg-CPurple hover:text-white"
           >
-            <FaLinkedin />
+            <Icon />
           </a>
         )}
 

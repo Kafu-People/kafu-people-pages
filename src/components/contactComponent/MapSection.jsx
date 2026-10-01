@@ -51,7 +51,7 @@ const MapSection = () => {
       }}
     >
       <iframe
-        title="Kafu People office location — Brantjesoever 4, Purmerend"
+        title="Kafu People office location: Brantjesoever 4, Purmerend"
         src={OFFICE_MAPS_EMBED_URL}
         className="absolute inset-0 h-full w-full"
         style={{

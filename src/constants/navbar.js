@@ -8,11 +8,10 @@ const DARK_HERO_PATHS = new Set([
   "/newsAndEvents",
   "/news",
   "/blogs",
-  "/team",
   "/ProductsCategories",
 ]);
 
-const DARK_HERO_PREFIXES = ["/event/", "/training/", "/portfolio/"];
+const DARK_HERO_PREFIXES = ["/event/", "/training/", "/portfolio/", "/services/", "/enroll/"];
 
 export function isArticleDetailPath(pathname) {
   return (

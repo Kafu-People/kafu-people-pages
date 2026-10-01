@@ -6,8 +6,8 @@ export const OFFICE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Brantjesoever+4,+1441DW+Purmerend,+Netherlands";
 export const OFFICE_MAPS_EMBED_URL =
   "https://maps.google.com/maps?q=Brantjesoever+4,+1441DW+Purmerend,+Netherlands&hl=en&z=16&output=embed";
-export const WHATSAPP_URL = "https://wa.me/31613913024";
-export const WHATSAPP_DISPLAY = "+31 6 13913024";
+export const WHATSAPP_URL = "https://wa.me/13173604384";
+export const WHATSAPP_DISPLAY = "+1 (317) 360-4384";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/kafu-people/";
 export const CALENDLY_URL = "https://calendly.com/kafupeople/30min";
 export const CALENDLY_PRIMARY_COLOR = "#1E4FD4";
@@ -43,7 +43,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     quote:
-      "Kafu People is fantastic to work with — thorough communication, professional, highly skilled, and just a great partner. They have an excellent attitude regardless of the situation. I highly recommend them for your development needs.",
+      "Kafu People is fantastic to work with: thorough communication, professional, highly skilled, and just a great partner. They have an excellent attitude regardless of the situation. I highly recommend them for your development needs.",
     name: "Blake W.",
     location: "Charleston, United States",
     project: "ThetaScreener",

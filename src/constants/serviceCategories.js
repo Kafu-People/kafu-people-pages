@@ -4,7 +4,7 @@ export const SERVICE_CATEGORIES = [
     id: "ai-agentic",
     title: "AI & Agentic Workflows",
     summary:
-      "We design and deploy autonomous AI agents that integrate into your operations — handling multi-step workflows, LLM integrations, and intelligent automation.",
+      "We design and deploy autonomous AI agents that integrate into your operations, handling multi-step workflows, LLM integrations, and intelligent automation.",
     homeIcon: "ai",
     servicesPage: {
       image: "/images/blogs/building-scalable-ai-agents.jpg",
@@ -28,7 +28,7 @@ export const SERVICE_CATEGORIES = [
     id: "saas-mvp",
     title: "SaaS & Startup MVPs",
     summary:
-      "Launch your product in weeks with scalable MVPs — user auth, billing, APIs, and core features ready for real users and early validation.",
+      "Launch your product in weeks with scalable MVPs: user auth, billing, APIs, and core features ready for real users and early validation.",
     homeIcon: "rocket",
     servicesPage: {
       image: "/images/blogs/shipping-saas-mvp-in-six-weeks.jpg",
@@ -52,7 +52,7 @@ export const SERVICE_CATEGORIES = [
     id: "cloud-dashboards",
     title: "Cloud-Native Dashboards",
     summary:
-      "Build real-time dashboards and data visualization on cloud-native infrastructure — live streaming, embedded analytics, and performance at scale.",
+      "Build real-time dashboards and data visualization on cloud-native infrastructure: live streaming, embedded analytics, and performance at scale.",
     homeIcon: "cloud",
     servicesPage: {
       image: "/images/newsAndEvents/new-cloud-native-dashboard-template.jpg",
@@ -95,9 +95,52 @@ export const SERVICE_CATEGORIES = [
       icon: "store",
     },
   },
+  {
+    id: "chatgpt-ads",
+    title: "Run Ads on ChatGPT",
+    summary:
+      "One of the first EU agencies running ChatGPT ad campaigns for brands. We handle strategy, creative, and full campaign management on OpenAI's ad platform.",
+    homeIcon: "ads",
+    servicesPage: {
+      image: "/images/blogs/building-scalable-ai-agents.jpg",
+      decorative: "/images/AI.svg",
+      heroGradient:
+        "bg-gradient-to-br from-slate-950 via-violet-700 to-slate-900",
+      headerBg: "bg-violet-50 border-violet-200/60",
+      headerLabel: "text-violet-700",
+      headerTitle: "text-cDarkBlue",
+      headerBody: "text-muted",
+      overviewCard:
+        "border-violet-600/30 bg-violet-600/5 hover:border-violet-600/50 hover:bg-violet-600/10",
+      overviewIcon: "text-violet-600",
+      offeringsBg: "bg-slate-900",
+      card: "bg-white/10 border-white/20 backdrop-blur-md",
+      iconWrap: "bg-white/15 text-white",
+      icon: "bullhorn",
+    },
+  },
+  {
+    id: "ai-training-coaching",
+    title: "AI Training Coaching",
+    summary:
+      "Coaching for developers in Latin America and the US to get accepted onto AI training platforms and do great work there.",
+    homeIcon: "coaching",
+    // Has its own page instead of an offerings section on /services.
+    href: "/services/ai-training-coaching",
+    // A coaching program, not client work, so it is not a portfolio filter.
+    inPortfolio: false,
+    servicesPage: {
+      overviewCard:
+        "border-primary/30 bg-primary/5 hover:border-primary/50 hover:bg-primary/10",
+      overviewIcon: "text-primary",
+      icon: "graduationCap",
+    },
+  },
 ];
 
-export const SERVICE_CATEGORY_TITLES = SERVICE_CATEGORIES.map((c) => c.title);
+export const SERVICE_CATEGORY_TITLES = SERVICE_CATEGORIES.filter(
+  (c) => c.inPortfolio !== false
+).map((c) => c.title);
 
 /** Individual offerings grouped under SERVICE_CATEGORIES on /services. */
 export const SERVICE_OFFERINGS = [
@@ -229,6 +272,42 @@ export const SERVICE_OFFERINGS = [
     title: "White-Label Dashboard Portals",
     description:
       "Provide branded analytics portals for each client with custom themes, user roles, and secure data isolation on shared cloud infrastructure.",
+  },
+  // ChatGPT Ads
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "bullhorn",
+    title: "ChatGPT Ad Campaign Strategy",
+    description:
+      "Define campaign goals, target audiences, and budget allocation for your ChatGPT ad campaigns, built around your product's value proposition and EU market positioning.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "magic",
+    title: "Ad Creative & Copywriting",
+    description:
+      "Craft compelling ad copy and creative assets that meet OpenAI's ad policies: messaging that converts within the unique context of a conversational AI interface.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "chartLine",
+    title: "Campaign Setup & Launch",
+    description:
+      "Full technical setup on OpenAI's advertiser platform: account configuration, audience targeting, bid strategy, and compliant landing page alignment.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "analytics",
+    title: "Ongoing Management & Optimisation",
+    description:
+      "Continuous campaign monitoring, A/B testing, and bid adjustments to improve performance, reduce cost-per-click, and maximise return on ad spend.",
+  },
+  {
+    categoryId: "chatgpt-ads",
+    iconKey: "chartBar",
+    title: "Performance Reporting",
+    description:
+      "Clear, actionable reports on impressions, clicks, conversions, and ROAS, so you always know what your ChatGPT ad budget is delivering.",
   },
   // Business & Corporate Websites
   {

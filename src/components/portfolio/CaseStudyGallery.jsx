@@ -2,16 +2,17 @@ import { useState, useCallback } from "react";
 
 export default function CaseStudyGallery({ images, title }) {
   const [current, setCurrent] = useState(0);
-
-  if (!images?.length) return null;
+  const count = images?.length ?? 0;
 
   const prev = useCallback(() => {
-    setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
-  }, [images.length]);
+    setCurrent((c) => (c === 0 ? count - 1 : c - 1));
+  }, [count]);
 
   const next = useCallback(() => {
-    setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
-  }, [images.length]);
+    setCurrent((c) => (c === count - 1 ? 0 : c + 1));
+  }, [count]);
+
+  if (!count) return null;
 
   if (images.length <= 2) {
     return (

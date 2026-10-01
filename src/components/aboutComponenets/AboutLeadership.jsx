@@ -12,7 +12,7 @@ const AboutLeadership = () => {
         </h2>
         <p className="mt-4 text-textGray">
           Kafu People is a distributed, remote-first team. We bring together
-          specialists across AI, cloud, security, and full-stack development —
+          specialists across AI, cloud, security, and full-stack development,
           working as one team regardless of timezone, and as a seamless
           extension of yours.
         </p>

@@ -10,6 +10,8 @@ import {
   FaLink,
   FaWhatsapp,
   FaLinkedin,
+  FaBullhorn,
+  FaGraduationCap,
 } from "react-icons/fa";
 import {
   CONTACT_EMAIL,
@@ -27,6 +29,8 @@ const SERVICE_FOOTER_ICONS = {
   "saas-mvp": FaBrain,
   "cloud-dashboards": FaCloud,
   "business-websites": FaLink,
+  "chatgpt-ads": FaBullhorn,
+  "ai-training-coaching": FaGraduationCap,
 };
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;
@@ -66,15 +70,24 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Services</h3>
               <ul className={listClass}>
-                {SERVICE_CATEGORIES.map(({ id, title }) => {
+                {SERVICE_CATEGORIES.map(({ id, title, href }) => {
                   const Icon = SERVICE_FOOTER_ICONS[id];
                   return (
-                    <li
-                      key={id}
-                      className="flex items-center transition-colors hover:text-primary-light"
-                    >
-                      <Icon className="mr-2 shrink-0" />
-                      {title}
+                    <li key={id}>
+                      {href ? (
+                        <Link
+                          to={href}
+                          className="flex items-center transition-colors hover:text-primary-light"
+                        >
+                          <Icon className="mr-2 shrink-0" aria-hidden="true" />
+                          {title}
+                        </Link>
+                      ) : (
+                        <span className="flex items-center transition-colors hover:text-primary-light">
+                          <Icon className="mr-2 shrink-0" aria-hidden="true" />
+                          {title}
+                        </span>
+                      )}
                     </li>
                   );
                 })}
@@ -115,14 +128,6 @@ const Footer = () => {
                   className="hover:text-primary-light transition-colors"
                 >
                   News & Updates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/team"
-                  className="hover:text-primary-light transition-colors"
-                >
-                  Team
                 </Link>
               </li>
               </ul>

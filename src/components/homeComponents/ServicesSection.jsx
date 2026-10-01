@@ -1,21 +1,26 @@
 import { Link } from "react-router-dom";
-import { LuRocket } from "react-icons/lu";
+import {
+  LuSparkles,
+  LuRocket,
+  LuCloud,
+  LuCodeXml,
+  LuMegaphone,
+  LuGraduationCap,
+  LuArrowRight,
+} from "react-icons/lu";
 import BookMeetingButton from "../ui/BookMeetingButton";
-import aiMachineIcon from "../../assets/images/homeServices/ai-machine.png";
-import webDevelopmentIcon from "../../assets/images/homeServices/web-development.png";
-import awsCloudIcon from "../../assets/images/homeServices/aws-cloud.png";
 import { MdDoubleArrow } from "react-icons/md";
 import { SERVICE_CATEGORIES } from "../../constants/serviceCategories";
 
+// One outline icon family so every card reads at the same weight and size.
 const HOME_ICONS = {
-  ai: aiMachineIcon,
-  rocket: null,
-  cloud: awsCloudIcon,
-  web: webDevelopmentIcon,
+  ai: LuSparkles,
+  rocket: LuRocket,
+  cloud: LuCloud,
+  web: LuCodeXml,
+  ads: LuMegaphone,
+  coaching: LuGraduationCap,
 };
-
-const iconWrapClass =
-  "mb-6 flex h-20 w-20 shrink-0 items-center justify-start sm:h-24 sm:w-24";
 
 const ServicesSection = () => {
   return (
@@ -26,47 +31,51 @@ const ServicesSection = () => {
         </p>
         <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Our Services</h2>
         <p className="mx-auto mb-12 max-w-2xl text-base text-cWhite/90">
-          End-to-end support for teams that need to ship — from architecture and
+          End-to-end support for teams that need to ship, from architecture and
           development to cloud and AI.
         </p>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
-          {SERVICE_CATEGORIES.map(({ title, summary, homeIcon }) => {
-            const icon = HOME_ICONS[homeIcon];
+        {/* Centered wrap: 3 + 2 on desktop, 2 per row on tablet, 1 on mobile. */}
+        <ul className="flex flex-wrap justify-center gap-6">
+          {SERVICE_CATEGORIES.map(({ title, summary, homeIcon, href }) => {
+            const Icon = HOME_ICONS[homeIcon] ?? LuRocket;
 
             return (
-              <div
+              <li
                 key={title}
-                className="rounded-2xl bg-cWhite/10 p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-cWhite/[0.15]"
+                className="relative flex w-full flex-col rounded-2xl bg-cWhite/10 p-7 text-left ring-1 ring-cWhite/10 transition-all duration-300 focus-within:ring-2 focus-within:ring-cWhite hover:-translate-y-1 hover:bg-cWhite/[0.15] sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
               >
-                {icon ? (
-                  <img
-                    src={icon}
-                    alt={title}
-                    className={`${iconWrapClass} object-contain object-left`}
-                    loading="lazy"
-                    decoding="async"
-                    width={48}
-                    height={48}
-                  />
-                ) : (
-                  <div className={iconWrapClass}>
-                    <LuRocket
-                      className="h-14 w-14 text-cWhite sm:h-16 sm:w-16"
-                      strokeWidth={1}
-                      aria-hidden
-                    />
-                  </div>
-                )}
-                <h3 className="mb-3 text-2xl font-bold text-cWhite sm:text-[1.75rem]">
-                  {title}
+                <span
+                  className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-cWhite/15"
+                  aria-hidden="true"
+                >
+                  <Icon className="h-6 w-6 text-cWhite" strokeWidth={1.75} />
+                </span>
+                <h3 className="mb-2 text-xl font-bold leading-snug text-cWhite">
+                  {href ? (
+                    // Stretched link: the whole card is clickable.
+                    <Link
+                      to={href}
+                      className="after:absolute after:inset-0 after:rounded-2xl focus:outline-none"
+                    >
+                      {title}
+                    </Link>
+                  ) : (
+                    title
+                  )}
                 </h3>
-                <p className="text-sm leading-relaxed text-cWhite/90">
+                <p className="text-sm leading-relaxed text-cWhite/85">
                   {summary}
                 </p>
-              </div>
+                {href ? (
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-cWhite">
+                    See the program
+                    <LuArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                ) : null}
+              </li>
             );
           })}
-        </div>
+        </ul>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <BookMeetingButton buttonText="Book a Meeting" variant="secondary" />
           <Link

@@ -8,7 +8,7 @@ export const OrganizationLD = () => ({
   url: SITE_URL,
   logo: `${SITE_URL}/images/kafupeople.webp`,
   description:
-    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs — from idea to production.",
+    "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs, from idea to production.",
   email: CONTACT_EMAIL,
   address: {
     "@type": "PostalAddress",
@@ -33,6 +33,7 @@ export const BlogPostingLD = (blog) => ({
     : `${SITE_URL}/images/kafupeople.webp`,
   datePublished: blog.datePublished,
   dateModified: blog.dateModified || blog.datePublished,
+  ...(blog.tags?.length ? { keywords: blog.tags.join(", ") } : {}),
   author: {
     "@type": "Person",
     name: blog.author || SITE_NAME,
@@ -56,6 +57,7 @@ export const ArticleLD = (article) => ({
   description: article.excerpt,
   image: `${SITE_URL}${article.image}`,
   datePublished: article.date,
+  ...(article.tags?.length ? { keywords: article.tags.join(", ") } : {}),
   author: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -82,10 +84,10 @@ export const SoftwareAppLD = (caseStudy) => ({
   },
 })
 
-export const FAQPageLD = (questions) => ({
+export const FAQPageLD = (questions, id = `${SITE_URL}/services#faq`) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `${SITE_URL}/services#faq`,
+  "@id": id,
   mainEntity: questions.map((q) => ({
     "@type": "Question",
     name: q.question,

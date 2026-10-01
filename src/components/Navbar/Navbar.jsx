@@ -8,9 +8,16 @@ import { NAV_SCROLL_TRANSITION_CLASS } from "../../constants/layout";
 const menuItems = [
   { title: "HOME", url: "/" },
   { title: "ABOUT", url: "/about" },
-  { title: "SERVICES", url: "/services" },
+  {
+    title: "SERVICES",
+    url: "/services",
+    submenu: [
+      { title: "All services", url: "/services" },
+      { title: "ChatGPT Ads", url: "/services/chatgpt-ads" },
+      { title: "AI Training Coaching", url: "/services/ai-training-coaching" },
+    ],
+  },
   { title: "PORTFOLIO", url: "/portfolio" },
-  { title: "TEAM", url: "/team" },
   { title: "BLOGS", url: "/blogs" },
   { title: "NEWS", url: "/news" },
   { title: "CONTACT", url: "/contact" },
@@ -18,11 +25,15 @@ const menuItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openMobileGroup, setOpenMobileGroup] = useState(null);
   const { pathname } = useLocation();
   const { isScrolledPastTop, useLightNavText } = useNavScroll();
   const isSolid = isScrolledPastTop || isOpen;
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setOpenMobileGroup(null);
+  };
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -102,6 +113,53 @@ const Navbar = () => {
             <ul className="flex flex-col py-2">
               {menuItems.map((menu) => (
                 <li key={menu.title} className="border-b border-slate-800/80 last:border-0">
+                  {menu.submenu ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenMobileGroup((g) => (g === menu.title ? null : menu.title))
+                        }
+                        aria-expanded={openMobileGroup === menu.title}
+                        aria-controls={`mobile-submenu-${menu.title}`}
+                        className={`flex w-full min-h-[44px] items-center justify-center gap-2 px-4 py-3.5 text-sm font-medium uppercase tracking-wide transition-colors ${
+                          menu.submenu.some((sub) => sub.url === pathname)
+                            ? "text-primary-light bg-slate-800/60"
+                            : "text-white hover:bg-slate-800 hover:text-primary-light"
+                        }`}
+                      >
+                        {menu.title}
+                        <span
+                          aria-hidden="true"
+                          className={`text-xs transition-transform ${
+                            openMobileGroup === menu.title ? "rotate-180" : ""
+                          }`}
+                        >
+                          &#9662;
+                        </span>
+                      </button>
+                      {openMobileGroup === menu.title ? (
+                        <ul id={`mobile-submenu-${menu.title}`} className="bg-slate-950/60 pb-1">
+                          {menu.submenu.map((sub) => (
+                            <li key={sub.url}>
+                              <Link
+                                to={sub.url}
+                                onClick={closeMenu}
+                                aria-current={pathname === sub.url ? "page" : undefined}
+                                className={`flex min-h-[44px] items-center justify-center px-4 py-3 text-sm transition-colors ${
+                                  pathname === sub.url
+                                    ? "text-primary-light"
+                                    : "text-slate-200 hover:bg-slate-800 hover:text-primary-light"
+                                }`}
+                              >
+                                {sub.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </>
+                  ) : (
                   <Link
                     to={menu.url}
                     onClick={closeMenu}
@@ -113,6 +171,7 @@ const Navbar = () => {
                   >
                     {menu.title}
                   </Link>
+                  )}
                 </li>
               ))}
             </ul>

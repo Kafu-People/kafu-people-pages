@@ -2,10 +2,10 @@ import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "../constants/site";
 import { getCaseBySlug } from "../data/portfolioCases";
 
 const defaultDescription =
-  "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs — from idea to production.";
+  "Kafu People helps startups and growing businesses ship AI-powered products, cloud-native apps, and full-stack MVPs, from idea to production.";
 
 const fallbackCaseStudyDescription =
-  "In-depth case study of a product built by Kafu People — from concept to delivery.";
+  "In-depth case study of a product built by Kafu People, from concept to delivery.";
 
 // cut long descriptions to ~155 chars so google doesn't chop them mid-word
 const truncateForMeta = (text, max = 155) =>
@@ -34,11 +34,11 @@ export const PAGE_SEO = {
   portfolio: {
     title: `Portfolio | ${SITE_NAME}`,
     description:
-      "Explore products and projects built by Kafu People — SaaS MVPs, dashboards, integrations, and more.",
+      "Explore products and projects built by Kafu People: SaaS MVPs, dashboards, integrations, and more.",
     canonicalPath: "/portfolio",
   },
   portfolioCaseStudy: {
-    title: (name) => `${name} — Case Study | ${SITE_NAME}`,
+    title: (name) => `${name} | Case Study | ${SITE_NAME}`,
     // grab each case's own description instead of using one shared line
     description: (slug) => {
       const caseStudy = getCaseBySlug(slug);
@@ -51,6 +51,24 @@ export const PAGE_SEO = {
     description:
       "AI & agentic workflows, SaaS MVPs, AWS cloud architecture, and business websites tailored to your stage of growth.",
     canonicalPath: "/services",
+  },
+  chatgptAds: {
+    title: `Run Ads on ChatGPT | ${SITE_NAME}`,
+    description:
+      "Kafu People is one of the first EU agencies running ChatGPT ad campaigns for brands, covering strategy, creative, setup, and ongoing management on OpenAI's ad platform.",
+    canonicalPath: "/services/chatgpt-ads",
+  },
+  aiTrainingCoaching: {
+    title: `AI Training Coaching for Developers | ${SITE_NAME}`,
+    description:
+      "Coaching for developers in Latin America and the US to get accepted onto AI training platforms for RLHF, evaluation, and coding tasks, and to do great work once you are in.",
+    canonicalPath: "/services/ai-training-coaching",
+  },
+  enrollSuccess: {
+    title: `You're enrolled | ${SITE_NAME}`,
+    description:
+      "Thank you for enrolling in AI Training Coaching. Here is what happens next.",
+    canonicalPath: "/enroll/success",
   },
   news: {
     title: `News & Events | ${SITE_NAME}`,
@@ -65,13 +83,13 @@ export const PAGE_SEO = {
     canonicalPath: "/news",
   },
   newsArticle: {
-    title: (title) => `${title} — News | ${SITE_NAME}`,
+    title: (title) => `${title} | News | ${SITE_NAME}`,
     description:
       "Read the latest news and updates from Kafu People on AI, cloud, and modern software delivery.",
     canonicalPath: (slug) => `/news/${slug}`,
   },
   blogPost: {
-    title: (title) => `${title} — Blog | ${SITE_NAME}`,
+    title: (title) => `${title} | Blog | ${SITE_NAME}`,
     description:
       "Read the latest article from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: (slug) => `/blogs/${slug}`,
@@ -81,12 +99,6 @@ export const PAGE_SEO = {
     description:
       "Articles and updates from Kafu People on technology, product development, and digital transformation.",
     canonicalPath: "/blogs",
-  },
-  team: {
-    title: `Our Team | ${SITE_NAME}`,
-    description:
-      "Meet the distributed, remote-first team of engineers, designers, and strategists building AI, cloud, and full-stack products at Kafu People.",
-    canonicalPath: "/team",
   },
   terms: {
     title: `Terms of Service | ${SITE_NAME}`,

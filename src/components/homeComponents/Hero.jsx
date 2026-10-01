@@ -84,7 +84,7 @@ export default function Hero() {
             </h1>
             <p className="mb-8 text-base leading-relaxed text-slate-200 sm:text-lg lg:mb-10">
               We help startups and growing businesses move from idea to
-              production-ready products — with practical AI workflows, end-to-end
+              production-ready products, with practical AI workflows, end-to-end
               development, and scalable AWS architecture.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">

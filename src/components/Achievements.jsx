@@ -5,31 +5,31 @@ const reasons = [
     id: 1,
     title: "Structured delivery",
     description:
-      "We scope work clearly, communicate progress often, and adapt when requirements shift — so you always know where your project stands.",
+      "We scope work clearly, communicate progress often, and adapt when requirements shift, so you always know where your project stands.",
   },
   {
     id: 2,
     title: "Full-stack & cloud",
     description:
-      "From React frontends to AWS backends, APIs, and databases — we build systems designed to run in production, not just demos.",
+      "From React frontends to AWS backends, APIs, and databases, we build systems designed to run in production, not just demos.",
   },
   {
     id: 3,
     title: "AI that ships",
     description:
-      "Agent workflows, integrations, and ML features grounded in your product goals — practical automation your team can maintain.",
+      "Agent workflows, integrations, and ML features grounded in your product goals: practical automation your team can maintain.",
   },
   {
     id: 4,
     title: "Clear communication",
     description:
-      "Regular updates, honest timelines, and questions asked early — the kind of partnership our clients highlight in their reviews.",
+      "Regular updates, honest timelines, and questions asked early: the kind of partnership our clients highlight in their reviews.",
   },
   {
     id: 5,
     title: "Quality you can review",
     description:
-      "Clean, documented code and attention to detail on every engagement — from DEX tooling to enterprise migrations.",
+      "Clean, documented code and attention to detail on every engagement, from DEX tooling to enterprise migrations.",
   },
   {
     id: 6,

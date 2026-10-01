@@ -10,7 +10,7 @@ export function flattenBlogPreview(text) {
   return (text || "").replace(/\s+/g, " ").trim();
 }
 
-const BULLET_RE = /^[•\-]\s/;
+const BULLET_RE = /^[•-]\s/;
 const NUMBERED_RE = /^\d+\.\s/;
 const EM_DASH_SPLIT_RE = /^(\d+\.\s.+?)(?:\s*[—–-]\s*(.+))?$/;
 
@@ -49,6 +49,29 @@ export function isImpactBlock(text) {
       !fragment.includes(":")
     );
   });
+}
+
+/** A block that is a single "## Heading" line. */
+export function isHeadingBlock(lines) {
+  return lines.length === 1 && /^##\s+\S/.test(lines[0]);
+}
+
+/** A block where every line is a "| a | b |" row, with a "|---|" divider second. */
+export function isTableBlock(lines) {
+  return (
+    lines.length >= 3 &&
+    lines.every((line) => line.startsWith("|") && line.endsWith("|")) &&
+    /^\|[\s:|-]+\|$/.test(lines[1])
+  );
+}
+
+export function parseTableBlock(lines) {
+  const cells = (line) =>
+    line
+      .slice(1, -1)
+      .split("|")
+      .map((cell) => cell.trim());
+  return { header: cells(lines[0]), rows: lines.slice(2).map(cells) };
 }
 
 /** Split article body into paragraph blocks. */

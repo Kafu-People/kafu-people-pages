@@ -42,7 +42,7 @@ const Team = () => {
           <p className="mt-2 mx-2 text-lg text-cWhite sm:text-xl lg:ml-12 lg:text-left">
             We're a distributed, remote-first team of engineers, designers, and
             strategists who partner with founders and growing businesses to ship
-            AI, cloud, and full-stack products — from idea to production.
+            AI, cloud, and full-stack products, from idea to production.
           </p>
         </div>
       </PageHero>

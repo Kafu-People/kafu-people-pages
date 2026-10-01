@@ -13,7 +13,7 @@ const ContactHero = () => {
         Contact Us
       </h1>
       <p className="text-base leading-relaxed text-cWhite/90 sm:text-lg">
-        Book a meeting or send a message — we help startups and growing teams
+        Book a meeting or send a message. We help startups and growing teams
         ship AI, cloud, and full-stack solutions. We typically respond within
         one business day.
       </p>

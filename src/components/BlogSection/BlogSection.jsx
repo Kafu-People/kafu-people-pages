@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import axios from "axios";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
 import { BreadcrumbListLD } from "../Schema";
@@ -41,7 +42,6 @@ const BlogSection = () => {
 
     const fetchBlogs = async () => {
       try {
-        const { default: axios } = await import("axios");
         const response = await axios.get(`${BACKEND_URL}/api/blogs`, {
           timeout: 3000,
           signal: controller.signal,
@@ -115,7 +115,7 @@ const BlogSection = () => {
         </h1>
         <div className="w-auto lg:w-[700px]">
           <p className="mx-4 mt-2 text-lg text-cWhite sm:text-justify sm:text-xl lg:ml-24 lg:text-left">
-            Team insights, startup lessons, and engineering perspectives — including the
+            Team insights, startup lessons, and engineering perspectives, including the
             posts we share on LinkedIn. Short reads from our experience building products
             with clients.
           </p>

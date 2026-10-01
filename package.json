@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/check-pages-asset-size.mjs",
+    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/strip-ssr-bare-imports.mjs && node scripts/check-pages-asset-size.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "check:assets": "node scripts/check-pages-asset-size.mjs",
     "lint": "eslint .",
@@ -25,9 +25,13 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.3",
     "react-toastify": "^11.0.3",
+    "stripe": "^22.6.2",
     "sweetalert2": "^11.15.10",
     "swiper": "^12.2.0",
     "vike": "^0.4.212"
+  },
+  "overrides": {
+    "glob": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

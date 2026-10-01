@@ -17,6 +17,8 @@ const TermsOfService = () => {
           <LegalDocumentHeader
             title="Terms of Service"
             subtitle={`These terms govern your use of the ${SITE_NAME} website and how we engage with you regarding our technology services.`}
+            lastUpdated="October 1, 2026"
+            version="1.3"
           />
 
           <LegalSection id="acceptance" title="1. Acceptance of Terms">
@@ -50,6 +52,8 @@ const TermsOfService = () => {
               Content on the Site is for general information and marketing
               purposes. It does not constitute a binding offer or guarantee of
               results, availability, or pricing until confirmed in writing.
+              This does not apply to AI Training Coaching packages purchased
+              through the Site, which are governed by Section 13.
             </p>
           </LegalSection>
 
@@ -234,10 +238,105 @@ const TermsOfService = () => {
             </p>
           </LegalSection>
 
-          <LegalSection id="change-history" title="13. Change History">
+          <LegalSection id="coaching" title="13. AI Training Coaching Programs">
+            <p>
+              This section applies when you purchase an AI Training Coaching
+              package (Starter, Cohort, or 1:1 Intensive) from Kafu People. It
+              applies in addition to the rest of these Terms.
+            </p>
+            <p>
+              <strong>Enrollment and payment.</strong> Packages are paid in
+              full, in advance, through our payment processor Stripe. Prices are
+              shown in US dollars on the program page at the time of purchase.
+              Regional pricing is based on where you live, and you agree to
+              select the region that applies to you. Your enrollment is
+              confirmed once payment is completed.
+            </p>
+            <p>
+              <strong>Refunds.</strong> You may request a full refund within
+              seven (7) days of purchase, provided you have not attended any
+              live session (group or private). To request a refund, email{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> from the
+              email address used at checkout. Approved refunds are returned to
+              the original payment method. After seven days, or once you have
+              attended a live session, payments are non-refundable except where
+              this section or applicable law says otherwise.
+            </p>
+            <p>
+              <strong>Cancellations and rescheduling.</strong>
+            </p>
             <ul>
               <li>
-                <strong>Version 1.0</strong> — April 25, 2026: Initial
+                You may stop participating at any time. Refunds are only
+                available as described under Refunds above.
+              </li>
+              <li>
+                Private sessions in the 1:1 Intensive can be rescheduled free of
+                charge with at least 24 hours&apos; notice. A private session
+                missed without that notice counts as used.
+              </li>
+              <li>
+                Missed group sessions are not repeated individually, but
+                available materials or recordings will be shared where
+                possible.
+              </li>
+              <li>
+                If we cancel or postpone a cohort or a session, we will offer
+                you a new date or, if you prefer, a full refund for any part of
+                the program not delivered.
+              </li>
+            </ul>
+            <p>
+              <strong>Your own platform accounts.</strong> The program teaches
+              you how to apply to and work on third-party AI training platforms.
+              You must apply and work only under your own accounts, using your
+              own identity, and you must follow each platform&apos;s terms of
+              service, eligibility rules, and confidentiality obligations.
+              Sharing, selling, renting, lending, or using another person&apos;s
+              account is not allowed. We never create, access, or operate
+              platform accounts for you or perform platform work on your
+              behalf. If you breach this clause, we may end your access to the
+              program without a refund.
+            </p>
+            <p>
+              <strong>No guarantee of results.</strong> Acceptance, task
+              availability, pay rates, and account decisions are made solely by
+              each platform. We do not guarantee that you will be accepted onto
+              any platform or earn any amount. Kafu People partners with Surge
+              AI, Scale AI, and Alignerr. These partnerships do not change how
+              each platform screens or accepts applicants, and Kafu People does
+              not make decisions about your platform account. Kafu People is not
+              affiliated with any other AI training platform.
+            </p>
+            <p>
+              <strong>Program materials.</strong> Guides, recordings, and other
+              materials are for your personal use only and may not be shared,
+              resold, or published.
+            </p>
+            <p>
+              <strong>Your statutory rights.</strong> Nothing in this section
+              limits any mandatory consumer rights you have under the laws that
+              apply to you.
+            </p>
+          </LegalSection>
+
+          <LegalSection id="change-history" title="14. Change History">
+            <ul>
+              <li>
+                <strong>Version 1.3</strong>, October 1, 2026: Section 13 now
+                names Kafu People&apos;s AI training platform partners.
+              </li>
+              <li>
+                <strong>Version 1.2</strong>, September 24, 2026: Clarified in
+                Section 2 that AI Training Coaching packages purchased through
+                the Site are governed by Section 13.
+              </li>
+              <li>
+                <strong>Version 1.1</strong>, September 24, 2026: Added Section
+                13 on AI Training Coaching Programs.
+              </li>
+              <li>
+                <strong>Version 1.0</strong>, April 25, 2026: Initial
                 publication of these Terms of Service.
               </li>
             </ul>

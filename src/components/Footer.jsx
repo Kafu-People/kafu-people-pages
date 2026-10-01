@@ -30,6 +30,7 @@ const SERVICE_FOOTER_ICONS = {
   "cloud-dashboards": FaCloud,
   "business-websites": FaLink,
   "chatgpt-ads": FaBullhorn,
+  "ai-training-coaching": FaGraduationCap,
 };
 const brandColumnClass = `${columnClass} flex flex-col items-center`;
 const linkColumnClass = `${columnClass} flex flex-col items-center`;
@@ -69,27 +70,27 @@ const Footer = () => {
             <div className={linkColumnInnerClass}>
               <h3 className={headingClass}>Services</h3>
               <ul className={listClass}>
-                {SERVICE_CATEGORIES.map(({ id, title }) => {
+                {SERVICE_CATEGORIES.map(({ id, title, href }) => {
                   const Icon = SERVICE_FOOTER_ICONS[id];
                   return (
-                    <li
-                      key={id}
-                      className="flex items-center transition-colors hover:text-primary-light"
-                    >
-                      <Icon className="mr-2 shrink-0" />
-                      {title}
+                    <li key={id}>
+                      {href ? (
+                        <Link
+                          to={href}
+                          className="flex items-center transition-colors hover:text-primary-light"
+                        >
+                          <Icon className="mr-2 shrink-0" aria-hidden="true" />
+                          {title}
+                        </Link>
+                      ) : (
+                        <span className="flex items-center transition-colors hover:text-primary-light">
+                          <Icon className="mr-2 shrink-0" aria-hidden="true" />
+                          {title}
+                        </span>
+                      )}
                     </li>
                   );
                 })}
-                <li>
-                  <Link
-                    to="/services/ai-training-coaching"
-                    className="flex items-center transition-colors hover:text-primary-light"
-                  >
-                    <FaGraduationCap className="mr-2 shrink-0" aria-hidden="true" />
-                    AI Training Coaching
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>

@@ -3,7 +3,6 @@ import { FaEnvelopeOpenText, FaCalendarCheck, FaUserCheck } from "react-icons/fa
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
-import BookMeetingButton from "../components/ui/BookMeetingButton";
 import { CALENDLY_URL, CONTACT_EMAIL } from "../constants/site";
 
 export default function EnrollSuccessPage() {
@@ -71,17 +70,15 @@ export default function EnrollSuccessPage() {
                   plan your program. Please use the same email address you
                   paid with.
                 </p>
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <BookMeetingButton buttonText="Book onboarding call" variant="primary" />
-                  <a
-                    href={CALENDLY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-primary underline-offset-2 hover:underline"
-                  >
-                    Open the booking page in a new tab
-                  </a>
-                </div>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-primary-dark"
+                >
+                  Book onboarding call
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
               </div>
             </li>
 

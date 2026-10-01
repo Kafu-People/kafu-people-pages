@@ -13,7 +13,7 @@ export function CyberServicePlaceholder() {
           <div className="mx-auto h-16 w-full max-w-3xl animate-pulse rounded bg-slate-100" />
         </div>
 
-        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_CATEGORIES.map((category) => (
             <div
               key={category.id}

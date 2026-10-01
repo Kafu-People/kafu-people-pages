@@ -21,6 +21,7 @@ import {
   FaLock,
   FaMagic,
   FaBullhorn,
+  FaGraduationCap,
 } from "react-icons/fa";
 import {
   MdOutlineAnalytics,
@@ -57,6 +58,7 @@ const SERVICE_ICONS = {
   palette: <FaPalette />,
   shield: <FaShieldAlt />,
   bullhorn: <FaBullhorn />,
+  graduationCap: <FaGraduationCap />,
 };
 
 function CategoryHero({ theme, index, title, summary }) {
@@ -108,23 +110,24 @@ const CyberService = () => {
             What we offer
           </p>
           <h2 className="mb-4 text-3xl font-bold text-cDarkBlue sm:text-4xl">
-            Five ways we help you ship
+            Six ways we can help
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
             Kafu People is a product engineering partner for startups and growing
             teams. We build AI-powered software, launch SaaS MVPs, ship cloud
             dashboards, and deliver business websites, from architecture through
-            production.
+            production. We also run ChatGPT ad campaigns and coach developers
+            for work on AI training platforms.
           </p>
         </div>
 
-        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_CATEGORIES.map((category) => {
             const theme = category.servicesPage;
             return (
               <a
                 key={category.id}
-                href={`#${category.id}`}
+                href={category.href ?? `#${category.id}`}
                 className={`rounded-xl border p-5 text-left transition hover:-translate-y-0.5 hover:shadow-md ${theme.overviewCard}`}
               >
                 <div className="mb-3 text-2xl text-primary">

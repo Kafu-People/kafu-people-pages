@@ -1,70 +1,100 @@
 import { Link } from "react-router-dom";
-const topics = [
+import { LuBrainCircuit, LuShieldCheck, LuCpu, LuArrowRight } from "react-icons/lu";
+
+const programs = [
   {
-    label: "Artificial Intelligence",
-    status: "live",
+    title: "AI Training Coaching",
+    topic: "Artificial Intelligence",
+    description:
+      "Get accepted onto AI training platforms and do great work on RLHF, evaluation, and coding tasks.",
     href: "/services/ai-training-coaching",
+    Icon: LuBrainCircuit,
   },
-  { label: "Cyber Security", status: "soon" },
-  { label: "Internet of Things", status: "soon" },
+  { title: "Cyber Security", topic: "Cyber Security", Icon: LuShieldCheck },
+  { title: "Internet of Things", topic: "Internet of Things", Icon: LuCpu },
 ];
 
 const TrainingPrograms = () => {
   return (
     <section className="bg-white py-16 lg:py-24 px-4 font-inter border-t border-slate-100">
-      <div className="max-w-3xl mx-auto text-center px-4">
-        <span className="inline-block rounded-full bg-accent/10 text-accent px-4 py-1 text-sm font-semibold mb-4">
-          Now enrolling: AI
-        </span>
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-          Training programs
-        </h2>
-        <p className="text-muted text-base md:text-lg mb-6">
-          Our AI Training Coaching program is open: we help developers in Latin
-          America and the US get accepted onto AI training platforms and do
-          great work there. Programs in security and IoT are coming soon.
-        </p>
-        <ul className="flex flex-wrap justify-center gap-3 mb-8">
-          {topics.map(({ label, status, href }) =>
-            status === "live" ? (
-              <li key={label}>
+      <div className="mx-auto max-w-5xl px-4">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+            Training programs
+          </h2>
+          <p className="text-muted text-base md:text-lg">
+            Hands-on programs for developers. AI Training Coaching is open now;
+            security and IoT programs are coming soon.
+          </p>
+        </div>
+
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {programs.map(({ title, topic, description, href, Icon }) =>
+            href ? (
+              <li
+                key={title}
+                className="flex flex-col rounded-2xl border-2 border-primary bg-white p-6 text-left shadow-md"
+              >
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <span
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"
+                    aria-hidden="true"
+                  >
+                    <Icon className="h-6 w-6" strokeWidth={1.75} />
+                  </span>
+                  <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
+                    Open now
+                  </span>
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  {topic}
+                </p>
+                <h3 className="mt-1 text-lg font-bold text-slate-900">{title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                  {description}
+                </p>
                 <Link
                   to={href}
-                  className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-accent/20"
+                  className="mt-5 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
                 >
-                  {label}
-                  <span className="rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-white">
-                    Live
-                  </span>
+                  See the program
+                  <LuArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </li>
             ) : (
               <li
-                key={label}
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-surface px-4 py-2 text-sm text-slate-700"
+                key={title}
+                className="flex flex-col rounded-2xl border border-slate-200 bg-surface p-6 text-left"
               >
-                {label}
-                <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">
-                  Coming soon
-                </span>
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <span
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-slate-200 text-slate-700"
+                    aria-hidden="true"
+                  >
+                    <Icon className="h-6 w-6" strokeWidth={1.75} />
+                  </span>
+                  <span className="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">
+                    Coming soon
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  A hands-on program for developers. Details coming soon.
+                </p>
               </li>
             )
           )}
         </ul>
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            to="/services/ai-training-coaching"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-primary-dark transition"
-          >
-            Explore AI Training Coaching
-          </Link>
+
+        <p className="mt-8 text-center text-sm text-muted">
+          Want to hear when security and IoT open?{" "}
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold text-primary hover:underline"
+            className="font-semibold text-primary underline-offset-2 hover:underline"
           >
-            Get notified about Security and IoT
+            Get notified
           </Link>
-        </div>
+        </p>
       </div>
     </section>
   );

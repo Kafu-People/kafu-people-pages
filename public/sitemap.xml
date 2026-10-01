@@ -2,73 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kafupeople.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/about</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/services</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/services/chatgpt-ads</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/services/ai-training-coaching</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/contact</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/blogs</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/news</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/newsAndEvents</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/training/ai</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/ProductsCategories</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/terms-of-service</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.30</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/privacy-policy</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/blogs/choosing-ai-training-platform-after-mturk-2026</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/blogs/linkedin-software-engineering-ai-trainer-program</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/blogs/ai-training-pay-by-field-and-task-2026</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/blogs/ai-will-not-replace-developers-ai-leverage</loc>
@@ -131,6 +146,36 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://kafupeople.com/news/micro1-high-rate-specialist-ai-training-roles</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/news/amazon-mechanical-turk-closes-after-21-years</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/news/funding-ai-training-data-companies-september-2026</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/news/employers-ai-training-new-survey-data-2026</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/news/ai-training-platform-onboarding-roundup-september-2026</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://kafupeople.com/news/grab-openai-verizon-ai-upskilling-programs</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://kafupeople.com/news/kafu-people-launches-ai-agent-practice</loc>
     <lastmod>2026-05-28</lastmod>
     <priority>0.70</priority>
@@ -182,17 +227,17 @@
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/echo3s</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/nerohalla</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://kafupeople.com/portfolio/giscrap</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.90</priority>
   </url>
 </urlset>

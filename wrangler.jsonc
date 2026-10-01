@@ -17,7 +17,7 @@
     {
       "binding": "DB",
       "database_name": "kafu-enrollments",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "787b029f-ac46-4541-b53f-1c36a492066b",
       "migrations_dir": "migrations"
     }
   ],

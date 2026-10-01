@@ -4,6 +4,56 @@
 
 const staticNews = [
   {
+    _id: "news-016",
+    slug: "micro1-high-rate-specialist-ai-training-roles",
+    title: "micro1 Posts High-Rate Specialist AI Training Roles",
+    excerpt: "New micro1 listings show reported rates of $100 to $200 per hour for bilingual psychologists and up to $170 per hour for QuickBooks specialists.",
+    content:
+      "micro1, a company that supplies expert human data and evaluations to AI labs, posted a new batch of specialist roles on its job board in late September 2026. The listed rates show how much more domain experts can earn than generalists in AI training work.\n" +
+      "\n" +
+      "## Reported ranges from the listings\n" +
+      "\n" +
+      "| Role | Listed hourly range (USD) |\n" +
+      "|---|---|\n" +
+      "| Bilingual psychologists and psychiatrists (Indonesian, Lithuanian, Georgian) | $100 to $200 |\n" +
+      "| QuickBooks specialist | $90 to $170 |\n" +
+      "| Robotics expert, electronics engineer, computer vision specialist | $50 to $90 |\n" +
+      "| Salesforce specialist | $28 to $92 |\n" +
+      "\n" +
+      "These are the ranges shown on each posting, not guaranteed pay. Listings can close or change at any time, and the final rate depends on the project and your background. The psychologist roles require a PhD.\n" +
+      "\n" +
+      "## What the work looks like\n" +
+      "\n" +
+      "The QuickBooks listing gives a good example. micro1 is looking for experienced accounting specialists to join an AI training project: reviewing accounting workflows, validating financial data, and flagging inconsistencies to help improve AI systems. The common thread is real professional judgment applied to AI output.\n" +
+      "\n" +
+      "## The premium for expertise\n" +
+      "\n" +
+      "Not every role pays at the top of these ranges. Some robotics trainer roles on the same board list around $30 per hour. The highest rates go to people with credentials and experience that are hard to find, especially when combined with a second language.\n" +
+      "\n" +
+      "For developers, the lesson is the same. Generic tasks are crowded and pay less. Specialist skills in a specific stack, domain, or language, plus strong performance on assessments, are what unlock better-paid projects.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.micro1.ai/jobs\">micro1: Job board</a>\n" +
+      "• <a href=\"https://jobs.micro1.ai/post/c19e2caa-4494-4e1c-9417-80a28e463027\">micro1: QuickBooks Specialist listing</a>\n" +
+      "• <a href=\"https://jobs.micro1.ai/post/193724fb-2847-47f6-9f5d-59a53769e40f\">micro1: Georgian Speaking Psychologist listing</a>\n" +
+      "• <a href=\"https://techcrunch.com/2025/09/12/micro1-a-competitor-to-scale-ai-raises-funds-at-500m-valuation/\">TechCrunch: micro1, a Scale AI competitor, raises funds</a>",
+    category: "AI Training",
+    date: "2026-09-30",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/micro1-specialist-ai-training-roles.webp",
+    imageAlt: "A doctor working on a laptop while on the phone",
+    imageCredit: {
+      name: "Vitaly Gariev",
+      url: "https://unsplash.com/@silverkblack",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/egCFrNJ6Djw",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "micro1"],
+  },
+  {
     _id: "news-015",
     slug: "amazon-mechanical-turk-closes-after-21-years",
     title: "Amazon Mechanical Turk Closes After 21 Years",

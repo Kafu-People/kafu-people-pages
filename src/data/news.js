@@ -4,6 +4,53 @@
 
 const staticNews = [
   {
+    _id: "news-011",
+    slug: "grab-openai-verizon-ai-upskilling-programs",
+    title: "Grab, OpenAI, and Verizon Launch Large AI Upskilling Programs",
+    excerpt: "Grab and OpenAI will train 30,000 gig workers and merchants in Southeast Asia, and Verizon commits $70M to free AI skills training in the US.",
+    content:
+      "Two large AI upskilling programs were announced on September 23, 2026, one in Southeast Asia and one in the United States. Both aim to give everyday workers practical AI skills rather than leaving that training to people who already work in tech.\n" +
+      "\n" +
+      "## Grab and OpenAI: GO Forward with AI\n" +
+      "\n" +
+      "Grab and OpenAI announced GO Forward with AI, a program to train 30,000 of Grab's driver, delivery, and merchant partners across Southeast Asia over two years. It runs through GrabAcademy and starts in Singapore with half-day, in-person masterclasses. Grab says the program will expand to Thailand, Indonesia, and the Philippines later in 2026.\n" +
+      "\n" +
+      "Participants get three months of ChatGPT Plus at no cost. The curriculum adapts material from OpenAI Academy, and GrabAcademy's regional trainers are being trained to deliver it.\n" +
+      "\n" +
+      "Grab also shared survey figures from Singapore: about half of its driver and delivery partners already use AI tools, and 87% said they are open to using them.\n" +
+      "\n" +
+      "## Verizon: AI Skills for America\n" +
+      "\n" +
+      "On the same day, Verizon announced AI Skills for America, a $70M commitment. It combines $50M in new funding with Verizon's existing $20M Reskilling and Career Transition Fund for departing employees, so not all of it is new money.\n" +
+      "\n" +
+      "The program offers a free online AI training portal with learning content from companies including IBM, Google, Microsoft, Anthropic, Coursera, and OpenAI. It also funds community coaching through partners such as LISC, NACCE, and Goodwill Industries International. Verizon says it is aimed at job seekers, early-career professionals, displaced workers, educators, and small businesses.\n" +
+      "\n" +
+      "## What it means for developers\n" +
+      "\n" +
+      "Large employers now treat basic AI skills as something the whole workforce needs, not only engineers. For developers, that raises the bar: using AI tools is becoming a baseline skill, and deeper work such as evaluating and improving AI output is where specialists stand out.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.grab.com/sg/press/others/grab-and-openai-partnership-expands-access-to-practical-ai-skills-across-sea/\">Grab: Grab and OpenAI partnership expands access to practical AI skills</a>\n" +
+      "• <a href=\"https://openai.com/index/grab-openai-ai-skills-southeast-asia/\">OpenAI: Grab and OpenAI AI skills in Southeast Asia</a>\n" +
+      "• <a href=\"https://www.verizon.com/about/news/verizon-ai-skills-for-america-investment\">Verizon: AI Skills for America</a>\n" +
+      "• <a href=\"https://njbiz.com/verizon-70m-free-ai-training/\">NJBIZ: Verizon commits $70M to free AI training</a>",
+    category: "AI Training",
+    date: "2026-09-24",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/ai-upskilling-programs-grab-verizon.webp",
+    imageAlt: "A presenter leading a training session for adults with laptops",
+    imageCredit: {
+      name: "Campaign Creators",
+      url: "https://unsplash.com/@campaign_creators",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/gMsnXqILjp4",
+    },
+    tags: ["ai-training", "upskilling", "remote-work", "openai", "grab", "verizon"],
+  },
+  {
     _id: "news-001",
     slug: "kafu-people-launches-ai-agent-practice",
     title: "Kafu People Launches Dedicated AI Agent Practice",

@@ -4,6 +4,57 @@
 
 const staticNews = [
   {
+    _id: "news-012",
+    slug: "ai-training-platform-onboarding-roundup-september-2026",
+    title: "How AI Training Platforms Are Changing Onboarding",
+    excerpt: "AI interviewers, paid expert studies, and student evaluators: a roundup of how AI training platforms recruit and screen contributors in September 2026.",
+    content:
+      "AI training platforms keep changing how they find and screen contributors. A few recent examples show the direction: more automated interviews, more specialist roles, and more paid research with experts.\n" +
+      "\n" +
+      "## Alignerr: an AI interviewer called Zara\n" +
+      "\n" +
+      "Alignerr, the expert network run by Labelbox, describes a five-step process: sign up with a resume, apply to jobs, verify your identity, set up a contract and payments, then onboard to the project. For some projects, that includes an interview with Zara, which Labelbox describes as its AI interview tool, or a domain-specific assessment. Not every project uses it.\n" +
+      "\n" +
+      "## OpenTrain AI: project management specialists\n" +
+      "\n" +
+      "OpenTrain AI posted a remote Project Management AI Training Specialist role, open worldwide. The work is evaluating AI-generated project plans, schedules, risk registers, and status reports against rubrics. The listing says prior AI training experience is not required, which shows how platforms now recruit for domain knowledge first.\n" +
+      "\n" +
+      "## Mercor: accent transcription and a paid cybersecurity study\n" +
+      "\n" +
+      "Mercor posted transcription roles for African-accented and Afrikaans-accented English earlier this month, used to build and evaluate AI voice agents. That listing has since closed.\n" +
+      "\n" +
+      "Mercor also posted paid expert interviews for cybersecurity practitioners in SOC, incident response, detection, and application security. The listing describes two to three one-hour video calls over about four weeks, with a reported rate of $125 to $175 per hour, to help design a benchmark of how well AI agents handle real cyber-defense work.\n" +
+      "\n" +
+      "## AfterQuery Experts: students evaluating AI reasoning\n" +
+      "\n" +
+      "34th Street Magazine reported that University of Pennsylvania students working through AfterQuery Experts test how well AI models read and reason about biology and finance research papers. They also grade AI answers against rubrics and write difficult finance questions. The article reports rates of around $40 per hour for some roles and $50 per hour for review work.\n" +
+      "\n" +
+      "## The pattern\n" +
+      "\n" +
+      "Screening is becoming more automated, and the roles are becoming more specific. Applicants who can show real domain knowledge, and who prepare for structured assessments and AI-led interviews, have an advantage.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.alignerr.com/en/process\">Alignerr: How it works</a>\n" +
+      "• <a href=\"https://www.opentrain.ai/jobs/project-management-ai-training-specialist--cmuguwih6000e04jpzvkvxbnl/\">OpenTrain AI: Project Management AI Training Specialist</a>\n" +
+      "• <a href=\"https://work.mercor.com/jobs/list_AAABoNB0XIYO9wcITgdLWrr3/cybersecurity-practitioner-paid-expert-interviews-soc-incident-response-detection-appsec\">Mercor: Cybersecurity Practitioner paid expert interviews</a>\n" +
+      "• <a href=\"https://www.34st.com/article/2026/09/ai-automation-afterquery-data-college-job-training\">34th Street Magazine: The College Students Training AI to Do Their Jobs</a>",
+    category: "AI Training",
+    date: "2026-09-26",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/ai-training-onboarding-roundup.webp",
+    imageAlt: "A laptop showing a video call next to a houseplant",
+    imageCredit: {
+      name: "Compagnons",
+      url: "https://unsplash.com/@sigmund",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/eTgMFFzroGc",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "alignerr", "mercor", "opentrain-ai", "afterquery"],
+  },
+  {
     _id: "news-011",
     slug: "grab-openai-verizon-ai-upskilling-programs",
     title: "Grab, OpenAI, and Verizon Launch Large AI Upskilling Programs",

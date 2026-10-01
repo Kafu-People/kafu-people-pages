@@ -1,5 +1,244 @@
 const staticBlogs = [
   {
+    _id: "static-015",
+    slug: "choosing-ai-training-platform-after-mturk-2026",
+    title: "Life After MTurk: Choosing an AI Training Platform in 2026",
+    metaDescription: "A guide for developers in Latin America and the US to 15 AI training platforms: reported pay, payment methods, onboarding, and availability.",
+    description:
+      "Amazon Mechanical Turk closed on September 30, 2026, after 21 years. If you relied on it, or you are a developer looking for AI training work for the first time, there are many alternatives. They differ a lot in pay, payment methods, how hard they are to join, and which countries they accept. This guide compares 15 of them for developers in Mexico, Argentina, Colombia, and the US.\n" +
+      "\n" +
+      "All pay figures below are ranges advertised by the platforms or shown in their listings. They are not guarantees, and actual earnings depend on project availability and your performance. Availability was checked against each platform's official pages in late September 2026 and can change.\n" +
+      "\n" +
+      "## Platform comparison\n" +
+      "\n" +
+      "| Platform | Best for | Reported pay (USD/hr) | Payment | Onboarding | US / MX / AR / CO |\n" +
+      "|---|---|---|---|---|---|\n" +
+      "| Outlier | Generalist and expert tasks | Varies; shown before each project | PayPal, Airtm, ACH | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| DataAnnotation | Writing, coding, STEM | $25 to $50 general; $40 to $150+ coding | PayPal | Medium (one-attempt assessment) | Yes / Check / Check / Check |\n" +
+      "| Alignerr | Domain experts, coding, languages | $20 to $120; some LATAM roles $10 to $35 | Weekly, via Deel | Medium (ID check, sometimes an AI interview) | Check / Yes / Yes / Check |\n" +
+      "| Mercor | Professionals: law, medicine, finance, coding | $10 to $250 across listings | Stripe (weekly) | Medium to high (AI interview, background check) | Yes / Yes / Yes / Yes |\n" +
+      "| micro1 | Experts and engineers | About $20 to $180 by listing | Deel, twice a month | Medium (AI interview) | Yes / Yes / Yes / Yes |\n" +
+      "| Handshake AI | US students, graduates, PhDs | Up to $40 to $125 by role | Stripe | Medium to high | Yes / No / No / No |\n" +
+      "| Snorkel AI | Credentialed experts, coding | Task-based; no hourly rate published | Not stated | High | Select US locations |\n" +
+      "| Surge AI | Senior engineers and elite experts | From $60; engineering $100 to $150+ | PayPal, via DataAnnotation | High (coding screen, paid trial) | Same as DataAnnotation |\n" +
+      "| Turing | Coding and LLM trainer contracts | Not published | Varies by project | Medium (60-minute evaluation) | Check / Yes / Check / Check |\n" +
+      "| Invisible | Language and domain specialists | $6 to $120 across listings | Not stated | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| TELUS Digital | Search and quality rating | Around $9 on some Mexico rater listings | Not verified | Medium | Check listings |\n" +
+      "| Prolific | Short studies, AI tasks, domain experts | $8 minimum; $30 to $100 recommended for experts | PayPal | Low | Yes / Yes / No / No |\n" +
+      "| Mindrift (Toloka) | Experts, coding | $5 to $30 evaluation; $32 to $90+ coding | Payoneer or PayPal via Tipalti | Medium | Yes / Yes / Yes / Yes |\n" +
+      "| CrowdGen (Appen) | Language and rating tasks | Varies by location and skills | PayPal, bank, Airtm, Payoneer | Low to medium | Check listings |\n" +
+      "| Welocalize (Welo Data) | Language raters, localized LATAM work | $2.25 to $105 across listings | Verified payment platforms, per project | Medium | Yes / Yes / Yes / Yes |\n" +
+      "\n" +
+      "\"Check\" means we could not confirm availability from an official source. Even where a platform accepts your country, individual projects can add their own location rules, so always read the listing.\n" +
+      "\n" +
+      "## If you are a beginner\n" +
+      "\n" +
+      "Start with platforms that have a low entry barrier and broad country coverage, such as Prolific (if you are in the US or Mexico), Outlier, Mindrift, and Welo Data. Expect lower rates on generalist tasks. Your goal at this stage is to build a track record and learn how quality reviews work.\n" +
+      "\n" +
+      "## If you are a domain expert\n" +
+      "\n" +
+      "If you have professional experience in software engineering, medicine, law, finance, or a science field, aim for expert pools directly. Mercor, micro1, Alignerr, Mindrift, and DataAnnotation all advertise expert rates well above generalist work. Surge AI and Snorkel AI are harder to join but target senior specialists. Developers should look for coding, code review, and agent evaluation projects, which are among the best-paid task types. For more detail, see our guide to <a href=\"/blogs/ai-training-pay-by-field-and-task-2026\">AI training pay by field and task</a>.\n" +
+      "\n" +
+      "## Rules that keep you on a platform\n" +
+      "\n" +
+      "• Follow the guidelines exactly. Reviewers grade against detailed instructions, and small deviations lower your quality score.\n" +
+      "• Never use AI tools on assessments or tasks unless the instructions allow it. Platforms including Handshake AI and Outlier prohibit it, and Mercor restricts it.\n" +
+      "• Keep a stable internet connection and work from the location on your profile. Identity and location checks are common, and mismatches can get an account closed.\n" +
+      "• Apply and work only under your own account. Sharing or renting accounts breaks platform terms and can lead to a permanent ban.\n" +
+      "\n" +
+      "## Avoid anyone who asks you to pay\n" +
+      "\n" +
+      "Legitimate platforms do not charge registration, training, or equipment fees. DataAnnotation, Mindrift, CrowdGen, and Welo Data state this directly. The US Federal Trade Commission warns that honest employers never ask you to pay to get a job, and that task scams often ask you to deposit your own money, frequently in crypto. Mexico's national employment service gives the same advice. If an \"AI training job\" asks for money upfront, walk away.\n" +
+      "\n" +
+      "## How to choose\n" +
+      "\n" +
+      "Pick two or three platforms that accept your country and match your skills, and apply to all of them. Approval can take weeks, and project availability rises and falls, so having more than one option keeps your income steadier.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://outlier.ai/legal/working-location-policy\">Outlier: Working location policy</a>\n" +
+      "• <a href=\"https://talent.docs.mercor.com/policies/supported-countries.md\">Mercor: Supported countries</a>\n" +
+      "• <a href=\"https://mindrift.ai/legal/eligibility-and-geographic-restrictions\">Mindrift: Eligibility and geographic restrictions</a>\n" +
+      "• <a href=\"https://consumer.ftc.gov/articles/job-scams\">FTC: Job scams</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-10-01",
+    dateModified: "2026-10-01",
+    image: "/images/blogs/choosing-ai-training-platform-2026.webp",
+    imageAlt: "A person typing on a laptop at a wooden desk in a home office",
+    imageCredit: {
+      name: "Kelly Sikkema",
+      url: "https://unsplash.com/@kellysikkema",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/r3zfwg1ByUI",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "outlier", "dataannotation", "alignerr", "mercor", "micro1", "mindrift", "prolific"],
+  },
+  {
+    _id: "static-014",
+    slug: "linkedin-software-engineering-ai-trainer-program",
+    title: "LinkedIn's Software Engineering AI Trainer Role: What We Know",
+    metaDescription: "What is confirmed about LinkedIn's AI Labor Marketplace and its Software Engineering AI Trainer role, plus where Greenlight fits and what is unverified.",
+    description:
+      "LinkedIn has started recruiting software engineers to train AI models, paid by the hour on a contract basis. There is a lot of speculation online about how the program works. This guide separates what is confirmed from what is only reported, so you can decide whether to apply with clear expectations.\n" +
+      "\n" +
+      "## What LinkedIn has confirmed\n" +
+      "\n" +
+      "In April 2026, Business Insider reported that LinkedIn was testing an \"AI labor marketplace\", and LinkedIn confirmed it was running early tests. The idea is simple: LinkedIn already knows who has which professional skills, so it can match experts with companies that need human feedback to train AI models.\n" +
+      "\n" +
+      "LinkedIn has posted Software Engineering AI Trainer roles under its own name. One listing for Argentina, now closed, showed a range of $45 to $80 per hour. Versions aimed at the US were advertised at $100 per hour, and Business Insider reported that senior software engineering trainers could earn up to $150 per hour. Business Insider also reported finance and nursing roles at up to about $100, and red team testing roles at $40 to $50.\n" +
+      "\n" +
+      "## How the role is structured\n" +
+      "\n" +
+      "Based on the LinkedIn listing:\n" +
+      "\n" +
+      "• Contract work. The role is for project consultants in LinkedIn's AI Labor Marketplace, and the listing says it is not a full-time employment position.\n" +
+      "• Per-project pay. Pay is estimated from the expected time to complete each project and paid per project, so your real hourly rate depends on how efficiently you work.\n" +
+      "• Flexible schedule. The listing describes part-time work where you control your own hours.\n" +
+      "• Experienced engineers. The Argentina listing asked for 5 to 7 years of experience, with Python and JavaScript or TypeScript.\n" +
+      "\n" +
+      "Because it is contract work, you are responsible for your own taxes, and there are no employee benefits. In the US this usually means independent contractor status, but the listing does not state the exact classification, so check your contract.\n" +
+      "\n" +
+      "## Where Greenlight fits\n" +
+      "\n" +
+      "You may see Greenlight mentioned in discussions about AI trainer contracts. The relevant company is GreenLight.ai, which describes itself as a freelancer management platform. It offers employer of record and agent of record services, contractor onboarding, and invoicing and payments in more than 190 countries. Its billing product includes contractor invoices with a client approval step.\n" +
+      "\n" +
+      "Here is the important part: we could not confirm that LinkedIn's program uses Greenlight. No LinkedIn listing or news report we found mentions it. The only connection we could find is worker-reported: in 2024, a contractor posted on Blind that they had worked on an OpenAI human data contract through Greenlight at $100 per hour. Treat that as one person's report, not a description of LinkedIn's process.\n" +
+      "\n" +
+      "Also be careful not to confuse GreenLight.ai with Greenlight, the unrelated debit card company for kids. Complaints about that company have nothing to do with contractor payments.\n" +
+      "\n" +
+      "## What we could not verify\n" +
+      "\n" +
+      "Several claims circulate online without a primary source. We found no confirmation for any of the following:\n" +
+      "\n" +
+      "• A HackerRank assessment as a fixed first step\n" +
+      "• Fixed 8-week contracts\n" +
+      "• A 20-hour weekly minimum\n" +
+      "• A named reviewer role that approves each task before you invoice\n" +
+      "• Widespread payment delays\n" +
+      "\n" +
+      "Some of these may be true for specific projects, but none were confirmed by LinkedIn, Greenlight, or a reputable outlet when we checked.\n" +
+      "\n" +
+      "## How the pay compares\n" +
+      "\n" +
+      "The reported LinkedIn rates sit in the same band as other expert coding work. DataAnnotation advertises coding projects at $40 to $150 or more per hour, and Mercor lists software engineering experts at $100 to $150. Generalist AI training work usually pays far less. For a wider comparison, see our guide to <a href=\"/blogs/ai-training-pay-by-field-and-task-2026\">AI training pay by field and task in 2026</a>.\n" +
+      "\n" +
+      "## Should you apply?\n" +
+      "\n" +
+      "If you are an experienced engineer, the reported rates are among the best in AI training work, and the role uses skills you already have. A few practical tips:\n" +
+      "\n" +
+      "• Read the contract carefully: classification, payment terms, and how hours are estimated.\n" +
+      "• Track your real time per task, since per-project pay can mean a lower effective rate.\n" +
+      "• Keep your LinkedIn profile accurate and specific, because matching starts there.\n" +
+      "• Prepare for a coding assessment, and never use AI tools on it unless the instructions allow it.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.aol.com/news/linkedin-quietly-moving-ai-training-190103884.html\">Business Insider via AOL: LinkedIn is quietly moving into AI training</a>\n" +
+      "• <a href=\"https://www.linkedin.com/jobs/view/4385781544\">LinkedIn: Software Engineering AI Trainer listing (closed)</a>\n" +
+      "• <a href=\"https://www.greenlight.ai/products/bill-pay\">GreenLight.ai: Bill and Pay for contractors</a>\n" +
+      "• <a href=\"https://www.teamblind.com/post/openai-contract-coming-to-an-end-very-soon-any-leadsreferrals-d38dte2w\">Blind: worker-reported OpenAI contract through Greenlight (2024)</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-09-21",
+    dateModified: "2026-09-21",
+    image: "/images/blogs/linkedin-software-engineering-ai-trainer.webp",
+    imageAlt: "A software engineer writing code at a desk with two monitors",
+    imageCredit: {
+      name: "ThisisEngineering",
+      url: "https://unsplash.com/@thisisengineering",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/64YrPKiguAE",
+    },
+    tags: ["ai-training", "remote-work", "linkedin", "greenlight", "software-engineering"],
+  },
+  {
+    _id: "static-013",
+    slug: "ai-training-pay-by-field-and-task-2026",
+    title: "From Generalist to Expert: AI Training Pay by Field and Task in 2026",
+    metaDescription: "Advertised AI training pay ranges by field and task in 2026, from generalist rating to expert coding, medicine, and law, with sources.",
+    description:
+      "AI training pay varies more than almost any other kind of remote work. The same platform can list one project at $16 per hour and another at $150. The difference comes down to two things: your field, and the type of task. This guide pulls together advertised ranges from platform pages and job listings so you can see where the money is in 2026.\n" +
+      "\n" +
+      "One important caveat first. Everything below is an advertised or reported range, not guaranteed pay. Projects pause, rates change, and what you earn depends on how much work is available and how well you score.\n" +
+      "\n" +
+      "## The big trend: experts over generalists\n" +
+      "\n" +
+      "AI labs no longer need large crowds to label simple data. They need people who can judge whether an answer is actually correct, and that takes real expertise. TechCrunch reported in September 2025 that xAI cut around 500 generalist annotators while planning to grow its specialist tutor team tenfold. Business Insider reported that Scale AI closed a generalist contractor team in Dallas, citing a shift toward higher-skill expert work.\n" +
+      "\n" +
+      "Generalist work has not disappeared, but it is under pressure. Business Insider reported in November 2025 that a large Meta project run through Mercor ended at $21 per hour and its replacement offered $16. Meanwhile, expert pools advertise rates several times higher.\n" +
+      "\n" +
+      "Two other trends are shaping the market. Multimodal work, such as rating images, audio, and video, keeps growing. And agent evaluation, where you review how an AI agent uses tools and completes multi-step tasks, is one of the newest and fastest-growing task types.\n" +
+      "\n" +
+      "## Advertised pay by field\n" +
+      "\n" +
+      "| Field | Advertised range (USD/hr) | Examples from listings |\n" +
+      "|---|---|---|\n" +
+      "| General (no specialty) | $15 to $50 | DataAnnotation lists generalist work at $25 to $50; some generalist projects pay $16 to $21 |\n" +
+      "| Coding | $40 to $150 | DataAnnotation lists $40 to $150+; Mercor software engineer experts $100 to $150 |\n" +
+      "| Math and STEM | $40 to $125 | DataAnnotation lists STEM at $40 to $125+ |\n" +
+      "| Medicine | $40 to $250 | Mercor medical experts $60 to $180; physician network $110 to $250 |\n" +
+      "| Law | $40 to $150 | Mercor legal experts $60 to $150 |\n" +
+      "| Finance | $40 to $150 | DataAnnotation $40 to $125+; Mercor finance experts $60 to $180 |\n" +
+      "| Creative writing | $15 to $60 | Lower on generalist writing projects; around $60 for credentialed writers on Mercor |\n" +
+      "| Languages | $15 to $50 | DataAnnotation multilingual $25 to $40; Mercor language and audio $35 to $50 |\n" +
+      "\n" +
+      "Handshake AI says its roles pay $40 to $125 per hour depending on the role, which fits the expert end of this table. At the other end, Prolific, which runs research studies rather than AI training projects, sets a minimum of $8 per hour and recommends $12.\n" +
+      "\n" +
+      "## Advertised pay by task\n" +
+      "\n" +
+      "| Task | Advertised range (USD/hr) | Notes |\n" +
+      "|---|---|---|\n" +
+      "| RLHF ranking | $15 to $50 | Generalist ranking sits at the low end; expert ranking pays more |\n" +
+      "| Red teaming | $40 to $110 | Mercor AI safety red teamer listings show $54 to $111 and $70 to $84 |\n" +
+      "| Golden answers | $20 to $70 | Writing reference answers that models are graded against |\n" +
+      "| Fact-checking | $20 to $60 | Often bundled into writing and citation review |\n" +
+      "| Code review | $40 to $125 | Mercor senior code review listings went up to $125 |\n" +
+      "| Multimodal annotation | $15 to $40 | Image, audio, and video rating |\n" +
+      "| Search relevance | $10 to $20 | Classic search rating varies a lot by country |\n" +
+      "| Agent evaluation | $25 to $90 | Reviewing multi-step agent traces and tool use |\n" +
+      "| Translation review | $15 to $50 | Higher for technical or rare language pairs |\n" +
+      "\n" +
+      "## What moves you up the range\n" +
+      "\n" +
+      "• Proven expertise. A degree, license, or years of professional experience in a field is the single biggest factor.\n" +
+      "• A second language. Bilingual experts in less common languages are in short supply.\n" +
+      "• Assessment scores. Platforms route better-paid projects to people who score well and stay consistent.\n" +
+      "• Following guidelines exactly. Quality reviewers penalize small deviations, and low quality scores remove you from projects.\n" +
+      "\n" +
+      "## What this means for developers\n" +
+      "\n" +
+      "Software engineers are in a strong position. Coding, code review, and agent evaluation are among the best-paid task types, and they reward the skills you already use at work. The challenge is getting through the screening: coding assessments, writing samples, and sometimes AI-led interviews.\n" +
+      "\n" +
+      "If you are early in your career, generalist projects can still be a way in, but treat them as a starting point. Build a track record, then apply for expert pools in your stack.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.dataannotation.tech/\">DataAnnotation: advertised rates by project type</a>\n" +
+      "• <a href=\"https://www.mercor.com/experts/\">Mercor: expert talent networks and rates</a>\n" +
+      "• <a href=\"https://www.aol.com/articles/ai-startup-powering-meta-openai-230627434.html\">Business Insider via AOL: Mercor ends Meta project, offers lower rate</a>\n" +
+      "• <a href=\"https://techcrunch.com/2025/09/13/xai-reportedly-lays-off-500-workers-from-data-annotation-team\">TechCrunch: xAI lays off 500 generalist annotators</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-09-18",
+    dateModified: "2026-09-18",
+    image: "/images/blogs/ai-training-pay-by-field-and-task-2026.webp",
+    imageAlt: "A calculator next to a laptop and printed charts on a desk",
+    imageCredit: {
+      name: "Jakub Żerdzicki",
+      url: "https://unsplash.com/@jakubzerdzicki",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/8wLZi9OhsWU",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "dataannotation", "mercor", "handshake-ai", "prolific"],
+  },
+  {
     _id: "static-012",
     slug: "ai-will-not-replace-developers-ai-leverage",
     title: "AI Will Not Replace Developers",

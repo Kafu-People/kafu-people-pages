@@ -33,6 +33,7 @@ export const BlogPostingLD = (blog) => ({
     : `${SITE_URL}/images/kafupeople.webp`,
   datePublished: blog.datePublished,
   dateModified: blog.dateModified || blog.datePublished,
+  ...(blog.tags?.length ? { keywords: blog.tags.join(", ") } : {}),
   author: {
     "@type": "Person",
     name: blog.author || SITE_NAME,
@@ -56,6 +57,7 @@ export const ArticleLD = (article) => ({
   description: article.excerpt,
   image: `${SITE_URL}${article.image}`,
   datePublished: article.date,
+  ...(article.tags?.length ? { keywords: article.tags.join(", ") } : {}),
   author: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,

@@ -8,6 +8,7 @@ import { getStaticBlogBySlug, getStaticBlogById } from "../data/blogs";
 import { BlogPostingLD, BreadcrumbListLD, SpeakableLD } from "../components/Schema";
 import { useSSRData } from "../lib/SSRDataContext";
 import ArticleContent from "../components/ArticleContent";
+import ImageCredit from "../components/ImageCredit";
 import { prepareBlogListReturn } from "../lib/blogListScroll";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -62,7 +63,9 @@ const BlogPost = () => {
   const rawExcerpt = blog.description
     ? blog.description.split("\n\n")[0]
     : PAGE_SEO.blogPost.description;
-  const blogDescription = rawExcerpt.length > 155
+  const blogDescription = blog.metaDescription
+    ? blog.metaDescription
+    : rawExcerpt.length > 155
     ? rawExcerpt.slice(0, 152).replace(/\s+\S*$/, "") + "..."
     : rawExcerpt;
 
@@ -128,12 +131,15 @@ const BlogPost = () => {
         </header>
 
         {blog.image && (
-          <div className="mb-8 overflow-hidden rounded-2xl shadow-lg">
-            <img loading="lazy"               src={blog.image}
-              alt={blog.title}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <figure className="mb-8">
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img loading="lazy"               src={blog.image}
+                alt={blog.imageAlt || blog.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <ImageCredit credit={blog.imageCredit} />
+          </figure>
         )}
 
         <ArticleContent text={blog.description} speakableIndex={0} />

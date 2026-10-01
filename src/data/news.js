@@ -4,6 +4,51 @@
 
 const staticNews = [
   {
+    _id: "news-014",
+    slug: "funding-ai-training-data-companies-september-2026",
+    title: "Money Keeps Flowing Into AI Training Data Companies",
+    excerpt: "Snorkel AI raised $350M at a $3.5B valuation, and micro1, Handshake, and Mercor report fast growth from demand for human AI training work.",
+    content:
+      "Companies that supply human expertise to train and evaluate AI models keep raising large rounds and reporting fast revenue growth. Here is what has been reported in recent months.\n" +
+      "\n" +
+      "## Snorkel AI: $350M Series E\n" +
+      "\n" +
+      "On September 22, TechCrunch reported that Snorkel AI raised a $350M Series E at a $3.5B valuation, co-led by Insight Partners and S32. That is roughly triple its previous valuation of $1.3B. TechCrunch also reported Snorkel's annualized run rate is above $375M.\n" +
+      "\n" +
+      "## micro1: from $100M to $500M gross run rate\n" +
+      "\n" +
+      "In August, TechCrunch reported that micro1 reached a $500M gross run rate, up from $100M about eight months earlier. TechCrunch noted that gross figures include pay passed through to contributors, and estimated the net figure is much lower. Forbes later reported that micro1 raised more than $100M at a $4B valuation.\n" +
+      "\n" +
+      "## Handshake and Mercor\n" +
+      "\n" +
+      "The Information reported in April that Handshake's AI training business was approaching $1B in gross annualized revenue, up from about $550M in January. Mercor raised a $350M Series C at a $10B valuation in late 2025, and in July 2026 Bloomberg and TechCrunch reported it was in talks to raise more at about a $20B valuation. We have not seen confirmation that round has closed.\n" +
+      "\n" +
+      "## What it means for contributors\n" +
+      "\n" +
+      "This money is a signal of demand. AI labs keep paying for expert human feedback in areas like coding, math, science, finance, and law. For skilled contributors, that means more projects and more specialist roles. It also means more competition and stricter screening, so preparation matters.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/\">TechCrunch: Snorkel AI triples valuation to $3.5B</a>\n" +
+      "• <a href=\"https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/\">TechCrunch: micro1 reaches $500M gross run rate</a>\n" +
+      "• <a href=\"https://www.theinformation.com/articles/handshake-mercor-revenue-surges-demand-human-contractors-train-ai\">The Information: Handshake, Mercor revenue surges</a>\n" +
+      "• <a href=\"https://techcrunch.com/2026/07/09/mercor-is-in-talks-for-a-20b-valuation/\">TechCrunch: Mercor is in talks for a $20B valuation</a>",
+    category: "AI Training",
+    date: "2026-09-28",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/ai-training-data-funding.webp",
+    imageAlt: "A screen showing a financial line chart",
+    imageCredit: {
+      name: "Chris Liverani",
+      url: "https://unsplash.com/@chrisliverani",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/dBI_My696Rk",
+    },
+    tags: ["ai-training", "data-annotation", "snorkel-ai", "micro1", "handshake-ai", "mercor"],
+  },
+  {
     _id: "news-013",
     slug: "employers-ai-training-new-survey-data-2026",
     title: "AI Training at Work Is Growing, but Time to Learn Is Not",

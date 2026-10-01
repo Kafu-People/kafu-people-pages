@@ -1,5 +1,85 @@
 const staticBlogs = [
   {
+    _id: "static-014",
+    slug: "linkedin-software-engineering-ai-trainer-program",
+    title: "LinkedIn's Software Engineering AI Trainer Role: What We Know",
+    metaDescription: "What is confirmed about LinkedIn's AI Labor Marketplace and its Software Engineering AI Trainer role, plus where Greenlight fits and what is unverified.",
+    description:
+      "LinkedIn has started recruiting software engineers to train AI models, paid by the hour on a contract basis. There is a lot of speculation online about how the program works. This guide separates what is confirmed from what is only reported, so you can decide whether to apply with clear expectations.\n" +
+      "\n" +
+      "## What LinkedIn has confirmed\n" +
+      "\n" +
+      "In April 2026, Business Insider reported that LinkedIn was testing an \"AI labor marketplace\", and LinkedIn confirmed it was running early tests. The idea is simple: LinkedIn already knows who has which professional skills, so it can match experts with companies that need human feedback to train AI models.\n" +
+      "\n" +
+      "LinkedIn has posted Software Engineering AI Trainer roles under its own name. One listing for Argentina, now closed, showed a range of $45 to $80 per hour. Versions aimed at the US were advertised at $100 per hour, and Business Insider reported that senior software engineering trainers could earn up to $150 per hour. Business Insider also reported finance and nursing roles at up to about $100, and red team testing roles at $40 to $50.\n" +
+      "\n" +
+      "## How the role is structured\n" +
+      "\n" +
+      "Based on the LinkedIn listing:\n" +
+      "\n" +
+      "• Contract work. The role is for project consultants in LinkedIn's AI Labor Marketplace, and the listing says it is not a full-time employment position.\n" +
+      "• Per-project pay. Pay is estimated from the expected time to complete each project and paid per project, so your real hourly rate depends on how efficiently you work.\n" +
+      "• Flexible schedule. The listing describes part-time work where you control your own hours.\n" +
+      "• Experienced engineers. The Argentina listing asked for 5 to 7 years of experience, with Python and JavaScript or TypeScript.\n" +
+      "\n" +
+      "Because it is contract work, you are responsible for your own taxes, and there are no employee benefits. In the US this usually means independent contractor status, but the listing does not state the exact classification, so check your contract.\n" +
+      "\n" +
+      "## Where Greenlight fits\n" +
+      "\n" +
+      "You may see Greenlight mentioned in discussions about AI trainer contracts. The relevant company is GreenLight.ai, which describes itself as a freelancer management platform. It offers employer of record and agent of record services, contractor onboarding, and invoicing and payments in more than 190 countries. Its billing product includes contractor invoices with a client approval step.\n" +
+      "\n" +
+      "Here is the important part: we could not confirm that LinkedIn's program uses Greenlight. No LinkedIn listing or news report we found mentions it. The only connection we could find is worker-reported: in 2024, a contractor posted on Blind that they had worked on an OpenAI human data contract through Greenlight at $100 per hour. Treat that as one person's report, not a description of LinkedIn's process.\n" +
+      "\n" +
+      "Also be careful not to confuse GreenLight.ai with Greenlight, the unrelated debit card company for kids. Complaints about that company have nothing to do with contractor payments.\n" +
+      "\n" +
+      "## What we could not verify\n" +
+      "\n" +
+      "Several claims circulate online without a primary source. We found no confirmation for any of the following:\n" +
+      "\n" +
+      "• A HackerRank assessment as a fixed first step\n" +
+      "• Fixed 8-week contracts\n" +
+      "• A 20-hour weekly minimum\n" +
+      "• A named reviewer role that approves each task before you invoice\n" +
+      "• Widespread payment delays\n" +
+      "\n" +
+      "Some of these may be true for specific projects, but none were confirmed by LinkedIn, Greenlight, or a reputable outlet when we checked.\n" +
+      "\n" +
+      "## How the pay compares\n" +
+      "\n" +
+      "The reported LinkedIn rates sit in the same band as other expert coding work. DataAnnotation advertises coding projects at $40 to $150 or more per hour, and Mercor lists software engineering experts at $100 to $150. Generalist AI training work usually pays far less. For a wider comparison, see our guide to <a href=\"/blogs/ai-training-pay-by-field-and-task-2026\">AI training pay by field and task in 2026</a>.\n" +
+      "\n" +
+      "## Should you apply?\n" +
+      "\n" +
+      "If you are an experienced engineer, the reported rates are among the best in AI training work, and the role uses skills you already have. A few practical tips:\n" +
+      "\n" +
+      "• Read the contract carefully: classification, payment terms, and how hours are estimated.\n" +
+      "• Track your real time per task, since per-project pay can mean a lower effective rate.\n" +
+      "• Keep your LinkedIn profile accurate and specific, because matching starts there.\n" +
+      "• Prepare for a coding assessment, and never use AI tools on it unless the instructions allow it.\n" +
+      "\n" +
+      "Want help getting accepted and doing well once you are in? <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> helps developers in Latin America and the US prepare their applications, pass assessments, and build habits that keep quality scores high.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.aol.com/news/linkedin-quietly-moving-ai-training-190103884.html\">Business Insider via AOL: LinkedIn is quietly moving into AI training</a>\n" +
+      "• <a href=\"https://www.linkedin.com/jobs/view/4385781544\">LinkedIn: Software Engineering AI Trainer listing (closed)</a>\n" +
+      "• <a href=\"https://www.greenlight.ai/products/bill-pay\">GreenLight.ai: Bill and Pay for contractors</a>\n" +
+      "• <a href=\"https://www.teamblind.com/post/openai-contract-coming-to-an-end-very-soon-any-leadsreferrals-d38dte2w\">Blind: worker-reported OpenAI contract through Greenlight (2024)</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-09-21",
+    dateModified: "2026-09-21",
+    image: "/images/blogs/linkedin-software-engineering-ai-trainer.webp",
+    imageAlt: "A software engineer writing code at a desk with two monitors",
+    imageCredit: {
+      name: "ThisisEngineering",
+      url: "https://unsplash.com/@thisisengineering",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/64YrPKiguAE",
+    },
+    tags: ["ai-training", "remote-work", "linkedin", "greenlight", "software-engineering"],
+  },
+  {
     _id: "static-013",
     slug: "ai-training-pay-by-field-and-task-2026",
     title: "From Generalist to Expert: AI Training Pay by Field and Task in 2026",

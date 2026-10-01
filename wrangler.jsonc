@@ -10,5 +10,21 @@
   },
   "observability": {
     "enabled": true
+  },
+  // AI Training Coaching enrollments, written by worker/stripe-webhook.ts.
+  // Apply schema: npx wrangler d1 migrations apply kafu-enrollments --remote
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kafu-enrollments",
+      "database_id": "90e2c69e-c36f-4a19-99db-ccbd95aab9b8",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Non-secret settings. Secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
+  // RESEND_API_KEY, SLACK_WEBHOOK_URL) are set with `wrangler secret put`.
+  "vars": {
+    "FROM_EMAIL": "Kafu People <training@kafupeople.com>",
+    "ONBOARDING_URL": "https://calendly.com/kafupeople/30min"
   }
 }

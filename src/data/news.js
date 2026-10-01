@@ -4,6 +4,57 @@
 
 const staticNews = [
   {
+    _id: "news-015",
+    slug: "amazon-mechanical-turk-closes-after-21-years",
+    title: "Amazon Mechanical Turk Closes After 21 Years",
+    excerpt: "Amazon Mechanical Turk permanently closed on September 30, 2026. Here is the timeline, what requesters must do by October 30, and what it signals.",
+    content:
+      "Amazon Mechanical Turk, one of the first online marketplaces for small paid tasks, permanently closed on September 30, 2026. The service launched in 2005 and became a common source of data labeling, transcription, and survey work, often paid a few cents per task.\n" +
+      "\n" +
+      "## The timeline\n" +
+      "\n" +
+      "On June 30, AWS announced that Mechanical Turk, SageMaker Ground Truth, and Amazon Augmented AI would close to new customers on July 30, 2026. Existing users kept access at first. In late August, Amazon told workers and customers that Mechanical Turk itself would shut down on September 30.\n" +
+      "\n" +
+      "According to the MTurk help page, requesters have until October 30, 2026 to approve or reject completed tasks, known as HITs. Any HITs left without action by then are approved automatically. Requesters can also award bonuses until October 30, and transaction history stays available until January 28, 2027.\n" +
+      "\n" +
+      "The closure also ends the Mechanical Turk workforce option inside SageMaker Ground Truth and Augmented AI. AWS documentation points users of those services to other workforce options, such as private or vendor teams.\n" +
+      "\n" +
+      "## How big it was\n" +
+      "\n" +
+      "AWS documentation describes a pool of more than 500,000 workers in 190 countries. For years, MTurk was the default place for researchers and companies to collect simple human judgments at scale.\n" +
+      "\n" +
+      "## No replacement named\n" +
+      "\n" +
+      "Amazon did not name a replacement service. Its statement said the company regularly reviews its programs and decided to close the service after an assessment. Amazon did not cite AI as the reason, although several outlets connected the closure to how AI is changing data work.\n" +
+      "\n" +
+      "## What it signals\n" +
+      "\n" +
+      "Simple microtasks are a shrinking market. The growth is in expert AI training work: evaluating model answers, writing high-quality examples, reviewing code, and testing AI agents. These tasks need real skills, pay more, and use stricter screening.\n" +
+      "\n" +
+      "If you used MTurk or are looking for similar work, our guide on <a href=\"/blogs/choosing-ai-training-platform-after-mturk-2026\">choosing an AI training platform in 2026</a> compares the main options for developers in Latin America and the US.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.mturk.com/help\">Amazon Mechanical Turk: Help and closure FAQ</a>\n" +
+      "• <a href=\"https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/\">AWS: Service availability updates (June 30, 2026)</a>\n" +
+      "• <a href=\"https://docs.aws.amazon.com/AWSMechTurk/latest/RequesterUI/OverviewofMturk.html\">AWS documentation: Overview of Mechanical Turk</a>\n" +
+      "• <a href=\"https://thenextweb.com/news/amazon-mechanical-turk-closing-september-2026\">The Next Web: Amazon Mechanical Turk is closing</a>",
+    category: "AI Training",
+    date: "2026-09-30",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/amazon-mechanical-turk-closes.webp",
+    imageAlt: "An empty room with rows of computer workstations",
+    imageCredit: {
+      name: "RUT MIIT",
+      url: "https://unsplash.com/@rutmiit",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/eWnSMfxvpF4",
+    },
+    tags: ["ai-training", "data-annotation", "remote-work", "amazon-mechanical-turk"],
+  },
+  {
     _id: "news-014",
     slug: "funding-ai-training-data-companies-september-2026",
     title: "Money Keeps Flowing Into AI Training Data Companies",

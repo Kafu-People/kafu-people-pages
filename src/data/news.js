@@ -4,6 +4,51 @@
 
 const staticNews = [
   {
+    _id: "news-013",
+    slug: "employers-ai-training-new-survey-data-2026",
+    title: "AI Training at Work Is Growing, but Time to Learn Is Not",
+    excerpt: "New Workera and iCIMS surveys show more employers offer AI training and job seekers value it, but most employees say they have no time to learn.",
+    content:
+      "Two surveys published in September 2026 show the same tension: AI training at work is spreading fast, but employees still struggle to find time for it, and job seekers increasingly see it as a reason to pick an employer.\n" +
+      "\n" +
+      "## Workera: training more than doubled\n" +
+      "\n" +
+      "Workera's 2026 State of Skills Intelligence report surveyed 1,000 full-time employees at US organizations with 5,000 or more staff. The share of employees who say their company offers AI-specific skills training rose from 25% in Workera's 2025 survey to 58% in 2026.\n" +
+      "\n" +
+      "The catch: 56% said no time is set aside during work hours to build their AI skills. Training is available, but many people are expected to learn on their own time.\n" +
+      "\n" +
+      "## iCIMS: job seekers notice who offers training\n" +
+      "\n" +
+      "An iCIMS survey of 1,000 US job seekers, released September 10, found that 42% would find a company that offers AI training more attractive than a similar employer that does not. 14% said they would accept lower pay in exchange for that training.\n" +
+      "\n" +
+      "## Why this matters for job seekers\n" +
+      "\n" +
+      "Both surveys point the same way. AI skills are becoming a standard expectation, and workers who build them independently are better placed than those waiting for their employer to make time.\n" +
+      "\n" +
+      "For developers, hands-on work evaluating and improving AI output is one of the most practical ways to build those skills, and it is also paid work. Preparing well for the assessments that AI training platforms use makes a real difference to getting accepted.\n" +
+      "\n" +
+      "If you are a developer in Latin America or the US and want to get accepted onto AI training platforms, <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you prepare.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.prnewswire.com/news-releases/ai-training-more-than-doubled-this-year-but-56-of-employees-report-no-time-at-work-to-build-the-skills-workera-research-finds-302887120.html\">Workera via PR Newswire: AI training more than doubled this year</a>\n" +
+      "• <a href=\"https://www.workera.ai/blog/state-of-skills-intelligence-report\">Workera: State of Skills Intelligence report (2025 baseline)</a>\n" +
+      "• <a href=\"https://www.icims.com/company/newsroom/septemberinsights2026/\">iCIMS: Workers are teaching themselves AI skills faster than employers train them</a>\n" +
+      "• <a href=\"https://www.hcamag.com/us/specialization/benefits/why-ai-training-may-be-employers-most-powerful-talent-drawcard/589450\">HCAmag: Why AI training may be employers' most powerful talent draw</a>",
+    category: "AI Training",
+    date: "2026-09-27",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/employers-ai-training-survey-data.webp",
+    imageAlt: "Colleagues with laptops watching a trainer at a whiteboard",
+    imageCredit: {
+      name: "Austin Distel",
+      url: "https://unsplash.com/@austindistel",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/wD1LRb9OeEo",
+    },
+    tags: ["ai-training", "upskilling", "remote-work", "careers"],
+  },
+  {
     _id: "news-012",
     slug: "ai-training-platform-onboarding-roundup-september-2026",
     title: "How AI Training Platforms Are Changing Onboarding",

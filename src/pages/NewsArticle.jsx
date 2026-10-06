@@ -52,7 +52,7 @@ const NewsArticle = () => {
   return (
     <>
       <PageSEO
-        title={title(article.title)}
+        title={article.metaTitle || title(article.title)}
         description={article.metaDescription || article.excerpt || description}
         canonicalPath={canonicalPath(article.slug)}
         ogImage={articleOgImage}

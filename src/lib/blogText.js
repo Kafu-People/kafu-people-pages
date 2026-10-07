@@ -12,7 +12,7 @@ export function flattenBlogPreview(text) {
 
 const BULLET_RE = /^[•-]\s/;
 const NUMBERED_RE = /^\d+\.\s/;
-const EM_DASH_SPLIT_RE = /^(\d+\.\s.+?)(?:\s*[—–-]\s*(.+))?$/;
+const EM_DASH_SPLIT_RE = /^(\d+\.\s.+?)(?:\s+[—–-]\s+(.+))?$/;
 
 export function isBulletLine(line) {
   return BULLET_RE.test(line.trim());

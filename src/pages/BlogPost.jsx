@@ -78,7 +78,7 @@ const BlogPost = () => {
   return (
     <>
       <PageSEO
-        title={title(blog.title)}
+        title={blog.metaTitle || title(blog.title)}
         description={blogDescription}
         canonicalPath={canonicalPath(blog.slug || slug)}
         ogImage={blogOgImage}

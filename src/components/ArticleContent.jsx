@@ -90,7 +90,7 @@ function renderBlock(block, index, speakableProps) {
 
           return (
             <li key={line} className={listItemClass}>
-              {itemText}
+              {parseAnchors(itemText)}
             </li>
           );
         })}

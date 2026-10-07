@@ -4,6 +4,59 @@
 
 const staticNews = [
   {
+    _id: "news-017",
+    slug: "anthropic-claude-frontier-academy-100m",
+    title: "Anthropic Puts $100M Into Training 10,000 Enterprise AI Engineers",
+    metaTitle: "Anthropic's $100M Plan to Train 10,000 AI Engineers",
+    metaDescription: "Anthropic's $100M Claude Frontier Academy will train 10,000 engineers from partner and customer firms to deploy Claude in enterprises by the end of 2027.",
+    excerpt: "Anthropic launched Claude Frontier Academy, a $100M program to train 10,000 engineers to deploy Claude in enterprises by the end of 2027.",
+    content:
+      "On October 2, 2026, Anthropic announced Claude Frontier Academy, a program backed by a $100 million commitment. Its goal is to train 10,000 Frontier Deployed Engineers by the end of 2027: engineers who can take Claude from an idea to a working deployment inside a large organization.\n" +
+      "\n" +
+      "## Who is in the program\n" +
+      "\n" +
+      "Organizations nominate their own engineers, and the Academy builds on Anthropic's Claude Partner Network. The first cohorts are running in San Francisco, New York, and London. Anthropic says they include engineers from Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk, among others. Each nominee arrives with a named Claude project to lead.\n" +
+      "\n" +
+      "## How it works\n" +
+      "\n" +
+      "Anthropic describes the format as following the medical model. Engineers first attend a multi-day, in-person program with Anthropic engineers and licensed instructors. The training walks them through a simulated enterprise deployment, from choosing the right use case through security review to handover, and ends with a graded practical on a new scenario.\n" +
+      "\n" +
+      "Engineers who pass earn a Claude Resident Engineer badge and start a 12-week residency, where they lead a real Claude use case at their own organization. They are assessed again at the end of the residency. Those who pass earn the Claude Frontier Deployed Engineer badge. Anthropic expects the first of these badges to be awarded in early 2027.\n" +
+      "\n" +
+      "## A different strategy from OpenAI\n" +
+      "\n" +
+      "TechRadar pointed out a contrast with OpenAI. In TechRadar's reading, OpenAI focuses on training its own staff to go into customer companies, while Anthropic is training engineers at other companies, including large consultancies that work with many clients. That approach can spread Claude across many organizations at once.\n" +
+      "\n" +
+      "## Startups are getting more support too\n" +
+      "\n" +
+      "Four days later, on October 6, CNBC reported that Anthropic was expanding its Claude Startups program. Eligible startups can get up to $45,000 in discounts and credits through a set of benefits Anthropic calls the Claude Startup Stack, along with office hours with Anthropic's applied AI team.\n" +
+      "\n" +
+      "## What this means for independent developers\n" +
+      "\n" +
+      "The Academy is aimed at engineers inside large partner and customer organizations, not at independent or freelance developers.\n" +
+      "\n" +
+      "But it shows clearly what the market now pays for: deploying AI into real business workflows, handling security, and proving it on a real project. Developers in Latin America and the US can build the same skill set on their own, and <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> is one way to get structured help with it.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.anthropic.com/news/claude-frontier-academy\">Anthropic: Claude Frontier Academy announcement</a>\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/02/anthropic-to-invest-100-million-to-train-ai-engineer-talent.html\">CNBC: Anthropic to invest $100 million to train AI engineer talent</a>\n" +
+      "• <a href=\"https://www.techradar.com/pro/anthropic-earmarks-usd100-million-to-train-over-10-000-ai-engineers-in-push-to-develop-enterprise-ai\">TechRadar: Anthropic earmarks $100 million to train AI engineers</a>\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/06/anthropic-claude-startups-program.html\">CNBC: Anthropic expands Claude Startups program</a>",
+    category: "AI Training",
+    date: "2026-10-06",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/anthropic-claude-frontier-academy.webp",
+    imageAlt: "Professionals with laptops at a long conference table watching a trainer at a whiteboard",
+    imageCredit: {
+      name: "Christina @ wocintechchat.com",
+      url: "https://unsplash.com/@wocintechchat",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/Q80LYxv_Tbs",
+    },
+    tags: ["ai-training", "anthropic", "ai-careers", "enterprise-ai"],
+  },
+  {
     _id: "news-016",
     slug: "micro1-high-rate-specialist-ai-training-roles",
     title: "micro1 Posts High-Rate Specialist AI Training Roles",

@@ -1,5 +1,79 @@
 const staticBlogs = [
   {
+    _id: "static-017",
+    slug: "developer-jobs-up-juniors-squeezed-ai",
+    title: "Developer Jobs Are Up 15%. So Why Is It Harder to Get Your First One?",
+    metaTitle: "Developer Jobs Are Up 15%. Why Are First Jobs Harder?",
+    metaDescription: "US software developer job postings are up almost 15% since early 2025, but most growth is senior and AI-focused. What it means for early-career developers.",
+    description:
+      "The headline numbers look like good news for developers, and mostly they are. After a long slump, US software development job postings are growing again, even while hiring across the wider economy cools.\n" +
+      "\n" +
+      "But the growth is not spread evenly. Most of it is going to experienced engineers and to roles built around AI. For anyone trying to land a first developer job, that gap matters more than the headline number.\n" +
+      "\n" +
+      "## What the data says\n" +
+      "\n" +
+      "In July 2026, Indeed Hiring Lab reported that US software development job postings had grown by almost 15% since late February 2025, the month Anthropic launched Claude Code. Over the same period, total US job postings fell by about 7%. Indeed was careful not to claim the launch caused the rebound, but it called the timing hard to ignore.\n" +
+      "\n" +
+      "Context matters here. Software development postings were still about 27.5% below their level just before the pandemic, so this is a recovery from a deep low, not a boom.\n" +
+      "\n" +
+      "The more important detail is where the growth went. Indeed found that 71% of the increase in software development postings between May 2025 and May 2026 came from senior roles, and 37% came from jobs with \"AI\" in the title. The two groups overlap, so the figures should not be added together. Indeed's reading is that demand is growing for experienced professionals who can work with AI, not for developers across the board.\n" +
+      "\n" +
+      "In October 2026, CNBC looked at the same trend. Its reporting describes companies using AI to produce code faster than developers could on their own, while still needing people who can evaluate that code and oversee the work. CNBC also cited Stanford's 2026 AI Index, which found that employment for early-career software developers fell by nearly 20% from 2024.\n" +
+      "\n" +
+      "## Why more code means more developers, but not more juniors\n" +
+      "\n" +
+      "When software gets cheaper to produce, more projects get approved. A feature that was not worth building last year might be worth building now. That creates more code, and every line of it still has to be reviewed, maintained, secured, and supported in production.\n" +
+      "\n" +
+      "The new demand lands on judgment. Someone has to decide whether AI-generated code is correct, whether the architecture will hold up, and whether a change opens a security hole. Companies tend to associate those skills with seniority, so that is where they hire.\n" +
+      "\n" +
+      "Meanwhile, the templated, low-stakes work that juniors traditionally learned on is exactly what AI handles first. Boilerplate, simple bug fixes, and small internal tools used to be how new developers built experience. Fewer of those tasks reach a human now, which is the squeeze we described in our earlier post on <a href=\"/blogs/ai-coding-tools-junior-developer-pipeline\">how AI coding tools are affecting the junior developer pipeline</a>.\n" +
+      "\n" +
+      "## Why employers should care too\n" +
+      "\n" +
+      "Cutting entry-level hiring has a long-term cost. In CNBC's reporting, Indeed Hiring Lab economist Sneha Puri warned that today's entry-level hires are where tomorrow's senior engineers come from, and that companies need to keep building that pipeline now.\n" +
+      "\n" +
+      "The longer-term outlook is also steady. CNBC cited the US Bureau of Labor Statistics projection that software developer employment will grow about 10% between 2025 and 2035. The jobs are still coming. The question is who will be ready for them.\n" +
+      "\n" +
+      "## The bigger picture\n" +
+      "\n" +
+      "This is not only a software story. At a panel on October 12, IMF Managing Director Kristalina Georgieva said AI is hitting the global labor market like a \"slow-moving tsunami,\" with young graduates among the first affected as routine entry-level tasks disappear. On the same panel, Singapore's President Tharman Shanmugaratnam, who co-chairs the World Bank's Jobs Council, urged governments to make crisis-era employment support permanent and to encourage firms to hire fresh graduates.\n" +
+      "\n" +
+      "## How to position yourself on the right side of the gap\n" +
+      "\n" +
+      "The data does not say there is no room for new developers. It says the entry point has moved. These steps help you show the kind of value companies are hiring for.\n" +
+      "\n" +
+      "1. Show senior-style judgment early: do not just generate code, review it. Write up short reviews of AI output on your own projects, explaining what you accepted, what you rejected, and why.\n" +
+      "2. Put AI in your skill set explicitly: with 37% of the recent growth in developer postings coming from jobs with AI in the title, AI skills belong on your profile. List concrete work with retrieval (RAG), evaluations, agent tooling, and API integration, and link to real examples.\n" +
+      "3. Own something end to end: one small project that is deployed, tested, monitored, and has had a basic security review says more than ten generated demos. Employers want evidence that you can carry work into production.\n" +
+      "4. Target growth areas, not job titles: teams shipping more software need people who can maintain, review, and secure it. Look for roles in quality, platform, security, and AI integration, not only roles labeled junior developer.\n" +
+      "5. For developers in Latin America: remote US roles reward the same proof. Clear written explanations of your technical decisions, in pull requests, documentation, and project write-ups, are part of the evidence that you can work independently.\n" +
+      "\n" +
+      "## The bar has moved, not closed\n" +
+      "\n" +
+      "The market is not closing on developers. It is raising the bar for where people enter, and that bar is about judgment, ownership, and working well with AI.\n" +
+      "\n" +
+      "Kafu People coaches developers in Latin America and the US to build exactly this kind of proof. If you want structured help, see <a href=\"/services/ai-training-coaching\">our AI Training Coaching program</a>.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/\">Indeed Hiring Lab: AI and Job Postings: From Destruction to Creation?</a>\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/11/ai-software-developer-jobs.html\">CNBC: AI is automating coding. So why are software developer job postings on the rise?</a>\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html\">CNBC: World Bank jobs council urges crisis-era employment support as IMF warns of AI tsunami</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-10-15",
+    dateModified: "2026-10-15",
+    image: "/images/blogs/developer-jobs-up-juniors-squeezed.webp",
+    imageAlt: "A developer wearing headphones at a desk, reviewing code on a monitor",
+    imageCredit: {
+      name: "Nubelson Fernandes",
+      url: "https://unsplash.com/@nublson",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/gTs2w7bu3Qo",
+    },
+    tags: ["ai-careers", "junior-developers", "developer-job-market", "ai-training"],
+  },
+  {
     _id: "static-016",
     slug: "ai-coding-tools-junior-developer-pipeline",
     title: "AI Coding Tools Are Squeezing the Junior Developer Pipeline. Here's How to Stay in It.",

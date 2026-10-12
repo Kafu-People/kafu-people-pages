@@ -123,6 +123,8 @@ const staticBlogs = [
       "\n" +
       "The Anthropic study points to a simple rule. Asking AI to explain concepts and check your reasoning helps you learn. Letting it write everything for you does not. Use the tools, but make sure you can still do the work without them.\n" +
       "\n" +
+      "For the hiring data behind this trend, see <a href=\"/blogs/developer-jobs-up-juniors-squeezed-ai\">why developer jobs are up while first jobs are harder to get</a>.\n" +
+      "\n" +
       "Kafu People coaches developers in Latin America and the US through this transition, with a focus on practical skills like reviewing AI output and preparing for technical assessments. If that would help you, see <a href=\"/services/ai-training-coaching\">our AI Training Coaching program</a>.\n" +
       "\n" +
       "## Sources\n" +

@@ -52,6 +52,8 @@ const staticBlogs = [
       "\n" +
       "The market is not closing on developers. It is raising the bar for where people enter, and that bar is about judgment, ownership, and working well with AI.\n" +
       "\n" +
+      "One of the clearest examples of that judgment is supervising AI agents, which we cover in <a href=\"/blogs/ai-agents-go-rogue-supervision-skills\">why supervision is the skill employers need</a>.\n" +
+      "\n" +
       "Kafu People coaches developers in Latin America and the US to build exactly this kind of proof. If you want structured help, see <a href=\"/services/ai-training-coaching\">our AI Training Coaching program</a>.\n" +
       "\n" +
       "## Sources\n" +

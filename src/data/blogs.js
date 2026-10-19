@@ -1,3 +1,5 @@
+import { getPublished, isPublished } from "../lib/publishing.js";
+
 const staticBlogs = [
   {
     _id: "static-018",
@@ -65,8 +67,8 @@ const staticBlogs = [
       "• <a href=\"https://lwn.net/Articles/1099594/\">LWN: Kernel maintainers drop the Assisted-by tag</a>",
     category: "AI",
     author: "Kafu People",
-    datePublished: "2026-10-22",
-    dateModified: "2026-10-22",
+    datePublished: "2026-10-19",
+    dateModified: "2026-10-19",
     image: "/images/blogs/ai-agents-go-rogue-supervision.webp",
     imageAlt: "A brightly lit data center floor with rows of server cabinets and network cables in overhead trays",
     imageCredit: {
@@ -725,12 +727,21 @@ const staticBlogs = [
   },
 ];
 
+// All posts, including scheduled ones. Pages should use the getters below,
+// which only return posts whose publish date has passed.
 export default staticBlogs;
 
-export function getStaticBlogById(id) {
-  return staticBlogs.find((b) => b._id === id) || null;
+/** Published blog posts, newest first. */
+export function getPublishedBlogs(now = new Date()) {
+  return getPublished(staticBlogs, now);
 }
 
-export function getStaticBlogBySlug(slug) {
-  return staticBlogs.find((b) => b.slug === slug) || null;
+export function getStaticBlogById(id, now = new Date()) {
+  const blog = staticBlogs.find((b) => b._id === id);
+  return blog && isPublished(blog, now) ? blog : null;
+}
+
+export function getStaticBlogBySlug(slug, now = new Date()) {
+  const blog = staticBlogs.find((b) => b.slug === slug);
+  return blog && isPublished(blog, now) ? blog : null;
 }

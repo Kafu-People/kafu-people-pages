@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import staticBlogs from "../../data/blogs";
+import { getPublishedBlogs } from "../../data/blogs";
 import { getLatestNews } from "../../data/news";
 
 const formatDate = (iso) =>
@@ -26,7 +26,7 @@ const buildItems = () => {
     });
   }
 
-  const latestBlog = staticBlogs[0];
+  const latestBlog = getPublishedBlogs()[0];
   if (latestBlog) {
     items.push({
       key: latestBlog._id,

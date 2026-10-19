@@ -1,15 +1,14 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import PageSEO from "../PageSEO";
 import { PAGE_SEO } from "../../config/seo";
 import { BreadcrumbListLD } from "../Schema";
 import PageHero from "../ui/PageHero";
-import staticBlogs from "../../data/blogs";
-import { BlogGridPlaceholder } from "./BlogGridPlaceholder";
+import { getPublishedBlogs } from "../../data/blogs";
+import { isPublished } from "../../lib/publishing";
+import BlogGrid from "./BlogGrid";
 import { logError } from "../../lib/logError";
 import { scrollToReturnBlogCardWithRetry } from "../../lib/blogListScroll";
-
-const BlogGrid = lazy(() => import("./BlogGrid"));
 
 const BLOG_HERO_IMAGE = "/images/blog-section.webp";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -31,7 +30,8 @@ const categoryMap = {
 };
 
 const BlogSection = () => {
-  const [blogs, setBlogs] = useState(staticBlogs);
+  // Rendered on the server so the full list is in the initial HTML.
+  const [blogs, setBlogs] = useState(() => getPublishedBlogs());
   const [error, setError] = useState(null);
   const [filter, setFilter] = useState("All Blogs");
 
@@ -47,11 +47,11 @@ const BlogSection = () => {
           signal: controller.signal,
         });
         if (Array.isArray(response.data) && response.data.length > 0) {
-          setBlogs(response.data);
+          setBlogs(response.data.filter((blog) => isPublished(blog)));
         }
       } catch (fetchError) {
         logError("Error fetching blogs:", fetchError);
-        if (!Array.isArray(staticBlogs) || staticBlogs.length === 0) {
+        if (getPublishedBlogs().length === 0) {
           setError(fetchError);
         }
       }
@@ -144,9 +144,7 @@ const BlogSection = () => {
       </div>
 
       <div className="container mx-auto px-6 py-8">
-        <Suspense fallback={<BlogGridPlaceholder />}>
-          <BlogGrid blogs={filteredBlogs} error={error} />
-        </Suspense>
+        <BlogGrid blogs={filteredBlogs} error={error} />
       </div>
     </>
   );

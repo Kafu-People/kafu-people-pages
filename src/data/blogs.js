@@ -48,6 +48,8 @@ const staticBlogs = [
       "\n" +
       "These skills build on the same judgment we discussed in <a href=\"/blogs/ai-coding-tools-junior-developer-pipeline\">how AI coding tools are affecting the junior developer pipeline</a> and in <a href=\"/blogs/developer-jobs-up-juniors-squeezed-ai\">why developer jobs are growing while first jobs are harder to get</a>. They are also central to the forward-deployed engineering roles that companies like AWS and Anthropic are now <a href=\"/news/forward-deployed-engineers-aws-anthropic\">racing to build</a>.\n" +
       "\n" +
+      "For a first-party look at how this is changing who gets hired, see <a href=\"/blogs/anthropic-fewer-junior-hires-what-it-means\">what Anthropic's own hiring data tells early-career developers</a>.\n" +
+      "\n" +
       "## The supervision gap is an opportunity\n" +
       "\n" +
       "Companies are deploying agents faster than they can supervise them, and that gap is a real career opportunity for developers who learn to close it. Kafu People coaches developers in Latin America and the US in exactly these skills. If you want structured help, see <a href=\"/services/ai-training-coaching\">our AI Training Coaching program</a>.\n" +

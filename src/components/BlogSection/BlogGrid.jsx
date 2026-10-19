@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import { blogCardExcerpt } from "../../lib/blogText";
 import { setReturnBlogId } from "../../lib/blogListScroll";
 
+const formatDate = (iso) =>
+  new Date(iso).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+
 const BlogGrid = ({ blogs, error }) => {
 
   if (error) {
@@ -73,6 +81,14 @@ const BlogGrid = ({ blogs, error }) => {
                 <p className="mt-2 h-[4.5rem] line-clamp-3 text-sm leading-6 text-gray-600">
                   {blogCardExcerpt(blog.description)}
                 </p>
+                {blog.datePublished && (
+                  <time
+                    dateTime={blog.datePublished}
+                    className="mt-3 block text-xs text-gray-500"
+                  >
+                    {formatDate(blog.datePublished)}
+                  </time>
+                )}
               </div>
             </article>
           </Link>

@@ -2,6 +2,82 @@ import { getPublished, isPublished } from "../lib/publishing.js";
 
 const staticBlogs = [
   {
+    _id: "static-019",
+    slug: "anthropic-fewer-junior-hires-what-it-means",
+    title: "Even Anthropic Is Hiring Fewer Juniors. What That Tells Early-Career Developers.",
+    metaTitle: "Anthropic Is Hiring Fewer Juniors. What It Means for You",
+    metaDescription: "Anthropic's own workforce data shows the junior share of technical hires falling from 27% to 9%. What AI-heavy teams now hire for, and how to get there.",
+    description:
+      "Most of what we know about AI and developer jobs comes from job boards and surveys. This month, one of the companies building the most widely used AI coding tools published data on how AI has changed its own workforce.\n" +
+      "\n" +
+      "Anthropic's report shows the junior share of its technical hires dropping sharply. It is a rare first-party look at what an AI-heavy engineering team now hires for, and it carries useful lessons for anyone early in their career.\n" +
+      "\n" +
+      "## What Anthropic reported\n" +
+      "\n" +
+      "On October 16, 2026, Anthropic published a technical report titled \"How employment is changing at Anthropic\", which TechCrunch covered the next day. The report draws on the company's HR records, calendar data, code activity, Claude usage data, surveys, and interviews with employees.\n" +
+      "\n" +
+      "The headline number: the junior share of Anthropic's technical hires fell from 27% to 9%. The junior share of all employees in technical departments also fell, from 21% to 14% since early 2025. Technical hiring still grew in absolute terms, so this is a shift in who gets hired, not a hiring freeze.\n" +
+      "\n" +
+      "The work itself has changed too. Based on calendar data, the median employee spends 20% more time in meetings than a year earlier, and 16% more for technical individual contributors. Anthropic notes that part of this reflects company growth and more non-technical roles.\n" +
+      "\n" +
+      "Engineers have not stopped producing code. Code output per engineer rose sharply, but more of the implementation is done by Claude, while people direct and review the work. The share of Claude sessions spent on what Anthropic calls meta-work, such as writing specs for agents, having one agent review another, and monitoring pipelines, rose from 10% to 22% between fall 2025 and spring 2026. In interviews, engineers described becoming managers of agents.\n" +
+      "\n" +
+      "Anthropic is careful about how far this goes. It is a single, unusual company growing very fast, and the authors say the findings are descriptive, not predictions for the wider economy.\n" +
+      "\n" +
+      "## It matches the wider market\n" +
+      "\n" +
+      "The same pattern shows up in job postings. Indeed Hiring Lab reported in July 2026 that in the first quarter of the year, 69.3% of US software development postings on Indeed were senior-level and only 4.5% were entry-level, the lowest entry-level share of any sector it tracked.\n" +
+      "\n" +
+      "Demand for tech workers overall is not collapsing. CompTIA reported that US active IT job postings reached 625,633 in September 2026, the highest total in more than three years, and that software developers and engineers were the most sought-after tech professionals by new openings that month. We covered more of the hiring data in <a href=\"/blogs/developer-jobs-up-juniors-squeezed-ai\">why developer jobs are up while first jobs are harder to get</a>.\n" +
+      "\n" +
+      "Routine, template-level work is the part being automated first. A small survey commissioned by Bluehost, which sells an AI website builder, found that 53% of 201 US small business owners used an AI tool to build their site. TechRadar, reporting on that survey, also cited Freelancer.com data showing website design listings fell 59% between the second quarter of 2024 and the third quarter of 2026.\n" +
+      "\n" +
+      "## What the job looks like now\n" +
+      "\n" +
+      "Put together, the Anthropic data shows where engineering time is going: specifying work, reviewing AI output, coordinating with people, and owning outcomes. Less of the job is typing code, and more of it is deciding what should be built and checking that it was built correctly.\n" +
+      "\n" +
+      "Clear instructions matter more than they used to. A May 2026 research paper, covered by The New Stack, measured how often coding agents take actions outside the scope of their task. In one setup, which ran Claude Code with permission prompts turned off, removing an explicit statement of what was and was not authorized raised out-of-scope actions from 0% to 17.1%. The effect varied by model and was smaller across the researchers' wider benchmark, but the lesson holds: writing down scope, constraints, and boundaries is now a core engineering skill.\n" +
+      "\n" +
+      "## How to look less junior, faster\n" +
+      "\n" +
+      "None of this means there is no way in. It means the starting point now includes skills that used to come later. These habits help you show them early.\n" +
+      "\n" +
+      "1. Write specs before prompts: before you ask an AI tool for code, write down the scope, the constraints, and what done looks like. A short spec in your project shows that you can define work, not just request it.\n" +
+      "2. Review like a senior: keep a log of AI output you rejected and why, from security issues to wrong assumptions about the codebase. That log is evidence of judgment that a portfolio of finished code cannot show.\n" +
+      "3. Communicate in writing: clear pull request descriptions, decision notes, and short status updates are what a meeting-heavy job runs on. For developers in Latin America working with US teams, strong written communication is often what makes remote collaboration work.\n" +
+      "4. Own outcomes end to end: one project that is shipped, tested, and monitored says more than many demos. Show that you carried something into production and kept it working.\n" +
+      "5. Learn to coordinate agents safely: directing agents is now part of the job, and so is knowing their limits. Our post on <a href=\"/blogs/ai-agents-go-rogue-supervision-skills\">why supervision is the skill employers need</a> covers least privilege, sandboxing, monitoring, and review.\n" +
+      "\n" +
+      "## What junior means now\n" +
+      "\n" +
+      "Entry-level work has not disappeared, but the word junior is changing. Increasingly it means an early-career developer who can already direct AI tools, review what they produce, and explain their decisions clearly.\n" +
+      "\n" +
+      "Kafu People coaches developers in Latin America and the US to build exactly that profile. If you want structured help, see <a href=\"/services/ai-training-coaching\">our AI Training Coaching program</a>.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.anthropic.com/research/employment-at-anthropic\">Anthropic: How employment is changing at Anthropic</a>\n" +
+      "• <a href=\"https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/\">TechCrunch: Anthropic says its workforce has become less junior</a>\n" +
+      "• <a href=\"https://hiringlab.indeed.com/2026/07/23/the-labor-market-is-tilting-toward-seniority/\">Indeed Hiring Lab: The labor market is tilting toward seniority</a>\n" +
+      "• <a href=\"https://www.comptia.org/en-us/about-us/news/press-releases/employer-demand-for-tech-talent-reaches-three-year-high-comptia-analysis-finds/\">CompTIA: Employer demand for tech talent reaches three-year high</a>\n" +
+      "• <a href=\"https://thenewstack.io/coding-agents-overstep-scope/\">The New Stack: One sentence changed Claude Code's overreach rate</a>\n" +
+      "• <a href=\"https://arxiv.org/abs/2605.18583\">arXiv: Overeager Coding Agents, measuring out-of-scope actions on benign tasks</a>\n" +
+      "• <a href=\"https://www.techradar.com/pro/the-collapse-of-web-coding-gigs-is-getting-ugly-ai-takes-over-routine-website-development-jobs-and-business-owners-are-very-happy-with-its-job-so-far\">TechRadar: AI takes over routine website development jobs</a>",
+    category: "AI",
+    author: "Kafu People",
+    datePublished: "2026-10-26",
+    dateModified: "2026-10-26",
+    image: "/images/blogs/anthropic-fewer-junior-hires.webp",
+    imageAlt: "Two engineers talking at a whiteboard that maps out an API rollout plan",
+    imageCredit: {
+      name: "ThisisEngineering",
+      url: "https://unsplash.com/@thisisengineering",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/xZTScJvolYk",
+    },
+    tags: ["junior-developers", "ai-careers", "developer-skills", "ai-training"],
+  },
+  {
     _id: "static-018",
     slug: "ai-agents-go-rogue-supervision-skills",
     title: "When AI Agents Go Rogue: Why Supervision Is the Skill Employers Need",

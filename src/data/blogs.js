@@ -65,8 +65,8 @@ const staticBlogs = [
       "• <a href=\"https://lwn.net/Articles/1099594/\">LWN: Kernel maintainers drop the Assisted-by tag</a>",
     category: "AI",
     author: "Kafu People",
-    datePublished: "2026-10-22",
-    dateModified: "2026-10-22",
+    datePublished: "2026-10-19",
+    dateModified: "2026-10-19",
     image: "/images/blogs/ai-agents-go-rogue-supervision.webp",
     imageAlt: "A brightly lit data center floor with rows of server cabinets and network cables in overhead trays",
     imageCredit: {

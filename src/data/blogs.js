@@ -1,3 +1,5 @@
+import { getPublished, isPublished } from "../lib/publishing.js";
+
 const staticBlogs = [
   {
     _id: "static-018",
@@ -725,12 +727,21 @@ const staticBlogs = [
   },
 ];
 
+// All posts, including scheduled ones. Pages should use the getters below,
+// which only return posts whose publish date has passed.
 export default staticBlogs;
 
-export function getStaticBlogById(id) {
-  return staticBlogs.find((b) => b._id === id) || null;
+/** Published blog posts, newest first. */
+export function getPublishedBlogs(now = new Date()) {
+  return getPublished(staticBlogs, now);
 }
 
-export function getStaticBlogBySlug(slug) {
-  return staticBlogs.find((b) => b.slug === slug) || null;
+export function getStaticBlogById(id, now = new Date()) {
+  const blog = staticBlogs.find((b) => b._id === id);
+  return blog && isPublished(blog, now) ? blog : null;
+}
+
+export function getStaticBlogBySlug(slug, now = new Date()) {
+  const blog = staticBlogs.find((b) => b.slug === slug);
+  return blog && isPublished(blog, now) ? blog : null;
 }

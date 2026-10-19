@@ -4,6 +4,60 @@
 
 const staticNews = [
   {
+    _id: "news-018",
+    slug: "forward-deployed-engineers-aws-anthropic",
+    title: "AWS and Anthropic Race to Build Teams of Forward-Deployed AI Engineers",
+    metaTitle: "Why AWS and Anthropic Want Forward-Deployed Engineers",
+    metaDescription: "AWS commits $1 billion to forward-deployed engineering and Anthropic is training 10,000 engineers, as demand grows for people who turn AI pilots into products.",
+    excerpt: "AWS is putting $1 billion into forward-deployed engineering and Anthropic is training 10,000 engineers, as companies push to prove AI spending pays off.",
+    content:
+      "Large tech companies are putting serious money behind a job title that barely existed a few years ago: the forward-deployed engineer. On October 15, 2026, CNBC reported that AWS and Anthropic are among the companies racing to build these teams, as investors push for proof that AI spending produces real business results.\n" +
+      "\n" +
+      "## What a forward-deployed engineer does\n" +
+      "\n" +
+      "A forward-deployed engineer, or FDE, works directly with a client instead of on an internal product team. They learn how the client's business runs, work inside its existing systems and security rules, and build and deploy AI applications that the company can actually use. In CNBC's description, their job is to turn promising AI experiments into working applications.\n" +
+      "\n" +
+      "The role mixes software engineering with business understanding. Lightcast, a labor market analytics firm, told CNBC that the FDE role shares roughly half of its skills with software engineering.\n" +
+      "\n" +
+      "## What AWS and Anthropic are doing\n" +
+      "\n" +
+      "According to CNBC, AWS has committed $1 billion to a forward-deployed engineering initiative. It is building its own FDE organization, starting with hundreds of engineers drawn from inside the company and hired externally. AWS says its FDEs work alongside customer teams so those customers can maintain the systems afterwards.\n" +
+      "\n" +
+      "Anthropic is taking a different route. As we covered earlier this month, its <a href=\"/news/anthropic-claude-frontier-academy-100m\">Claude Frontier Academy</a> is a $100 million program to train 10,000 engineers by the end of 2027. Instead of hiring them, Anthropic trains engineers who already work at its customers and partners, through a residency modeled on medical training.\n" +
+      "\n" +
+      "CNBC also reported that OpenAI has a deployment business backed by more than $4 billion in initial investment, and that Accenture and Google Cloud are building a 1,000-person FDE workforce together.\n" +
+      "\n" +
+      "## How fast demand is growing\n" +
+      "\n" +
+      "Lightcast data cited by CNBC shows US job postings for FDEs rising from fewer than 200 in 2023 to about 1,200 in 2025, and to more than 7,300 in the first nine months of 2026. The median advertised salary was about $195,000. These are advertised positions, not confirmed hires.\n" +
+      "\n" +
+      "The pressure behind this is financial. Companies have spent heavily on AI, and executives quoted by CNBC say investors are growing impatient for results. CNBC also noted that much of the evidence of returns so far comes from company case studies rather than independent measurement.\n" +
+      "\n" +
+      "## What FDE work looks like for independent developers\n" +
+      "\n" +
+      "The FDE skill set is learnable outside big corporate programs. It comes down to understanding a client's business problem, integrating AI through APIs and retrieval (RAG), handling security and permissions, and owning the deployment until it works in production.\n" +
+      "\n" +
+      "Independent and nearshore developers already do much of this kind of client-facing integration work, and <a href=\"/services/ai-training-coaching\">Kafu People AI Training Coaching</a> can help you build and show those skills.\n" +
+      "\n" +
+      "## Sources\n" +
+      "\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/15/aws-anthropic-racing-to-deploy-army-of-specialized-ai-engineers.html\">CNBC: AWS, Anthropic race to deploy army of specialized engineers</a>\n" +
+      "• <a href=\"https://www.cnbc.com/2026/10/02/anthropic-to-invest-100-million-to-train-ai-engineer-talent.html\">CNBC: Anthropic to invest $100 million to train AI engineer talent</a>\n" +
+      "• <a href=\"https://www.anthropic.com/news/claude-frontier-academy\">Anthropic: Claude Frontier Academy announcement</a>",
+    category: "AI Training",
+    date: "2026-10-19",
+    author: "Kafu People",
+    image: "/images/newsAndEvents/forward-deployed-engineers-aws-anthropic.webp",
+    imageAlt: "An engineer presenting a plan on a whiteboard to colleagues seated at a table with laptops",
+    imageCredit: {
+      name: "Vitaly Gariev",
+      url: "https://unsplash.com/@silverkblack",
+      source: "Unsplash",
+      sourceUrl: "https://unsplash.com/photos/K0aM-ztA76Q",
+    },
+    tags: ["ai-careers", "forward-deployed-engineer", "enterprise-ai", "ai-training"],
+  },
+  {
     _id: "news-017",
     slug: "anthropic-claude-frontier-academy-100m",
     title: "Anthropic Puts $100M Into Training 10,000 Enterprise AI Engineers",

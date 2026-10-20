@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
 import { blogCardExcerpt } from "../../lib/blogText";
 import { setReturnBlogId } from "../../lib/blogListScroll";
+import { formatPostDate } from "../../lib/formatPostDate";
 
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  });
 
 const BlogGrid = ({ blogs, error }) => {
 
@@ -86,7 +80,7 @@ const BlogGrid = ({ blogs, error }) => {
                     dateTime={blog.datePublished}
                     className="mt-3 block text-xs text-gray-500"
                   >
-                    {formatDate(blog.datePublished)}
+                    {formatPostDate(blog.datePublished)}
                   </time>
                 )}
               </div>

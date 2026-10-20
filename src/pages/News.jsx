@@ -5,6 +5,7 @@ import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
 import { getNewsCategories, getLatestNews } from "../data/news";
+import { formatPostDate } from "../lib/formatPostDate";
 import {
   scrollToReturnNewsCardWithRetry,
   setReturnNewsId,
@@ -12,12 +13,6 @@ import {
 
 const NEWS_HERO_IMAGE = "/images/blog-section.webp";
 
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
 
 const News = () => {
   const [filter, setFilter] = useState("All");
@@ -130,7 +125,7 @@ const News = () => {
                           dateTime={item.date}
                           className="text-xs text-gray-500"
                         >
-                          {formatDate(item.date)}
+                          {formatPostDate(item.date)}
                         </time>
                       </div>
                       <h2 className="text-xl font-bold text-cDarkBlue">

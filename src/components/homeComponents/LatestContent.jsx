@@ -2,13 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getPublishedBlogs } from "../../data/blogs";
 import { getLatestNews } from "../../data/news";
+import { formatPostDate } from "../../lib/formatPostDate";
 
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
 
 const buildItems = () => {
   const items = [];
@@ -22,7 +17,7 @@ const buildItems = () => {
       image: latestNews.image,
       title: latestNews.title,
       excerpt: latestNews.excerpt,
-      meta: formatDate(latestNews.date),
+      meta: formatPostDate(latestNews.date, "short"),
     });
   }
 

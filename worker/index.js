@@ -53,12 +53,8 @@ export default {
       return new Response("Not Found", { status: 404 });
     }
 
-    const headers = new Headers();
-    if (httpResponse.headers) {
-      for (const [key, value] of Object.entries(httpResponse.headers)) {
-        if (value !== undefined) headers.set(key, String(value));
-      }
-    }
+    // Vike gives headers as [name, value] pairs, which Headers accepts directly.
+    const headers = new Headers(httpResponse.headers ?? []);
     if (!headers.has("Content-Type") && httpResponse.contentType) {
       headers.set("Content-Type", httpResponse.contentType);
     }

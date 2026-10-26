@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { blogCardExcerpt } from "../../lib/blogText";
 import { setReturnBlogId } from "../../lib/blogListScroll";
+import { formatPostDate } from "../../lib/formatPostDate";
+
 
 const BlogGrid = ({ blogs, error }) => {
 
@@ -73,6 +75,14 @@ const BlogGrid = ({ blogs, error }) => {
                 <p className="mt-2 h-[4.5rem] line-clamp-3 text-sm leading-6 text-gray-600">
                   {blogCardExcerpt(blog.description)}
                 </p>
+                {blog.datePublished && (
+                  <time
+                    dateTime={blog.datePublished}
+                    className="mt-3 block text-xs text-gray-500"
+                  >
+                    {formatPostDate(blog.datePublished)}
+                  </time>
+                )}
               </div>
             </article>
           </Link>

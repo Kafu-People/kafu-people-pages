@@ -3,17 +3,12 @@ import PageSEO from "../components/PageSEO";
 import { PAGE_SEO, SITE_URL } from "../config/seo";
 import { ArticleLD, SpeakableLD } from "../components/Schema";
 import { getNewsBySlug } from "../data/news";
+import { formatPostDate } from "../lib/formatPostDate";
 import { useSSRData } from "../lib/SSRDataContext";
 import ArticleContent from "../components/ArticleContent";
 import ImageCredit from "../components/ImageCredit";
 import { prepareNewsListReturn } from "../lib/newsListScroll";
 
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
 
 const NewsArticle = () => {
   const { slug } = useParams();
@@ -89,7 +84,7 @@ const NewsArticle = () => {
               {article.category}
             </span>
             <time dateTime={article.date} className="text-sm text-gray-500">
-              {formatDate(article.date)}
+              {formatPostDate(article.date)}
             </time>
           </div>
           <h1 data-speakable="headline" className="text-3xl font-bold text-cDarkBlue sm:text-4xl">

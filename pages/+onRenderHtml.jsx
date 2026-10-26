@@ -32,6 +32,9 @@ function onRenderHtml(pageContext) {
   const link = helmet.link ? helmet.link.toString() : "";
   const script = helmet.script ? helmet.script.toString() : "";
 
+  // Raw JSON inside a non-executed <script type="application/json">. It must not
+  // be HTML-escaped: the browser does not decode entities in script text, so
+  // JSON.parse would fail. Escaping "<" keeps "</script>" out of the payload.
   const serialized = JSON.stringify(ssrData).replace(/</g, "\\u003c");
 
   const fontHead = `
@@ -65,7 +68,7 @@ function onRenderHtml(pageContext) {
   </head>
   <body>
     <div id="root">${dangerouslySkipEscape(pageHtml)}</div>
-    <script id="__INITIAL_STATE__" type="application/json">${serialized}</script>
+    <script id="__INITIAL_STATE__" type="application/json">${dangerouslySkipEscape(serialized)}</script>
   </body>
 </html>`;
 

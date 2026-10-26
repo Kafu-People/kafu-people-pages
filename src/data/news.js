@@ -2,6 +2,8 @@
 // Mirrors the blog data layer shape so the listing/detail pages can stay simple.
 // `image` paths point at files in /public/images/newsAndEvents.
 
+import { getPublished, isPublished } from "../lib/publishing.js";
+
 const staticNews = [
   {
     _id: "news-018",
@@ -551,25 +553,28 @@ const staticNews = [
   },
 ];
 
+// All items, including scheduled ones. Pages should use the getters below,
+// which only return items whose publish date has passed.
 export default staticNews;
 
-export const NEWS_CATEGORIES = [
-  "All",
-  ...Array.from(new Set(staticNews.map((n) => n.category))),
-];
-
-export function getNewsBySlug(slug) {
-  return staticNews.find((n) => n.slug === slug) || null;
+/** Category filter options, built from published items only. */
+export function getNewsCategories(now = new Date()) {
+  return ["All", ...new Set(getPublished(staticNews, now).map((n) => n.category))];
 }
 
-export function getNewsById(id) {
-  return staticNews.find((n) => n._id === id) || null;
+export function getNewsBySlug(slug, now = new Date()) {
+  const item = staticNews.find((n) => n.slug === slug);
+  return item && isPublished(item, now) ? item : null;
 }
 
-// Newest first, optionally limited (used by the homepage latest-content section).
-export function getLatestNews(limit) {
-  const sorted = [...staticNews].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
+export function getNewsById(id, now = new Date()) {
+  const item = staticNews.find((n) => n._id === id);
+  return item && isPublished(item, now) ? item : null;
+}
+
+// Published items, newest first, optionally limited (used by the homepage
+// latest-content section).
+export function getLatestNews(limit, now = new Date()) {
+  const sorted = getPublished(staticNews, now);
   return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
 }

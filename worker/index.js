@@ -1,6 +1,11 @@
 import "../dist/server/entry.mjs";
 import { renderPage } from "vike/server";
 import { onRequestPost as handleStripeWebhook } from "./stripe-webhook.ts";
+import blogs from "../src/data/blogs.js";
+import news from "../src/data/news.js";
+import portfolio from "../src/data/portfolioCases.js";
+import { SITE_URL } from "../src/constants/site.js";
+import { buildSitemapXml } from "../src/lib/sitemap.js";
 
 export default {
   async fetch(request, env, ctx) {
@@ -21,6 +26,17 @@ export default {
       });
     }
 
+    // Built per request so scheduled posts appear on their publish date.
+    if (url.pathname === "/sitemap.xml" && (request.method === "GET" || request.method === "HEAD")) {
+      const xml = buildSitemapXml({ siteUrl: SITE_URL, blogs, news, portfolio });
+      return new Response(request.method === "HEAD" ? null : xml, {
+        headers: {
+          "Content-Type": "application/xml; charset=utf-8",
+          "Cache-Control": "public, max-age=3600",
+        },
+      });
+    }
+
     if (request.method === "GET" || request.method === "HEAD") {
       const assetResponse = await env.ASSETS.fetch(request);
       if (assetResponse.status !== 404) {
@@ -37,12 +53,8 @@ export default {
       return new Response("Not Found", { status: 404 });
     }
 
-    const headers = new Headers();
-    if (httpResponse.headers) {
-      for (const [key, value] of Object.entries(httpResponse.headers)) {
-        if (value !== undefined) headers.set(key, String(value));
-      }
-    }
+    // Vike gives headers as [name, value] pairs, which Headers accepts directly.
+    const headers = new Headers(httpResponse.headers ?? []);
     if (!headers.has("Content-Type") && httpResponse.contentType) {
       headers.set("Content-Type", httpResponse.contentType);
     }

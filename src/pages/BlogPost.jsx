@@ -16,9 +16,16 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const BlogPost = () => {
   const { slug } = useParams();
   const ssrBlog = useSSRData("blog");
-  const [blog, setBlog] = useState(ssrBlog || null);
-  const [loading, setLoading] = useState(!ssrBlog);
-  const [error, setError] = useState(null);
+  // Static posts resolve immediately (unpublished ones return null). Without a
+  // backend there is nothing else to fetch, so render "not found" right away,
+  // including on the server.
+  const initialBlog =
+    ssrBlog || getStaticBlogBySlug(slug) || getStaticBlogById(slug);
+  const [blog, setBlog] = useState(initialBlog);
+  const [loading, setLoading] = useState(!initialBlog && Boolean(BACKEND_URL));
+  const [error, setError] = useState(
+    !initialBlog && !BACKEND_URL ? "Blog post not found." : null,
+  );
 
   useEffect(() => {
     if (ssrBlog && ssrBlog.slug === slug) return;
@@ -26,6 +33,13 @@ const BlogPost = () => {
     if (found) {
       setBlog(found);
       setLoading(false);
+      setError(null);
+      return;
+    }
+    if (!BACKEND_URL) {
+      setBlog(null);
+      setLoading(false);
+      setError("Blog post not found.");
       return;
     }
     axios

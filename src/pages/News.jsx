@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import PageSEO from "../components/PageSEO";
 import { PAGE_SEO } from "../config/seo";
 import PageHero from "../components/ui/PageHero";
-import staticNews, { NEWS_CATEGORIES, getLatestNews } from "../data/news";
+import { getNewsCategories, getLatestNews } from "../data/news";
+import { formatPostDate } from "../lib/formatPostDate";
 import {
   scrollToReturnNewsCardWithRetry,
   setReturnNewsId,
@@ -12,18 +13,13 @@ import {
 
 const NEWS_HERO_IMAGE = "/images/blog-section.webp";
 
-const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
 
 const News = () => {
   const [filter, setFilter] = useState("All");
   const seo = PAGE_SEO.newsList;
 
   const newsItems = getLatestNews();
+  const categories = getNewsCategories();
   const filteredNews =
     filter === "All"
       ? newsItems
@@ -66,7 +62,7 @@ const News = () => {
       <div className="container mx-auto px-6 py-6 text-center">
         <div className="flex justify-center">
           <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide sm:flex-wrap sm:justify-center w-full px-2">
-            {NEWS_CATEGORIES.map((category) => (
+            {categories.map((category) => (
               <button
                 key={category}
                 className={`px-4 py-2 min-h-[44px] rounded-md text-sm sm:text-base border flex-shrink-0 ${
@@ -85,7 +81,7 @@ const News = () => {
 
       {/* News grid */}
       <div className="container mx-auto px-6 py-8">
-        {staticNews.length === 0 ? (
+        {newsItems.length === 0 ? (
           <div className="text-center py-16">
             <h2 className="text-2xl font-bold text-cDarkBlue mb-4">
               No updates yet
@@ -129,7 +125,7 @@ const News = () => {
                           dateTime={item.date}
                           className="text-xs text-gray-500"
                         >
-                          {formatDate(item.date)}
+                          {formatPostDate(item.date)}
                         </time>
                       </div>
                       <h2 className="text-xl font-bold text-cDarkBlue">

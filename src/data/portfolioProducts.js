@@ -9,6 +9,15 @@ export const PORTFOLIO_CATEGORIES = [
 
 export const PORTFOLIO_PRODUCTS = [
   {
+    product_id: "p011",
+    image: "/products/DialPoint.webp",
+    name: "DialPoint",
+    description:
+      "AI voice agents that answer business calls, book appointments, and escalate urgent ones, plus the intake workflows that capture and route every lead.",
+    category: "AI & Agentic Workflows",
+    url: "https://dialpoint.ai/",
+  },
+  {
     product_id: "p010",
     image: "/products/giscrap-dashboard.png",
     name: "Giscrap",

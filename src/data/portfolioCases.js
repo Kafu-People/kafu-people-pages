@@ -1,5 +1,87 @@
 const portfolioCases = [
   {
+    slug: "dialpoint",
+    productId: "p011",
+    title: "DialPoint",
+    tagline: "AI voice agents and intake automation for service businesses",
+    outcome:
+      "Delivered the voice agent and workflow automation features on a fixed-price milestone, with a 100% client rating and a recommendation to hire again",
+    description:
+      "DialPoint answers business phone lines with an AI voice agent that books appointments and escalates urgent calls, and runs the intake workflows behind it so no lead or form falls through.",
+    category: "AI & Agentic Workflows",
+    role: "AI Automation Partner",
+    timeline: "Fixed-price milestone (October 2026)",
+    image: "/products/DialPoint.webp",
+    liveUrl: "https://dialpoint.ai/",
+    techStack: [
+      "AI Voice Agents",
+      "Workflow Automation",
+      "LLM Integration",
+      "Two-way SMS",
+      "Online Payments",
+    ],
+    features: [
+      {
+        title: "24/7 Inbound Answering",
+        description:
+          "An AI voice agent picks up every call after hours, on weekends, and whenever staff are busy, and answers common questions.",
+      },
+      {
+        title: "Booking on the Call",
+        description:
+          "Callers are booked into an appointment during the conversation instead of being left on voicemail.",
+      },
+      {
+        title: "Urgent-call Escalation",
+        description:
+          "Calls that need a person are transferred to the right member of the team, with an after-hours escalation tree.",
+      },
+      {
+        title: "Lead and Intake Automation",
+        description:
+          "Leads from forms, email, and DMs are captured, routed, and assigned automatically, and intake documents are filed the moment they are submitted.",
+      },
+      {
+        title: "Reminders and Reviews",
+        description:
+          "Appointment reminder sequences, waitlist auto-fill for cancellations, and review requests after each job or visit.",
+      },
+      {
+        title: "SMS and Payments",
+        description:
+          "Two-way SMS on the voice agent's number and card or ACH payment collection built into calls and workflows.",
+      },
+    ],
+    gallery: ["/products/DialPoint.webp", "/products/DialPoint-Services.webp"],
+    relatedSlugs: ["giscrap", "echo3s"],
+    sections: [
+      {
+        type: "overview",
+        heading: "Overview",
+        content:
+          "DialPoint Automation is a US service that puts an AI voice agent on a business's phone line and automates the intake work behind it. It serves dental and healthcare clinics, home services, auto repair, legal and financial firms, salons, restaurants, and dozens of other local service verticals, sold as monthly retainers tuned to each industry.",
+      },
+      {
+        type: "challenge",
+        heading: "The Challenge",
+        content:
+          "Service businesses lose customers in two quiet ways: calls that go unanswered after hours or during a job, and leads that sit in an inbox or on a printed form until it is too late. DialPoint needed a voice agent and a set of automation workflows that work as one front door, reliable enough to book real appointments and hand urgent calls to a person.",
+      },
+      {
+        type: "solution",
+        heading: "Our Solution",
+        content:
+          "Kafu People set up DialPoint's voice AI automation workflows and delivered the platform features the client needed: inbound call answering with booking and escalation, lead capture and routing from forms, email, and DMs, appointment and reminder sequences, and document processing so intake paperwork is filed automatically.",
+      },
+      {
+        type: "results",
+        heading: "Results",
+        content:
+          "The milestone was delivered and paid on schedule, and the client rated the engagement 100% on Guru. In their review, they highlighted clear and consistent communication, strong work ethic, attention to detail, and follow-through on commitments, and said they would gladly hire Kafu People again.",
+      },
+    ],
+  },
+  {
     slug: "echo3s",
     productId: "p007",
     title: "Echo3s",

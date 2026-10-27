@@ -14,11 +14,12 @@ const portfolioCases = [
     image: "/products/DialPoint.webp",
     liveUrl: "https://dialpoint.ai/",
     techStack: [
-      "AI Voice Agents",
-      "Workflow Automation",
-      "LLM Integration",
-      "Two-way SMS",
-      "Online Payments",
+      "Base44",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Deno",
     ],
     features: [
       {
@@ -71,7 +72,7 @@ const portfolioCases = [
         type: "solution",
         heading: "Our Solution",
         content:
-          "Kafu People set up DialPoint's voice AI automation workflows and delivered the platform features the client needed: inbound call answering with booking and escalation, lead capture and routing from forms, email, and DMs, appointment and reminder sequences, and document processing so intake paperwork is filed automatically.",
+          "Kafu People set up DialPoint's voice AI automation workflows and delivered the platform features the client needed: inbound call answering with booking and escalation, lead capture and routing from forms, email, and DMs, appointment and reminder sequences, and document processing so intake paperwork is filed automatically. The platform runs on Base44: a React and Vite frontend styled with Tailwind CSS and shadcn/ui components, Base44's managed backend for data, auth, and file storage, and Deno-based backend functions for server logic, served on the dialpoint.ai custom domain.",
       },
       {
         type: "results",

@@ -1,7 +1,7 @@
 /** Default hero video on Streamable (override with VITE_HERO_VIDEO_URL). */
 export const HERO_VIDEO_URL =
   import.meta.env.VITE_HERO_VIDEO_URL?.trim() ||
-  "https://streamable.com/mueba1";
+  "https://streamable.com/tep6t3";
 
 export const HERO_POSTER_SRC = "/images/hero.webp";
 

@@ -5,6 +5,7 @@ import AboutHero from "../components/aboutComponenets/AboutHero";
 import Vision from "../components/aboutComponenets/Vision";
 import AnimatedStats from "../components/AnimatedStats";
 import OurValue from "../components/aboutComponenets/OurValue";
+import Partners from "../components/aboutComponenets/Partners";
 import Achievements from "../components/Achievements";
 import CTABanner from "../components/homeComponents/CTABanner";
 
@@ -26,6 +27,7 @@ const About = () => {
       <AnimatedStats />
       <Vision />
       <OurValue />
+      <Partners />
       <Achievements />
       <CTABanner />
     </>

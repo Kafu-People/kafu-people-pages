@@ -19,6 +19,17 @@ body.calendly-popup-open {
   overflow: hidden !important;
 }
 
+/* react-calendly caps the popup at 1000px, but Calendly only switches to its
+   side-by-side layout from about 1110px wide. Below that it stacks the event
+   details above a clipped, scrolling calendar. "body" outranks the styles
+   react-calendly injects at runtime with the same selector. */
+@media (min-width: 976px) {
+  body .calendly-overlay .calendly-popup {
+    width: 94%;
+    max-width: 1140px;
+  }
+}
+
 .testimonials-swiper .swiper-pagination-bullet {
   background-color: #cbd5e1;
   opacity: 1;

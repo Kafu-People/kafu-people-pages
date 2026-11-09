@@ -12,6 +12,7 @@ import {
   FaLinkedin,
   FaBullhorn,
   FaGraduationCap,
+  FaBuilding,
 } from "react-icons/fa";
 import {
   CONTACT_EMAIL,
@@ -19,6 +20,8 @@ import {
   WHATSAPP_DISPLAY,
   LINKEDIN_URL,
   OFFICE_ADDRESS,
+  KVK_NUMBER,
+  KVK_URL,
 } from "../constants/site";
 import { SERVICE_CATEGORIES } from "../constants/serviceCategories";
 import { NewsletterSubscribeForm } from "./NewsletterSignup";
@@ -144,6 +147,22 @@ const Footer = () => {
                     Address:
                   </span>{" "}
                   {OFFICE_ADDRESS}
+                </li>
+                <li>
+                  <span className="font-semibold text-accent-light flex items-center gap-1">
+                    <FaBuilding className="shrink-0" />
+                    KVK Number:
+                  </span>{" "}
+                  <a
+                    href={KVK_URL}
+                    className="text-white underline-offset-2 hover:underline hover:text-primary-light transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`KVK number ${KVK_NUMBER}, verify in the Dutch Chamber of Commerce register`}
+                    title="Verify in the Dutch Chamber of Commerce (KVK) register"
+                  >
+                    {KVK_NUMBER}
+                  </a>
                 </li>
                 <li>
                   <span className="font-semibold text-accent-light flex items-center gap-1">

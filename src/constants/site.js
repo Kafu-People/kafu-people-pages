@@ -2,6 +2,10 @@ export const SITE_NAME = "Kafu People";
 export const SITE_URL = "https://kafupeople.com";
 export const CONTACT_EMAIL = "hello@kafupeople.com";
 export const OFFICE_ADDRESS = "Brantjesoever 4, 1441DW Purmerend, Netherlands";
+export const KVK_NUMBER = "85842788";
+export const KVK_BRANCH_NUMBER = "000051862751";
+/** Public Dutch Chamber of Commerce (KVK) register entry, linked as proof of registration. */
+export const KVK_URL = `https://www.kvk.nl/bestellen/#/${KVK_NUMBER}${KVK_BRANCH_NUMBER}`;
 export const OFFICE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Brantjesoever+4,+1441DW+Purmerend,+Netherlands";
 export const OFFICE_MAPS_EMBED_URL =

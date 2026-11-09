@@ -2,7 +2,7 @@ import React from "react";
 import PageSEO from "../components/PageSEO";
 import LegalDocumentHeader from "../components/legal/LegalDocumentHeader";
 import LegalSection from "../components/legal/LegalSection";
-import { SITE_NAME, CONTACT_EMAIL } from "../constants/site";
+import { SITE_NAME, CONTACT_EMAIL, KVK_NUMBER, KVK_BRANCH_NUMBER, KVK_URL } from "../constants/site";
 
 const PrivacyPolicy = () => {
   return (
@@ -195,7 +195,16 @@ const PrivacyPolicy = () => {
               </div>
               <div>
                 <dt className="font-semibold text-cBlack">KVK Number</dt>
-                <dd className="mt-1">85842788</dd>
+                <dd className="mt-1">
+                  <a href={KVK_URL} target="_blank" rel="noopener noreferrer">
+                    {KVK_NUMBER}
+                  </a>{" "}
+                  (verify in the KVK register)
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-cBlack">KVK Branch Number</dt>
+                <dd className="mt-1">{KVK_BRANCH_NUMBER}</dd>
               </div>
               <div>
                 <dt className="font-semibold text-cBlack">Registered Address</dt>

@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, CONTACT_EMAIL } from "../constants/site"
+import { SITE_URL, SITE_NAME, CONTACT_EMAIL, KVK_NUMBER } from "../constants/site"
 
 export const OrganizationLD = () => ({
   "@context": "https://schema.org",
@@ -16,6 +16,11 @@ export const OrganizationLD = () => ({
     addressLocality: "Purmerend",
     postalCode: "1441DW",
     addressCountry: "NL",
+  },
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "KVK",
+    value: KVK_NUMBER,
   },
   sameAs: ["https://www.linkedin.com/company/kafu-people/"],
 })
